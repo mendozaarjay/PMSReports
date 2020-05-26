@@ -151,6 +151,28 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="HourlyAccountability" msprop:Generator_TableClassName="HourlyAccountabilityDataTable" msprop:Generator_TableVarName="tableHourlyAccountability" msprop:Generator_RowChangedName="HourlyAccountabilityRowChanged" msprop:Generator_TablePropName="HourlyAccountability" msprop:Generator_RowDeletingName="HourlyAccountabilityRowDeleting" msprop:Generator_RowChangingName="HourlyAccountabilityRowChanging" msprop:Generator_RowEvHandlerName="HourlyAccountabilityRowChangeEventHandler" msprop:Generator_RowDeletedName="HourlyAccountabilityRowDeleted" msprop:Generator_RowClassName="HourlyAccountabilityRow" msprop:Generator_UserTableName="HourlyAccountability" msprop:Generator_RowEvArgName="HourlyAccountabilityRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TimeString" msprop:Generator_ColumnVarNameInTable="columnTimeString" msprop:Generator_ColumnPropNameInRow="TimeString" msprop:Generator_ColumnPropNameInTable="TimeStringColumn" msprop:Generator_UserColumnName="TimeString" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalCard" msprop:Generator_ColumnVarNameInTable="columnTotalCard" msprop:Generator_ColumnPropNameInRow="TotalCard" msprop:Generator_ColumnPropNameInTable="TotalCardColumn" msprop:Generator_UserColumnName="TotalCard" type="xs:int" minOccurs="0" />
+              <xs:element name="CardCounter" msprop:Generator_ColumnVarNameInTable="columnCardCounter" msprop:Generator_ColumnPropNameInRow="CardCounter" msprop:Generator_ColumnPropNameInTable="CardCounterColumn" msprop:Generator_UserColumnName="CardCounter" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AmountCounter" msprop:Generator_ColumnVarNameInTable="columnAmountCounter" msprop:Generator_ColumnPropNameInRow="AmountCounter" msprop:Generator_ColumnPropNameInTable="AmountCounterColumn" msprop:Generator_UserColumnName="AmountCounter" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OperationOccupancy" msprop:Generator_TableClassName="OperationOccupancyDataTable" msprop:Generator_TableVarName="tableOperationOccupancy" msprop:Generator_TablePropName="OperationOccupancy" msprop:Generator_RowDeletingName="OperationOccupancyRowDeleting" msprop:Generator_RowChangingName="OperationOccupancyRowChanging" msprop:Generator_RowEvHandlerName="OperationOccupancyRowChangeEventHandler" msprop:Generator_RowDeletedName="OperationOccupancyRowDeleted" msprop:Generator_UserTableName="OperationOccupancy" msprop:Generator_RowChangedName="OperationOccupancyRowChanged" msprop:Generator_RowEvArgName="OperationOccupancyRowChangeEvent" msprop:Generator_RowClassName="OperationOccupancyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RowNum" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:int" minOccurs="0" />
+              <xs:element name="DurationHours" msprop:Generator_ColumnVarNameInTable="columnDurationHours" msprop:Generator_ColumnPropNameInRow="DurationHours" msprop:Generator_ColumnPropNameInTable="DurationHoursColumn" msprop:Generator_UserColumnName="DurationHours" type="xs:string" minOccurs="0" />
+              <xs:element name="In" msprop:Generator_ColumnVarNameInTable="columnIn" msprop:Generator_ColumnPropNameInRow="In" msprop:Generator_ColumnPropNameInTable="InColumn" msprop:Generator_UserColumnName="In" type="xs:int" minOccurs="0" />
+              <xs:element name="Out" msprop:Generator_ColumnVarNameInTable="columnOut" msprop:Generator_ColumnPropNameInRow="Out" msprop:Generator_ColumnPropNameInTable="OutColumn" msprop:Generator_UserColumnName="Out" type="xs:int" minOccurs="0" />
+              <xs:element name="Remaining" msprop:Generator_ColumnVarNameInTable="columnRemaining" msprop:Generator_ColumnPropNameInRow="Remaining" msprop:Generator_ColumnPropNameInTable="RemainingColumn" msprop:Generator_UserColumnName="Remaining" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

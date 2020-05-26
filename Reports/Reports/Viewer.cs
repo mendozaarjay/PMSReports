@@ -50,6 +50,14 @@ namespace Reports.Reports
                     mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.PeakLoadReport.rdlc";
                     this.Text = "Peak Load Report";
                     break;
+                case ReportType.HourlyAccountability:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.HourlyAccountabilityReport.rdlc";
+                    this.Text = "Hourly Accountability Report";
+                    break;
+                case ReportType.OperationOccupancy:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.OperationOccupancyReport.rdlc";
+                    this.Text = "Operation Occupancy Report";
+                    break;
             }
             this.mReportViewer.RefreshReport();
             base.OnLoad(e);

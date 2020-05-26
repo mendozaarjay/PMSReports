@@ -159,12 +159,14 @@
             this.operationHourlyAccountabilityToolStripMenuItem.Name = "operationHourlyAccountabilityToolStripMenuItem";
             this.operationHourlyAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.operationHourlyAccountabilityToolStripMenuItem.Text = "Operation Hourly Accountability";
+            this.operationHourlyAccountabilityToolStripMenuItem.Click += new System.EventHandler(this.operationHourlyAccountabilityToolStripMenuItem_Click);
             // 
             // operationOccupancyToolStripMenuItem
             // 
             this.operationOccupancyToolStripMenuItem.Name = "operationOccupancyToolStripMenuItem";
             this.operationOccupancyToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.operationOccupancyToolStripMenuItem.Text = "Operation Occupancy";
+            this.operationOccupancyToolStripMenuItem.Click += new System.EventHandler(this.operationOccupancyToolStripMenuItem_Click);
             // 
             // peakLoadToolStripMenuItem
             // 

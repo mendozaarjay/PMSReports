@@ -25,8 +25,8 @@ namespace Reports.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SNE52L4\\SQLEXPRESS;Initial Catalog=PMSNEW;Persist Security In" +
-            "fo=True;User ID=sa;Password=zealadmin01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SNE52L4\\SQLEXPRESS;Initial Catalog=PMSLatest;Persist Security" +
+            " Info=True;User ID=sa;Password=zealadmin01")]
         public string UserConnectionString {
             get {
                 return ((string)(this["UserConnectionString"]));

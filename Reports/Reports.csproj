@@ -66,13 +66,21 @@
     <Compile Include="Forms\LengthOfStay.Designer.cs">
       <DependentUpon>LengthOfStay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HourlyAccountability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HourlyAccountability.Designer.cs">
+      <DependentUpon>HourlyAccountability.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\HourlyAccountabilityModel.cs" />
     <Compile Include="Models\LengthOfStayModel.cs" />
+    <Compile Include="Models\OperationOccupancyModel.cs" />
     <Compile Include="Models\PeakLoadModel.cs" />
     <Compile Include="Models\RemainingCarModel.cs" />
     <Compile Include="Forms\RemainingCars.cs">
@@ -87,6 +95,12 @@
     <Compile Include="Forms\PeakLoad.Designer.cs">
       <DependentUpon>PeakLoad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OperationOccupancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OperationOccupancy.Designer.cs">
+      <DependentUpon>OperationOccupancy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\BIRServices.cs" />
     <Compile Include="Services\DetailedTransactionSummaryServices.cs" />
     <Compile Include="Forms\BIR.cs">
@@ -96,8 +110,10 @@
       <DependentUpon>BIR.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\HistoryServices.cs" />
+    <Compile Include="Services\HourlyAccountabilityServices.cs" />
     <Compile Include="Services\ImageServices.cs" />
     <Compile Include="Services\LengthOfStayServices.cs" />
+    <Compile Include="Services\OperationOccupancyServices.cs" />
     <Compile Include="Services\PeakLoadServices.cs" />
     <Compile Include="Services\RemainingCarsServices.cs" />
     <Compile Include="Services\SalesServices.cs" />
@@ -169,6 +185,14 @@
     <EmbeddedResource Include="Forms\RemainingCars.resx">
       <DependentUpon>RemainingCars.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HourlyAccountability.resx">
+      <DependentUpon>HourlyAccountability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OperationOccupancy.resx">
+      <DependentUpon>OperationOccupancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OperationOccupancyReport.rdlc" />
+    <EmbeddedResource Include="Reports\HourlyAccountabilityReport.rdlc" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

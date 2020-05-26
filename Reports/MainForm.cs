@@ -136,5 +136,27 @@ namespace Reports
                 frm.Show();
             }
         }
+
+        private void operationHourlyAccountabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("HourlyAccountability"))
+            {
+                HourlyAccountability frm = new HourlyAccountability();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
+
+        private void operationOccupancyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("OperationOccupancy"))
+            {
+                OperationOccupancy frm = new OperationOccupancy();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
     }
 }
