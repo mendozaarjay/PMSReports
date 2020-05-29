@@ -60,11 +60,24 @@ namespace Reports
             return false;
         }
 
-        private void birToolStripMenuItem_Click(object sender, EventArgs e)
+       
+
+        private void historyToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (!IsAlreadyOpen("BIR"))
+            if (!IsAlreadyOpen("History"))
             {
-                BIR frm = new BIR();
+                History frm = new History();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
+
+        private void shiftToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("Shift"))
+            {
+                Shift frm = new Shift();
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
@@ -82,11 +95,11 @@ namespace Reports
             }
         }
 
-        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        private void detailedTransactionSummaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!IsAlreadyOpen("History"))
+            if (!IsAlreadyOpen("DetailedTransactionSummary"))
             {
-                History frm = new History();
+                DetailedTransactionSummary frm = new DetailedTransactionSummary();
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
@@ -104,22 +117,11 @@ namespace Reports
             }
         }
 
-        private void remainingCarsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void operationOccupancyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!IsAlreadyOpen("RemainingCars"))
+            if (!IsAlreadyOpen("OperationOccupancy"))
             {
-                RemainingCars frm = new RemainingCars();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Maximized;
-                frm.Show();
-            }
-        }
-
-        private void detailedTransactionSummaryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!IsAlreadyOpen("DetailedTransactionSummary"))
-            {
-                DetailedTransactionSummary frm = new DetailedTransactionSummary();
+                OperationOccupancy frm = new OperationOccupancy();
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
@@ -137,22 +139,33 @@ namespace Reports
             }
         }
 
-        private void operationHourlyAccountabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        private void remainingCarsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!IsAlreadyOpen("HourlyAccountability"))
+            if (!IsAlreadyOpen("RemainingCars"))
             {
-                HourlyAccountability frm = new HourlyAccountability();
+                RemainingCars frm = new RemainingCars();
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
         }
 
-        private void operationOccupancyToolStripMenuItem_Click(object sender, EventArgs e)
+        private void zReadingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!IsAlreadyOpen("OperationOccupancy"))
+            //if (!IsAlreadyOpen("RemainingCars"))
+            //{
+            //    RemainingCars frm = new RemainingCars();
+            //    frm.MdiParent = this;
+            //    frm.WindowState = FormWindowState.Maximized;
+            //    frm.Show();
+            //}
+        }
+
+        private void bIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("BIR"))
             {
-                OperationOccupancy frm = new OperationOccupancy();
+                BIR frm = new BIR();
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();

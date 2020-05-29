@@ -22,13 +22,18 @@ namespace Reports
         }
         protected override void OnLoad(EventArgs e)
         {
+            timeFrom.Value = DateTime.Now.Minimun();
+            timeTo.Value = DateTime.Now.Maximum();
             CheckForIllegalCrossThreadCalls = false;
             base.OnLoad(e);
         }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
-            var result = await services.DetailedTransactionSummaryAsync(dtFrom.Value.Minimun(), dtTo.Value.Maximum(), txtSearch.Text.Trim());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var result = await services.DetailedTransactionSummaryAsync(from,to, txtSearch.Text.Trim());
             PopulateDetailedTransactionSummary(result);
             btnGenerate.Enabled = true;
         }
@@ -68,7 +73,9 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
-            var dt = await services.DetailedTransactionSummaryDatatableAsync(dtFrom.Value.Minimun(), dtTo.Value.Maximum(), txtSearch.Text.Trim());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to, txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -84,7 +91,9 @@ namespace Reports
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
-            var dt = await services.DetailedTransactionSummaryDatatableAsync(dtFrom.Value.Minimun(), dtTo.Value.Maximum(), txtSearch.Text.Trim());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to,txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -100,7 +109,9 @@ namespace Reports
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
-            var dt = await services.DetailedTransactionSummaryDatatableAsync(dtFrom.Value.Minimun(), dtTo.Value.Maximum(), txtSearch.Text.Trim());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to,txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 

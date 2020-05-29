@@ -17,5 +17,6 @@
         PeakLoad = 12,
         RemainingCars = 13,
         SummaryReportPerTerminal = 14,
+        ZReading = 15,
     };
 }

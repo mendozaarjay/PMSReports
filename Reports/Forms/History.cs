@@ -22,6 +22,8 @@ namespace Reports
         }
         protected override void OnLoad(EventArgs e)
         {
+            timeFrom.Value = DateTime.Now.Minimun();
+            timeTo.Value = DateTime.Now.Maximum();
             CheckForIllegalCrossThreadCalls = false;
             base.OnLoad(e);
         }
@@ -29,7 +31,11 @@ namespace Reports
         private async void  btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
-            var items = await services.GetHistoryReportAsync(dtFrom.Value.Minimun(),dtTo.Value.Maximum(),txtSearch.Text.Trim());
+
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var items = await services.GetHistoryReportAsync(from,to,txtSearch.Text.Trim());
 
             var parkerIn = items.Where(a => a.MonthlyName == "" && a.TimeOut == "");
             var parkerOut = items.Where(a => a.MonthlyName == "" && a.TimeOut != "");
@@ -189,7 +195,9 @@ namespace Reports
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
-            var dt = await services.GetHistoryDataTableAsync(dtFrom.Value.Minimun(), dtTo.Value.Maximum(), txtSearch.Text.Trim());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.GetHistoryDataTableAsync(from,to, txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -206,7 +214,10 @@ namespace Reports
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
-            var items = await services.GetHistoryDataTableAsync(dtFrom.Value.Minimun(), dtTo.Value.Maximum(), txtSearch.Text.Trim());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var items = await services.GetHistoryDataTableAsync(from,to, txtSearch.Text.Trim());
             items.Columns.Remove("TransitId");
             items.AcceptChanges();
 
@@ -219,7 +230,10 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
-            var dt = await services.GetHistoryDataTableAsync(dtFrom.Value.Minimun(), dtTo.Value.Maximum(), txtSearch.Text.Trim());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var dt = await services.GetHistoryDataTableAsync(from,to, txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 

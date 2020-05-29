@@ -161,8 +161,6 @@
             this.dtlCollectionImage = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dtTo = new System.Windows.Forms.DateTimePicker();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dgErased = new System.Windows.Forms.DataGridView();
             this.dtlEraseTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -256,6 +254,10 @@
             this.btnCsv = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTransactions)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -1128,24 +1130,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(306, 30);
             this.txtSearch.TabIndex = 5;
-            // 
-            // dtTo
-            // 
-            this.dtTo.CustomFormat = "MM/dd/yyyy";
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(154, 71);
-            this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(306, 30);
-            this.dtTo.TabIndex = 4;
-            // 
-            // dtFrom
-            // 
-            this.dtFrom.CustomFormat = "MM/dd/yyyy";
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(154, 32);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(306, 30);
-            this.dtFrom.TabIndex = 3;
             // 
             // tabPage5
             // 
@@ -2021,10 +2005,12 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.timeTo);
+            this.groupBox1.Controls.Add(this.timeFrom);
             this.groupBox1.Controls.Add(this.dtTo);
             this.groupBox1.Controls.Add(this.dtFrom);
+            this.groupBox1.Controls.Add(this.btnGenerate);
+            this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -2132,6 +2118,44 @@
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(333, 74);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 12;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(333, 35);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 11;
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(154, 74);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 10;
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(154, 35);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 9;
+            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -2178,8 +2202,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DateTimePicker dtTo;
-        private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage4;
@@ -2351,5 +2373,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllUpdateUser;
         private System.Windows.Forms.DataGridViewButtonColumn dtlAllImage;
+        private System.Windows.Forms.DateTimePicker timeTo;
+        private System.Windows.Forms.DateTimePicker timeFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.DateTimePicker dtFrom;
     }
 }

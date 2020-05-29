@@ -40,8 +40,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dtTo = new System.Windows.Forms.DateTimePicker();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -141,6 +139,10 @@
             this.dtlMonthlyOutUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutUpdateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutImage = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -253,10 +255,12 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.timeTo);
+            this.groupBox1.Controls.Add(this.timeFrom);
             this.groupBox1.Controls.Add(this.dtTo);
             this.groupBox1.Controls.Add(this.dtFrom);
+            this.groupBox1.Controls.Add(this.btnGenerate);
+            this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -283,24 +287,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(306, 30);
             this.txtSearch.TabIndex = 5;
-            // 
-            // dtTo
-            // 
-            this.dtTo.CustomFormat = "MM/dd/yyyy";
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(154, 71);
-            this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(306, 30);
-            this.dtTo.TabIndex = 4;
-            // 
-            // dtFrom
-            // 
-            this.dtFrom.CustomFormat = "MM/dd/yyyy";
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(154, 32);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(306, 30);
-            this.dtFrom.TabIndex = 3;
             // 
             // label3
             // 
@@ -527,6 +513,7 @@
             this.dtlAllImage.Name = "dtlAllImage";
             this.dtlAllImage.ReadOnly = true;
             this.dtlAllImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtlAllImage.Width = 125;
             // 
             // tabPage2
             // 
@@ -709,6 +696,7 @@
             this.dtlParkerInImage.Name = "dtlParkerInImage";
             this.dtlParkerInImage.ReadOnly = true;
             this.dtlParkerInImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtlParkerInImage.Width = 125;
             // 
             // tabPage3
             // 
@@ -891,6 +879,7 @@
             this.dtlParkerOutImage.Name = "dtlParkerOutImage";
             this.dtlParkerOutImage.ReadOnly = true;
             this.dtlParkerOutImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtlParkerOutImage.Width = 125;
             // 
             // tabPage4
             // 
@@ -1073,6 +1062,7 @@
             this.dtlMonthlyInImage.Name = "dtlMonthlyInImage";
             this.dtlMonthlyInImage.ReadOnly = true;
             this.dtlMonthlyInImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtlMonthlyInImage.Width = 125;
             // 
             // tabPage5
             // 
@@ -1255,6 +1245,45 @@
             this.dtlMonthlyOutImage.Name = "dtlMonthlyOutImage";
             this.dtlMonthlyOutImage.ReadOnly = true;
             this.dtlMonthlyOutImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtlMonthlyOutImage.Width = 125;
+            // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(333, 68);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 12;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(333, 29);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 11;
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(154, 68);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 10;
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(154, 29);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 9;
             // 
             // History
             // 
@@ -1307,8 +1336,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DateTimePicker dtTo;
-        private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -1406,6 +1433,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutUpdateUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutUpdateId;
         private System.Windows.Forms.DataGridViewButtonColumn dtlMonthlyOutImage;
+        private System.Windows.Forms.DateTimePicker timeTo;
+        private System.Windows.Forms.DateTimePicker timeFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.DateTimePicker dtFrom;
     }
 }
 

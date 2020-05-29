@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Reporting.WinForms;
+using Reports.Services;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ namespace Reports.Reports
 {
     public partial class Viewer : Form
     {
+        private GeneralSettingsServices services = new GeneralSettingsServices();
         public DataTable Source { get; set; }
         public ReportType ReportType { get; set; }
         public Viewer()
@@ -16,9 +18,15 @@ namespace Reports.Reports
         }
         protected override void OnLoad(EventArgs e)
         {
+            var settings = services.GetSettings();
+
             ReportDataSource dataSource = new ReportDataSource("Reports", Source);
+            
             dataSource.Name = "dsSource";
             mReportViewer.LocalReport.DataSources.Add(dataSource);
+
+
+
 
             switch (ReportType)
             {
@@ -58,7 +66,18 @@ namespace Reports.Reports
                     mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.OperationOccupancyReport.rdlc";
                     this.Text = "Operation Occupancy Report";
                     break;
+                case ReportType.Shift:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.ShiftReport.rdlc";
+                    this.Text = "Shift Report";
+                    break;
             }
+
+            ReportParameterCollection parameters = new ReportParameterCollection();
+            parameters.Add(new ReportParameter("Company", settings.Company));
+            parameters.Add(new ReportParameter("TIN", settings.TIN));
+            parameters.Add(new ReportParameter("Address", settings.Address));
+            mReportViewer.LocalReport.SetParameters(parameters);
+
             this.mReportViewer.RefreshReport();
             base.OnLoad(e);
         }

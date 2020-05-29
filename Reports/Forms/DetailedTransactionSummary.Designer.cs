@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailedTransactionSummary));
             this.btnGenerate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dtTo = new System.Windows.Forms.DateTimePicker();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +58,10 @@
             this.btnCsv = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -86,24 +88,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(306, 30);
             this.txtSearch.TabIndex = 5;
-            // 
-            // dtTo
-            // 
-            this.dtTo.CustomFormat = "MM/dd/yyyy";
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(154, 71);
-            this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(306, 30);
-            this.dtTo.TabIndex = 4;
-            // 
-            // dtFrom
-            // 
-            this.dtFrom.CustomFormat = "MM/dd/yyyy";
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(154, 32);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(306, 30);
-            this.dtFrom.TabIndex = 3;
             // 
             // label3
             // 
@@ -140,10 +124,12 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.timeTo);
+            this.groupBox1.Controls.Add(this.timeFrom);
             this.groupBox1.Controls.Add(this.dtTo);
             this.groupBox1.Controls.Add(this.dtFrom);
+            this.groupBox1.Controls.Add(this.btnGenerate);
+            this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -278,9 +264,9 @@
             // 
             // dtlAmount
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtlAmount.HeaderText = "Amount";
             this.dtlAmount.MinimumWidth = 6;
             this.dtlAmount.Name = "dtlAmount";
@@ -379,6 +365,44 @@
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(333, 74);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 12;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(333, 35);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 11;
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(154, 74);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 10;
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(154, 35);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 9;
+            // 
             // DetailedTransactionSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -409,8 +433,6 @@
         #endregion
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DateTimePicker dtTo;
-        private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -436,5 +458,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCardNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashier;
         private System.Windows.Forms.DataGridViewButtonColumn dtlImage;
+        private System.Windows.Forms.DateTimePicker timeTo;
+        private System.Windows.Forms.DateTimePicker timeFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.DateTimePicker dtFrom;
     }
 }
