@@ -2,6 +2,7 @@
 using Microsoft.Reporting.WinForms;
 using Reports.Services;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -10,6 +11,8 @@ namespace Reports.Reports
     public partial class Viewer : Form
     {
         private GeneralSettingsServices services = new GeneralSettingsServices();
+        public bool IsMultipleSource { get; set; } = false;
+        public IEnumerable<DataTable> ReportSources { get; set; }
         public DataTable Source { get; set; }
         public ReportType ReportType { get; set; }
         public Viewer()
@@ -19,15 +22,21 @@ namespace Reports.Reports
         protected override void OnLoad(EventArgs e)
         {
             var settings = services.GetSettings();
-
-            ReportDataSource dataSource = new ReportDataSource("Reports", Source);
-            
-            dataSource.Name = "dsSource";
-            mReportViewer.LocalReport.DataSources.Add(dataSource);
-
-
-
-
+            if (!IsMultipleSource)
+            {
+                ReportDataSource dataSource = new ReportDataSource("Reports", Source);
+                dataSource.Name = "dsSource";
+                mReportViewer.LocalReport.DataSources.Add(dataSource);
+            }
+            else
+            {
+                foreach(var item in ReportSources)
+                {
+                    ReportDataSource dataSource = new ReportDataSource("Reports", item);
+                    dataSource.Name = "dsSource";
+                    mReportViewer.LocalReport.DataSources.Add(dataSource);
+                }
+            }
             switch (ReportType)
             {
                 case ReportType.History:
@@ -69,6 +78,14 @@ namespace Reports.Reports
                 case ReportType.Shift:
                     mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.ShiftReport.rdlc";
                     this.Text = "Shift Report";
+                    break;
+                case ReportType.CashierAccountability:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.CashierAccountabilityReport.rdlc";
+                    this.Text = "Cashier Accountability Report";
+                    break;
+                case ReportType.OperationHourlyAccountability:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.OperationHourlyAccountabilityReport.rdlc";
+                    this.Text = "Operation Hourly Accountability Report";
                     break;
             }
 

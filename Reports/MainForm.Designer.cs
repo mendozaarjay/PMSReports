@@ -144,18 +144,21 @@
             this.cashierAccountabilityToolStripMenuItem.Name = "cashierAccountabilityToolStripMenuItem";
             this.cashierAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.cashierAccountabilityToolStripMenuItem.Text = "Cashier Accountability";
+            this.cashierAccountabilityToolStripMenuItem.Click += new System.EventHandler(this.cashierAccountabilityToolStripMenuItem_Click);
             // 
             // hourlyAccountabilityToolStripMenuItem
             // 
             this.hourlyAccountabilityToolStripMenuItem.Name = "hourlyAccountabilityToolStripMenuItem";
             this.hourlyAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.hourlyAccountabilityToolStripMenuItem.Text = "Hourly Accountability";
+            this.hourlyAccountabilityToolStripMenuItem.Click += new System.EventHandler(this.hourlyAccountabilityToolStripMenuItem_Click);
             // 
             // operationHourlyAccountabilityToolStripMenuItem
             // 
             this.operationHourlyAccountabilityToolStripMenuItem.Name = "operationHourlyAccountabilityToolStripMenuItem";
             this.operationHourlyAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.operationHourlyAccountabilityToolStripMenuItem.Text = "Operation Hourly Accountability";
+            this.operationHourlyAccountabilityToolStripMenuItem.Click += new System.EventHandler(this.operationHourlyAccountabilityToolStripMenuItem_Click);
             // 
             // statisticsReportsToolStripMenuItem
             // 

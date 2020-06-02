@@ -171,5 +171,38 @@ namespace Reports
                 frm.Show();
             }
         }
+
+        private void cashierAccountabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("CashierAccountability"))
+            {
+                CashierAccountability frm = new CashierAccountability();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
+
+        private void hourlyAccountabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("HourlyAccountability"))
+            {
+                HourlyAccountability frm = new HourlyAccountability();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
+
+        private void operationHourlyAccountabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("OperationHourlyAccountability"))
+            {
+                OperationHourlyAccountability frm = new OperationHourlyAccountability();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
     }
 }

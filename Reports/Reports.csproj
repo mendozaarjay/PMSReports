@@ -61,10 +61,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Forms\CashierAccountability.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Forms\CashierAccountability.Designer.cs">
+      <DependentUpon>CashierAccountability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LengthOfStay.cs">
@@ -86,9 +92,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CashierAccountabilityModel.cs" />
     <Compile Include="Models\GeneralSettingModel.cs" />
     <Compile Include="Models\HourlyAccountabilityModel.cs" />
     <Compile Include="Models\LengthOfStayModel.cs" />
+    <Compile Include="Models\OperationHourlyAccountabilityModel.cs" />
     <Compile Include="Models\OperationOccupancyModel.cs" />
     <Compile Include="Models\PeakLoadModel.cs" />
     <Compile Include="Models\RemainingCarModel.cs" />
@@ -111,7 +119,14 @@
       <DependentUpon>OperationOccupancy.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ShiftModel.cs" />
+    <Compile Include="Forms\OperationHourlyAccountability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OperationHourlyAccountability.Designer.cs">
+      <DependentUpon>OperationHourlyAccountability.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\BIRServices.cs" />
+    <Compile Include="Services\CashierAccountabilityServices.cs" />
     <Compile Include="Services\DetailedTransactionSummaryServices.cs" />
     <Compile Include="Forms\BIR.cs">
       <SubType>Form</SubType>
@@ -124,6 +139,7 @@
     <Compile Include="Services\HourlyAccountabilityServices.cs" />
     <Compile Include="Services\ImageServices.cs" />
     <Compile Include="Services\LengthOfStayServices.cs" />
+    <Compile Include="Services\OperationHourlyAccountabilityServices.cs" />
     <Compile Include="Services\OperationOccupancyServices.cs" />
     <Compile Include="Services\PeakLoadServices.cs" />
     <Compile Include="Services\RemainingCarsServices.cs" />
@@ -197,7 +213,15 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Forms\OperationHourlyAccountability.resx">
+      <DependentUpon>OperationHourlyAccountability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OperationHourlyAccountabilityReport.rdlc" />
+    <EmbeddedResource Include="Reports\CashierAccountabilityReport.rdlc" />
+    <EmbeddedResource Include="Forms\CashierAccountability.resx">
+      <DependentUpon>CashierAccountability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LengthOfStay.resx">

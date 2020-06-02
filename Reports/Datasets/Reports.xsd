@@ -196,6 +196,32 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="CashierAccountability" msprop:Generator_TableClassName="CashierAccountabilityDataTable" msprop:Generator_TableVarName="tableCashierAccountability" msprop:Generator_RowChangedName="CashierAccountabilityRowChanged" msprop:Generator_TablePropName="CashierAccountability" msprop:Generator_RowDeletingName="CashierAccountabilityRowDeleting" msprop:Generator_RowChangingName="CashierAccountabilityRowChanging" msprop:Generator_RowEvHandlerName="CashierAccountabilityRowChangeEventHandler" msprop:Generator_RowDeletedName="CashierAccountabilityRowDeleted" msprop:Generator_RowClassName="CashierAccountabilityRow" msprop:Generator_UserTableName="CashierAccountability" msprop:Generator_RowEvArgName="CashierAccountabilityRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Row" msprop:Generator_ColumnVarNameInTable="columnRow" msprop:Generator_ColumnPropNameInRow="Row" msprop:Generator_ColumnPropNameInTable="RowColumn" msprop:Generator_UserColumnName="Row" type="xs:int" minOccurs="0" />
+              <xs:element name="RunDate" msprop:Generator_ColumnVarNameInTable="columnRunDate" msprop:Generator_ColumnPropNameInRow="RunDate" msprop:Generator_ColumnPropNameInTable="RunDateColumn" msprop:Generator_UserColumnName="RunDate" type="xs:string" minOccurs="0" />
+              <xs:element name="RunTime" msprop:Generator_ColumnVarNameInTable="columnRunTime" msprop:Generator_ColumnPropNameInRow="RunTime" msprop:Generator_ColumnPropNameInTable="RunTimeColumn" msprop:Generator_UserColumnName="RunTime" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="Terminal" msprop:Generator_ColumnVarNameInTable="columnTerminal" msprop:Generator_ColumnPropNameInRow="Terminal" msprop:Generator_ColumnPropNameInTable="TerminalColumn" msprop:Generator_UserColumnName="Terminal" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalChange" msprop:Generator_ColumnVarNameInTable="columnTotalChange" msprop:Generator_ColumnPropNameInRow="TotalChange" msprop:Generator_ColumnPropNameInTable="TotalChangeColumn" msprop:Generator_UserColumnName="TotalChange" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CarParkIncome" msprop:Generator_ColumnVarNameInTable="columnCarParkIncome" msprop:Generator_ColumnPropNameInRow="CarParkIncome" msprop:Generator_ColumnPropNameInTable="CarParkIncomeColumn" msprop:Generator_UserColumnName="CarParkIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="ReceiptsOut" msprop:Generator_ColumnVarNameInTable="columnReceiptsOut" msprop:Generator_ColumnPropNameInRow="ReceiptsOut" msprop:Generator_ColumnPropNameInTable="ReceiptsOutColumn" msprop:Generator_UserColumnName="ReceiptsOut" type="xs:int" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OperationHourlyAccountability" msprop:Generator_TableClassName="OperationHourlyAccountabilityDataTable" msprop:Generator_TableVarName="tableOperationHourlyAccountability" msprop:Generator_TablePropName="OperationHourlyAccountability" msprop:Generator_RowDeletingName="OperationHourlyAccountabilityRowDeleting" msprop:Generator_RowChangingName="OperationHourlyAccountabilityRowChanging" msprop:Generator_RowEvHandlerName="OperationHourlyAccountabilityRowChangeEventHandler" msprop:Generator_RowDeletedName="OperationHourlyAccountabilityRowDeleted" msprop:Generator_UserTableName="OperationHourlyAccountability" msprop:Generator_RowChangedName="OperationHourlyAccountabilityRowChanged" msprop:Generator_RowEvArgName="OperationHourlyAccountabilityRowChangeEvent" msprop:Generator_RowClassName="OperationHourlyAccountabilityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RowNum" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:int" minOccurs="0" />
+              <xs:element name="DurationHours" msprop:Generator_ColumnVarNameInTable="columnDurationHours" msprop:Generator_ColumnPropNameInRow="DurationHours" msprop:Generator_ColumnPropNameInTable="DurationHoursColumn" msprop:Generator_UserColumnName="DurationHours" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfVehicles" msprop:Generator_ColumnVarNameInTable="columnNumberOfVehicles" msprop:Generator_ColumnPropNameInRow="NumberOfVehicles" msprop:Generator_ColumnPropNameInTable="NumberOfVehiclesColumn" msprop:Generator_UserColumnName="NumberOfVehicles" type="xs:int" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>
