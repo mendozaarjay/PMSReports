@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinder_grow_5736348_VRk_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml, Version=2.10.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.10.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
@@ -61,6 +64,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datasets\Reports.cs">
+      <DependentUpon>Reports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuditPerTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuditPerTerminal.Designer.cs">
+      <DependentUpon>AuditPerTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuditPerCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuditPerCashier.Designer.cs">
+      <DependentUpon>AuditPerCashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CashierAccountability.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +110,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AuditPerCashierModel.cs" />
+    <Compile Include="Models\AuditPerCashierProcessedTicketModel.cs" />
+    <Compile Include="Models\AuditPerCashierTicketAccountabilityModel.cs" />
+    <Compile Include="Models\AuditPerTerminalModel.cs" />
+    <Compile Include="Models\AuditPerTerminalProcessedTicketsModel.cs" />
+    <Compile Include="Models\AuditPerTerminalTicketAccountabilityModel.cs" />
     <Compile Include="Models\CashierAccountabilityModel.cs" />
     <Compile Include="Models\GeneralSettingModel.cs" />
     <Compile Include="Models\HourlyAccountabilityModel.cs" />
@@ -125,6 +149,11 @@
     <Compile Include="Forms\OperationHourlyAccountability.Designer.cs">
       <DependentUpon>OperationHourlyAccountability.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\SummaryReportPerTerminalModel.cs" />
+    <Compile Include="Models\SummaryReportPerTerminalProcessedTicketsModel.cs" />
+    <Compile Include="Models\SummaryReportPerTerminalTickeAccountabilityModel.cs" />
+    <Compile Include="Services\AuditPerCashierServices.cs" />
+    <Compile Include="Services\AuditPerTerminalServices.cs" />
     <Compile Include="Services\BIRServices.cs" />
     <Compile Include="Services\CashierAccountabilityServices.cs" />
     <Compile Include="Services\DetailedTransactionSummaryServices.cs" />
@@ -167,6 +196,13 @@
     </Compile>
     <Compile Include="Forms\Shift.Designer.cs">
       <DependentUpon>Shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SummaryReportPerTerminalServices.cs" />
+    <Compile Include="Forms\SummaryReportPerTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummaryReportPerTerminal.Designer.cs">
+      <DependentUpon>SummaryReportPerTerminal.cs</DependentUpon>
     </Compile>
     <Compile Include="UtilitiesForms\ImageZommer.cs">
       <SubType>Form</SubType>
@@ -213,9 +249,17 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Forms\AuditPerTerminal.resx">
+      <DependentUpon>AuditPerTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuditPerCashier.resx">
+      <DependentUpon>AuditPerCashier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OperationHourlyAccountability.resx">
       <DependentUpon>OperationHourlyAccountability.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SummaryReportPerTerminalReport.rdlc" />
+    <EmbeddedResource Include="Reports\AuditPerTerminalReport.rdlc" />
     <EmbeddedResource Include="Reports\OperationHourlyAccountabilityReport.rdlc" />
     <EmbeddedResource Include="Reports\CashierAccountabilityReport.rdlc" />
     <EmbeddedResource Include="Forms\CashierAccountability.resx">
@@ -245,6 +289,7 @@
       <DependentUpon>PeakLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PeakLoadReport.rdlc" />
+    <EmbeddedResource Include="Reports\AuditPerCashierReport.rdlc" />
     <EmbeddedResource Include="Reports\RemainingCarsReport.rdlc" />
     <EmbeddedResource Include="Reports\LengthOfStayReport.rdlc" />
     <EmbeddedResource Include="Reports\DetailedTransactionSummaryReport.rdlc" />
@@ -260,6 +305,9 @@
       <DependentUpon>Shift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ShiftReport.rdlc" />
+    <EmbeddedResource Include="Forms\SummaryReportPerTerminal.resx">
+      <DependentUpon>SummaryReportPerTerminal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UtilitiesForms\ImageZommer.resx">
       <DependentUpon>ImageZommer.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +364,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="iconfinder_grow_5736348_VRk_icon.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

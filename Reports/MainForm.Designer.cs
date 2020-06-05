@@ -38,9 +38,11 @@
             this.detailedTransactionSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountabilityReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditPerCashierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditPerTerminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cashierAccountabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hourlyAccountabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operationHourlyAccountabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.summaryReportPerTerminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticsReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lengthOfStayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operationOccupancyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,9 +128,11 @@
             // 
             this.accountabilityReportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.auditPerCashierToolStripMenuItem,
+            this.auditPerTerminalToolStripMenuItem,
             this.cashierAccountabilityToolStripMenuItem,
             this.hourlyAccountabilityToolStripMenuItem,
-            this.operationHourlyAccountabilityToolStripMenuItem});
+            this.operationHourlyAccountabilityToolStripMenuItem,
+            this.summaryReportPerTerminalToolStripMenuItem});
             this.accountabilityReportsToolStripMenuItem.Name = "accountabilityReportsToolStripMenuItem";
             this.accountabilityReportsToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
             this.accountabilityReportsToolStripMenuItem.Text = "Accountability Reports";
@@ -138,6 +142,14 @@
             this.auditPerCashierToolStripMenuItem.Name = "auditPerCashierToolStripMenuItem";
             this.auditPerCashierToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.auditPerCashierToolStripMenuItem.Text = "Audit Per Cashier";
+            this.auditPerCashierToolStripMenuItem.Click += new System.EventHandler(this.auditPerCashierToolStripMenuItem_Click);
+            // 
+            // auditPerTerminalToolStripMenuItem
+            // 
+            this.auditPerTerminalToolStripMenuItem.Name = "auditPerTerminalToolStripMenuItem";
+            this.auditPerTerminalToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.auditPerTerminalToolStripMenuItem.Text = "Audit Per Terminal";
+            this.auditPerTerminalToolStripMenuItem.Click += new System.EventHandler(this.auditPerTerminalToolStripMenuItem_Click);
             // 
             // cashierAccountabilityToolStripMenuItem
             // 
@@ -159,6 +171,13 @@
             this.operationHourlyAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.operationHourlyAccountabilityToolStripMenuItem.Text = "Operation Hourly Accountability";
             this.operationHourlyAccountabilityToolStripMenuItem.Click += new System.EventHandler(this.operationHourlyAccountabilityToolStripMenuItem_Click);
+            // 
+            // summaryReportPerTerminalToolStripMenuItem
+            // 
+            this.summaryReportPerTerminalToolStripMenuItem.Name = "summaryReportPerTerminalToolStripMenuItem";
+            this.summaryReportPerTerminalToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.summaryReportPerTerminalToolStripMenuItem.Text = "Summary Report Per Terminal";
+            this.summaryReportPerTerminalToolStripMenuItem.Click += new System.EventHandler(this.summaryReportPerTerminalToolStripMenuItem_Click);
             // 
             // statisticsReportsToolStripMenuItem
             // 
@@ -364,6 +383,8 @@
         private System.Windows.Forms.ToolStripMenuItem bIRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parkingAnalyticsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem auditPerTerminalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem summaryReportPerTerminalToolStripMenuItem;
     }
 }
 

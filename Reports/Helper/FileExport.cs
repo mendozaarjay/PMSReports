@@ -60,6 +60,62 @@ namespace Reports
                 return false;
             }
         }
+        public static bool ExportToExcel(List<DataTable> dataTables, string filename)
+        {
+            try
+            {
+                using (SpreadsheetDocument document = SpreadsheetDocument.Create(filename, SpreadsheetDocumentType.Workbook))
+                {
+                    WriteExcelFile(dataTables, document);
+                }
+                MessageBox.Show("Process has been successfully completed.", "Export to Excel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occured.\n" + ex.Message, "Export to Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+        private static void WriteExcelFile(List<DataTable> dataTables, SpreadsheetDocument spreadsheet)
+        {
+            spreadsheet.AddWorkbookPart();
+            spreadsheet.WorkbookPart.Workbook = new DocumentFormat.OpenXml.Spreadsheet.Workbook();
+            spreadsheet.WorkbookPart.Workbook.Append(new BookViews(new WorkbookView()));
+            WorkbookStylesPart workbookStylesPart = spreadsheet.WorkbookPart.AddNewPart<WorkbookStylesPart>("rIdStyles");
+            Stylesheet stylesheet = new Stylesheet();
+            workbookStylesPart.Stylesheet = stylesheet;
+
+            uint worksheetNumber = 1;
+            foreach (DataTable dt in dataTables)
+            {
+                string workSheetID = "rId" + worksheetNumber.ToString();
+                string worksheetName = dt.TableName;
+
+                WorksheetPart newWorksheetPart = spreadsheet.WorkbookPart.AddNewPart<WorksheetPart>();
+                newWorksheetPart.Worksheet = new DocumentFormat.OpenXml.Spreadsheet.Worksheet();
+
+                newWorksheetPart.Worksheet.AppendChild(new DocumentFormat.OpenXml.Spreadsheet.SheetData());
+
+                WriteDataTableToExcelWorksheet(dt, newWorksheetPart);
+                newWorksheetPart.Worksheet.Save();
+                if (worksheetNumber == 1)
+                    spreadsheet.WorkbookPart.Workbook.AppendChild(new DocumentFormat.OpenXml.Spreadsheet.Sheets());
+
+                spreadsheet.WorkbookPart.Workbook.GetFirstChild<DocumentFormat.OpenXml.Spreadsheet.Sheets>().AppendChild(new DocumentFormat.OpenXml.Spreadsheet.Sheet()
+                {
+                    Id = spreadsheet.WorkbookPart.GetIdOfPart(newWorksheetPart),
+                    SheetId = (uint)worksheetNumber,
+                    Name = dt.TableName
+                });
+
+                worksheetNumber++;
+            }
+
+            spreadsheet.WorkbookPart.Workbook.Save();
+        }
+
+
         private static void WriteDataTableToExcelWorksheet(DataTable dt, WorksheetPart worksheetPart)
         {
             var worksheet = worksheetPart.Worksheet;

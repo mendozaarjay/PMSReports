@@ -33,7 +33,7 @@ namespace Reports.Reports
                 foreach(var item in ReportSources)
                 {
                     ReportDataSource dataSource = new ReportDataSource("Reports", item);
-                    dataSource.Name = "dsSource";
+                    dataSource.Name = item.TableName;
                     mReportViewer.LocalReport.DataSources.Add(dataSource);
                 }
             }
@@ -86,6 +86,18 @@ namespace Reports.Reports
                 case ReportType.OperationHourlyAccountability:
                     mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.OperationHourlyAccountabilityReport.rdlc";
                     this.Text = "Operation Hourly Accountability Report";
+                    break;
+                case ReportType.AuditPerCashier:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.AuditPerCashierReport.rdlc";
+                    this.Text = "Audit Per Cashier Report";
+                    break;
+                case ReportType.AuditPerTerminal:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.AuditPerTerminalReport.rdlc";
+                    this.Text = "Audit Per Terminal Report";
+                    break;
+                case ReportType.SummaryReportPerTerminal:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.SummaryReportPerTerminalReport.rdlc";
+                    this.Text = "Summary Report Per Terminal";
                     break;
             }
 

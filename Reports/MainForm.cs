@@ -204,5 +204,38 @@ namespace Reports
                 frm.Show();
             }
         }
+
+        private void auditPerCashierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("AuditPerCashier"))
+            {
+                AuditPerCashier frm = new AuditPerCashier();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
+
+        private void auditPerTerminalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("AuditPerTerminal"))
+            {
+                AuditPerTerminal frm = new AuditPerTerminal();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
+
+        private void summaryReportPerTerminalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!IsAlreadyOpen("SummaryReportPerTerminal"))
+            {
+                SummaryReportPerTerminal frm = new SummaryReportPerTerminal();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
     }
 }
