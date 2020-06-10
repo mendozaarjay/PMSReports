@@ -215,7 +215,7 @@ namespace Reports
                 {
                     for(int col = 0; col < dt.Columns.Count; col++)
                     {
-                        string value = dr[col].ToString().Length > 0 ? dr[col].ToString() : "NULL";
+                        string value = dr[col].ToString().Length > 0 ? dr[col].ToString() : "";
                         if (value.Contains(','))
                         {
                             value = String.Format("\"{0}\"", value);

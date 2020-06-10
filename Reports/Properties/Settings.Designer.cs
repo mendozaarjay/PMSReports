@@ -35,5 +35,53 @@ namespace Reports.Properties {
                 this["UserConnectionString"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TESTPROGRAMANDVERSION")]
+        public string ProgramVersion {
+            get {
+                return ((string)(this["ProgramVersion"]));
+            }
+            set {
+                this["ProgramVersion"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TESTSN")]
+        public string SN {
+            get {
+                return ((string)(this["SN"]));
+            }
+            set {
+                this["SN"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TESTMIN")]
+        public string MIN {
+            get {
+                return ((string)(this["MIN"]));
+            }
+            set {
+                this["MIN"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TESTUSERNAME")]
+        public string Username {
+            get {
+                return ((string)(this["Username"]));
+            }
+            set {
+                this["Username"] = value;
+            }
+        }
     }
 }

@@ -53,6 +53,7 @@ namespace Reports
                 dgPeakLoad[dtlAmount.Index, row].Value = item.Amount;
                 row++;
             }
+            dgPeakLoad.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -95,6 +96,7 @@ namespace Reports
             var items = await services.PeakLoadReportDataTableAsync(dtDate.Value);
             items.TableName = "PeakLoad";
             var viewer = new Viewer();
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.ReportType = ReportType.PeakLoad;
             viewer.Source = items;
             viewer.ShowDialog();

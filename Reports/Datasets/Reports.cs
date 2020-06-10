@@ -4,5 +4,8 @@
 
     partial class Reports
     {
+        partial class ZReadingDataTable
+        {
+        }
     }
 }

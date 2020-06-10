@@ -54,6 +54,7 @@ namespace Reports
                 dgOperation[dtlRemaining.Index, row].Value = item.Remaining;
                 row++;
             }
+            dgOperation.AutoResizeColumns();
         }
 
         private async void btnCsv_Click(object sender, EventArgs e)
@@ -89,6 +90,7 @@ namespace Reports
             var items = await services.OperationOccupancyReportDataTableAsync(dtDate.Value);
             items.TableName = "OperationOccupancy";
             var viewer = new Viewer();
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.ReportType = ReportType.OperationOccupancy;
             viewer.Source = items;
             viewer.ShowDialog();

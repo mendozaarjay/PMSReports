@@ -140,10 +140,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox15</rd:DefaultName>
-            <Top>3cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>2.5cm</Top>
+            <Left>0.10833cm</Left>
             <Height>1.0445cm</Height>
-            <Width>24.6965cm</Width>
+            <Width>16.1875cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -173,10 +173,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.76792cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>0.5cm</Top>
+            <Left>0.10833cm</Left>
             <Height>0.6cm</Height>
-            <Width>24.6965cm</Width>
+            <Width>16.1875cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -207,10 +207,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>1.3cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>1.1cm</Top>
+            <Left>0.10833cm</Left>
             <Height>0.6cm</Height>
-            <Width>24.6965cm</Width>
+            <Width>16.1875cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -247,10 +247,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>1.9cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>1.7cm</Top>
+            <Left>0.10833cm</Left>
             <Height>0.6cm</Height>
-            <Width>24.6965cm</Width>
+            <Width>16.1875cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -277,8 +277,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox53</rd:DefaultName>
-            <Top>6.81398cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>8.71898cm</Top>
+            <Left>0.10833cm</Left>
             <Height>0.6cm</Height>
             <Width>3.897cm</Width>
             <ZIndex>4</ZIndex>
@@ -307,8 +307,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox53</rd:DefaultName>
-            <Top>9.04468cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>10.94968cm</Top>
+            <Left>0.10833cm</Left>
             <Height>0.6cm</Height>
             <Width>3.897cm</Width>
             <ZIndex>5</ZIndex>
@@ -333,12 +333,14 @@
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>12.06386cm</Top>
-            <Left>20.73833cm</Left>
+            <Top>14.00414cm</Top>
+            <Left>11.91199cm</Left>
             <Height>0.6cm</Height>
             <Width>4.29917cm</Width>
             <ZIndex>6</ZIndex>
@@ -353,8 +355,8 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>13.29153cm</Top>
-            <Left>20.73833cm</Left>
+            <Top>15.19653cm</Top>
+            <Left>11.91199cm</Left>
             <Height>0cm</Height>
             <Width>4.29917cm</Width>
             <ZIndex>7</ZIndex>
@@ -381,8 +383,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>13.32681cm</Top>
-            <Left>20.73833cm</Left>
+            <Top>15.23181cm</Top>
+            <Left>11.91199cm</Left>
             <Height>0.6cm</Height>
             <Width>4.29917cm</Width>
             <ZIndex>8</ZIndex>
@@ -407,12 +409,14 @@
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>12.06386cm</Top>
-            <Left>11.5678cm</Left>
+            <Top>14.00414cm</Top>
+            <Left>0.3175cm</Left>
             <Height>0.6cm</Height>
             <Width>4.29917cm</Width>
             <ZIndex>9</ZIndex>
@@ -427,8 +431,8 @@
             </Style>
           </Textbox>
           <Line Name="Line2">
-            <Top>13.29153cm</Top>
-            <Left>11.5678cm</Left>
+            <Top>15.19653cm</Top>
+            <Left>0.3175cm</Left>
             <Height>0cm</Height>
             <Width>4.29917cm</Width>
             <ZIndex>10</ZIndex>
@@ -455,8 +459,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>13.32681cm</Top>
-            <Left>11.5678cm</Left>
+            <Top>15.23181cm</Top>
+            <Left>0.3175cm</Left>
             <Height>0.6cm</Height>
             <Width>4.29917cm</Width>
             <ZIndex>11</ZIndex>
@@ -474,10 +478,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>8.215cm</Width>
+                  <Width>10.05167cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>6.13583cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -630,10 +634,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>SummaryReportPerTerminal</DataSetName>
-            <Top>5.19853cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>7.10353cm</Top>
+            <Left>0.10833cm</Left>
             <Height>1.2cm</Height>
-            <Width>10.715cm</Width>
+            <Width>16.1875cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -645,10 +649,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>8.215cm</Width>
+                  <Width>10.05167cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>6.13583cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -801,10 +805,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>SummaryReportPerTerminalTickeAccountability</DataSetName>
-            <Top>7.59037cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>9.49537cm</Top>
+            <Left>0.10833cm</Left>
             <Height>1.2cm</Height>
-            <Width>10.715cm</Width>
+            <Width>16.1875cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -816,10 +820,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>8.215cm</Width>
+                  <Width>10.05167cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>6.13583cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -972,10 +976,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>SummaryReportPerTerminalProcessedTickets</DataSetName>
-            <Top>9.82107cm</Top>
-            <Left>0.3175cm</Left>
+            <Top>11.72607cm</Top>
+            <Left>0.10833cm</Left>
             <Height>1.2cm</Height>
-            <Width>10.715cm</Width>
+            <Width>16.1875cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -983,11 +987,204 @@
               </Border>
             </Style>
           </Tablix>
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Textbox Name="Textbox12">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!ProgramAndVersion.Value</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox2</rd:DefaultName>
+                <Top>0.03259cm</Top>
+                <Height>0.6cm</Height>
+                <Width>11.771cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox21">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>S/N : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Parameters!Serial.Value</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox16</rd:DefaultName>
+                <Top>0.63259cm</Top>
+                <Height>0.6cm</Height>
+                <Width>11.771cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox22">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>MIN : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Parameters!Min.Value</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox16</rd:DefaultName>
+                <Top>1.23259cm</Top>
+                <Height>0.6cm</Height>
+                <Width>11.771cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox40">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Date/Time : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Parameters!DateCovered.Value</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox16</rd:DefaultName>
+                <Top>1.86786cm</Top>
+                <Height>0.6cm</Height>
+                <Width>11.771cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox41">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Username : </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Parameters!Username.Value</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox16</rd:DefaultName>
+                <Top>2.46786cm</Top>
+                <Height>0.6cm</Height>
+                <Width>11.771cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>3.72089cm</Top>
+            <Left>0.10833cm</Left>
+            <Height>3.06786cm</Height>
+            <Width>12.14793cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
         </ReportItems>
-        <Height>5.64589in</Height>
+        <Height>6.43756in</Height>
         <Style />
       </Body>
-      <Width>9.97597in</Width>
+      <Width>6.61764in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
@@ -1016,6 +1213,31 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="ProgramAndVersion">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Serial">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Min">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateCovered">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Username">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -1036,6 +1258,31 @@
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>Address</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ProgramAndVersion</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Serial</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Min</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>DateCovered</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Username</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

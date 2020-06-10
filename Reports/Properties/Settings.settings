@@ -5,5 +5,17 @@
     <Setting Name="UserConnectionString" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=DESKTOP-SNE52L4\SQLEXPRESS;Initial Catalog=PMSLatest;Persist Security Info=True;User ID=sa;Password=zealadmin01</Value>
     </Setting>
+    <Setting Name="ProgramVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TESTPROGRAMANDVERSION</Value>
+    </Setting>
+    <Setting Name="SN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TESTSN</Value>
+    </Setting>
+    <Setting Name="MIN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TESTMIN</Value>
+    </Setting>
+    <Setting Name="Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TESTUSERNAME</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

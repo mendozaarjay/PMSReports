@@ -46,6 +46,7 @@ namespace Reports
                 dgOperation[dtlAmount.Index, row].Value = item.Amount;
                 row++;
             }
+            dgOperation.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -87,6 +88,7 @@ namespace Reports
             var items = await services.OperationHourlyAccountabilityDataTableAsync(dtDate.Value);
             items.TableName = "OperationHourlyAccountability";
             var viewer = new Viewer();
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.ReportType = ReportType.OperationHourlyAccountability;
             viewer.Source = items;
             viewer.ShowDialog();

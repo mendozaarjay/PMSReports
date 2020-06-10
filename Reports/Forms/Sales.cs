@@ -59,6 +59,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgAllSales[dtlAllRow.Index, row].Value = row + 1;
                 dgAllSales[dtlAllTransitId.Index, row].Value = item.TransitId;
                 dgAllSales[dtlAllORNumber.Index, row].Value = item.ORNo;
                 dgAllSales[dtlAllType.Index, row].Value = item.Type;
@@ -82,9 +83,10 @@ namespace Reports
                 dgAllSales[dtlAllZeroRated.Index, row].Value = item.ZeroRated;
                 dgAllSales[dtlAllReprint.Index, row].Value = item.Reprint;
                 dgAllSales[dtlAllDescription.Index, row].Value = item.Description;
-                dgAllSales[dtlAllUpdateUser.Index, row].Value = item.UpdateUser;
+                dgAllSales[dtlAllUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgAllSales.AutoResizeColumns();
         }
         private void PopulateSalesTransactions(IEnumerable<SalesModel> items)
         {
@@ -95,6 +97,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgTransactions[dtlTransactionRow.Index, row].Value = row + 1;
                 dgTransactions[dtlTransactionTransitId.Index, row].Value = item.TransitId;
                 dgTransactions[dtlTransactionORNumber.Index, row].Value = item.ORNo;
                 dgTransactions[dtlTransactionType.Index, row].Value = item.Type;
@@ -118,9 +121,10 @@ namespace Reports
                 dgTransactions[dtlTransactionZeroRated.Index, row].Value = item.ZeroRated;
                 dgTransactions[dtlTransactionReprint.Index, row].Value = item.Reprint;
                 dgTransactions[dtlTransactionDescription.Index, row].Value = item.Description;
-                dgTransactions[dtlTransactionUpdateUser.Index, row].Value = item.UpdateUser;
+                dgTransactions[dtlTransactionUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgTransactions.AutoResizeColumns();
         }
         private void PopulateSalesCollection(IEnumerable<SalesModel> items)
         {
@@ -132,6 +136,7 @@ namespace Reports
 
             foreach (var item in items)
             {
+                dgCollections[dtlCollectionRow.Index, row].Value = row + 1;
                 dgCollections[dtlCollectionTransitId.Index, row].Value = item.TransitId;
                 dgCollections[dtlCollectionORNumber.Index, row].Value = item.ORNo;
                 dgCollections[dtlCollectionType.Index, row].Value = item.Type;
@@ -155,9 +160,10 @@ namespace Reports
                 dgCollections[dtlCollectionZeroRated.Index, row].Value = item.ZeroRated;
                 dgCollections[dtlCollectionReprint.Index, row].Value = item.Reprint;
                 dgCollections[dtlCollectionDescription.Index, row].Value = item.Description;
-                dgCollections[dtlCollectionUpdateUser.Index, row].Value = item.UpdateUser;
+                dgCollections[dtlCollectionUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgCollections.AutoResizeColumns();
         }
         private void PopulateSalesDiscount(IEnumerable<SalesModel> items)
         {
@@ -168,6 +174,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgDiscounts[dtlDiscountRow.Index, row].Value = row + 1;
                 dgDiscounts[dtlDiscountTransitId.Index, row].Value = item.TransitId;
                 dgDiscounts[dtlDiscountORNumber.Index, row].Value = item.ORNo;
                 dgDiscounts[dtlDiscountType.Index, row].Value = item.Type;
@@ -191,9 +198,10 @@ namespace Reports
                 dgDiscounts[dtlDiscountZeroRated.Index, row].Value = item.ZeroRated;
                 dgDiscounts[dtlDiscountReprint.Index, row].Value = item.Reprint;
                 dgDiscounts[dtlDiscountDescription.Index, row].Value = item.Description;
-                dgDiscounts[dtlDiscountUpdateUser.Index, row].Value = item.UpdateUser;
+                dgDiscounts[dtlDiscountUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgDiscounts.AutoResizeColumns();
         }
         private void PopulateSalesErased(IEnumerable<SalesModel> items)
         {
@@ -204,6 +212,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgErased[dtlEraseRow.Index, row].Value = row + 1;
                 dgErased[dtlEraseTransitId.Index, row].Value = item.TransitId;
                 dgErased[dtlEraseORNumber.Index, row].Value = item.ORNo;
                 dgErased[dtlEraseType.Index, row].Value = item.Type;
@@ -227,9 +236,10 @@ namespace Reports
                 dgErased[dtlEraseZeroRated.Index, row].Value = item.ZeroRated;
                 dgErased[dtlEraseReprint.Index, row].Value = item.Reprint;
                 dgErased[dtlEraseDescription.Index, row].Value = item.Description;
-                dgErased[dtlEraseUpdateUser.Index, row].Value = item.UpdateUser;
+                dgErased[dtlEraseUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgErased.AutoResizeColumns();
         }
         private void PopulateSalesFee(IEnumerable<SalesModel> items)
         {
@@ -241,6 +251,7 @@ namespace Reports
 
             foreach (var item in items)
             {
+                dgFees[dtlFeeRow.Index, row].Value = row + 1;
                 dgFees[dtlFeeTransitId.Index, row].Value = item.TransitId;
                 dgFees[dtlFeeORNumber.Index, row].Value = item.ORNo;
                 dgFees[dtlFeeType.Index, row].Value = item.Type;
@@ -264,9 +275,10 @@ namespace Reports
                 dgFees[dtlFeeZeroRated.Index, row].Value = item.ZeroRated;
                 dgFees[dtlFeeReprint.Index, row].Value = item.Reprint;
                 dgFees[dtlFeeDescription.Index, row].Value = item.Description;
-                dgFees[dtlFeeUpdateUser.Index, row].Value = item.UpdateUser;
+                dgFees[dtlFeeUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgFees.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -329,6 +341,7 @@ namespace Reports
 
             dt.TableName = "Sales";
             var viewer = new Viewer();
+            viewer.DateCovered = from.ToString() + "~" + to.ToString();
             viewer.ReportType = ReportType.Sales;
             viewer.Source = dt;
             viewer.ShowDialog();

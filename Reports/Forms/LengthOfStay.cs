@@ -47,6 +47,7 @@ namespace Reports
                 dgLengthOfStay[dtlAmount.Index, row].Value = item.Amount;
                 row++;
             }
+            dgLengthOfStay.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -89,6 +90,7 @@ namespace Reports
             var items = await services.LengthOfStayDataTableAsync(dtDate.Value);
             items.TableName = "LengthOfStay";
             var viewer = new Viewer();
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.ReportType = ReportType.LengthOfStay;
             viewer.Source = items;
             viewer.ShowDialog();

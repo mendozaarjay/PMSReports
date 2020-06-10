@@ -64,6 +64,7 @@ namespace Reports
                 dgSummary[dtlSummaryValue.Index, row].Value = item.Value;
                 row++;
             }
+            dgSummary.AutoResizeColumns();
         }
 
         private void LoadTicketAccountability(IEnumerable<SummaryReportPerTerminalTickeAccountabilityModel> items)
@@ -78,6 +79,7 @@ namespace Reports
                 dgTickets[dtlTicketsValue.Index, row].Value = item.Value;
                 row++;
             }
+            dgTickets.AutoResizeColumns();
         }
 
         private void LoadProcessedTickets(IEnumerable<SummaryReportPerTerminalProcessedTicketsModel> items)
@@ -92,6 +94,7 @@ namespace Reports
                 dgProcessed[dtlProcessedValue.Index, row].Value = item.Value;
                 row++;
             }
+            dgProcessed.AutoResizeColumns();
         }
 
         private async void btnCsv_Click(object sender, EventArgs e)
@@ -138,6 +141,7 @@ namespace Reports
 
             var viewer = new Viewer();
             viewer.IsMultipleSource = true;
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.ReportType = ReportType.SummaryReportPerTerminal;
             viewer.ReportSources = sources;
             viewer.ShowDialog();

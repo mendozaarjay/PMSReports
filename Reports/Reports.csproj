@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>iconfinder_grow_5736348_VRk_icon.ico</ApplicationIcon>
+    <ApplicationIcon>reporticon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml, Version=2.10.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
@@ -152,6 +152,7 @@
     <Compile Include="Models\SummaryReportPerTerminalModel.cs" />
     <Compile Include="Models\SummaryReportPerTerminalProcessedTicketsModel.cs" />
     <Compile Include="Models\SummaryReportPerTerminalTickeAccountabilityModel.cs" />
+    <Compile Include="Models\ZReadingModel.cs" />
     <Compile Include="Services\AuditPerCashierServices.cs" />
     <Compile Include="Services\AuditPerTerminalServices.cs" />
     <Compile Include="Services\BIRServices.cs" />
@@ -204,6 +205,7 @@
     <Compile Include="Forms\SummaryReportPerTerminal.Designer.cs">
       <DependentUpon>SummaryReportPerTerminal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\ZReadingServices.cs" />
     <Compile Include="UtilitiesForms\ImageZommer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +251,12 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Forms\ZReading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ZReading.Designer.cs">
+      <DependentUpon>ZReading.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AuditPerTerminal.resx">
       <DependentUpon>AuditPerTerminal.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +266,7 @@
     <EmbeddedResource Include="Forms\OperationHourlyAccountability.resx">
       <DependentUpon>OperationHourlyAccountability.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ZReadingReport.rdlc" />
     <EmbeddedResource Include="Reports\SummaryReportPerTerminalReport.rdlc" />
     <EmbeddedResource Include="Reports\AuditPerTerminalReport.rdlc" />
     <EmbeddedResource Include="Reports\OperationHourlyAccountabilityReport.rdlc" />
@@ -337,6 +346,9 @@
     <EmbeddedResource Include="UtilitiesForms\ImageViewerForm.resx">
       <DependentUpon>ImageViewerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ZReading.resx">
+      <DependentUpon>ZReading.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Datasets\Reports.xsc">
       <DependentUpon>Reports.xsd</DependentUpon>
     </None>
@@ -364,7 +376,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="iconfinder_grow_5736348_VRk_icon.ico" />
+    <Content Include="reporticon.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

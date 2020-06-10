@@ -66,6 +66,7 @@ namespace Reports.Services
                         Reprint = int.Parse(dr["Reprint"].ToString()),
                         Description = string.Empty,
                         UpdateUser = dr["UpdateUser"].ToString(),
+                        Username = dr["Username"].ToString(),
                         IsErased = dr["IsErased"].ToString().Equals("1") ? true : false,
                     };
 

@@ -38,10 +38,10 @@ namespace Reports
             var items = await services.GetHistoryReportAsync(from,to,txtSearch.Text.Trim());
 
             var parkerIn = items.Where(a => a.MonthlyName == "" && a.TimeOut == "");
-            var parkerOut = items.Where(a => a.MonthlyName == "" && a.TimeOut != "");
+            var parkerOut = items.Where(a => a.MonthlyName == "");
 
             var monthlyIn = items.Where(a => a.MonthlyName != "" && a.TimeOut == "");
-            var monthlyOut = items.Where(a => a.MonthlyName != "" && a.TimeOut != "");
+            var monthlyOut = items.Where(a => a.MonthlyName != "");
 
             PopulateHistoryAll(items);
             PopulateHistoryParkerIn(parkerIn);
@@ -59,10 +59,10 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgHistoryAll[dtlAllRow.Index, row].Value = row + 1;
                 dgHistoryAll[dtlAllTransitId.Index, row].Value = item.Id;
                 dgHistoryAll[dtlAllTerminal.Index, row].Value = item.Terminal;
                 dgHistoryAll[dtlAllORNo.Index, row].Value = item.ORNumber;
-                dgHistoryAll[dtlAllType.Index, row].Value = item.Type;
                 dgHistoryAll[dtlAllPlateNo.Index, row].Value = item.PlateNo;
                 dgHistoryAll[dtlAllTicketNo.Index, row].Value = item.TicketNumber;
                 dgHistoryAll[dtlAllDateTimeIn.Index, row].Value = item.TimeIn;
@@ -77,6 +77,7 @@ namespace Reports
                 dgHistoryAll[dtlAllUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
+            dgHistoryAll.AutoResizeColumns();
         }
         private void PopulateHistoryParkerIn(IEnumerable<HistoryModel> items)
         {
@@ -87,10 +88,10 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgParkerIn[dtlParkerInRow.Index, row].Value = row + 1;
                 dgParkerIn[dtlParkerInTransitId.Index, row].Value = item.Id;
                 dgParkerIn[dtlParkerInTerminal.Index, row].Value = item.Terminal;
                 dgParkerIn[dtlParkerInORNo.Index, row].Value = item.ORNumber;
-                dgParkerIn[dtlParkerInType.Index, row].Value = item.Type;
                 dgParkerIn[dtlParkerInPlateNo.Index, row].Value = item.PlateNo;
                 dgParkerIn[dtlParkerInTicketNo.Index, row].Value = item.TicketNumber;
                 dgParkerIn[dtlParkerInDateTimeIn.Index, row].Value = item.TimeIn;
@@ -105,6 +106,7 @@ namespace Reports
                 dgParkerIn[dtlParkerInUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
+            dgParkerIn.AutoResizeColumns();
         }
         private void PopulateHistoryParkerOut(IEnumerable<HistoryModel> items)
         {
@@ -116,10 +118,10 @@ namespace Reports
 
             foreach (var item in items)
             {
+                dgParkerOut[dtlParkerOutRow.Index, row].Value = row + 1;
                 dgParkerOut[dtlParkerOutTransitId.Index, row].Value = item.Id;
                 dgParkerOut[dtlParkerOutTerminal.Index, row].Value = item.Terminal;
                 dgParkerOut[dtlParkerOutORNo.Index, row].Value = item.ORNumber;
-                dgParkerOut[dtlParkerOutType.Index, row].Value = item.Type;
                 dgParkerOut[dtlParkerOutPlateNo.Index, row].Value = item.PlateNo;
                 dgParkerOut[dtlParkerOutTicketNo.Index, row].Value = item.TicketNumber;
                 dgParkerOut[dtlParkerOutDateTimeIn.Index, row].Value = item.TimeIn;
@@ -134,6 +136,7 @@ namespace Reports
                 dgParkerOut[dtlParkerOutUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
+            dgParkerOut.AutoResizeColumns();
         }
 
         private void PopulateHistoryMonthlyIn(IEnumerable<HistoryModel> items)
@@ -145,10 +148,10 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgMonthlyIn[dtlMonthlyInRow.Index, row].Value = row + 1;
                 dgMonthlyIn[dtlMonthlyInTransitId.Index, row].Value = item.Id;
                 dgMonthlyIn[dtlMonthlyInTerminal.Index, row].Value = item.Terminal;
                 dgMonthlyIn[dtlMonthlyInORNo.Index, row].Value = item.ORNumber;
-                dgMonthlyIn[dtlMonthlyInType.Index, row].Value = item.Type;
                 dgMonthlyIn[dtlMonthlyInPlateNo.Index, row].Value = item.PlateNo;
                 dgMonthlyIn[dtlMonthlyInTicketNo.Index, row].Value = item.TicketNumber;
                 dgMonthlyIn[dtlMonthlyInDateTimeIn.Index, row].Value = item.TimeIn;
@@ -163,6 +166,7 @@ namespace Reports
                 dgMonthlyIn[dtlMonthlyInUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
+            dgMonthlyIn.AutoResizeColumns();
         }
         private void PopulateHistoryMonthlyOut(IEnumerable<HistoryModel> items)
         {
@@ -173,10 +177,10 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgMonthlyOut[dtlMonthlyOutRow.Index, row].Value = row + 1;
                 dgMonthlyOut[dtlMonthlyOutTransitId.Index, row].Value = item.Id;
                 dgMonthlyOut[dtlMonthlyOutTerminal.Index, row].Value = item.Terminal;
                 dgMonthlyOut[dtlMonthlyOutORNo.Index, row].Value = item.ORNumber;
-                dgMonthlyOut[dtlMonthlyOutType.Index, row].Value = item.Type;
                 dgMonthlyOut[dtlMonthlyOutPlateNo.Index, row].Value = item.PlateNo;
                 dgMonthlyOut[dtlMonthlyOutTicketNo.Index, row].Value = item.TicketNumber;
                 dgMonthlyOut[dtlMonthlyOutDateTimeIn.Index, row].Value = item.TimeIn;
@@ -191,6 +195,7 @@ namespace Reports
                 dgMonthlyOut[dtlMonthlyOutUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
+            dgMonthlyOut.AutoResizeColumns();
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
@@ -223,6 +228,7 @@ namespace Reports
 
             items.TableName = "History";
             var viewer = new Viewer();
+            viewer.DateCovered = from.ToString() + "~" + to.ToString();
             viewer.ReportType = ReportType.History;
             viewer.Source = items;
             viewer.ShowDialog();

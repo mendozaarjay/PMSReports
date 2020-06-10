@@ -63,6 +63,7 @@ namespace Reports
                 dgAuditPerTerminal[dtlaptTotal.Index, row].Value = item.Total;
                 row++;
             }
+            dgAuditPerTerminal.AutoResizeColumns();
         }
 
         private void LoadProcessedTickets(IEnumerable<AuditPerTerminalProcessedTicketsModel> items)
@@ -82,6 +83,7 @@ namespace Reports
                 dgProcessedTickets[dtlptTotal.Index, row].Value = item.Total;
                 row++;
             }
+            dgProcessedTickets.AutoResizeColumns();
         }
 
         private void LoadTicketAccountability(IEnumerable<AuditPerTerminalTicketAccountabilityModel> items)
@@ -101,6 +103,7 @@ namespace Reports
                 dgTicketAccountability[dtltaTotal.Index, row].Value = item.Total;
                 row++;
             }
+            dgTicketAccountability.AutoResizeColumns();
         }
 
         private async void btnCsv_Click(object sender, EventArgs e)
@@ -147,6 +150,7 @@ namespace Reports
 
             var viewer = new Viewer();
             viewer.IsMultipleSource = true;
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.ReportType = ReportType.AuditPerTerminal;
             viewer.ReportSources = sources;
             viewer.ShowDialog();

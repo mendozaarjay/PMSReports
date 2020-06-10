@@ -29,16 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailedTransactionSummary));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgDetailedTransaction = new System.Windows.Forms.DataGridView();
+            this.btnFind = new System.Windows.Forms.ToolStripButton();
+            this.btnPrint = new System.Windows.Forms.ToolStripButton();
+            this.btnExcel = new System.Windows.Forms.ToolStripButton();
+            this.btnCsv = new System.Windows.Forms.ToolStripButton();
+            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.dtlRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlORNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,16 +63,6 @@
             this.dtlCardNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlImage = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnFind = new System.Windows.Forms.ToolStripButton();
-            this.btnPrint = new System.Windows.Forms.ToolStripButton();
-            this.btnExcel = new System.Windows.Forms.ToolStripButton();
-            this.btnCsv = new System.Windows.Forms.ToolStripButton();
-            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.timeTo = new System.Windows.Forms.DateTimePicker();
-            this.timeFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtTo = new System.Windows.Forms.DateTimePicker();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -140,6 +141,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
             // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(333, 74);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 12;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(333, 35);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 11;
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(154, 74);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 10;
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(154, 35);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 9;
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -166,6 +205,7 @@
             this.dgDetailedTransaction.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgDetailedTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDetailedTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlRow,
             this.dtlTransitId,
             this.dtlLocation,
             this.dtlORNumber,
@@ -188,114 +228,6 @@
             this.dgDetailedTransaction.Size = new System.Drawing.Size(1071, 368);
             this.dgDetailedTransaction.TabIndex = 0;
             this.dgDetailedTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDetailedTransaction_CellContentClick);
-            // 
-            // dtlTransitId
-            // 
-            this.dtlTransitId.HeaderText = "TransitId";
-            this.dtlTransitId.MinimumWidth = 6;
-            this.dtlTransitId.Name = "dtlTransitId";
-            this.dtlTransitId.ReadOnly = true;
-            this.dtlTransitId.Visible = false;
-            this.dtlTransitId.Width = 200;
-            // 
-            // dtlLocation
-            // 
-            this.dtlLocation.HeaderText = "Location";
-            this.dtlLocation.MinimumWidth = 6;
-            this.dtlLocation.Name = "dtlLocation";
-            this.dtlLocation.ReadOnly = true;
-            this.dtlLocation.Width = 200;
-            // 
-            // dtlORNumber
-            // 
-            this.dtlORNumber.HeaderText = "OR Number";
-            this.dtlORNumber.MinimumWidth = 6;
-            this.dtlORNumber.Name = "dtlORNumber";
-            this.dtlORNumber.ReadOnly = true;
-            this.dtlORNumber.Width = 200;
-            // 
-            // dtlRateName
-            // 
-            this.dtlRateName.HeaderText = "Rate";
-            this.dtlRateName.MinimumWidth = 6;
-            this.dtlRateName.Name = "dtlRateName";
-            this.dtlRateName.ReadOnly = true;
-            this.dtlRateName.Width = 200;
-            // 
-            // dtlTimeIn
-            // 
-            this.dtlTimeIn.HeaderText = "Time In";
-            this.dtlTimeIn.MinimumWidth = 6;
-            this.dtlTimeIn.Name = "dtlTimeIn";
-            this.dtlTimeIn.ReadOnly = true;
-            this.dtlTimeIn.Width = 200;
-            // 
-            // dtlTimeOut
-            // 
-            this.dtlTimeOut.HeaderText = "Time Out";
-            this.dtlTimeOut.MinimumWidth = 6;
-            this.dtlTimeOut.Name = "dtlTimeOut";
-            this.dtlTimeOut.ReadOnly = true;
-            this.dtlTimeOut.Width = 200;
-            // 
-            // dtlDuration
-            // 
-            this.dtlDuration.HeaderText = "Duration (mins)";
-            this.dtlDuration.MinimumWidth = 6;
-            this.dtlDuration.Name = "dtlDuration";
-            this.dtlDuration.ReadOnly = true;
-            this.dtlDuration.Width = 200;
-            // 
-            // dtlTotalHours
-            // 
-            this.dtlTotalHours.HeaderText = "Total Hours";
-            this.dtlTotalHours.MinimumWidth = 6;
-            this.dtlTotalHours.Name = "dtlTotalHours";
-            this.dtlTotalHours.ReadOnly = true;
-            this.dtlTotalHours.Width = 200;
-            // 
-            // dtlPlateNo
-            // 
-            this.dtlPlateNo.HeaderText = "Plate No";
-            this.dtlPlateNo.MinimumWidth = 6;
-            this.dtlPlateNo.Name = "dtlPlateNo";
-            this.dtlPlateNo.ReadOnly = true;
-            this.dtlPlateNo.Width = 200;
-            // 
-            // dtlAmount
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dtlAmount.HeaderText = "Amount";
-            this.dtlAmount.MinimumWidth = 6;
-            this.dtlAmount.Name = "dtlAmount";
-            this.dtlAmount.ReadOnly = true;
-            this.dtlAmount.Width = 200;
-            // 
-            // dtlCardNumber
-            // 
-            this.dtlCardNumber.HeaderText = "Card Number";
-            this.dtlCardNumber.MinimumWidth = 6;
-            this.dtlCardNumber.Name = "dtlCardNumber";
-            this.dtlCardNumber.ReadOnly = true;
-            this.dtlCardNumber.Width = 200;
-            // 
-            // dtlCashier
-            // 
-            this.dtlCashier.HeaderText = "Cashier";
-            this.dtlCashier.MinimumWidth = 6;
-            this.dtlCashier.Name = "dtlCashier";
-            this.dtlCashier.ReadOnly = true;
-            this.dtlCashier.Width = 200;
-            // 
-            // dtlImage
-            // 
-            this.dtlImage.HeaderText = "Image";
-            this.dtlImage.MinimumWidth = 6;
-            this.dtlImage.Name = "dtlImage";
-            this.dtlImage.ReadOnly = true;
-            this.dtlImage.Width = 200;
             // 
             // btnFind
             // 
@@ -365,43 +297,122 @@
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // timeTo
+            // dtlRow
             // 
-            this.timeTo.CustomFormat = "hh:mm tt";
-            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeTo.Location = new System.Drawing.Point(333, 74);
-            this.timeTo.Name = "timeTo";
-            this.timeTo.ShowUpDown = true;
-            this.timeTo.Size = new System.Drawing.Size(127, 30);
-            this.timeTo.TabIndex = 12;
+            this.dtlRow.HeaderText = "Row";
+            this.dtlRow.MinimumWidth = 6;
+            this.dtlRow.Name = "dtlRow";
+            this.dtlRow.ReadOnly = true;
+            this.dtlRow.Width = 125;
             // 
-            // timeFrom
+            // dtlTransitId
             // 
-            this.timeFrom.CustomFormat = "hh:mm tt";
-            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeFrom.Location = new System.Drawing.Point(333, 35);
-            this.timeFrom.Name = "timeFrom";
-            this.timeFrom.ShowUpDown = true;
-            this.timeFrom.Size = new System.Drawing.Size(127, 30);
-            this.timeFrom.TabIndex = 11;
+            this.dtlTransitId.HeaderText = "TransitId";
+            this.dtlTransitId.MinimumWidth = 6;
+            this.dtlTransitId.Name = "dtlTransitId";
+            this.dtlTransitId.ReadOnly = true;
+            this.dtlTransitId.Visible = false;
+            this.dtlTransitId.Width = 200;
             // 
-            // dtTo
+            // dtlLocation
             // 
-            this.dtTo.CustomFormat = "MM/dd/yyyy";
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(154, 74);
-            this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(171, 30);
-            this.dtTo.TabIndex = 10;
+            this.dtlLocation.HeaderText = "Location";
+            this.dtlLocation.MinimumWidth = 6;
+            this.dtlLocation.Name = "dtlLocation";
+            this.dtlLocation.ReadOnly = true;
+            this.dtlLocation.Width = 200;
             // 
-            // dtFrom
+            // dtlORNumber
             // 
-            this.dtFrom.CustomFormat = "MM/dd/yyyy";
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(154, 35);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(171, 30);
-            this.dtFrom.TabIndex = 9;
+            this.dtlORNumber.HeaderText = "OR Number";
+            this.dtlORNumber.MinimumWidth = 6;
+            this.dtlORNumber.Name = "dtlORNumber";
+            this.dtlORNumber.ReadOnly = true;
+            this.dtlORNumber.Width = 200;
+            // 
+            // dtlRateName
+            // 
+            this.dtlRateName.HeaderText = "Rate";
+            this.dtlRateName.MinimumWidth = 6;
+            this.dtlRateName.Name = "dtlRateName";
+            this.dtlRateName.ReadOnly = true;
+            this.dtlRateName.Width = 200;
+            // 
+            // dtlTimeIn
+            // 
+            this.dtlTimeIn.HeaderText = "Time In";
+            this.dtlTimeIn.MinimumWidth = 6;
+            this.dtlTimeIn.Name = "dtlTimeIn";
+            this.dtlTimeIn.ReadOnly = true;
+            this.dtlTimeIn.Width = 200;
+            // 
+            // dtlTimeOut
+            // 
+            this.dtlTimeOut.HeaderText = "Time Out";
+            this.dtlTimeOut.MinimumWidth = 6;
+            this.dtlTimeOut.Name = "dtlTimeOut";
+            this.dtlTimeOut.ReadOnly = true;
+            this.dtlTimeOut.Width = 200;
+            // 
+            // dtlDuration
+            // 
+            this.dtlDuration.HeaderText = "Duration (mins)";
+            this.dtlDuration.MinimumWidth = 6;
+            this.dtlDuration.Name = "dtlDuration";
+            this.dtlDuration.ReadOnly = true;
+            this.dtlDuration.Width = 200;
+            // 
+            // dtlTotalHours
+            // 
+            this.dtlTotalHours.HeaderText = "Total Hours";
+            this.dtlTotalHours.MinimumWidth = 6;
+            this.dtlTotalHours.Name = "dtlTotalHours";
+            this.dtlTotalHours.ReadOnly = true;
+            this.dtlTotalHours.Visible = false;
+            this.dtlTotalHours.Width = 200;
+            // 
+            // dtlPlateNo
+            // 
+            this.dtlPlateNo.HeaderText = "Plate No";
+            this.dtlPlateNo.MinimumWidth = 6;
+            this.dtlPlateNo.Name = "dtlPlateNo";
+            this.dtlPlateNo.ReadOnly = true;
+            this.dtlPlateNo.Width = 200;
+            // 
+            // dtlAmount
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dtlAmount.HeaderText = "Amount";
+            this.dtlAmount.MinimumWidth = 6;
+            this.dtlAmount.Name = "dtlAmount";
+            this.dtlAmount.ReadOnly = true;
+            this.dtlAmount.Width = 200;
+            // 
+            // dtlCardNumber
+            // 
+            this.dtlCardNumber.HeaderText = "Card Number";
+            this.dtlCardNumber.MinimumWidth = 6;
+            this.dtlCardNumber.Name = "dtlCardNumber";
+            this.dtlCardNumber.ReadOnly = true;
+            this.dtlCardNumber.Width = 200;
+            // 
+            // dtlCashier
+            // 
+            this.dtlCashier.HeaderText = "Cashier/User";
+            this.dtlCashier.MinimumWidth = 6;
+            this.dtlCashier.Name = "dtlCashier";
+            this.dtlCashier.ReadOnly = true;
+            this.dtlCashier.Width = 200;
+            // 
+            // dtlImage
+            // 
+            this.dtlImage.HeaderText = "Image";
+            this.dtlImage.MinimumWidth = 6;
+            this.dtlImage.Name = "dtlImage";
+            this.dtlImage.ReadOnly = true;
+            this.dtlImage.Width = 200;
             // 
             // DetailedTransactionSummary
             // 
@@ -445,6 +456,11 @@
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.DataGridView dgDetailedTransaction;
+        private System.Windows.Forms.DateTimePicker timeTo;
+        private System.Windows.Forms.DateTimePicker timeFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.DateTimePicker dtFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlORNumber;
@@ -458,9 +474,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCardNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashier;
         private System.Windows.Forms.DataGridViewButtonColumn dtlImage;
-        private System.Windows.Forms.DateTimePicker timeTo;
-        private System.Windows.Forms.DateTimePicker timeFrom;
-        private System.Windows.Forms.DateTimePicker dtTo;
-        private System.Windows.Forms.DateTimePicker dtFrom;
     }
 }

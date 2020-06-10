@@ -152,13 +152,13 @@ namespace Reports
 
         private void zReadingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (!IsAlreadyOpen("RemainingCars"))
-            //{
-            //    RemainingCars frm = new RemainingCars();
-            //    frm.MdiParent = this;
-            //    frm.WindowState = FormWindowState.Maximized;
-            //    frm.Show();
-            //}
+            if (!IsAlreadyOpen("ZReading"))
+            {
+                ZReading frm = new ZReading();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
         }
 
         private void bIRToolStripMenuItem_Click(object sender, EventArgs e)

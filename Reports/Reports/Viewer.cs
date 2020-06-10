@@ -15,6 +15,7 @@ namespace Reports.Reports
         public IEnumerable<DataTable> ReportSources { get; set; }
         public DataTable Source { get; set; }
         public ReportType ReportType { get; set; }
+        public string DateCovered { get; set; }
         public Viewer()
         {
             InitializeComponent();
@@ -99,12 +100,23 @@ namespace Reports.Reports
                     mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.SummaryReportPerTerminalReport.rdlc";
                     this.Text = "Summary Report Per Terminal";
                     break;
+                case ReportType.ZReading:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.ZReadingReport.rdlc";
+                    this.Text = "ZReading Report";
+                    break;
             }
+            
 
             ReportParameterCollection parameters = new ReportParameterCollection();
             parameters.Add(new ReportParameter("Company", settings.Company));
             parameters.Add(new ReportParameter("TIN", settings.TIN));
             parameters.Add(new ReportParameter("Address", settings.Address));
+
+            parameters.Add(new ReportParameter("ProgramAndVersion", Properties.Settings.Default.ProgramVersion));
+            parameters.Add(new ReportParameter("Serial", Properties.Settings.Default.SN));
+            parameters.Add(new ReportParameter("Min", Properties.Settings.Default.MIN));
+            parameters.Add(new ReportParameter("DateCovered", this.DateCovered));
+            parameters.Add(new ReportParameter("Username", Properties.Settings.Default.Username));
             mReportViewer.LocalReport.SetParameters(parameters);
 
             this.mReportViewer.RefreshReport();

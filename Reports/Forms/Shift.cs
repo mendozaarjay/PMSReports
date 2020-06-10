@@ -69,6 +69,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgAll[dtlAllRow.Index, row].Value = row + 1;
                 dgAll[dtlAllSRNumber.Index, row].Value = item.SRNumber;
                 dgAll[dtlAllType.Index, row].Value = item.Type;
                 dgAll[dtlAllDateTimeIn.Index, row].Value = item.DateTimeIn;
@@ -84,9 +85,10 @@ namespace Reports
                 dgAll[dtlAllChangeFund.Index, row].Value = item.ChangeFund;
                 dgAll[dtlAllTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgAll[dtlAllVariance.Index, row].Value = item.Variance;
-                dgAll[dtlAllUpdateUser.Index, row].Value = item.Cashier;
+                dgAll[dtlAllUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgAll.AutoResizeColumns();
         }
         private void PopulateShiftIn(IEnumerable<ShiftModel> items)
         {
@@ -97,6 +99,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgShiftIn[dtlShiftInRow.Index, row].Value = row + 1;
                 dgShiftIn[dtlShiftInSRNumber.Index, row].Value = item.SRNumber;
                 dgShiftIn[dtlShiftInType.Index, row].Value = item.Type;
                 dgShiftIn[dtlShiftInDateTimeIn.Index, row].Value = item.DateTimeIn;
@@ -112,9 +115,10 @@ namespace Reports
                 dgShiftIn[dtlShiftInChangeFund.Index, row].Value = item.ChangeFund;
                 dgShiftIn[dtlShiftInTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgShiftIn[dtlShiftInVariance.Index, row].Value = item.Variance;
-                dgShiftIn[dtlShiftInUpdateUser.Index, row].Value = item.Cashier;
+                dgShiftIn[dtlShiftInUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgShiftIn.AutoResizeColumns();
         }
         private void PopulateShiftOut(IEnumerable<ShiftModel> items)
         {
@@ -125,6 +129,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgShiftOut[dtlShiftOutRow.Index, row].Value = row + 1;
                 dgShiftOut[dtlShiftOutSRNumber.Index, row].Value = item.SRNumber;
                 dgShiftOut[dtlShiftOutType.Index, row].Value = item.Type;
                 dgShiftOut[dtlShiftOutDateTimeIn.Index, row].Value = item.DateTimeIn;
@@ -140,9 +145,10 @@ namespace Reports
                 dgShiftOut[dtlShiftOutChangeFund.Index, row].Value = item.ChangeFund;
                 dgShiftOut[dtlShiftOutTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgShiftOut[dtlShiftOutVariance.Index, row].Value = item.Variance;
-                dgShiftOut[dtlShiftOutUpdateUser.Index, row].Value = item.Cashier;
+                dgShiftOut[dtlShiftOutUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgShiftOut.AutoResizeColumns();
         }
         private void PopulatePartial(IEnumerable<ShiftModel> items)
         {
@@ -153,6 +159,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgPartial[dtlPartialRow.Index, row].Value = row + 1;
                 dgPartial[dtlPartialSRNumber.Index, row].Value = item.SRNumber;
                 dgPartial[dtlPartialType.Index, row].Value = item.Type;
                 dgPartial[dtlPartialDateTimeIn.Index, row].Value = item.DateTimeIn;
@@ -168,9 +175,10 @@ namespace Reports
                 dgPartial[dtlPartialChangeFund.Index, row].Value = item.ChangeFund;
                 dgPartial[dtlPartialTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgPartial[dtlPartialVariance.Index, row].Value = item.Variance;
-                dgPartial[dtlPartialUpdateUser.Index, row].Value = item.Cashier;
+                dgPartial[dtlPartialUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgPartial.AutoResizeColumns();
         }
 
         private void PopulateDutyOff(IEnumerable<ShiftModel> items)
@@ -182,6 +190,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgDutyOff[dtlDutyOffRow.Index, row].Value = row + 1;
                 dgDutyOff[dtlDutyOffSRNumber.Index, row].Value = item.SRNumber;
                 dgDutyOff[dtlDutyOffType.Index, row].Value = item.Type;
                 dgDutyOff[dtlDutyOffDateTimeIn.Index, row].Value = item.DateTimeIn;
@@ -197,9 +206,10 @@ namespace Reports
                 dgDutyOff[dtlDutyOffChangeFund.Index, row].Value = item.ChangeFund;
                 dgDutyOff[dtlDutyOffTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgDutyOff[dtlDutyOffVariance.Index, row].Value = item.Variance;
-                dgDutyOff[dtlDutyOffUpdateUser.Index, row].Value = item.Cashier;
+                dgDutyOff[dtlDutyOffUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgDutyOff.AutoResizeColumns();
         }
 
         private void PopulateCutOff(IEnumerable<ShiftModel> items)
@@ -211,6 +221,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgCutOff[dtlCutOffRow.Index, row].Value = row + 1;
                 dgCutOff[dtlCutOffSRNumber.Index, row].Value = item.SRNumber;
                 dgCutOff[dtlCutOffType.Index, row].Value = item.Type;
                 dgCutOff[dtlCutOffDateTimeIn.Index, row].Value = item.DateTimeIn;
@@ -226,9 +237,10 @@ namespace Reports
                 dgCutOff[dtlCutOffChangeFund.Index, row].Value = item.ChangeFund;
                 dgCutOff[dtlCutOffTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgCutOff[dtlCutOffVariance.Index, row].Value = item.Variance;
-                dgCutOff[dtlCutOffUpdateUser.Index, row].Value = item.Cashier;
+                dgCutOff[dtlCutOffUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgCutOff.AutoResizeColumns();
         }
 
         private void PopulateEndOfDay(IEnumerable<ShiftModel> items)
@@ -240,6 +252,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgEndOfDay[dtlEndOfDayRow.Index, row].Value = row + 1;
                 dgEndOfDay[dtlEndOfDaySRNumber.Index, row].Value = item.SRNumber;
                 dgEndOfDay[dtlEndOfDayType.Index, row].Value = item.Type;
                 dgEndOfDay[dtlEndOfDayDateTimeIn.Index, row].Value = item.DateTimeIn;
@@ -255,9 +268,10 @@ namespace Reports
                 dgEndOfDay[dtlEndOfDayChangeFund.Index, row].Value = item.ChangeFund;
                 dgEndOfDay[dtlEndOfDayTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgEndOfDay[dtlEndOfDayVariance.Index, row].Value = item.Variance;
-                dgEndOfDay[dtlEndOfDayUpdateUser.Index, row].Value = item.Cashier;
+                dgEndOfDay[dtlEndOfDayUpdateUser.Index, row].Value = item.Username;
                 row++;
             }
+            dgEndOfDay.AutoResizeColumns();
         } 
         #endregion
 
@@ -309,6 +323,7 @@ namespace Reports
 
             dt.TableName = "Shift";
             var viewer = new Viewer();
+            viewer.DateCovered = from.ToString() + "~" + to.ToString();
             viewer.ReportType = ReportType.Shift;
             viewer.Source = dt;
             viewer.ShowDialog();

@@ -50,6 +50,7 @@ namespace Reports
                 dgHourlyAccountability[dtlAmountCounter.Index, row].Value = item.AmountCounter;
                 row++;
             }
+            dgHourlyAccountability.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace Reports
             items.TableName = "HourlyAccountability";
             var viewer = new Viewer();
             viewer.ReportType = ReportType.HourlyAccountability;
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.Source = items;
             viewer.ShowDialog();
         }

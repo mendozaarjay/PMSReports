@@ -47,6 +47,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
+                dgDetailedTransaction[dtlRow.Index, row].Value = row + 1;
                 dgDetailedTransaction[dtlTransitId.Index, row].Value = item.TransitId;
                 dgDetailedTransaction[dtlLocation.Index, row].Value = item.Location;
                 dgDetailedTransaction[dtlORNumber.Index, row].Value = item.ORNumber;
@@ -58,9 +59,10 @@ namespace Reports
                 dgDetailedTransaction[dtlPlateNo.Index, row].Value = item.PlateNo;
                 dgDetailedTransaction[dtlAmount.Index, row].Value = item.Amount;
                 dgDetailedTransaction[dtlCardNumber.Index, row].Value = item.CardNumber;
-                dgDetailedTransaction[dtlCashier.Index, row].Value = item.Cashier;
+                dgDetailedTransaction[dtlCashier.Index, row].Value = item.Username;
                 row++;
             }
+            dgDetailedTransaction.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -117,6 +119,7 @@ namespace Reports
 
             dt.TableName = "DetailedTransactionSummary";
             var viewer = new Viewer();
+            viewer.DateCovered = from.ToString() + "~" + to.ToString();
             viewer.ReportType = ReportType.DetailedTransactionSummaryReport;
             viewer.Source = dt;
             viewer.ShowDialog();

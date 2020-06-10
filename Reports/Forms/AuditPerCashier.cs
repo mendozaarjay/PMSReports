@@ -64,6 +64,7 @@ namespace Reports
                 dgAuditPerCashier[dtlapcTotal.Index, row].Value = item.Total;
                 row++;
             }
+            dgAuditPerCashier.AutoResizeColumns(); 
         }
 
         private void LoadTicketAccountability(IEnumerable<AuditPerCashierTicketAccountabilityModel> items)
@@ -84,6 +85,7 @@ namespace Reports
                 dgTicketAccountability[dtltaTotal.Index, row].Value = item.Total;
                 row++;
             }
+            dgTicketAccountability.AutoResizeColumns();
         }
 
         private void LoadProcessedTickets(IEnumerable<AuditPerCashierProcessedTicketModel> items)
@@ -104,6 +106,7 @@ namespace Reports
                 dgProcessedTickets[dtlptTotal.Index, row].Value = item.Total;
                 row++;
             }
+            dgProcessedTickets.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -156,6 +159,7 @@ namespace Reports
             sources.Add(ticketaccountability);
 
             var viewer = new Viewer();
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.IsMultipleSource = true;
             viewer.ReportType = ReportType.AuditPerCashier;
             viewer.ReportSources = sources;

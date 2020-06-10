@@ -55,6 +55,7 @@ namespace Reports.Services
                         TimeIn = dr["TimeIn"].ToString(),
                         TimeOut = dr["TimeOut"].ToString(),
                         TotalHours = dr["TotalHours"].ToString(),
+                        Username = dr["Username"].ToString(),
                     };
                     items.Add(item);
                 }

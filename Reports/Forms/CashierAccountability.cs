@@ -57,6 +57,7 @@ namespace Reports
                 dgCashierAccountability[dtlAmount.Index, row].Value = item.Amount;
                 row++;
             }
+            dgCashierAccountability.AutoResizeColumns();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -104,6 +105,7 @@ namespace Reports
             var items = await services.CashierAccountabilityDataTableAsync(dtDate.Value, terminal);
             items.TableName = "CashierAccountability";
             var viewer = new Viewer();
+            viewer.DateCovered = dtDate.Value.Minimun().ToString();
             viewer.ReportType = ReportType.CashierAccountability;
             viewer.Source = items;
             viewer.ShowDialog();

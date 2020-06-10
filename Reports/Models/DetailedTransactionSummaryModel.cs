@@ -18,5 +18,7 @@
         public string Cashier { get; set; }
         public string TimeIn { get; set; }
         public string TimeOut { get; set; }
+        public string Username { get; set; }
+
     }
 }

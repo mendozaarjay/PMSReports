@@ -1,6 +1,7 @@
-﻿using Reports.Services;
+﻿using DocumentFormat.OpenXml.Office.CustomUI;
 using Reports.Models;
 using Reports.Reports;
+using Reports.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,21 +15,27 @@ using System.Windows.Forms;
 
 namespace Reports
 {
-    public partial class BIR : Form
+    public partial class ZReading : Form
     {
-        private BIRServices services = new BIRServices();
-        public BIR()
+        private ZReadingServices services = new ZReadingServices();
+        public ZReading()
         {
             InitializeComponent();
         }
         protected override void OnLoad(EventArgs e)
         {
-
             CheckForIllegalCrossThreadCalls = false;
             GenerateParameters();
+            LoadGates();
             base.OnLoad(e);
         }
-
+        private void LoadGates()
+        {
+            var items = services.Gates();
+            cbTerminal.DataSource = items;
+            cbTerminal.ValueMember = "Id";
+            cbTerminal.DisplayMember = "Name";
+        }
         private void GenerateParameters()
         {
             DataTable dtMonths = new DataTable();
@@ -69,62 +76,40 @@ namespace Reports
             var currentYear = DateTime.Now.Year;
             cboYear.SelectedValue = currentYear;
         }
-
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
-
             btnGenerate.Enabled = false;
             var month = int.Parse(cboMonth.SelectedValue.ToString());
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
 
-            var result = await services.BIRReportAsync(dateFrom, dateTo);
-            PopulateBIRReport(result);
+            var result = await services.ZReadingAsync(dateFrom, dateTo,cbTerminal.SelectedValue.ToString());
+            PopulateReport(result);
             btnGenerate.Enabled = true;
-
         }
-        private void PopulateBIRReport(IEnumerable<BIRModel> items)
+
+        private void PopulateReport(IEnumerable<ZReadingModel> items)
         {
-            dgBIR.Rows.Clear();
-            if(items.Count() > 0)
-            {
-                dgBIR.Rows.Add(items.Count());
-            }
+            dgReading.Rows.Clear();
+            if (items.Count() > 0)
+                dgReading.Rows.Add(items.Count());
+
             var row = 0;
             foreach (var item in items)
             {
-                dgBIR[dtlDate.Index, row].Value = item.Date;
-                dgBIR[dtlBeginningOR.Index, row].Value = item.BeginningOR;
-                dgBIR[dtlEndingOR.Index, row].Value = item.EndingOR;
-                dgBIR[dtlBeginningSales.Index, row].Value = item.BeginningSales;
-                dgBIR[dtlEndingSales.Index, row].Value = item.EndingSales;
-                dgBIR[dtlTotalSales.Index, row].Value = item.TotalSales;
-                dgBIR[dtlDiscountSC.Index, row].Value = item.DiscountSC;
-                dgBIR[dtlDiscountPWD.Index, row].Value = item.DiscountPWD;
-                dgBIR[dtlDiscountOthers.Index, row].Value = item.DiscountOthers;
-                dgBIR[dtlGrossAmount.Index, row].Value = item.GrossAmount;
-                dgBIR[dtlVatable.Index, row].Value = item.Vatable;
-                dgBIR[dtlVat.Index, row].Value = item.Vat;
-                dgBIR[dtlVatExempt.Index, row].Value = item.VatExempt;
-                dgBIR[dtlZeroRated.Index, row].Value = item.ZeroRated;
-                dgBIR[dtlResetCount.Index, row].Value = item.ResetCount;
-                dgBIR[dtlZCounter.Index, row].Value = item.ZCounter;
-                dgBIR[dtlRemarks.Index, row].Value = item.Remarks;
+                dgReading[dtlDate.Index, row].Value = item.Date;
+                dgReading[dtlTime.Index, row].Value = item.Time;
+                dgReading[dtlNewORNo.Index, row].Value = item.NewORNo;
+                dgReading[dtlOldORNo.Index, row].Value = item.OldORNo;
+                dgReading[dtlNewFRNo.Index, row].Value = item.NewFRNo;
+                dgReading[dtlOldFRNo.Index, row].Value = item.OldFRNo;
+                dgReading[dtlTodaySales.Index, row].Value = item.TodaySales;
+                dgReading[dtlNewSales.Index, row].Value = item.NewSales;
+                dgReading[dtlOldSales.Index, row].Value = item.OldSales;
                 row++;
             }
-            dgBIR.AutoResizeColumns();
-
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-
-            var currentMonth = DateTime.Now.Month;
-            cboMonth.SelectedValue = currentMonth;
-            var currentYear = DateTime.Now.Year;
-            cboYear.SelectedValue = currentYear;
-            btnGenerate_Click(null, null);
+            dgReading.AutoResizeColumns();
         }
 
         private async void btnCsv_Click(object sender, EventArgs e)
@@ -133,13 +118,13 @@ namespace Reports
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
-            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo);
+            var dt = await services.ZReadingDataTableAsync(dateFrom, dateTo, cbTerminal.SelectedValue.ToString());
 
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "BIR Report " + dateFrom.ToString("MMddyyy") + "-" + dateTo.ToString("MMddyyyy");
+            sd.FileName = "ZReading Report " + dateFrom.ToString("MMddyyy") + "-" + dateTo.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -152,15 +137,15 @@ namespace Reports
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
-            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo);
+            var dt = await services.ZReadingDataTableAsync(dateFrom, dateTo, cbTerminal.SelectedValue.ToString());
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "BIR Report " + dateFrom.ToString("MMddyyy") + "-" + dateTo.ToString("MMddyyyy");
+            sd.FileName = "ZReading Report " + dateFrom.ToString("MMddyyy") + "-" + dateTo.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "BIR Report", sd.FileName);
+                FileExport.ExportToExcel(dt, "ZReading Report", sd.FileName);
             }
         }
 
@@ -170,23 +155,23 @@ namespace Reports
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
-            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo);
+            var dt = await services.ZReadingDataTableAsync(dateFrom, dateTo, cbTerminal.SelectedValue.ToString());
 
 
-            dt.TableName = "BIR";
+            dt.TableName = "ZReading";
             var viewer = new Viewer();
             viewer.DateCovered = dateFrom.ToString() + "~" + dateTo.ToString();
-            viewer.ReportType = ReportType.BIR;
+            viewer.ReportType = ReportType.ZReading;
             viewer.Source = dt;
             viewer.ShowDialog();
         }
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            if (dgBIR.Rows.Count <= 0)
+            if (dgReading.Rows.Count <= 0)
                 return;
             var searchKey = Finder.SearchResult();
-            dgBIR.FindValue(searchKey);
+            dgReading.FindValue(searchKey);
         }
     }
 }

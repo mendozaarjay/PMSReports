@@ -26,6 +26,7 @@
         public int Reprint { get; set; }
         public string Description { get; set; }
         public string UpdateUser { get; set; }
+        public string Username { get; set; }
         public bool IsErased { get; set; }
     }
 }
