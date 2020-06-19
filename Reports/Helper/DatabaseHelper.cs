@@ -7,7 +7,7 @@ namespace Reports
 {
     public static class DatabaseHelper
     {
-        public static DataTable ExecGetData(SqlCommand cmd,string SqlConnectionString)
+        public static DataTable ExecGetData(SqlCommand cmd, string SqlConnectionString)
         {
             DataTable dt = new DataTable();
             SqlConnection cn = new SqlConnection();
@@ -18,6 +18,7 @@ namespace Reports
                 cn.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
                 da.SelectCommand = cmd;
                 da.Fill(dt);
             }
@@ -43,6 +44,7 @@ namespace Reports
                 await cn.OpenAsync();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
                 da.SelectCommand = cmd;
                 await Task.Run(() => da.Fill(dt));
             }
@@ -70,6 +72,7 @@ namespace Reports
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = SqlQuery;
                 cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
                 da.SelectCommand = cmd;
                 da.Fill(dt);
             }
@@ -97,6 +100,7 @@ namespace Reports
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = SqlQuery;
                 cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
                 da.SelectCommand = cmd;
                 await Task.Run(() => da.Fill(dt));
             }
@@ -110,6 +114,59 @@ namespace Reports
                     cn.Close();
             }
             return dt;
+        }
+        public static string ReturnText(string SqlQuery, string SqlConnectionString)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand cmd = new SqlCommand();
+            var result = string.Empty;
+            try
+            {
+                cn.ConnectionString = SqlConnectionString;
+                cn.Open();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = SqlQuery;
+                cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
+                result = cmd.ExecuteScalar().ToString();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open)
+                    cn.Close();
+            }
+            return result;
+        }
+        public static async Task<string> ReturnTextAsync(string SqlQuery, string SqlConnectionString)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand cmd = new SqlCommand();
+            var result = string.Empty;
+            try
+            {
+                cn.ConnectionString = SqlConnectionString;
+                cn.Open();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = SqlQuery;
+                cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
+                var _result = await cmd.ExecuteScalarAsync();
+                result = _result.ToString();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open)
+                    cn.Close();
+            }
+            return result;
         }
     }
 }

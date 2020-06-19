@@ -67,7 +67,7 @@ namespace Reports
             if (!IsAlreadyOpen("History"))
             {
                 History frm = new History();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -78,7 +78,7 @@ namespace Reports
             if (!IsAlreadyOpen("Shift"))
             {
                 Shift frm = new Shift();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -89,7 +89,7 @@ namespace Reports
             if (!IsAlreadyOpen("Sales"))
             {
                 Sales frm = new Sales();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -100,7 +100,7 @@ namespace Reports
             if (!IsAlreadyOpen("DetailedTransactionSummary"))
             {
                 DetailedTransactionSummary frm = new DetailedTransactionSummary();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -111,7 +111,7 @@ namespace Reports
             if (!IsAlreadyOpen("LengthOfStay"))
             {
                 LengthOfStay frm = new LengthOfStay();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -122,7 +122,7 @@ namespace Reports
             if (!IsAlreadyOpen("OperationOccupancy"))
             {
                 OperationOccupancy frm = new OperationOccupancy();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -133,7 +133,7 @@ namespace Reports
             if (!IsAlreadyOpen("PeakLoad"))
             {
                 PeakLoad frm = new PeakLoad();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -144,7 +144,7 @@ namespace Reports
             if (!IsAlreadyOpen("RemainingCars"))
             {
                 RemainingCars frm = new RemainingCars();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -155,7 +155,7 @@ namespace Reports
             if (!IsAlreadyOpen("ZReading"))
             {
                 ZReading frm = new ZReading();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -166,7 +166,7 @@ namespace Reports
             if (!IsAlreadyOpen("BIR"))
             {
                 BIR frm = new BIR();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -177,7 +177,7 @@ namespace Reports
             if (!IsAlreadyOpen("CashierAccountability"))
             {
                 CashierAccountability frm = new CashierAccountability();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -188,7 +188,7 @@ namespace Reports
             if (!IsAlreadyOpen("HourlyAccountability"))
             {
                 HourlyAccountability frm = new HourlyAccountability();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -199,7 +199,7 @@ namespace Reports
             if (!IsAlreadyOpen("OperationHourlyAccountability"))
             {
                 OperationHourlyAccountability frm = new OperationHourlyAccountability();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -210,7 +210,7 @@ namespace Reports
             if (!IsAlreadyOpen("AuditPerCashier"))
             {
                 AuditPerCashier frm = new AuditPerCashier();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -221,7 +221,7 @@ namespace Reports
             if (!IsAlreadyOpen("AuditPerTerminal"))
             {
                 AuditPerTerminal frm = new AuditPerTerminal();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
@@ -232,9 +232,23 @@ namespace Reports
             if (!IsAlreadyOpen("SummaryReportPerTerminal"))
             {
                 SummaryReportPerTerminal frm = new SummaryReportPerTerminal();
-                frm.MdiParent = this;
+                //frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
+            }
+        }
+
+        private void parkingAnalyticsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!IsAlreadyOpen("Analytics"))
+            {
+                MainFormNew frm = new MainFormNew();
+                //frm.MdiParent = this;
+                frm.Font = new Font("Segoe UI", 10F);
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+
             }
         }
     }

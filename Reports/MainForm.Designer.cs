@@ -81,7 +81,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1259, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1259, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -93,7 +93,7 @@
             this.salesToolStripMenuItem,
             this.detailedTransactionSummaryToolStripMenuItem});
             this.transactionReportsToolStripMenuItem.Name = "transactionReportsToolStripMenuItem";
-            this.transactionReportsToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.transactionReportsToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.transactionReportsToolStripMenuItem.Text = "Transaction Reports";
             // 
             // historyToolStripMenuItem
@@ -134,7 +134,7 @@
             this.operationHourlyAccountabilityToolStripMenuItem,
             this.summaryReportPerTerminalToolStripMenuItem});
             this.accountabilityReportsToolStripMenuItem.Name = "accountabilityReportsToolStripMenuItem";
-            this.accountabilityReportsToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.accountabilityReportsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.accountabilityReportsToolStripMenuItem.Text = "Accountability Reports";
             // 
             // auditPerCashierToolStripMenuItem
@@ -187,7 +187,7 @@
             this.peakLoadToolStripMenuItem,
             this.remainingCarsToolStripMenuItem});
             this.statisticsReportsToolStripMenuItem.Name = "statisticsReportsToolStripMenuItem";
-            this.statisticsReportsToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.statisticsReportsToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.statisticsReportsToolStripMenuItem.Text = "Statistics Reports";
             // 
             // lengthOfStayToolStripMenuItem
@@ -224,7 +224,7 @@
             this.zReadingToolStripMenuItem,
             this.bIRToolStripMenuItem});
             this.periodicReportsToolStripMenuItem.Name = "periodicReportsToolStripMenuItem";
-            this.periodicReportsToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.periodicReportsToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.periodicReportsToolStripMenuItem.Text = "Periodic Reports";
             // 
             // zReadingToolStripMenuItem
@@ -246,7 +246,7 @@
             this.dashboardToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parkingAnalyticsToolStripMenuItem});
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(96, 26);
             this.dashboardToolStripMenuItem.Text = "Dashboard";
             // 
             // parkingAnalyticsToolStripMenuItem
@@ -254,6 +254,7 @@
             this.parkingAnalyticsToolStripMenuItem.Name = "parkingAnalyticsToolStripMenuItem";
             this.parkingAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.parkingAnalyticsToolStripMenuItem.Text = "Parking Analytics";
+            this.parkingAnalyticsToolStripMenuItem.Click += new System.EventHandler(this.parkingAnalyticsToolStripMenuItem_Click);
             // 
             // windowsMenu
             // 
@@ -264,7 +265,7 @@
             this.closeAllToolStripMenuItem,
             this.arrangeIconsToolStripMenuItem});
             this.windowsMenu.Name = "windowsMenu";
-            this.windowsMenu.Size = new System.Drawing.Size(84, 24);
+            this.windowsMenu.Size = new System.Drawing.Size(84, 26);
             this.windowsMenu.Text = "&Windows";
             // 
             // cascadeToolStripMenuItem
@@ -308,7 +309,7 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel,
             this.lblStatus});
-            this.statusStrip.Location = new System.Drawing.Point(0, 685);
+            this.statusStrip.Location = new System.Drawing.Point(0, 863);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.statusStrip.Size = new System.Drawing.Size(1259, 26);
@@ -329,15 +330,16 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 711);
+            this.ClientSize = new System.Drawing.Size(1259, 889);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
