@@ -77,6 +77,18 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UtilitiesForms\EnterPlateNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilitiesForms\EnterPlateNo.Designer.cs">
+      <DependentUpon>EnterPlateNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CardEncoding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardEncoding.Designer.cs">
+      <DependentUpon>CardEncoding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datasets\Reports.cs">
       <DependentUpon>Reports.xsd</DependentUpon>
     </Compile>
@@ -117,12 +129,7 @@
       <DependentUpon>HourlyAccountability.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\DateTimeConverter.cs" />
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Helper\PlateNoUpdater.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +142,7 @@
     <Compile Include="Models\AuditPerTerminalModel.cs" />
     <Compile Include="Models\AuditPerTerminalProcessedTicketsModel.cs" />
     <Compile Include="Models\AuditPerTerminalTicketAccountabilityModel.cs" />
+    <Compile Include="Models\CardEncodingModel.cs" />
     <Compile Include="Models\CashierAccountabilityModel.cs" />
     <Compile Include="Models\DataPointModel.cs" />
     <Compile Include="Models\GeneralSettingModel.cs" />
@@ -182,6 +190,7 @@
     <Compile Include="Services\AuditPerCashierServices.cs" />
     <Compile Include="Services\AuditPerTerminalServices.cs" />
     <Compile Include="Services\BIRServices.cs" />
+    <Compile Include="Services\CardEncodingServices.cs" />
     <Compile Include="Services\CashierAccountabilityServices.cs" />
     <Compile Include="Services\DashboardServices.cs" />
     <Compile Include="Services\DetailedTransactionSummaryServices.cs" />
@@ -284,6 +293,12 @@
     <Compile Include="Forms\ZReading.Designer.cs">
       <DependentUpon>ZReading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UtilitiesForms\EnterPlateNo.resx">
+      <DependentUpon>EnterPlateNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CardEncoding.resx">
+      <DependentUpon>CardEncoding.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuditPerTerminal.resx">
       <DependentUpon>AuditPerTerminal.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,9 +307,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OperationHourlyAccountability.resx">
       <DependentUpon>OperationHourlyAccountability.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ZReadingReport.rdlc" />
     <EmbeddedResource Include="Reports\SummaryReportPerTerminalReport.rdlc" />

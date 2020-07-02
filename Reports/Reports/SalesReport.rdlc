@@ -155,22 +155,22 @@
                   <Width>1.0395cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.16133cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.84383cm</Width>
+                  <Width>1.51993cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.42717cm</Width>
+                  <Width>2.05024cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>3.643cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>3.37017cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.71683cm</Width>
+                  <Width>1.46283cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.992cm</Width>
@@ -215,16 +215,16 @@
                   <Width>1.4205cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.03433cm</Width>
+                  <Width>1.71683cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.22483cm</Width>
+                  <Width>1.65333cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.37817cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.35183cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -240,8 +240,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Row</Value>
+                                  <Value>No</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -277,6 +278,7 @@
                                 <TextRun>
                                   <Value>OR Number</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -312,6 +314,7 @@
                                 <TextRun>
                                   <Value>Plate No</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -347,6 +350,7 @@
                                 <TextRun>
                                   <Value>Ticket  No</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -382,6 +386,7 @@
                                 <TextRun>
                                   <Value>Time In</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -417,6 +422,7 @@
                                 <TextRun>
                                   <Value>Time Out</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -452,6 +458,7 @@
                                 <TextRun>
                                   <Value>Duration</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -487,6 +494,7 @@
                                 <TextRun>
                                   <Value>Rate Name</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -522,6 +530,7 @@
                                 <TextRun>
                                   <Value>Coupon</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -557,6 +566,7 @@
                                 <TextRun>
                                   <Value>Monthly RFID</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -592,6 +602,7 @@
                                 <TextRun>
                                   <Value>Monthly Name</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -627,6 +638,7 @@
                                 <TextRun>
                                   <Value>Gross Amount</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -662,6 +674,7 @@
                                 <TextRun>
                                   <Value>Sub Total</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -697,6 +710,7 @@
                                 <TextRun>
                                   <Value>Discount</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -732,6 +746,7 @@
                                 <TextRun>
                                   <Value>Amount Due</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -767,6 +782,7 @@
                                 <TextRun>
                                   <Value>Amount Tendered</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -802,6 +818,7 @@
                                 <TextRun>
                                   <Value>Change</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -837,6 +854,7 @@
                                 <TextRun>
                                   <Value>Vatable</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -872,6 +890,7 @@
                                 <TextRun>
                                   <Value>Vat</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -907,6 +926,7 @@
                                 <TextRun>
                                   <Value>Vat Exempt</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -942,6 +962,7 @@
                                 <TextRun>
                                   <Value>Zero Rated</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -977,6 +998,7 @@
                                 <TextRun>
                                   <Value>Discount Money</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1012,6 +1034,7 @@
                                 <TextRun>
                                   <Value>Discount Percent</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1047,6 +1070,7 @@
                                 <TextRun>
                                   <Value>Reprint</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1082,6 +1106,7 @@
                                 <TextRun>
                                   <Value>Cashier/User</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1121,10 +1146,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Row.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Row</rd:DefaultName>
@@ -1151,7 +1180,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ORNumber.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1181,7 +1212,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!PlateNo.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1211,7 +1244,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TicketNumber.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1241,7 +1276,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TimeIn.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1271,7 +1308,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TimeOut.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1301,10 +1340,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Duration.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Duration</rd:DefaultName>
@@ -1331,10 +1374,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!RateName.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RateName</rd:DefaultName>
@@ -1361,7 +1408,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Coupon.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1391,7 +1440,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!MonthlyRFID.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1421,7 +1472,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!MonthlyName.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1451,7 +1504,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!GrossAmount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1481,7 +1536,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!SubTotal.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1511,7 +1568,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Discount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1541,7 +1600,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!AmountDue.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1571,7 +1632,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!AmountTendered.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1601,7 +1664,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Change.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1631,7 +1696,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Vatable.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1661,7 +1728,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Vat.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1691,7 +1760,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!VatExempt.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1721,7 +1792,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ZeroRated.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1751,7 +1824,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DiscountMoney.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1781,7 +1856,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DiscountPercent.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1811,7 +1888,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Reprint.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1841,7 +1920,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Username.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1859,7 +1940,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1909,11 +1989,12 @@
             <Top>7.3575cm</Top>
             <Left>0.10833cm</Left>
             <Height>1.7715cm</Height>
-            <Width>45.38799cm</Width>
+            <Width>45.07049cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <FontSize>9pt</FontSize>
             </Style>
           </Tablix>
           <Textbox Name="Textbox53">

@@ -2234,6 +2234,8 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnTotalSales;
             
+            private global::System.Data.DataColumn columnTerminal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BIRDataTable() {
@@ -2405,6 +2407,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TerminalColumn {
+                get {
+                    return this.columnTerminal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2457,7 +2467,8 @@ namespace Reports.Datasets {
                         string ResetCount, 
                         string ZCounter, 
                         string Remarks, 
-                        decimal TotalSales) {
+                        decimal TotalSales, 
+                        string Terminal) {
                 BIRRow rowBIRRow = ((BIRRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Date,
@@ -2476,7 +2487,8 @@ namespace Reports.Datasets {
                         ResetCount,
                         ZCounter,
                         Remarks,
-                        TotalSales};
+                        TotalSales,
+                        Terminal};
                 rowBIRRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBIRRow);
                 return rowBIRRow;
@@ -2516,6 +2528,7 @@ namespace Reports.Datasets {
                 this.columnZCounter = base.Columns["ZCounter"];
                 this.columnRemarks = base.Columns["Remarks"];
                 this.columnTotalSales = base.Columns["TotalSales"];
+                this.columnTerminal = base.Columns["Terminal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2555,6 +2568,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnRemarks);
                 this.columnTotalSales = new global::System.Data.DataColumn("TotalSales", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalSales);
+                this.columnTerminal = new global::System.Data.DataColumn("Terminal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTerminal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11031,6 +11046,22 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Terminal {
+                get {
+                    try {
+                        return ((string)(this[this.tableBIR.TerminalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal\' in table \'BIR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBIR.TerminalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDateNull() {
                 return this.IsNull(this.tableBIR.DateColumn);
             }
@@ -11231,6 +11262,18 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalSalesNull() {
                 this[this.tableBIR.TotalSalesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTerminalNull() {
+                return this.IsNull(this.tableBIR.TerminalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTerminalNull() {
+                this[this.tableBIR.TerminalColumn] = global::System.Convert.DBNull;
             }
         }
         

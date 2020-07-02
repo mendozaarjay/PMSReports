@@ -114,6 +114,7 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var month = int.Parse(cboMonth.SelectedValue.ToString());
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
@@ -129,10 +130,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var month = int.Parse(cboMonth.SelectedValue.ToString());
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
@@ -147,10 +150,12 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "ZReading Report", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var month = int.Parse(cboMonth.SelectedValue.ToString());
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
@@ -160,10 +165,11 @@ namespace Reports
 
             dt.TableName = "ZReading";
             var viewer = new Viewer();
-            viewer.DateCovered = dateFrom.ToString() + "~" + dateTo.ToString();
+            viewer.DateCovered = dateFrom.ToString("MM/dd/yyyy") + "~" + dateTo.ToString("MM/dd/yyyy");
             viewer.ReportType = ReportType.ZReading;
             viewer.Source = dt;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

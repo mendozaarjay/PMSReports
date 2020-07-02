@@ -12,7 +12,7 @@ namespace Reports.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,8 +25,8 @@ namespace Reports.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SNE52L4\\SQLEXPRESS;Initial Catalog=PMSLatest;Persist Security" +
-            " Info=True;User ID=sa;Password=zealadmin01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SNE52L4\\SQLEXPRESS;Initial Catalog=TEKTITE_NEW;Persist Securi" +
+            "ty Info=True;User ID=sa;Password=zealadmin01")]
         public string UserConnectionString {
             get {
                 return ((string)(this["UserConnectionString"]));

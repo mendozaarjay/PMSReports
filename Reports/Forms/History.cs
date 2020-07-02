@@ -200,6 +200,7 @@ namespace Reports
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
             var dt = await services.GetHistoryDataTableAsync(from,to, txtSearch.Text.Trim());
@@ -214,11 +215,12 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "History Report", sd.FileName);
             }
-
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
@@ -232,10 +234,12 @@ namespace Reports
             viewer.ReportType = ReportType.History;
             viewer.Source = items;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
@@ -251,6 +255,7 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

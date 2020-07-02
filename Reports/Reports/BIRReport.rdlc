@@ -85,10 +85,14 @@
           <DataField>TotalSales</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="Terminal">
+          <DataField>Terminal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Reports</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Arjay Mendoza\Desktop\Reports\Reports\Datasets\Reports.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Arjay Mendoza\Desktop\PMSReports\Reports\Datasets\Reports.xsd</rd:SchemaPath>
         <rd:TableName>BIR</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -1236,10 +1240,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dsSource</DataSetName>
-            <Top>7.04cm</Top>
+            <Top>7.675cm</Top>
             <Left>0.10833cm</Left>
             <Height>1.57993cm</Height>
-            <Width>29.34171cm</Width>
+            <Width>29.3417cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1582,8 +1586,48 @@
               </Border>
             </Style>
           </Rectangle>
+          <Textbox Name="Textbox10">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Terminal :</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Fields!Terminal.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>6.89861cm</Top>
+            <Left>0.10833cm</Left>
+            <Height>0.6cm</Height>
+            <Width>11.74984cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>3.46868in</Height>
+        <Height>3.66868in</Height>
         <Style />
       </Body>
       <Width>11.67389in</Width>

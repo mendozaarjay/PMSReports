@@ -12,17 +12,18 @@ namespace Reports.Services
     public class BIRServices
     {
         private const string StoredProcedure = "[dbo].[spBIRReport]";
-        public async Task<DataTable> BIRReportDataTableAsync(DateTime dateFrom, DateTime dateTo)
+        public async Task<DataTable> BIRReportDataTableAsync(DateTime dateFrom, DateTime dateTo,string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@DateFrom", dateFrom);
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<IEnumerable<BIRModel>> BIRReportAsync(DateTime dateFrom, DateTime dateTo)
+        public async Task<IEnumerable<BIRModel>> BIRReportAsync(DateTime dateFrom, DateTime dateTo,string terminal)
         {
             List<BIRModel> items = new List<BIRModel>();
             SqlCommand cmd = new SqlCommand();
@@ -30,6 +31,7 @@ namespace Reports.Services
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@DateFrom", dateFrom);
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
 
             if(result != null)
@@ -61,6 +63,11 @@ namespace Reports.Services
             }
 
             return items;
+        }
+        public DataTable Gates()
+        {
+            var gates = DatabaseHelper.LoadDataTable("SELECT [g].[GateID] AS [Id],[g].[GateName] AS [Name] FROM  [dbo].[Gates] [g] WHERE ISNULL([g].[IsDeleted],0) = 0 ", Properties.Settings.Default.UserConnectionString);
+            return gates;
         }
     }
 }

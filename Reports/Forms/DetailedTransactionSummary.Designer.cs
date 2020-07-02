@@ -30,13 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailedTransactionSummary));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbShowImages = new System.Windows.Forms.CheckBox();
             this.timeTo = new System.Windows.Forms.DateTimePicker();
             this.timeFrom = new System.Windows.Forms.DateTimePicker();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
@@ -62,7 +63,9 @@
             this.dtlAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCardNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlImage = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dtlEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtlExitImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtlViewImage = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -125,6 +128,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cbShowImages);
             this.groupBox1.Controls.Add(this.timeTo);
             this.groupBox1.Controls.Add(this.timeFrom);
             this.groupBox1.Controls.Add(this.dtTo);
@@ -136,10 +140,21 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1047, 197);
+            this.groupBox1.Size = new System.Drawing.Size(1360, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
+            // 
+            // cbShowImages
+            // 
+            this.cbShowImages.AutoSize = true;
+            this.cbShowImages.Location = new System.Drawing.Point(483, 154);
+            this.cbShowImages.Name = "cbShowImages";
+            this.cbShowImages.Size = new System.Drawing.Size(133, 27);
+            this.cbShowImages.TabIndex = 13;
+            this.cbShowImages.Text = "Show Images";
+            this.cbShowImages.UseVisualStyleBackColor = true;
+            this.cbShowImages.CheckedChanged += new System.EventHandler(this.cbShowImages_CheckedChanged);
             // 
             // timeTo
             // 
@@ -194,7 +209,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgDetailedTransaction);
-            this.splitContainer1.Size = new System.Drawing.Size(1071, 585);
+            this.splitContainer1.Size = new System.Drawing.Size(1384, 621);
             this.splitContainer1.SplitterDistance = 213;
             this.splitContainer1.TabIndex = 3;
             // 
@@ -218,14 +233,16 @@
             this.dtlAmount,
             this.dtlCardNumber,
             this.dtlCashier,
-            this.dtlImage});
+            this.dtlEntranceImage,
+            this.dtlExitImage,
+            this.dtlViewImage});
             this.dgDetailedTransaction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDetailedTransaction.Location = new System.Drawing.Point(0, 0);
             this.dgDetailedTransaction.Name = "dgDetailedTransaction";
             this.dgDetailedTransaction.ReadOnly = true;
             this.dgDetailedTransaction.RowHeadersWidth = 51;
             this.dgDetailedTransaction.RowTemplate.Height = 24;
-            this.dgDetailedTransaction.Size = new System.Drawing.Size(1071, 368);
+            this.dgDetailedTransaction.Size = new System.Drawing.Size(1384, 404);
             this.dgDetailedTransaction.TabIndex = 0;
             this.dgDetailedTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDetailedTransaction_CellContentClick);
             // 
@@ -293,7 +310,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1071, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1384, 27);
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -356,7 +373,7 @@
             // 
             // dtlDuration
             // 
-            this.dtlDuration.HeaderText = "Duration (mins)";
+            this.dtlDuration.HeaderText = "Duration";
             this.dtlDuration.MinimumWidth = 6;
             this.dtlDuration.Name = "dtlDuration";
             this.dtlDuration.ReadOnly = true;
@@ -381,9 +398,9 @@
             // 
             // dtlAmount
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlAmount.HeaderText = "Amount";
             this.dtlAmount.MinimumWidth = 6;
             this.dtlAmount.Name = "dtlAmount";
@@ -406,19 +423,39 @@
             this.dtlCashier.ReadOnly = true;
             this.dtlCashier.Width = 200;
             // 
-            // dtlImage
+            // dtlEntranceImage
             // 
-            this.dtlImage.HeaderText = "Image";
-            this.dtlImage.MinimumWidth = 6;
-            this.dtlImage.Name = "dtlImage";
-            this.dtlImage.ReadOnly = true;
-            this.dtlImage.Width = 200;
+            this.dtlEntranceImage.HeaderText = "Entrance Image";
+            this.dtlEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dtlEntranceImage.MinimumWidth = 6;
+            this.dtlEntranceImage.Name = "dtlEntranceImage";
+            this.dtlEntranceImage.ReadOnly = true;
+            this.dtlEntranceImage.Width = 150;
+            // 
+            // dtlExitImage
+            // 
+            this.dtlExitImage.HeaderText = "Exit Image";
+            this.dtlExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dtlExitImage.MinimumWidth = 6;
+            this.dtlExitImage.Name = "dtlExitImage";
+            this.dtlExitImage.ReadOnly = true;
+            this.dtlExitImage.Width = 150;
+            // 
+            // dtlViewImage
+            // 
+            this.dtlViewImage.HeaderText = "View";
+            this.dtlViewImage.MinimumWidth = 6;
+            this.dtlViewImage.Name = "dtlViewImage";
+            this.dtlViewImage.ReadOnly = true;
+            this.dtlViewImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtlViewImage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dtlViewImage.Width = 50;
             // 
             // DetailedTransactionSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 612);
+            this.ClientSize = new System.Drawing.Size(1384, 648);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.bindingNavigator1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -460,6 +497,7 @@
         private System.Windows.Forms.DateTimePicker timeFrom;
         private System.Windows.Forms.DateTimePicker dtTo;
         private System.Windows.Forms.DateTimePicker dtFrom;
+        private System.Windows.Forms.CheckBox cbShowImages;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlLocation;
@@ -473,6 +511,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCardNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashier;
-        private System.Windows.Forms.DataGridViewButtonColumn dtlImage;
+        private System.Windows.Forms.DataGridViewImageColumn dtlEntranceImage;
+        private System.Windows.Forms.DataGridViewImageColumn dtlExitImage;
+        private System.Windows.Forms.DataGridViewButtonColumn dtlViewImage;
     }
 }

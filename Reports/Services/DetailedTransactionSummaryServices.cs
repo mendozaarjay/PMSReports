@@ -56,6 +56,8 @@ namespace Reports.Services
                         TimeOut = dr["TimeOut"].ToString(),
                         TotalHours = dr["TotalHours"].ToString(),
                         Username = dr["Username"].ToString(),
+                        EntranceImage = dr["EntranceImage"].ToString().Length > 0 ? (byte[])(dr["EntranceImage"]) : null,
+                        ExitImage = dr["ExitImage"].ToString().Length > 0 ? (byte[])(dr["ExitImage"]) : null,
                     };
                     items.Add(item);
                 }

@@ -25,7 +25,9 @@ namespace Reports
         {
             timeFrom.Value = DateTime.Now.Minimun();
             timeTo.Value = DateTime.Now.Maximum();
+
             CheckForIllegalCrossThreadCalls = false;
+            this.PerformLayout();
             base.OnLoad(e);
         }
         private async void btnGenerate_Click(object sender, EventArgs e)
@@ -285,6 +287,7 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
             var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text);
@@ -297,10 +300,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
             var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text);
@@ -313,10 +318,12 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "Shift Report", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
             var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text);
@@ -327,6 +334,7 @@ namespace Reports
             viewer.ReportType = ReportType.Shift;
             viewer.Source = dt;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

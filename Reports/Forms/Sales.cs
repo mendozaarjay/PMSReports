@@ -291,6 +291,7 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
@@ -307,10 +308,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
@@ -327,10 +330,12 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "Sales Report", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
@@ -345,6 +350,7 @@ namespace Reports
             viewer.ReportType = ReportType.Sales;
             viewer.Source = dt;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

@@ -26,9 +26,16 @@ namespace Reports
 
             CheckForIllegalCrossThreadCalls = false;
             GenerateParameters();
+            LoadGates();
             base.OnLoad(e);
         }
-
+        private void LoadGates()
+        {
+            var items = services.Gates();
+            cbTerminal.DataSource = items;
+            cbTerminal.ValueMember = "Id";
+            cbTerminal.DisplayMember = "Name";
+        }
         private void GenerateParameters()
         {
             DataTable dtMonths = new DataTable();
@@ -79,7 +86,7 @@ namespace Reports
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
 
-            var result = await services.BIRReportAsync(dateFrom, dateTo);
+            var result = await services.BIRReportAsync(dateFrom, dateTo,cbTerminal.SelectedValue.ToString());
             PopulateBIRReport(result);
             btnGenerate.Enabled = true;
 
@@ -129,11 +136,12 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var month = int.Parse(cboMonth.SelectedValue.ToString());
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
-            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo);
+            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo, cbTerminal.SelectedValue.ToString());
 
 
             SaveFileDialog sd = new SaveFileDialog();
@@ -144,15 +152,17 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var month = int.Parse(cboMonth.SelectedValue.ToString());
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
-            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo);
+            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo, cbTerminal.SelectedValue.ToString());
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
@@ -162,23 +172,26 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "BIR Report", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var month = int.Parse(cboMonth.SelectedValue.ToString());
             var year = int.Parse(cboYear.SelectedValue.ToString());
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
-            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo);
+            var dt = await services.BIRReportDataTableAsync(dateFrom, dateTo, cbTerminal.SelectedValue.ToString());
 
 
             dt.TableName = "BIR";
             var viewer = new Viewer();
-            viewer.DateCovered = dateFrom.ToString() + "~" + dateTo.ToString();
+            viewer.DateCovered = dateFrom.ToString("MM/dd/yyyy") + "~" + dateTo.ToString("MM/dd/yyyy");
             viewer.ReportType = ReportType.BIR;
             viewer.Source = dt;
             viewer.ShowDialog();
+            btnPrint.Enabled = false;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

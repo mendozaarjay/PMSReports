@@ -74,6 +74,7 @@
             this.cWeeklyOccupancy = new LiveCharts.WinForms.CartesianChart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.cWeeklySales = new LiveCharts.WinForms.CartesianChart();
+            this.cardEncodingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -285,6 +286,7 @@
             // transactionReportsToolStripMenuItem
             // 
             this.transactionReportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cardEncodingToolStripMenuItem,
             this.historyToolStripMenuItem,
             this.shiftToolStripMenuItem,
             this.salesToolStripMenuItem,
@@ -336,34 +338,34 @@
             this.operationHourlyAccoutabilityToolStripMenuItem,
             this.summaryReportPerTerminalToolStripMenuItem});
             this.accoutabilityReportsToolStripMenuItem.Name = "accoutabilityReportsToolStripMenuItem";
-            this.accoutabilityReportsToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.accoutabilityReportsToolStripMenuItem.Text = "Accoutability Reports";
+            this.accoutabilityReportsToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.accoutabilityReportsToolStripMenuItem.Text = "Accountability Reports";
             // 
             // auditPerCashierToolStripMenuItem
             // 
             this.auditPerCashierToolStripMenuItem.Name = "auditPerCashierToolStripMenuItem";
-            this.auditPerCashierToolStripMenuItem.Size = new System.Drawing.Size(298, 26);
+            this.auditPerCashierToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.auditPerCashierToolStripMenuItem.Text = "Audit Per Cashier";
             this.auditPerCashierToolStripMenuItem.Click += new System.EventHandler(this.auditPerCashierToolStripMenuItem_Click);
             // 
             // auditPerTerminalToolStripMenuItem
             // 
             this.auditPerTerminalToolStripMenuItem.Name = "auditPerTerminalToolStripMenuItem";
-            this.auditPerTerminalToolStripMenuItem.Size = new System.Drawing.Size(298, 26);
+            this.auditPerTerminalToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.auditPerTerminalToolStripMenuItem.Text = "Audit Per Terminal";
             this.auditPerTerminalToolStripMenuItem.Click += new System.EventHandler(this.auditPerTerminalToolStripMenuItem_Click);
             // 
             // cashierAccountabilityToolStripMenuItem
             // 
             this.cashierAccountabilityToolStripMenuItem.Name = "cashierAccountabilityToolStripMenuItem";
-            this.cashierAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(298, 26);
+            this.cashierAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.cashierAccountabilityToolStripMenuItem.Text = "Cashier Accountability";
             this.cashierAccountabilityToolStripMenuItem.Click += new System.EventHandler(this.cashierAccountabilityToolStripMenuItem_Click);
             // 
             // hourlyAccountabilityToolStripMenuItem
             // 
             this.hourlyAccountabilityToolStripMenuItem.Name = "hourlyAccountabilityToolStripMenuItem";
-            this.hourlyAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(298, 26);
+            this.hourlyAccountabilityToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.hourlyAccountabilityToolStripMenuItem.Text = "Hourly Accountability";
             this.hourlyAccountabilityToolStripMenuItem.Click += new System.EventHandler(this.hourlyAccountabilityToolStripMenuItem_Click);
             // 
@@ -432,14 +434,14 @@
             // bIRToolStripMenuItem
             // 
             this.bIRToolStripMenuItem.Name = "bIRToolStripMenuItem";
-            this.bIRToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bIRToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.bIRToolStripMenuItem.Text = "BIR";
             this.bIRToolStripMenuItem.Click += new System.EventHandler(this.bIRToolStripMenuItem_Click);
             // 
             // zReadingToolStripMenuItem
             // 
             this.zReadingToolStripMenuItem.Name = "zReadingToolStripMenuItem";
-            this.zReadingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zReadingToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.zReadingToolStripMenuItem.Text = "Z Reading";
             this.zReadingToolStripMenuItem.Click += new System.EventHandler(this.zReadingToolStripMenuItem_Click);
             // 
@@ -514,6 +516,13 @@
             this.cWeeklySales.Size = new System.Drawing.Size(1161, 293);
             this.cWeeklySales.TabIndex = 0;
             this.cWeeklySales.Text = "cartesianChart1";
+            // 
+            // cardEncodingToolStripMenuItem
+            // 
+            this.cardEncodingToolStripMenuItem.Name = "cardEncodingToolStripMenuItem";
+            this.cardEncodingToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.cardEncodingToolStripMenuItem.Text = "Card Encoding";
+            this.cardEncodingToolStripMenuItem.Click += new System.EventHandler(this.cardEncodingToolStripMenuItem_Click);
             // 
             // MainFormNew
             // 
@@ -593,5 +602,6 @@
         private System.Windows.Forms.ToolStripMenuItem periodicReportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bIRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zReadingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cardEncodingToolStripMenuItem;
     }
 }

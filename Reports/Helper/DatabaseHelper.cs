@@ -7,6 +7,57 @@ namespace Reports
 {
     public static class DatabaseHelper
     {
+        public static string ExecNonQuery(SqlCommand cmd, string SqlConnectionString)
+        {
+            string result = string.Empty;
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = SqlConnectionString;
+                cn.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
+                cmd.ExecuteNonQuery();
+                result = "Proccess has been successfully completed.";
+            }
+            catch (Exception ex)
+            {
+                result = "Error/s:\n" + ex.Message;
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open)
+                    cn.Close();
+            }
+            return result;
+        }
+        public static async Task<string> ExecNonQueryAsync(SqlCommand cmd, string SqlConnectionString)
+        {
+            string result = string.Empty;
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = SqlConnectionString;
+                cn.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cn;
+                cmd.CommandTimeout = 0;
+                await cmd.ExecuteNonQueryAsync();
+                result = "Proccess has been successfully completed.";
+            }
+            catch (Exception ex)
+            {
+                result = "Error/s:\n" + ex.Message;
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open)
+                    cn.Close();
+            }
+            return result;
+        }
+
         public static DataTable ExecGetData(SqlCommand cmd, string SqlConnectionString)
         {
             DataTable dt = new DataTable();

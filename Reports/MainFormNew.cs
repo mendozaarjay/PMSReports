@@ -368,5 +368,12 @@ namespace Reports
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
+
+        private void cardEncodingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CardEncoding frm = new CardEncoding();
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
+        }
     }
 }

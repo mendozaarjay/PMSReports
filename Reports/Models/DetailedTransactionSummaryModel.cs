@@ -19,6 +19,8 @@
         public string TimeIn { get; set; }
         public string TimeOut { get; set; }
         public string Username { get; set; }
+        public byte[] EntranceImage { get; set; }
+        public byte[] ExitImage { get; set; }
 
     }
 }

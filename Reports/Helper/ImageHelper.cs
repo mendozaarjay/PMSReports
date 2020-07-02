@@ -14,7 +14,8 @@ namespace Reports
             {
                 using(MemoryStream ms = new MemoryStream())
                 {
-                    image.Save(ms, ImageFormat.Jpeg);
+                    var item = new Bitmap(image, new Size(50, 50));
+                    item.Save(ms, ImageFormat.Jpeg);
                     returnThis = ms.ToArray();
                 }
             }

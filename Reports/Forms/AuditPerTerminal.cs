@@ -68,6 +68,7 @@ namespace Reports
 
         private void LoadProcessedTickets(IEnumerable<AuditPerTerminalProcessedTicketsModel> items)
         {
+
             dgProcessedTickets.Rows.Clear();
 
             if (items.Count() > 0)
@@ -108,6 +109,7 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var dt = await services.AuditPerTerminalDataTableAsync(dtDate.Value);
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
@@ -117,10 +119,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var dt = await services.AuditPerTerminalDataTableAsync(dtDate.Value);
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
@@ -130,10 +134,12 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "Audit Per Terminal Report", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var sources = new List<DataTable>();
 
             var _auditPerTerminal = await services.AuditPerTerminalDataTableAsync(dtDate.Value);
@@ -150,10 +156,11 @@ namespace Reports
 
             var viewer = new Viewer();
             viewer.IsMultipleSource = true;
-            viewer.DateCovered = dtDate.Value.Minimun().ToString();
+            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
             viewer.ReportType = ReportType.AuditPerTerminal;
             viewer.ReportSources = sources;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

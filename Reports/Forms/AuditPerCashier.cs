@@ -118,6 +118,7 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var dt = await services.AuditPerCashierDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
@@ -127,10 +128,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var dt = await services.AuditPerCashierDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
@@ -140,10 +143,12 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "Audit Per Cashier Report",sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var sources = new List<DataTable>();
 
             var auditpercashier = await services.AuditPerCashierDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
@@ -159,11 +164,12 @@ namespace Reports
             sources.Add(ticketaccountability);
 
             var viewer = new Viewer();
-            viewer.DateCovered = dtDate.Value.Minimun().ToString();
+            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
             viewer.IsMultipleSource = true;
             viewer.ReportType = ReportType.AuditPerCashier;
             viewer.ReportSources = sources;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

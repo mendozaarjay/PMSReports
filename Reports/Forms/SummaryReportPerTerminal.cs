@@ -99,6 +99,7 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var dt = await services.SummaryReportPerTerminalDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
@@ -108,10 +109,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var dt = await services.SummaryReportPerTerminalDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
@@ -121,10 +124,12 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "Summary Report Per Terminal", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var sources = new List<DataTable>();
 
             var summary = await services.SummaryReportPerTerminalDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
@@ -141,10 +146,11 @@ namespace Reports
 
             var viewer = new Viewer();
             viewer.IsMultipleSource = true;
-            viewer.DateCovered = dtDate.Value.Minimun().ToString();
+            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
             viewer.ReportType = ReportType.SummaryReportPerTerminal;
             viewer.ReportSources = sources;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

@@ -69,6 +69,7 @@ namespace Reports
 
         private  async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
             var dt = await services.CashierAccountabilityDataTableAsync(dtDate.Value,terminal);
             dt.Columns.Remove("Row");
@@ -81,10 +82,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
             var dt = await services.CashierAccountabilityDataTableAsync(dtDate.Value, terminal);
             dt.Columns.Remove("Row");
@@ -97,18 +100,21 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "Cashier Accountability Report", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
             var items = await services.CashierAccountabilityDataTableAsync(dtDate.Value, terminal);
             items.TableName = "CashierAccountability";
             var viewer = new Viewer();
-            viewer.DateCovered = dtDate.Value.Minimun().ToString();
+            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
             viewer.ReportType = ReportType.CashierAccountability;
             viewer.Source = items;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

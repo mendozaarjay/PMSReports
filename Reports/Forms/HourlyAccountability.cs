@@ -62,6 +62,7 @@ namespace Reports
 
         private async void btnCsv_Click(object sender, EventArgs e)
         {
+            btnCsv.Enabled = false;
             var dt = await services.HourlyAccountabilityReportDatatableAsync(dtDate.Value);
 
             SaveFileDialog sd = new SaveFileDialog();
@@ -72,10 +73,12 @@ namespace Reports
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
             }
+            btnCsv.Enabled = true;
         }
 
         private  async void btnExcel_Click(object sender, EventArgs e)
         {
+            btnExcel.Enabled = false;
             var dt = await services.HourlyAccountabilityReportDatatableAsync(dtDate.Value);
 
             SaveFileDialog sd = new SaveFileDialog();
@@ -86,17 +89,20 @@ namespace Reports
             {
                 FileExport.ExportToExcel(dt, "Hourly Accountability Report", sd.FileName);
             }
+            btnExcel.Enabled = true;
         }
 
         private async void btnPrint_Click(object sender, EventArgs e)
         {
+            btnPrint.Enabled = false;
             var items = await services.HourlyAccountabilityReportDatatableAsync(dtDate.Value);
             items.TableName = "HourlyAccountability";
             var viewer = new Viewer();
             viewer.ReportType = ReportType.HourlyAccountability;
-            viewer.DateCovered = dtDate.Value.Minimun().ToString();
+            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
             viewer.Source = items;
             viewer.ShowDialog();
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)
