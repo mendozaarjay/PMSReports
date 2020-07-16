@@ -3,14 +3,10 @@ using Reports.Reports;
 using Reports.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
@@ -18,6 +14,7 @@ namespace Reports
     {
         DetailedTransactionSummaryServices services = new DetailedTransactionSummaryServices();
         private List<DetailedTransactionSummaryModel> SummaryItems { get; set; }
+        public UserAccessItem UserAccess { get; set; }
         public DetailedTransactionSummary()
         {
             InitializeComponent();

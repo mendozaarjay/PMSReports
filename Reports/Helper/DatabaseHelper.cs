@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
-namespace Reports
+namespace Reports.Helper
 {
     public static class DatabaseHelper
     {

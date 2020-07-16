@@ -4,14 +4,15 @@ using Reports.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
     public partial class RemainingCars : Form
     {
         RemainingCarsServices services = new RemainingCarsServices();
+        public UserAccessItem UserAccess { get; set; }
         public RemainingCars()
         {
             InitializeComponent();

@@ -1,22 +1,21 @@
-﻿using DocumentFormat.OpenXml.Office.CustomUI;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using LiveCharts;
+﻿using LiveCharts;
 using LiveCharts.Defaults;
 using LiveCharts.Helpers;
 using LiveCharts.Wpf;
-using Reports.Models;
 using Reports.Services;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
     public partial class Dashboard : Form
     {
         private DashboardServices services = new DashboardServices();
+        public UserAccessItem UserAccess { get; set; }
         public Dashboard()
         {
             InitializeComponent();

@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.transactionReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cardEncodingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shiftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +75,7 @@
             this.cWeeklyOccupancy = new LiveCharts.WinForms.CartesianChart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.cWeeklySales = new LiveCharts.WinForms.CartesianChart();
-            this.cardEncodingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userAccessMatrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -295,6 +296,13 @@
             this.transactionReportsToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.transactionReportsToolStripMenuItem.Text = "Transaction Reports";
             // 
+            // cardEncodingToolStripMenuItem
+            // 
+            this.cardEncodingToolStripMenuItem.Name = "cardEncodingToolStripMenuItem";
+            this.cardEncodingToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.cardEncodingToolStripMenuItem.Text = "Card Encoding";
+            this.cardEncodingToolStripMenuItem.Click += new System.EventHandler(this.cardEncodingToolStripMenuItem_Click);
+            // 
             // historyToolStripMenuItem
             // 
             this.historyToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -336,7 +344,8 @@
             this.cashierAccountabilityToolStripMenuItem,
             this.hourlyAccountabilityToolStripMenuItem,
             this.operationHourlyAccoutabilityToolStripMenuItem,
-            this.summaryReportPerTerminalToolStripMenuItem});
+            this.summaryReportPerTerminalToolStripMenuItem,
+            this.userAccessMatrixToolStripMenuItem});
             this.accoutabilityReportsToolStripMenuItem.Name = "accoutabilityReportsToolStripMenuItem";
             this.accoutabilityReportsToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
             this.accoutabilityReportsToolStripMenuItem.Text = "Accountability Reports";
@@ -434,14 +443,14 @@
             // bIRToolStripMenuItem
             // 
             this.bIRToolStripMenuItem.Name = "bIRToolStripMenuItem";
-            this.bIRToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.bIRToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.bIRToolStripMenuItem.Text = "BIR";
             this.bIRToolStripMenuItem.Click += new System.EventHandler(this.bIRToolStripMenuItem_Click);
             // 
             // zReadingToolStripMenuItem
             // 
             this.zReadingToolStripMenuItem.Name = "zReadingToolStripMenuItem";
-            this.zReadingToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.zReadingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.zReadingToolStripMenuItem.Text = "Z Reading";
             this.zReadingToolStripMenuItem.Click += new System.EventHandler(this.zReadingToolStripMenuItem_Click);
             // 
@@ -517,12 +526,11 @@
             this.cWeeklySales.TabIndex = 0;
             this.cWeeklySales.Text = "cartesianChart1";
             // 
-            // cardEncodingToolStripMenuItem
+            // userAccessMatrixToolStripMenuItem
             // 
-            this.cardEncodingToolStripMenuItem.Name = "cardEncodingToolStripMenuItem";
-            this.cardEncodingToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.cardEncodingToolStripMenuItem.Text = "Card Encoding";
-            this.cardEncodingToolStripMenuItem.Click += new System.EventHandler(this.cardEncodingToolStripMenuItem_Click);
+            this.userAccessMatrixToolStripMenuItem.Name = "userAccessMatrixToolStripMenuItem";
+            this.userAccessMatrixToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.userAccessMatrixToolStripMenuItem.Text = "User Access Matrix";
             // 
             // MainFormNew
             // 
@@ -603,5 +611,6 @@
         private System.Windows.Forms.ToolStripMenuItem bIRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zReadingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cardEncodingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userAccessMatrixToolStripMenuItem;
     }
 }

@@ -1,22 +1,20 @@
-﻿using Reports.Services;
-using Reports.Models;
+﻿using Reports.Models;
 using Reports.Reports;
+using Reports.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
     public partial class BIR : Form
     {
         private BIRServices services = new BIRServices();
+        public UserAccessItem UserAccess { get; set; }
         public BIR()
         {
             InitializeComponent();

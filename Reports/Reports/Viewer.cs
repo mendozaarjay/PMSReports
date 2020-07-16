@@ -104,6 +104,10 @@ namespace Reports.Reports
                     mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.ZReadingReport.rdlc";
                     this.Text = "ZReading Report";
                     break;
+                case ReportType.UserAccessMatrix:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.UserAccessMatrixReport.rdlc";
+                    this.Text = "User Access Matrix Report";
+                    break;
             }
             
 

@@ -1,15 +1,11 @@
-﻿using DocumentFormat.OpenXml.Office.CustomUI;
-using Reports.Models;
+﻿using Reports.Models;
 using Reports.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
@@ -17,6 +13,7 @@ namespace Reports
     {
         private CardEncodingServices services = new CardEncodingServices();
         private List<CardEncodingModel> CardEncodingItems { get; set; }
+        public UserAccessItem UserAccess { get; set; }
         public CardEncoding()
         {
             InitializeComponent();

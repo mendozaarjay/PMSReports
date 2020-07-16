@@ -18,5 +18,6 @@
         RemainingCars = 13,
         SummaryReportPerTerminal = 14,
         ZReading = 15,
+        UserAccessMatrix = 16,
     };
 }

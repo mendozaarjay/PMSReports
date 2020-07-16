@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Reports</RootNamespace>
     <AssemblyName>Reports</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -73,10 +73,21 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UserAccess">
+      <HintPath>..\..\useraccessmatrix\UserAccess\UserAccess\bin\Debug\UserAccess.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\UserAccessMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAccessMatrix.Designer.cs">
+      <DependentUpon>UserAccessMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserAccessMatrixModel.cs" />
+    <Compile Include="Services\UserAccessMatrixServices.cs" />
     <Compile Include="UtilitiesForms\EnterPlateNo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +141,6 @@
     </Compile>
     <Compile Include="Helper\DateTimeConverter.cs" />
     <Compile Include="Helper\PlateNoUpdater.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\AuditPerCashierModel.cs" />
     <Compile Include="Models\AuditPerCashierProcessedTicketModel.cs" />
     <Compile Include="Models\AuditPerCashierTicketAccountabilityModel.cs" />
@@ -293,6 +298,10 @@
     <Compile Include="Forms\ZReading.Designer.cs">
       <DependentUpon>ZReading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\UserAccessMatrix.resx">
+      <DependentUpon>UserAccessMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserAccessMatrixReport.rdlc" />
     <EmbeddedResource Include="UtilitiesForms\EnterPlateNo.resx">
       <DependentUpon>EnterPlateNo.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,9 +342,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\OperationOccupancyReport.rdlc" />
     <EmbeddedResource Include="Reports\HourlyAccountabilityReport.rdlc" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PeakLoad.resx">
       <DependentUpon>PeakLoad.cs</DependentUpon>
     </EmbeddedResource>

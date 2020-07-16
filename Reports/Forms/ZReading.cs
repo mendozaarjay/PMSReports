@@ -1,23 +1,20 @@
-﻿using DocumentFormat.OpenXml.Office.CustomUI;
-using Reports.Models;
+﻿using Reports.Models;
 using Reports.Reports;
 using Reports.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
     public partial class ZReading : Form
     {
         private ZReadingServices services = new ZReadingServices();
+        public UserAccessItem UserAccess { get; set; }
         public ZReading()
         {
             InitializeComponent();

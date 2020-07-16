@@ -12,12 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
     public partial class MainFormNew : Form
     {
         DashboardServices services = new DashboardServices();
+        public IEnumerable<UserAccessItem> UserAccessItems { get; set; }
         public MainFormNew()
         {
             InitializeComponent();
@@ -26,8 +28,92 @@ namespace Reports
         protected override void OnLoad(EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
+            var items = UserAccess.Utilities.AccessMatrix.GetUserAccess(int.Parse(Properties.Settings.Default.CurrentUserId));
+            UserAccessItems = items;
+            LoadUserAccess();
             base.OnLoad(e);
         }
+
+        #region User  Access
+        private void LoadUserAccess()
+        {
+            LoadTransactionAccess();
+            LoadAccountabilityAccess();
+            LoadStatisticsAccess();
+            LoadPeriodicAccess();
+        }
+
+        private void LoadTransactionAccess()
+        {
+            //Transactional
+            var cardEncoding = UserAccessItems.Any(a => a.ModuleCode == "RCE" && a.CanAccess);
+            var history = UserAccessItems.Any(a => a.ModuleCode == "RH" && a.CanAccess);
+            var shift = UserAccessItems.Any(a => a.ModuleCode == "RSHIFT" && a.CanAccess);
+            var sales = UserAccessItems.Any(a => a.ModuleCode == "RSALES" && a.CanAccess);
+            var detailedTransaction = UserAccessItems.Any(a => a.ModuleCode == "RDTS" && a.CanAccess);
+            if (cardEncoding || history || shift || sales || detailedTransaction)
+                transactionReportsToolStripMenuItem.Visible = true;
+            else
+                transactionReportsToolStripMenuItem.Visible = false;
+
+            cardEncodingToolStripMenuItem.Visible = cardEncoding;
+            historyToolStripMenuItem.Visible = history;
+            shiftToolStripMenuItem.Visible = shift;
+            salesToolStripMenuItem.Visible = sales;
+            detailedTransactionSummaryToolStripMenuItem.Visible = detailedTransaction;
+        }
+        private void LoadAccountabilityAccess()
+        {
+            var auditPerCashier = UserAccessItems.Any(a => a.ModuleCode == "RAPC" && a.CanAccess);
+            var auditPerTerminal = UserAccessItems.Any(a => a.ModuleCode == "RAPT" && a.CanAccess);
+            var cashierAccountability = UserAccessItems.Any(a => a.ModuleCode == "RCA" && a.CanAccess);
+            var hourlyAccountabability = UserAccessItems.Any(a => a.ModuleCode == "RHA" && a.CanAccess);
+            var operationHourly = UserAccessItems.Any(a => a.ModuleCode == "ROHA" && a.CanAccess);
+            var summaryReport = UserAccessItems.Any(a => a.ModuleCode == "RSRPT" && a.CanAccess);
+            var uam = UserAccessItems.Any(a => a.ModuleCode == "RUAM" && a.CanAccess);
+            if (auditPerCashier || auditPerTerminal || cashierAccountability || hourlyAccountabability || operationHourly || summaryReport || uam)
+                accoutabilityReportsToolStripMenuItem.Visible = true;
+            else
+                accoutabilityReportsToolStripMenuItem.Visible = false;
+
+
+            auditPerCashierToolStripMenuItem.Visible = auditPerCashier;
+            auditPerTerminalToolStripMenuItem.Visible = auditPerTerminal;
+            cashierAccountabilityToolStripMenuItem.Visible = cashierAccountability;
+            hourlyAccountabilityToolStripMenuItem.Visible = hourlyAccountabability;
+            operationHourlyAccoutabilityToolStripMenuItem.Visible = operationHourly;
+            summaryReportPerTerminalToolStripMenuItem.Visible = summaryReport;
+            userAccessMatrixToolStripMenuItem.Visible = uam;
+        }
+        private void LoadStatisticsAccess()
+        {
+            var los = UserAccessItems.Any(a => a.ModuleCode == "RLOS" && a.CanAccess);
+            var oo = UserAccessItems.Any(a => a.ModuleCode == "ROO" && a.CanAccess);
+            var pl = UserAccessItems.Any(a => a.ModuleCode == "RPL" && a.CanAccess);
+            var rc = UserAccessItems.Any(a => a.ModuleCode == "RRC" && a.CanAccess);
+            if (los || oo || pl || rc)
+                statisticsReportToolStripMenuItem.Visible = true;
+            else
+                statisticsReportToolStripMenuItem.Visible = false;
+
+            lenghtOfStayToolStripMenuItem.Visible = los;
+            operationOccupancyToolStripMenuItem.Visible = oo;
+            peakLoadToolStripMenuItem.Visible = pl;
+            remainingCarsToolStripMenuItem.Visible = rc;
+        }
+        private void LoadPeriodicAccess()
+        {
+            var bir = UserAccessItems.Any(a => a.ModuleCode == "RBIR" && a.CanAccess);
+            var zr = UserAccessItems.Any(a => a.ModuleCode == "RZR" && a.CanAccess);
+            if (bir || zr)
+                periodicReportsToolStripMenuItem.Visible = true;
+            else
+                periodicReportsToolStripMenuItem.Visible = false;
+
+            bIRToolStripMenuItem.Visible = bir;
+            zReadingToolStripMenuItem.Visible = zr;
+        } 
+        #endregion
         protected  async override void OnShown(EventArgs e)
         {
             await LoadHourlyOccupancy();
@@ -40,6 +126,8 @@ namespace Reports
             base.OnShown(e);
 
         }
+
+        #region DashboardFunctions
         private async Task LoadTickets()
         {
             var processed = await services.ProcessedTicketsAsync(DateTime.Now);
@@ -69,7 +157,6 @@ namespace Reports
             };
             cTickets.LegendLocation = LegendLocation.Bottom;
         }
-
         private async Task LoadHeader()
         {
             var sales = await services.TodaySalesAsync(DateTime.Now);
@@ -255,11 +342,14 @@ namespace Reports
 
             await LoadWeeklyOccupancy();
             await LoadWeeklySales();
-        }      
+        }       
+        #endregion
 
         private void historyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             History frm = new History();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RH");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -267,6 +357,8 @@ namespace Reports
         private void shiftToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Shift frm = new Shift();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RSHIFT");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -274,6 +366,8 @@ namespace Reports
         private void salesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sales frm = new Sales();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RSALES");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -281,6 +375,8 @@ namespace Reports
         private void detailedTransactionSummaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DetailedTransactionSummary frm = new DetailedTransactionSummary();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RDTS");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -288,6 +384,8 @@ namespace Reports
         private void auditPerCashierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AuditPerCashier frm = new AuditPerCashier();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RAPC");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -295,6 +393,8 @@ namespace Reports
         private void auditPerTerminalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AuditPerTerminal frm = new AuditPerTerminal();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RAPT");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -302,6 +402,8 @@ namespace Reports
         private void cashierAccountabilityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CashierAccountability frm = new CashierAccountability();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RCA");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -309,6 +411,8 @@ namespace Reports
         private void hourlyAccountabilityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HourlyAccountability frm = new HourlyAccountability();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RHA");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -316,6 +420,8 @@ namespace Reports
         private void operationHourlyAccoutabilityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OperationHourlyAccountability frm = new OperationHourlyAccountability();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "ROHA");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -323,6 +429,8 @@ namespace Reports
         private void summaryReportPerTerminalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SummaryReportPerTerminal frm = new SummaryReportPerTerminal();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RSRPT");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -330,6 +438,8 @@ namespace Reports
         private void lenghtOfStayToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LengthOfStay frm = new LengthOfStay();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RLOS");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -337,6 +447,8 @@ namespace Reports
         private void operationOccupancyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OperationOccupancy frm = new OperationOccupancy();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "ROO");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -344,6 +456,8 @@ namespace Reports
         private void peakLoadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PeakLoad frm = new PeakLoad();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RPL");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -351,6 +465,8 @@ namespace Reports
         private void remainingCarsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemainingCars frm = new RemainingCars();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RRC");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -358,6 +474,8 @@ namespace Reports
         private void bIRToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BIR frm = new BIR();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RBIR");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -365,6 +483,8 @@ namespace Reports
         private void zReadingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ZReading frm = new ZReading();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RZR");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
@@ -372,6 +492,8 @@ namespace Reports
         private void cardEncodingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CardEncoding frm = new CardEncoding();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RCE");
+            frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }

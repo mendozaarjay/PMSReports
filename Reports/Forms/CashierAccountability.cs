@@ -10,12 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAccess.Models;
 
 namespace Reports
 {
     public partial class CashierAccountability : Form
     {
         private CashierAccountabilityServices services = new CashierAccountabilityServices();
+        public UserAccessItem UserAccess { get; set; }
         public CashierAccountability()
         {
             InitializeComponent();
