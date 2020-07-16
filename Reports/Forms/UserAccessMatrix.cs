@@ -41,7 +41,7 @@ namespace Reports
             btnGenerate.Enabled = true;
         }
 
-        private void PopulateUserAccessMatrix(IEnumerable<UserAccessMatrixModel> items)
+        private void PopulateUserAccessMatrix(IEnumerable<UserAccessMatrixItemModel> items)
         {
             dgItems.Rows.Clear();
             if (items.Count() > 0)

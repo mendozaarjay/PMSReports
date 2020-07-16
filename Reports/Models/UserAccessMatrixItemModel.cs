@@ -1,6 +1,6 @@
 ﻿namespace Reports.Models
 {
-    public class UserAccessMatrixModel
+    public class UserAccessMatrixItemModel
     {
         public int UserId { get; set; }
         public string Username { get; set; }

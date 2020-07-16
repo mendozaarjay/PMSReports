@@ -86,7 +86,7 @@
     <Compile Include="Forms\UserAccessMatrix.Designer.cs">
       <DependentUpon>UserAccessMatrix.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserAccessMatrixModel.cs" />
+    <Compile Include="Models\UserAccessMatrixItemModel.cs" />
     <Compile Include="Services\UserAccessMatrixServices.cs" />
     <Compile Include="UtilitiesForms\EnterPlateNo.cs">
       <SubType>Form</SubType>

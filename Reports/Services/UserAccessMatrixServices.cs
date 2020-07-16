@@ -23,9 +23,9 @@ namespace Reports.Services
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<IEnumerable<UserAccessMatrixModel>> GetUserAccessMatrixAsync(string userid)
+        public async Task<IEnumerable<UserAccessMatrixItemModel>> GetUserAccessMatrixAsync(string userid)
         {
-            var items = new List<UserAccessMatrixModel>();
+            var items = new List<UserAccessMatrixItemModel>();
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
@@ -36,7 +36,7 @@ namespace Reports.Services
             {
                 foreach(DataRow dr in result.Rows)
                 {
-                    var item = new UserAccessMatrixModel
+                    var item = new UserAccessMatrixItemModel
                     {
                         UserId = int.Parse(dr["UserId"].ToString()),
                         Username = dr["Username"].ToString(),
