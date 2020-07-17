@@ -22,7 +22,13 @@ namespace Reports
         {
             CheckForIllegalCrossThreadCalls = false;
             LoadGates();
+            LoadAccess();
             base.OnLoad(e);
+        }
+
+        private void LoadAccess()
+        {
+            
         }
 
         private void LoadGates()
