@@ -22,7 +22,12 @@ namespace Reports
         {
             dgEncoding.Columns[dtlImage.Index].Visible = false;
             CheckForIllegalCrossThreadCalls = false;
+            LoadAccess();
             base.OnLoad(e);
+        }
+        private void LoadAccess()
+        {
+            btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
@@ -155,16 +160,19 @@ namespace Reports
             {
                 if(dgEncoding.CurrentRow.Index >= 0)
                 {
-                    var current = dgEncoding.CurrentRow.Index;
-                    var id = dgEncoding[dtlId.Index, current].Value.ToString();
-                    var plateno = dgEncoding[dtlPlateNo.Index, current].Value.ToString();
-                    bool success = false;
-                    var newPlate = PlateNoUpdater.Update(ref success, id, plateno);
-                    if (success)
+                    if (UserAccess.CanEdit)
                     {
-                        dgEncoding[dtlPlateNo.Index, current].Value = newPlate;
+                        var current = dgEncoding.CurrentRow.Index;
+                        var id = dgEncoding[dtlId.Index, current].Value.ToString();
+                        var plateno = dgEncoding[dtlPlateNo.Index, current].Value.ToString();
+                        bool success = false;
+                        var newPlate = PlateNoUpdater.Update(ref success, id, plateno);
+                        if (success)
+                        {
+                            dgEncoding[dtlPlateNo.Index, current].Value = newPlate;
+                        }
+                        dgEncoding.Rows[current].Cells[dtlPlateNo.Index].Selected = true; 
                     }
-                    dgEncoding.Rows[current].Cells[dtlPlateNo.Index].Selected = true;
                 }
 
             }

@@ -26,7 +26,14 @@ namespace Reports
 
             CheckForIllegalCrossThreadCalls = false;
             this.PerformLayout();
+            LoadAccess();
             base.OnLoad(e);
+        }
+        private void LoadAccess()
+        {
+            btnPrint.Visible = UserAccess.CanPrint;
+            btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
+            btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {

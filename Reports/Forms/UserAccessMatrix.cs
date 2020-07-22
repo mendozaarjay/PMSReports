@@ -22,9 +22,15 @@ namespace Reports
         {
             CheckForIllegalCrossThreadCalls = false;
             LoadAllUsers();
+            LoadAccess();
             base.OnLoad(e);
         }
-
+        private void LoadAccess()
+        {
+            btnPrint.Visible = UserAccess.CanPrint;
+            btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
+            btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
+        }
         private void LoadAllUsers()
         {
             var dt = services.GetAllEmployees();

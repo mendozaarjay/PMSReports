@@ -22,7 +22,14 @@ namespace Reports
         protected override void OnLoad(EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
+            LoadAccess();
             base.OnLoad(e);
+        }
+        private void LoadAccess()
+        {
+            btnPrint.Visible = UserAccess.CanPrint;
+            btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
+            btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
         private void btnRefresh_Click(object sender, EventArgs e)
         {

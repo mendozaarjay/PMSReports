@@ -25,7 +25,14 @@ namespace Reports
             timeFrom.Value = DateTime.Now.Minimun();
             timeTo.Value = DateTime.Now.Maximum();
             CheckForIllegalCrossThreadCalls = false;
+            LoadAccess();
             base.OnLoad(e);
+        }
+        private void LoadAccess()
+        {
+            btnPrint.Visible = UserAccess.CanPrint;
+            btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
+            btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {

@@ -28,7 +28,9 @@ namespace Reports
 
         private void LoadAccess()
         {
-            
+            btnPrint.Visible = UserAccess.CanPrint;
+            btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
+            btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
 
         private void LoadGates()
