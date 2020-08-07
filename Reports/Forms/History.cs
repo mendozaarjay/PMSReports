@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserAccess.Models;
 
@@ -14,6 +15,7 @@ namespace Reports
     {
         private HistoryServices services = new HistoryServices();
         public UserAccessItem UserAccess { get; set; }
+        IEnumerable<HistoryModel> HistoryItems { get; set; }
         public History()
         {
             InitializeComponent();
@@ -23,6 +25,21 @@ namespace Reports
             timeFrom.Value = DateTime.Now.Minimun();
             timeTo.Value = DateTime.Now.Maximum();
             CheckForIllegalCrossThreadCalls = false;
+            //All
+            dgHistoryAll.Columns[dtlAllEntranceImage.Index].Visible = false;
+            dgHistoryAll.Columns[dtlAllExitImage.Index].Visible = false;
+            //Parker In
+            dgParkerIn.Columns[dtlParkerInEntranceImage.Index].Visible = false;
+            dgParkerIn.Columns[dtlParkerInExitImage.Index].Visible = false;
+            //Parker Out
+            dgParkerOut.Columns[dtlParkerOutEntranceImage.Index].Visible = false;
+            dgParkerOut.Columns[dtlParkerOutExitImage.Index].Visible = false;
+            //Monthly In
+            dgMonthlyIn.Columns[dtlMonthlyInEntranceImage.Index].Visible = false;
+            dgMonthlyIn.Columns[dtlMonthlyInExitImage.Index].Visible = false;
+            //Mnthly Out
+            dgMonthlyOut.Columns[dtlMonthlyOutEntranceImage.Index].Visible = false;
+            dgMonthlyOut.Columns[dtlMonthlyOutExitImage.Index].Visible = false;
             LoadAccess();
             base.OnLoad(e);
         }
@@ -32,20 +49,24 @@ namespace Reports
             btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
             btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
-        private async void  btnGenerate_Click(object sender, EventArgs e)
+        private async void btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
 
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var items = await services.GetHistoryReportAsync(from,to,txtSearch.Text.Trim());
+            var items = await services.GetHistoryReportAsync(from, to, txtSearch.Text.Trim());
 
             var parkerIn = items.Where(a => a.MonthlyName == "" && a.TimeOut == "");
             var parkerOut = items.Where(a => a.MonthlyName == "");
 
             var monthlyIn = items.Where(a => a.MonthlyName != "" && a.TimeOut == "");
             var monthlyOut = items.Where(a => a.MonthlyName != "");
+
+            HistoryItems = null;
+            HistoryItems = items.ToList();
+
 
             PopulateHistoryAll(items);
             PopulateHistoryParkerIn(parkerIn);
@@ -207,7 +228,7 @@ namespace Reports
             btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.GetHistoryDataTableAsync(from,to, txtSearch.Text.Trim());
+            var dt = await services.GetHistoryDataTableAsync(from, to, txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -228,7 +249,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var items = await services.GetHistoryDataTableAsync(from,to, txtSearch.Text.Trim());
+            var items = await services.GetHistoryDataTableAsync(from, to, txtSearch.Text.Trim());
             items.Columns.Remove("TransitId");
             items.AcceptChanges();
 
@@ -247,7 +268,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var dt = await services.GetHistoryDataTableAsync(from,to, txtSearch.Text.Trim());
+            var dt = await services.GetHistoryDataTableAsync(from, to, txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -279,58 +300,418 @@ namespace Reports
             btnRefresh.Enabled = true;
         }
 
-        private void dgHistoryAll_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void cbShowImages_CheckedChanged(object sender, EventArgs e)
         {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-                return;
-            if(e.ColumnIndex == dtlAllImage.Index)
+            if (cbShowImages.Checked)
             {
-                var id = int.Parse(dgHistoryAll[dtlAllTransitId.Index, e.RowIndex].Value.ToString());
-                ImageViewer.ShowImage(id);
+                if (HistoryItems != null)
+                {
+                    if (HistoryItems.Count() > 0)
+                    {
+                        await ShowImage();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                //All
+                dgHistoryAll.Columns[dtlAllEntranceImage.Index].Visible = false;
+                dgHistoryAll.Columns[dtlAllExitImage.Index].Visible = false;
+                //Parker In
+                dgParkerIn.Columns[dtlParkerInEntranceImage.Index].Visible = false;
+                dgParkerIn.Columns[dtlParkerInExitImage.Index].Visible = false;
+                //Parker Out
+                dgParkerOut.Columns[dtlParkerOutEntranceImage.Index].Visible = false;
+                dgParkerOut.Columns[dtlParkerOutExitImage.Index].Visible = false;
+                //Monthly In
+                dgMonthlyIn.Columns[dtlMonthlyInEntranceImage.Index].Visible = false;
+                dgMonthlyIn.Columns[dtlMonthlyInExitImage.Index].Visible = false;
+                //Mnthly Out
+                dgMonthlyOut.Columns[dtlMonthlyOutEntranceImage.Index].Visible = false;
+                dgMonthlyOut.Columns[dtlMonthlyOutExitImage.Index].Visible = false;
+
+                HideImage();
             }
         }
-
-        private void dgParkerIn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async Task ShowImage()
         {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-                return;
-            if (e.ColumnIndex == dtlParkerInImage.Index)
+            //All
+            dgHistoryAll.Columns[dtlAllEntranceImage.Index].Visible = true;
+            dgHistoryAll.Columns[dtlAllExitImage.Index].Visible = true;
+            //Parker In
+            dgParkerIn.Columns[dtlParkerInEntranceImage.Index].Visible = true;
+            dgParkerIn.Columns[dtlParkerInExitImage.Index].Visible = true;
+            //Parker Out
+            dgParkerOut.Columns[dtlParkerOutEntranceImage.Index].Visible = true;
+            dgParkerOut.Columns[dtlParkerOutExitImage.Index].Visible = true;
+            //Monthly In
+            dgMonthlyIn.Columns[dtlMonthlyInEntranceImage.Index].Visible = true;
+            dgMonthlyIn.Columns[dtlMonthlyInExitImage.Index].Visible = true;
+            //Mnthly Out
+            dgMonthlyOut.Columns[dtlMonthlyOutEntranceImage.Index].Visible = true;
+            dgMonthlyOut.Columns[dtlMonthlyOutExitImage.Index].Visible = true;
+
+            #region All
+            if (dgHistoryAll.Rows.Count > 0)
             {
-                var id = int.Parse(dgParkerIn[dtlParkerInTransitId.Index, e.RowIndex].Value.ToString());
-                ImageViewer.ShowImage(id);
+                for (int i = 0; i <= dgHistoryAll.Rows.Count - 1; i++)
+                {
+                    await Task.Run(() =>
+                    {
+                        var item = HistoryItems.FirstOrDefault(a => a.Id.ToString() == dgHistoryAll[dtlAllTransitId.Index, i].Value.ToString());
+                        dgHistoryAll.Columns[dtlAllEntranceImage.Index].Width = 150;
+                        dgHistoryAll.Columns[dtlAllExitImage.Index].Width = 150;
+
+                        if (item.EntranceImage != null)
+                        {
+
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = entranceImage;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgHistoryAll[dtlAllEntranceImage.Index, i] = col;
+                            dgHistoryAll.Rows[i].Height = 150;
+                            dgHistoryAll[dtlAllEntranceImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgHistoryAll[dtlAllEntranceImage.Index, i] = col;
+                            dgHistoryAll.Rows[i].Height = 24;
+                            dgHistoryAll[dtlAllEntranceImage.Index, i].ReadOnly = true;
+                        }
+
+                        if (item.ExitImage != null)
+                        {
+
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = image;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgHistoryAll[dtlAllExitImage.Index, i] = col;
+                            dgHistoryAll.Rows[i].Height = 150;
+                            dgHistoryAll[dtlAllExitImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgHistoryAll[dtlAllExitImage.Index, i] = col;
+                            dgHistoryAll.Rows[i].Height = 24;
+                            dgHistoryAll[dtlAllExitImage.Index, i].ReadOnly = true;
+                        }
+
+                    });
+
+
+                }
             }
-        }
+            #endregion
 
-        private void dgParkerOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-                return;
-            if (e.ColumnIndex == dtlParkerOutImage.Index)
+            #region Parker In
+            if (dgParkerIn.Rows.Count > 0)
             {
-                var id = int.Parse(dgParkerOut[dtlParkerOutTransitId.Index, e.RowIndex].Value.ToString());
-                ImageViewer.ShowImage(id);
+                for (int i = 0; i <= dgParkerIn.Rows.Count - 1; i++)
+                {
+                    await Task.Run(() =>
+                    {
+                        var item = HistoryItems.FirstOrDefault(a => a.Id.ToString() == dgParkerIn[dtlParkerInTransitId.Index, i].Value.ToString());
+                        dgParkerIn.Columns[dtlParkerInEntranceImage.Index].Width = 150;
+                        dgParkerIn.Columns[dtlParkerInExitImage.Index].Width = 150;
+
+                        if (item.EntranceImage != null)
+                        {
+
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = entranceImage;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgParkerIn[dtlParkerInEntranceImage.Index, i] = col;
+                            dgParkerIn.Rows[i].Height = 150;
+                            dgParkerIn[dtlParkerInEntranceImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgParkerIn[dtlParkerInEntranceImage.Index, i] = col;
+                            dgParkerIn.Rows[i].Height = 24;
+                            dgParkerIn[dtlParkerInEntranceImage.Index, i].ReadOnly = true;
+                        }
+
+                        if (item.ExitImage != null)
+                        {
+
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = image;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgParkerIn[dtlParkerInExitImage.Index, i] = col;
+                            dgParkerIn.Rows[i].Height = 150;
+                            dgParkerIn[dtlParkerInExitImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgParkerIn[dtlParkerInExitImage.Index, i] = col;
+                            dgParkerIn.Rows[i].Height = 24;
+                            dgParkerIn[dtlParkerInExitImage.Index, i].ReadOnly = true;
+                        }
+
+                    });
+
+
+                }
             }
-        }
+            #endregion
 
-        private void dgMonthlyIn_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-                return;
-            if (e.ColumnIndex == dtlMonthlyInImage.Index)
+            #region Parker Out
+
+            if (dgParkerOut.Rows.Count > 0)
             {
-                var id = int.Parse(dgMonthlyIn[dtlMonthlyInTransitId.Index, e.RowIndex].Value.ToString());
-                ImageViewer.ShowImage(id);
+                for (int i = 0; i <= dgParkerOut.Rows.Count - 1; i++)
+                {
+                    await Task.Run(() =>
+                    {
+                        var item = HistoryItems.FirstOrDefault(a => a.Id.ToString() == dgParkerOut[dtlParkerOutTransitId.Index, i].Value.ToString());
+                        dgParkerOut.Columns[dtlParkerOutEntranceImage.Index].Width = 150;
+                        dgParkerOut.Columns[dtlParkerOutExitImage.Index].Width = 150;
+
+                        if (item.EntranceImage != null)
+                        {
+
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = entranceImage;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgParkerOut[dtlParkerOutEntranceImage.Index, i] = col;
+                            dgParkerOut.Rows[i].Height = 150;
+                            dgParkerOut[dtlParkerOutEntranceImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgParkerOut[dtlParkerOutEntranceImage.Index, i] = col;
+                            dgParkerOut.Rows[i].Height = 24;
+                            dgParkerOut[dtlParkerOutEntranceImage.Index, i].ReadOnly = true;
+                        }
+
+                        if (item.ExitImage != null)
+                        {
+
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = image;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgParkerOut[dtlParkerOutExitImage.Index, i] = col;
+                            dgParkerOut.Rows[i].Height = 150;
+                            dgParkerOut[dtlParkerOutExitImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgParkerOut[dtlParkerOutExitImage.Index, i] = col;
+                            dgParkerOut.Rows[i].Height = 24;
+                            dgParkerOut[dtlParkerOutExitImage.Index, i].ReadOnly = true;
+                        }
+
+                    });
+
+
+                }
             }
-        }
 
-        private void dgMonthlyOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-                return;
-            if (e.ColumnIndex == dtlMonthlyOutImage.Index)
+
+            #endregion
+
+            #region Monthly In
+            if (dgMonthlyIn.Rows.Count > 0)
             {
-                var id = int.Parse(dgMonthlyOut[dtlMonthlyOutTransitId.Index, e.RowIndex].Value.ToString());
-                ImageViewer.ShowImage(id);
+                for (int i = 0; i <= dgMonthlyIn.Rows.Count - 1; i++)
+                {
+                    await Task.Run(() =>
+                    {
+                        var item = HistoryItems.FirstOrDefault(a => a.Id.ToString() == dgMonthlyIn[dtlMonthlyInTransitId.Index, i].Value.ToString());
+                        dgMonthlyIn.Columns[dtlMonthlyInEntranceImage.Index].Width = 150;
+                        dgMonthlyIn.Columns[dtlMonthlyInExitImage.Index].Width = 150;
+
+                        if (item.EntranceImage != null)
+                        {
+
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = entranceImage;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgMonthlyIn[dtlMonthlyInEntranceImage.Index, i] = col;
+                            dgMonthlyIn.Rows[i].Height = 150;
+                            dgMonthlyIn[dtlMonthlyInEntranceImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgMonthlyIn[dtlMonthlyInEntranceImage.Index, i] = col;
+                            dgMonthlyIn.Rows[i].Height = 24;
+                            dgMonthlyIn[dtlMonthlyInEntranceImage.Index, i].ReadOnly = true;
+                        }
+
+                        if (item.ExitImage != null)
+                        {
+
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = image;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgMonthlyIn[dtlMonthlyInExitImage.Index, i] = col;
+                            dgMonthlyIn.Rows[i].Height = 150;
+                            dgMonthlyIn[dtlMonthlyInExitImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgMonthlyIn[dtlMonthlyInExitImage.Index, i] = col;
+                            dgMonthlyIn.Rows[i].Height = 24;
+                            dgMonthlyIn[dtlMonthlyInExitImage.Index, i].ReadOnly = true;
+                        }
+
+                    });
+
+                }
+            }
+            #endregion
+
+            #region Monthly Out
+            if (dgMonthlyOut.Rows.Count > 0)
+            {
+                for (int i = 0; i <= dgMonthlyOut.Rows.Count - 1; i++)
+                {
+                    await Task.Run(() =>
+                    {
+                        var item = HistoryItems.FirstOrDefault(a => a.Id.ToString() == dgMonthlyOut[dtlMonthlyOutTransitId.Index, i].Value.ToString());
+                        dgMonthlyOut.Columns[dtlMonthlyOutEntranceImage.Index].Width = 150;
+                        dgMonthlyOut.Columns[dtlMonthlyOutExitImage.Index].Width = 150;
+
+                        if (item.EntranceImage != null)
+                        {
+
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = entranceImage;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgMonthlyOut[dtlMonthlyOutEntranceImage.Index, i] = col;
+                            dgMonthlyOut.Rows[i].Height = 150;
+                            dgMonthlyOut[dtlMonthlyOutEntranceImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgMonthlyOut[dtlMonthlyOutEntranceImage.Index, i] = col;
+                            dgMonthlyOut.Rows[i].Height = 24;
+                            dgMonthlyOut[dtlMonthlyOutEntranceImage.Index, i].ReadOnly = true;
+                        }
+
+                        if (item.ExitImage != null)
+                        {
+
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = image;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgMonthlyOut[dtlMonthlyOutExitImage.Index, i] = col;
+                            dgMonthlyOut.Rows[i].Height = 150;
+                            dgMonthlyOut[dtlMonthlyOutExitImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgMonthlyOut[dtlMonthlyOutExitImage.Index, i] = col;
+                            dgMonthlyOut.Rows[i].Height = 24;
+                            dgMonthlyOut[dtlMonthlyOutExitImage.Index, i].ReadOnly = true;
+                        }
+
+                    });
+
+                }
+            }
+            #endregion
+
+        }
+        private void HideImage()
+        {
+            //All
+            dgHistoryAll.Columns[dtlAllEntranceImage.Index].Visible = false;
+            dgHistoryAll.Columns[dtlAllExitImage.Index].Visible = false;
+            if (dgHistoryAll.Rows.Count > 0)
+            {
+                for (int i = 0; i <= dgHistoryAll.Rows.Count - 1; i++)
+                {
+                    dgHistoryAll.Rows[i].Height = 24;
+                }
+            }
+            //Parker In
+            dgParkerIn.Columns[dtlParkerInEntranceImage.Index].Visible = false;
+            dgParkerIn.Columns[dtlParkerInExitImage.Index].Visible = false;
+            if (dgParkerIn.Rows.Count > 0)
+            {
+                for (int i = 0; i <= dgParkerIn.Rows.Count - 1; i++)
+                {
+                    dgParkerIn.Rows[i].Height = 24;
+                }
+            }
+            //Parker Out
+            dgParkerOut.Columns[dtlParkerOutEntranceImage.Index].Visible = false;
+            dgParkerOut.Columns[dtlParkerOutExitImage.Index].Visible = false;
+            if (dgParkerOut.Rows.Count > 0)
+            {
+                for (int i = 0; i <= dgParkerOut.Rows.Count - 1; i++)
+                {
+                    dgParkerOut.Rows[i].Height = 24;
+                }
+            }
+            //Monthly In
+            dgMonthlyIn.Columns[dtlMonthlyInEntranceImage.Index].Visible = false;
+            dgMonthlyIn.Columns[dtlMonthlyInExitImage.Index].Visible = false;
+            if (dgMonthlyIn.Rows.Count > 0)
+            {
+                for (int i = 0; i <= dgMonthlyIn.Rows.Count - 1; i++)
+                {
+                    dgMonthlyIn.Rows[i].Height = 24;
+                }
+            }
+            //Monthly Out
+            dgMonthlyOut.Columns[dtlMonthlyOutEntranceImage.Index].Visible = false;
+            dgMonthlyOut.Columns[dtlMonthlyOutExitImage.Index].Visible = false;
+            if (dgMonthlyOut.Rows.Count > 0)
+            {
+                for (int i = 0; i <= dgMonthlyOut.Rows.Count - 1; i++)
+                {
+                    dgMonthlyOut.Rows[i].Height = 24;
+                }
             }
         }
     }

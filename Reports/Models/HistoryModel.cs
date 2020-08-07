@@ -18,5 +18,7 @@
         public string UpdateDate { get; set; }
         public string UpdateUser { get; set; }
         public string UpdateId { get; set; }
+        public byte[] EntranceImage { get; set; }
+        public byte[] ExitImage { get; set; }
     }
 }

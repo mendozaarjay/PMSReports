@@ -10,5 +10,6 @@
         public string ORNumber { get; set; }
         public string Rate { get; set; }
         public byte[] EntranceImage { get; set; }
+        public byte[] ExitImage { get; set; }
     }
 }

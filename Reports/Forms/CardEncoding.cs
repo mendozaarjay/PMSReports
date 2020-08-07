@@ -20,7 +20,8 @@ namespace Reports
         }
         protected override void OnLoad(EventArgs e)
         {
-            dgEncoding.Columns[dtlImage.Index].Visible = false;
+            dgEncoding.Columns[dtlEntranceImage.Index].Visible = false;
+            dgEncoding.Columns[dtlExitImage.Index].Visible = false;
             CheckForIllegalCrossThreadCalls = false;
             LoadAccess();
             base.OnLoad(e);
@@ -43,7 +44,9 @@ namespace Reports
 
         private async Task ShowImages()
         {
-            dgEncoding.Columns[dtlImage.Index].Visible = true;
+            dgEncoding.Columns[dtlEntranceImage.Index].Visible = true;
+            dgEncoding.Columns[dtlExitImage.Index].Visible = true;
+
             if (dgEncoding.Rows.Count > 0)
             {
                 for (int i = 0; i <= dgEncoding.Rows.Count - 1; i++)
@@ -51,7 +54,7 @@ namespace Reports
                     await Task.Run(() =>
                     {
                         var item = CardEncodingItems.FirstOrDefault(a => a.Id.ToString() == dgEncoding[dtlId.Index, i].Value.ToString());
-                        dgEncoding.Columns[dtlImage.Index].Width = 150;
+                        dgEncoding.Columns[dtlEntranceImage.Index].Width = 150;
 
                         if (item.EntranceImage != null)
                         {
@@ -60,20 +63,42 @@ namespace Reports
                             var col = new DataGridViewImageCell();
                             col.Value = entranceImage;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
-                            dgEncoding[dtlImage.Index, i] = col;
+                            dgEncoding[dtlEntranceImage.Index, i] = col;
                             dgEncoding.Rows[i].Height = 150;
-                            dgEncoding[dtlImage.Index, i].ReadOnly = true;
+                            dgEncoding[dtlEntranceImage.Index, i].ReadOnly = true;
+                            
                         }
                         else
                         {
                             var col = new DataGridViewTextBoxCell();
                             col.Value = string.Empty;
 
-                            dgEncoding[dtlImage.Index, i] = col;
+                            dgEncoding[dtlEntranceImage.Index, i] = col;
                             dgEncoding.Rows[i].Height = 24;
-                            dgEncoding[dtlImage.Index, i].ReadOnly = true;
+                            dgEncoding[dtlEntranceImage.Index, i].ReadOnly = true;
                         }
 
+
+                        if (item.ExitImage != null)
+                        {
+
+                            var exitImage = ImageHelper.ConvertByteToImage(item.ExitImage);
+                            var col = new DataGridViewImageCell();
+                            col.Value = exitImage;
+                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                            dgEncoding[dtlExitImage.Index, i] = col;
+                            dgEncoding.Rows[i].Height = 150;
+                            dgEncoding[dtlExitImage.Index, i].ReadOnly = true;
+                        }
+                        else
+                        {
+                            var col = new DataGridViewTextBoxCell();
+                            col.Value = string.Empty;
+
+                            dgEncoding[dtlExitImage.Index, i] = col;
+                            dgEncoding.Rows[i].Height = 24;
+                            dgEncoding[dtlExitImage.Index, i].ReadOnly = true;
+                        }
                     });
 
 
@@ -82,7 +107,8 @@ namespace Reports
         }
         private void HideImage()
         {
-            dgEncoding.Columns[dtlImage.Index].Visible = false;
+            dgEncoding.Columns[dtlEntranceImage.Index].Visible = false;
+            dgEncoding.Columns[dtlExitImage.Index].Visible = false;
             if (dgEncoding.Rows.Count > 0)
             {
                 for (int i = 0; i <= dgEncoding.Rows.Count - 1; i++)
@@ -137,7 +163,8 @@ namespace Reports
             }
             else
             {
-                dgEncoding.Columns[dtlImage.Index].Visible = false;
+                dgEncoding.Columns[dtlEntranceImage.Index].Visible = false;
+                dgEncoding.Columns[dtlExitImage.Index].Visible = false;
                 HideImage();
             }
         }

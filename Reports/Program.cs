@@ -18,7 +18,7 @@ namespace Reports
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFormNew());
+            Application.Run(new CardEncoding());
         }
     }
 }

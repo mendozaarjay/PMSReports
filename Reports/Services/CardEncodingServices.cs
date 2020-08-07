@@ -33,6 +33,7 @@ namespace Reports.Services
                         Rate = dr["Rate"].ToString(),
                         TicketNumber = dr["TicketNumber"].ToString(),
                         EntranceImage = dr["EntranceImage"].ToString().Length > 0 ? (byte[])dr["EntranceImage"] : null ,
+                        ExitImage = dr["ExitImage"].ToString().Length > 0 ? (byte[])dr["ExitImage"] : null ,
                     };
                     items.Add(item);
                 }

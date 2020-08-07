@@ -25,8 +25,8 @@ namespace Reports.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=TEKTITE_NEW;Persist Security Info=True;U" +
-            "ser ID=sa;Password=zealadmin01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=AVIDA;Persist Security Info=True;User ID" +
+            "=sa;Password=zealadmin01")]
         public string UserConnectionString {
             get {
                 return ((string)(this["UserConnectionString"]));

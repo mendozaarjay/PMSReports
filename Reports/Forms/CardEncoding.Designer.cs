@@ -52,7 +52,8 @@
             this.dtlTicketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlOrNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtlEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtlExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlView = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -240,7 +241,8 @@
             this.dtlTicketNo,
             this.dtlOrNo,
             this.dtlRate,
-            this.dtlImage,
+            this.dtlEntranceImage,
+            this.dtlExitImage,
             this.dtlView});
             this.dgEncoding.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgEncoding.Location = new System.Drawing.Point(0, 0);
@@ -310,14 +312,23 @@
             this.dtlRate.ReadOnly = true;
             this.dtlRate.Width = 125;
             // 
-            // dtlImage
+            // dtlEntranceImage
             // 
-            this.dtlImage.HeaderText = "Image";
-            this.dtlImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dtlImage.MinimumWidth = 6;
-            this.dtlImage.Name = "dtlImage";
-            this.dtlImage.ReadOnly = true;
-            this.dtlImage.Width = 125;
+            this.dtlEntranceImage.HeaderText = "Entrance Image";
+            this.dtlEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dtlEntranceImage.MinimumWidth = 6;
+            this.dtlEntranceImage.Name = "dtlEntranceImage";
+            this.dtlEntranceImage.ReadOnly = true;
+            this.dtlEntranceImage.Width = 150;
+            // 
+            // dtlExitImage
+            // 
+            this.dtlExitImage.HeaderText = "Exit Image";
+            this.dtlExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dtlExitImage.MinimumWidth = 6;
+            this.dtlExitImage.Name = "dtlExitImage";
+            this.dtlExitImage.ReadOnly = true;
+            this.dtlExitImage.Width = 150;
             // 
             // dtlView
             // 
@@ -377,7 +388,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTicketNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlOrNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlRate;
-        private System.Windows.Forms.DataGridViewImageColumn dtlImage;
+        private System.Windows.Forms.DataGridViewImageColumn dtlEntranceImage;
+        private System.Windows.Forms.DataGridViewImageColumn dtlExitImage;
         private System.Windows.Forms.DataGridViewButtonColumn dtlView;
     }
 }
