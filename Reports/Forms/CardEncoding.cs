@@ -134,8 +134,6 @@ namespace Reports
                 dgEncoding[dtlTimeIn.Index, row].Value = item.TimeIn;
                 dgEncoding[dtlPlateNo.Index, row].Value = item.PlateNo;
                 dgEncoding[dtlTicketNo.Index, row].Value = item.TicketNumber;
-                dgEncoding[dtlOrNo.Index, row].Value = item.ORNumber;
-                dgEncoding[dtlRate.Index, row].Value = item.Rate;
                 row++;
             }
             

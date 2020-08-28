@@ -59,10 +59,10 @@ namespace Reports
             var items = await services.GetHistoryReportAsync(from, to, txtSearch.Text.Trim());
 
             var parkerIn = items.Where(a => a.MonthlyName == "" && a.TimeOut == "");
-            var parkerOut = items.Where(a => a.MonthlyName == "");
+            var parkerOut = items.Where(a => a.MonthlyName == "" && a.TimeOut.Length > 0);
 
             var monthlyIn = items.Where(a => a.MonthlyName != "" && a.TimeOut == "");
-            var monthlyOut = items.Where(a => a.MonthlyName != "");
+            var monthlyOut = items.Where(a => a.MonthlyName != "" && a.TimeOut.Length > 0);
 
             HistoryItems = null;
             HistoryItems = items.ToList();
@@ -97,9 +97,6 @@ namespace Reports
                 dgHistoryAll[dtlAllCoupon.Index, row].Value = item.Coupon;
                 dgHistoryAll[dtlAllMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgHistoryAll[dtlAllMonthlyName.Index, row].Value = item.MonthlyName;
-                dgHistoryAll[dtlAllUpdateDate.Index, row].Value = item.UpdateDate;
-                dgHistoryAll[dtlAllUpdateUser.Index, row].Value = item.UpdateUser;
-                dgHistoryAll[dtlAllUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
             dgHistoryAll.AutoResizeColumns();
@@ -126,9 +123,6 @@ namespace Reports
                 dgParkerIn[dtlParkerInCoupon.Index, row].Value = item.Coupon;
                 dgParkerIn[dtlParkerInMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgParkerIn[dtlParkerInMonthlyName.Index, row].Value = item.MonthlyName;
-                dgParkerIn[dtlParkerInUpdateDate.Index, row].Value = item.UpdateDate;
-                dgParkerIn[dtlParkerInUpdateUser.Index, row].Value = item.UpdateUser;
-                dgParkerIn[dtlParkerInUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
             dgParkerIn.AutoResizeColumns();
@@ -156,9 +150,6 @@ namespace Reports
                 dgParkerOut[dtlParkerOutCoupon.Index, row].Value = item.Coupon;
                 dgParkerOut[dtlParkerOutMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgParkerOut[dtlParkerOutMonthlyName.Index, row].Value = item.MonthlyName;
-                dgParkerOut[dtlParkerOutUpdateDate.Index, row].Value = item.UpdateDate;
-                dgParkerOut[dtlParkerOutUpdateUser.Index, row].Value = item.UpdateUser;
-                dgParkerOut[dtlParkerOutUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
             dgParkerOut.AutoResizeColumns();
@@ -186,9 +177,6 @@ namespace Reports
                 dgMonthlyIn[dtlMonthlyInCoupon.Index, row].Value = item.Coupon;
                 dgMonthlyIn[dtlMonthlyInMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgMonthlyIn[dtlMonthlyInMonthlyName.Index, row].Value = item.MonthlyName;
-                dgMonthlyIn[dtlMonthlyInUpdateDate.Index, row].Value = item.UpdateDate;
-                dgMonthlyIn[dtlMonthlyInUpdateUser.Index, row].Value = item.UpdateUser;
-                dgMonthlyIn[dtlMonthlyInUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
             dgMonthlyIn.AutoResizeColumns();
@@ -215,9 +203,6 @@ namespace Reports
                 dgMonthlyOut[dtlMonthlyOutCoupon.Index, row].Value = item.Coupon;
                 dgMonthlyOut[dtlMonthlyOutMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgMonthlyOut[dtlMonthlyOutMonthlyName.Index, row].Value = item.MonthlyName;
-                dgMonthlyOut[dtlMonthlyOutUpdateDate.Index, row].Value = item.UpdateDate;
-                dgMonthlyOut[dtlMonthlyOutUpdateUser.Index, row].Value = item.UpdateUser;
-                dgMonthlyOut[dtlMonthlyOutUpdateId.Index, row].Value = item.UpdateId;
                 row++;
             }
             dgMonthlyOut.AutoResizeColumns();

@@ -40,9 +40,7 @@ namespace Reports.Services
                 item.Coupon = dr["Coupon"].ToString();
                 item.MonthlyRFID = dr["MonthlyRFID"].ToString();
                 item.MonthlyName = dr["MonthlyName"].ToString();
-                item.UpdateUser = dr["UpdateDate"].ToString();
-                item.UpdateUser = dr["UpdateUser"].ToString();
-                item.UpdateId = dr["UpdateId"].ToString();
+            
                 item.EntranceImage = dr["EntranceImage"].ToString().Length > 0 ? (byte[])(dr["EntranceImage"]) : null;
                 item.ExitImage = dr["ExitImage"].ToString().Length > 0 ? (byte[])(dr["ExitImage"]) : null;
                 items.Add(item);

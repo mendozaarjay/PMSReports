@@ -50,8 +50,6 @@
             this.dtlTimeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTicketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlOrNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlView = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -239,8 +237,6 @@
             this.dtlTimeIn,
             this.dtlPlateNo,
             this.dtlTicketNo,
-            this.dtlOrNo,
-            this.dtlRate,
             this.dtlEntranceImage,
             this.dtlExitImage,
             this.dtlView});
@@ -295,22 +291,6 @@
             this.dtlTicketNo.Name = "dtlTicketNo";
             this.dtlTicketNo.ReadOnly = true;
             this.dtlTicketNo.Width = 125;
-            // 
-            // dtlOrNo
-            // 
-            this.dtlOrNo.HeaderText = "OR No";
-            this.dtlOrNo.MinimumWidth = 6;
-            this.dtlOrNo.Name = "dtlOrNo";
-            this.dtlOrNo.ReadOnly = true;
-            this.dtlOrNo.Width = 125;
-            // 
-            // dtlRate
-            // 
-            this.dtlRate.HeaderText = "Rate";
-            this.dtlRate.MinimumWidth = 6;
-            this.dtlRate.Name = "dtlRate";
-            this.dtlRate.ReadOnly = true;
-            this.dtlRate.Width = 125;
             // 
             // dtlEntranceImage
             // 
@@ -386,8 +366,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTimeIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlPlateNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTicketNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlOrNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlRate;
         private System.Windows.Forms.DataGridViewImageColumn dtlEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlExitImage;
         private System.Windows.Forms.DataGridViewButtonColumn dtlView;

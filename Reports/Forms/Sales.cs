@@ -75,8 +75,6 @@ namespace Reports
                 dgAllSales[dtlAllDuration.Index, row].Value = item.Duration;
                 dgAllSales[dtlAllRateName.Index, row].Value = item.RateName;
                 dgAllSales[dtlAllCoupon.Index, row].Value = item.Coupon;
-                dgAllSales[dtlAllMonthlyRFID.Index, row].Value = item.MonthlyRFID;
-                dgAllSales[dtlAllMonthlyName.Index, row].Value = item.MonthlyName;
                 dgAllSales[dtlAllGrossAmount.Index, row].Value = item.GrossAmount;
                 dgAllSales[dtlAllDiscount.Index, row].Value = item.Discount;
                 dgAllSales[dtlAllAmountDue.Index, row].Value = item.AmountDue;
@@ -113,8 +111,6 @@ namespace Reports
                 dgTransactions[dtlTransactionDuration.Index, row].Value = item.Duration;
                 dgTransactions[dtlTransactionRateName.Index, row].Value = item.RateName;
                 dgTransactions[dtlTransactionCoupon.Index, row].Value = item.Coupon;
-                dgTransactions[dtlTransactionMonthlyRFID.Index, row].Value = item.MonthlyRFID;
-                dgTransactions[dtlTransactionMonthlyName.Index, row].Value = item.MonthlyName;
                 dgTransactions[dtlTransactionGrossAmount.Index, row].Value = item.GrossAmount;
                 dgTransactions[dtlTransactionDiscount.Index, row].Value = item.Discount;
                 dgTransactions[dtlTransactionAmountDue.Index, row].Value = item.AmountDue;
@@ -152,8 +148,6 @@ namespace Reports
                 dgCollections[dtlCollectionDuration.Index, row].Value = item.Duration;
                 dgCollections[dtlCollectionRateName.Index, row].Value = item.RateName;
                 dgCollections[dtlCollectionCoupon.Index, row].Value = item.Coupon;
-                dgCollections[dtlCollectionMonthlyRFID.Index, row].Value = item.MonthlyRFID;
-                dgCollections[dtlCollectionMonthlyName.Index, row].Value = item.MonthlyName;
                 dgCollections[dtlCollectionGrossAmount.Index, row].Value = item.GrossAmount;
                 dgCollections[dtlCollectionDiscount.Index, row].Value = item.Discount;
                 dgCollections[dtlCollectionAmountDue.Index, row].Value = item.AmountDue;
@@ -190,8 +184,6 @@ namespace Reports
                 dgDiscounts[dtlDiscountDuration.Index, row].Value = item.Duration;
                 dgDiscounts[dtlDiscountRateName.Index, row].Value = item.RateName;
                 dgDiscounts[dtlDiscountCoupon.Index, row].Value = item.Coupon;
-                dgDiscounts[dtlDiscountMonthlyRFID.Index, row].Value = item.MonthlyRFID;
-                dgDiscounts[dtlDiscountMonthlyName.Index, row].Value = item.MonthlyName;
                 dgDiscounts[dtlDiscountGrossAmount.Index, row].Value = item.GrossAmount;
                 dgDiscounts[dtlDiscountDiscount.Index, row].Value = item.Discount;
                 dgDiscounts[dtlDiscountAmountDue.Index, row].Value = item.AmountDue;
@@ -228,8 +220,6 @@ namespace Reports
                 dgErased[dtlEraseDuration.Index, row].Value = item.Duration;
                 dgErased[dtlEraseRateName.Index, row].Value = item.RateName;
                 dgErased[dtlEraseCoupon.Index, row].Value = item.Coupon;
-                dgErased[dtlEraseMonthlyRFID.Index, row].Value = item.MonthlyRFID;
-                dgErased[dtlEraseMonthlyName.Index, row].Value = item.MonthlyName;
                 dgErased[dtlEraseGrossAmount.Index, row].Value = item.GrossAmount;
                 dgErased[dtlEraseDiscount.Index, row].Value = item.Discount;
                 dgErased[dtlEraseAmountDue.Index, row].Value = item.AmountDue;
@@ -267,8 +257,6 @@ namespace Reports
                 dgFees[dtlFeeDuration.Index, row].Value = item.Duration;
                 dgFees[dtlFeeRateName.Index, row].Value = item.RateName;
                 dgFees[dtlFeeCoupon.Index, row].Value = item.Coupon;
-                dgFees[dtlFeeMonthlyRFID.Index, row].Value = item.MonthlyRFID;
-                dgFees[dtlFeeMonthlyName.Index, row].Value = item.MonthlyName;
                 dgFees[dtlFeeGrossAmount.Index, row].Value = item.GrossAmount;
                 dgFees[dtlFeeDiscount.Index, row].Value = item.Discount;
                 dgFees[dtlFeeAmountDue.Index, row].Value = item.AmountDue;

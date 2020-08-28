@@ -639,7 +639,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Amount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -689,7 +691,7 @@
             <Top>7.04cm</Top>
             <Left>0.10833cm</Left>
             <Height>1.34817cm</Height>
-            <Width>15.84284cm</Width>
+            <Width>15.84283cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>

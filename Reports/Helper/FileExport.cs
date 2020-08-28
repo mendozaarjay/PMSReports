@@ -151,6 +151,7 @@ namespace Reports
                 for (int colInx = 0; colInx < numberOfColumns; colInx++)
                 {
                     cellValue = dr.ItemArray[colInx].ToString();
+                    var type = dr.ItemArray[colInx].GetType().ToString();
                     if (IsNumericColumn[colInx])
                     {
                         cellNumericValue = 0;

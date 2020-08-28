@@ -12,8 +12,6 @@
         public string Duration { get; set; }
         public string RateName { get; set; }
         public string Coupon { get; set; }
-        public string MonthlyRFID { get; set; }
-        public string MonthlyName { get; set; }
         public decimal GrossAmount { get; set; }
         public decimal Discount { get; set; }
         public decimal AmountDue { get; set; }

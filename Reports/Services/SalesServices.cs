@@ -52,8 +52,6 @@ namespace Reports.Services
                         Duration = dr["Duration"].ToString(),
                         RateName = dr["RateName"].ToString(),
                         Coupon = dr["Coupon"].ToString(),
-                        MonthlyRFID = dr["MonthlyRFID"].ToString(),
-                        MonthlyName = dr["MonthlyName"].ToString(),
                         GrossAmount = decimal.Parse(dr["GrossAmount"].ToString()),
                         Discount = decimal.Parse(dr["Discount"].ToString()),
                         AmountDue = decimal.Parse(dr["AmountDue"].ToString()),
