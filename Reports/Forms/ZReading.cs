@@ -108,9 +108,12 @@ namespace Reports
                 dgReading[dtlOldORNo.Index, row].Value = item.OldORNo;
                 dgReading[dtlNewFRNo.Index, row].Value = item.NewFRNo;
                 dgReading[dtlOldFRNo.Index, row].Value = item.OldFRNo;
-                dgReading[dtlTodaySales.Index, row].Value = item.TodaySales;
-                dgReading[dtlNewSales.Index, row].Value = item.NewSales;
-                dgReading[dtlOldSales.Index, row].Value = item.OldSales;
+                if(item.TodaySales > 0)
+                    dgReading[dtlTodaySales.Index, row].Value = item.TodaySales;
+                if (item.NewSales > 0)
+                    dgReading[dtlNewSales.Index, row].Value = item.NewSales;
+                if (item.OldSales > 0)
+                    dgReading[dtlOldSales.Index, row].Value = item.OldSales;
                 row++;
             }
             dgReading.AutoResizeColumns();
@@ -152,7 +155,7 @@ namespace Reports
             sd.FileName = "ZReading Report " + dateFrom.ToString("MMddyyy") + "-" + dateTo.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "ZReading Report", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

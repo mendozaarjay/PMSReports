@@ -107,7 +107,7 @@ namespace Reports
             sd.FileName = "Cashier Accountability Report " + dtDate.Value.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "Cashier Accountability Report", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

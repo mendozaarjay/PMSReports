@@ -88,7 +88,7 @@ namespace Reports
             sd.FileName = "Operation Occupancy Report " + dtDate.Value.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "Operation Occupancy Report", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

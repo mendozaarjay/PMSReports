@@ -9,8 +9,8 @@
         public string OldORNo { get; set; }
         public string NewFRNo { get; set; }
         public string OldFRNo { get; set; }
-        public string TodaySales { get; set; }
-        public string NewSales { get; set; }
-        public string OldSales { get; set; }
+        public decimal TodaySales { get; set; }
+        public decimal NewSales { get; set; }
+        public decimal OldSales { get; set; }
     }
 }

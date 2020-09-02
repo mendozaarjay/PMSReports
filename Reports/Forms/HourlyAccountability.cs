@@ -91,7 +91,7 @@ namespace Reports
             sd.FileName = "Hourly Accountability Report " + dtDate.Value.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "Hourly Accountability Report", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

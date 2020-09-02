@@ -86,7 +86,7 @@ namespace Reports
             sd.FileName = "Operation Hourly Accountability Report " + dtDate.Value.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "Operation Hourly Accountability Report", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

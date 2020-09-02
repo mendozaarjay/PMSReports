@@ -175,7 +175,7 @@ namespace Reports
             sd.FileName = "BIR Report " + dateFrom.ToString("MMddyyy") + "-" + dateTo.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "BIR Report", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

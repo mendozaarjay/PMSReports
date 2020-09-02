@@ -127,7 +127,7 @@ namespace Reports
             sd.FileName = "Summary Report Per Terminal " + dtDate.Value.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "Summary Report Per Terminal", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

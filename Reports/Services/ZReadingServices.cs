@@ -44,9 +44,9 @@ namespace Reports.Services
                         OldORNo = dr["OldORNo"].ToString(),
                         OldFRNo = dr["OldFRNo"].ToString(),
                         NewFRNo = dr["NewFRNo"].ToString(),
-                        TodaySales = dr["TodaySales"].ToString(),
-                        OldSales = dr["OldSales"].ToString(),
-                        NewSales = dr["NewSales"].ToString(),
+                        TodaySales = dr["TodaySales"].ToString().Length == 0 ? 0 : decimal.Parse(dr["TodaySales"].ToString()),
+                        OldSales = dr["OldSales"].ToString().Length == 0 ? 0 : decimal.Parse(dr["OldSales"].ToString()),
+                        NewSales = dr["NewSales"].ToString().Length == 0 ? 0 : decimal.Parse(dr["NewSales"].ToString()),
                     };
                     items.Add(item);
                 }

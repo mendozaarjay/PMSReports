@@ -933,7 +933,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TodaySales.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -963,7 +965,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!NewSales.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -993,7 +997,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!OldSales.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1210,7 +1216,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!TodaySales.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1240,7 +1248,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!NewSales.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1270,7 +1280,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!OldSales.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1324,7 +1336,7 @@
             <Top>8.73337cm</Top>
             <Left>0.10833cm</Left>
             <Height>1.8cm</Height>
-            <Width>30.08255cm</Width>
+            <Width>30.08259cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>

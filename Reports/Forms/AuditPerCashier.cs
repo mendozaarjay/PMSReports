@@ -147,7 +147,7 @@ namespace Reports
             sd.FileName = "Audit Per Cashier Report " + dtDate.Value.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "Audit Per Cashier Report",sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }

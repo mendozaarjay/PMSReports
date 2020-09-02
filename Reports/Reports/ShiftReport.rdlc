@@ -986,6 +986,7 @@
                                   <Value>=Fields!GrossAmount.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1018,6 +1019,7 @@
                                   <Value>=Fields!Vatable.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1050,6 +1052,7 @@
                                   <Value>=Fields!Vat.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1082,6 +1085,7 @@
                                   <Value>=Fields!SubTotal.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1114,6 +1118,7 @@
                                   <Value>=Fields!Discount.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1146,6 +1151,7 @@
                                   <Value>=Fields!AmountTendered.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1178,6 +1184,7 @@
                                   <Value>=Fields!Change.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1210,6 +1217,7 @@
                                   <Value>=Fields!ChangeFund.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1242,6 +1250,7 @@
                                   <Value>=Fields!TenderDeclaration.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1274,6 +1283,7 @@
                                   <Value>=Fields!Variance.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>

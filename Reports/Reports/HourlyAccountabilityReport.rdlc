@@ -340,7 +340,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TotalAmount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />

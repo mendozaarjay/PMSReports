@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZReading));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnCsv = new System.Windows.Forms.ToolStripButton();
@@ -37,15 +40,6 @@
             this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.dgReading = new System.Windows.Forms.DataGridView();
-            this.dtlDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlNewORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlOldORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlNewFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlOldFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlTodaySales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlNewSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlOldSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +49,15 @@
             this.btnGenerate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtlDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlNewORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlOldORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlNewFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlOldFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTodaySales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlNewSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlOldSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgReading)).BeginInit();
@@ -156,78 +159,6 @@
             this.dgReading.RowTemplate.Height = 24;
             this.dgReading.Size = new System.Drawing.Size(900, 438);
             this.dgReading.TabIndex = 0;
-            // 
-            // dtlDate
-            // 
-            this.dtlDate.HeaderText = "Date";
-            this.dtlDate.MinimumWidth = 6;
-            this.dtlDate.Name = "dtlDate";
-            this.dtlDate.ReadOnly = true;
-            this.dtlDate.Width = 150;
-            // 
-            // dtlTime
-            // 
-            this.dtlTime.HeaderText = "Time";
-            this.dtlTime.MinimumWidth = 6;
-            this.dtlTime.Name = "dtlTime";
-            this.dtlTime.ReadOnly = true;
-            this.dtlTime.Width = 150;
-            // 
-            // dtlNewORNo
-            // 
-            this.dtlNewORNo.HeaderText = "New OR No";
-            this.dtlNewORNo.MinimumWidth = 6;
-            this.dtlNewORNo.Name = "dtlNewORNo";
-            this.dtlNewORNo.ReadOnly = true;
-            this.dtlNewORNo.Width = 150;
-            // 
-            // dtlOldORNo
-            // 
-            this.dtlOldORNo.HeaderText = "Old OR No";
-            this.dtlOldORNo.MinimumWidth = 6;
-            this.dtlOldORNo.Name = "dtlOldORNo";
-            this.dtlOldORNo.ReadOnly = true;
-            this.dtlOldORNo.Width = 150;
-            // 
-            // dtlNewFRNo
-            // 
-            this.dtlNewFRNo.HeaderText = "New FR No";
-            this.dtlNewFRNo.MinimumWidth = 6;
-            this.dtlNewFRNo.Name = "dtlNewFRNo";
-            this.dtlNewFRNo.ReadOnly = true;
-            this.dtlNewFRNo.Width = 150;
-            // 
-            // dtlOldFRNo
-            // 
-            this.dtlOldFRNo.HeaderText = "Old FR No";
-            this.dtlOldFRNo.MinimumWidth = 6;
-            this.dtlOldFRNo.Name = "dtlOldFRNo";
-            this.dtlOldFRNo.ReadOnly = true;
-            this.dtlOldFRNo.Width = 150;
-            // 
-            // dtlTodaySales
-            // 
-            this.dtlTodaySales.HeaderText = "Today Sales";
-            this.dtlTodaySales.MinimumWidth = 6;
-            this.dtlTodaySales.Name = "dtlTodaySales";
-            this.dtlTodaySales.ReadOnly = true;
-            this.dtlTodaySales.Width = 150;
-            // 
-            // dtlNewSales
-            // 
-            this.dtlNewSales.HeaderText = "New Sales";
-            this.dtlNewSales.MinimumWidth = 6;
-            this.dtlNewSales.Name = "dtlNewSales";
-            this.dtlNewSales.ReadOnly = true;
-            this.dtlNewSales.Width = 150;
-            // 
-            // dtlOldSales
-            // 
-            this.dtlOldSales.HeaderText = "Old Sales";
-            this.dtlOldSales.MinimumWidth = 6;
-            this.dtlOldSales.Name = "dtlOldSales";
-            this.dtlOldSales.ReadOnly = true;
-            this.dtlOldSales.Width = 150;
             // 
             // splitContainer1
             // 
@@ -334,6 +265,84 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Month";
             // 
+            // dtlDate
+            // 
+            this.dtlDate.HeaderText = "Date";
+            this.dtlDate.MinimumWidth = 6;
+            this.dtlDate.Name = "dtlDate";
+            this.dtlDate.ReadOnly = true;
+            this.dtlDate.Width = 150;
+            // 
+            // dtlTime
+            // 
+            this.dtlTime.HeaderText = "Time";
+            this.dtlTime.MinimumWidth = 6;
+            this.dtlTime.Name = "dtlTime";
+            this.dtlTime.ReadOnly = true;
+            this.dtlTime.Width = 150;
+            // 
+            // dtlNewORNo
+            // 
+            this.dtlNewORNo.HeaderText = "New OR No";
+            this.dtlNewORNo.MinimumWidth = 6;
+            this.dtlNewORNo.Name = "dtlNewORNo";
+            this.dtlNewORNo.ReadOnly = true;
+            this.dtlNewORNo.Width = 150;
+            // 
+            // dtlOldORNo
+            // 
+            this.dtlOldORNo.HeaderText = "Old OR No";
+            this.dtlOldORNo.MinimumWidth = 6;
+            this.dtlOldORNo.Name = "dtlOldORNo";
+            this.dtlOldORNo.ReadOnly = true;
+            this.dtlOldORNo.Width = 150;
+            // 
+            // dtlNewFRNo
+            // 
+            this.dtlNewFRNo.HeaderText = "New FR No";
+            this.dtlNewFRNo.MinimumWidth = 6;
+            this.dtlNewFRNo.Name = "dtlNewFRNo";
+            this.dtlNewFRNo.ReadOnly = true;
+            this.dtlNewFRNo.Width = 150;
+            // 
+            // dtlOldFRNo
+            // 
+            this.dtlOldFRNo.HeaderText = "Old FR No";
+            this.dtlOldFRNo.MinimumWidth = 6;
+            this.dtlOldFRNo.Name = "dtlOldFRNo";
+            this.dtlOldFRNo.ReadOnly = true;
+            this.dtlOldFRNo.Width = 150;
+            // 
+            // dtlTodaySales
+            // 
+            dataGridViewCellStyle1.Format = "N2";
+            this.dtlTodaySales.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dtlTodaySales.HeaderText = "Today Sales";
+            this.dtlTodaySales.MinimumWidth = 6;
+            this.dtlTodaySales.Name = "dtlTodaySales";
+            this.dtlTodaySales.ReadOnly = true;
+            this.dtlTodaySales.Width = 150;
+            // 
+            // dtlNewSales
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            this.dtlNewSales.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtlNewSales.HeaderText = "New Sales";
+            this.dtlNewSales.MinimumWidth = 6;
+            this.dtlNewSales.Name = "dtlNewSales";
+            this.dtlNewSales.ReadOnly = true;
+            this.dtlNewSales.Width = 150;
+            // 
+            // dtlOldSales
+            // 
+            dataGridViewCellStyle3.Format = "N2";
+            this.dtlOldSales.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtlOldSales.HeaderText = "Old Sales";
+            this.dtlOldSales.MinimumWidth = 6;
+            this.dtlOldSales.Name = "dtlOldSales";
+            this.dtlOldSales.ReadOnly = true;
+            this.dtlOldSales.Width = 150;
+            // 
             // ZReading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -377,6 +386,8 @@
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlNewORNo;
@@ -386,7 +397,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTodaySales;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlNewSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlOldSales;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbTerminal;
     }
 }

@@ -108,7 +108,7 @@ namespace Reports
             sd.FileName = "User Access Matrix Report " + DateTime.Now.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                FileExport.ExportToExcel(dt, "User Access Matrix Report", sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }
