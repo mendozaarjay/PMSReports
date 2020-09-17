@@ -42,10 +42,10 @@ namespace Reports
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
             var result = await services.DetailedTransactionSummaryAsync(from,to, txtSearch.Text.Trim());
-            PopulateDetailedTransactionSummary(result);
+            await Spinner.ShowSpinner(this, PopulateDetailedTransactionSummary(result));
             if(cbShowImages.Checked)
             {
-                await ShowImage();
+                await Spinner.ShowSpinner(this, ShowImage());
             }
             btnGenerate.Enabled = true;
         }
@@ -61,18 +61,18 @@ namespace Reports
                     await Task.Run(() =>
                     {
                         var item = SummaryItems.FirstOrDefault(a => a.TransitId.ToString() == dgDetailedTransaction[dtlTransitId.Index, i].Value.ToString());
-                        dgDetailedTransaction.Columns[dtlEntranceImage.Index].Width = 150;
-                        dgDetailedTransaction.Columns[dtlExitImage.Index].Width = 150;
+                        dgDetailedTransaction.Columns[dtlEntranceImage.Index].Width = 250;
+                        dgDetailedTransaction.Columns[dtlExitImage.Index].Width = 250;
 
                         if (item.EntranceImage != null)
                         {
 
-                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
+                            var entranceImage = ImageHelper.ConvertByteToImageWithResizing(item.EntranceImage);
                             var col =  new DataGridViewImageCell();
                             col.Value = entranceImage;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
                             dgDetailedTransaction[dtlEntranceImage.Index, i] = col;
-                            dgDetailedTransaction.Rows[i].Height = 150;
+                            dgDetailedTransaction.Rows[i].Height = 250;
                             dgDetailedTransaction[dtlEntranceImage.Index, i].ReadOnly = true;
                         }
                         else
@@ -88,12 +88,12 @@ namespace Reports
                         if (item.ExitImage != null)
                         {
 
-                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
+                            var image = ImageHelper.ConvertByteToImageWithResizing(item.ExitImage);
                             var col = new DataGridViewImageCell();
                             col.Value = image;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
                             dgDetailedTransaction[dtlExitImage.Index, i] = col;
-                            dgDetailedTransaction.Rows[i].Height = 150;
+                            dgDetailedTransaction.Rows[i].Height = 250;
                             dgDetailedTransaction[dtlExitImage.Index, i].ReadOnly = true;
                         }
                         else
@@ -124,7 +124,7 @@ namespace Reports
                 }
             }
         }
-        private void PopulateDetailedTransactionSummary(IEnumerable<DetailedTransactionSummaryModel> items)
+        private async Task PopulateDetailedTransactionSummary(IEnumerable<DetailedTransactionSummaryModel> items)
         {
             SummaryItems = null;
             SummaryItems = items.ToList();
@@ -135,26 +135,28 @@ namespace Reports
                 SummaryItems = items.ToList();
             }
 
-            var row = 0;
-            foreach (var item in items)
+            await Task.Run(() =>
             {
-                dgDetailedTransaction[dtlRow.Index, row].Value = row + 1;
-                dgDetailedTransaction[dtlTransitId.Index, row].Value = item.TransitId;
-                dgDetailedTransaction[dtlLocation.Index, row].Value = item.Location;
-                dgDetailedTransaction[dtlORNumber.Index, row].Value = item.ORNumber;
-                dgDetailedTransaction[dtlRateName.Index, row].Value = item.RateName;
-                dgDetailedTransaction[dtlTimeIn.Index, row].Value = item.TimeIn;
-                dgDetailedTransaction[dtlTimeOut.Index, row].Value = item.TimeOut;
-                dgDetailedTransaction[dtlDuration.Index, row].Value = item.Duration;
-                dgDetailedTransaction[dtlTotalHours.Index, row].Value = item.TotalHours;
-                dgDetailedTransaction[dtlPlateNo.Index, row].Value = item.PlateNo;
-                dgDetailedTransaction[dtlAmount.Index, row].Value = item.Amount;
-                dgDetailedTransaction[dtlCardNumber.Index, row].Value = item.CardNumber;
-                dgDetailedTransaction[dtlCashier.Index, row].Value = item.Username;
-               
-                row++;
-            }
-            dgDetailedTransaction.AutoResizeColumns();
+                var row = 0;
+                foreach (var item in items)
+                {
+                    dgDetailedTransaction[dtlRow.Index, row].Value = row + 1;
+                    dgDetailedTransaction[dtlTransitId.Index, row].Value = item.TransitId;
+                    dgDetailedTransaction[dtlLocation.Index, row].Value = item.Location;
+                    dgDetailedTransaction[dtlORNumber.Index, row].Value = item.ORNumber;
+                    dgDetailedTransaction[dtlRateName.Index, row].Value = item.RateName;
+                    dgDetailedTransaction[dtlTimeIn.Index, row].Value = item.TimeIn;
+                    dgDetailedTransaction[dtlTimeOut.Index, row].Value = item.TimeOut;
+                    dgDetailedTransaction[dtlDuration.Index, row].Value = item.Duration;
+                    dgDetailedTransaction[dtlTotalHours.Index, row].Value = item.TotalHours;
+                    dgDetailedTransaction[dtlPlateNo.Index, row].Value = item.PlateNo;
+                    dgDetailedTransaction[dtlAmount.Index, row].Value = item.Amount;
+                    dgDetailedTransaction[dtlCardNumber.Index, row].Value = item.CardNumber;
+                    dgDetailedTransaction[dtlCashier.Index, row].Value = item.Username;
+
+                    row++;
+                }
+            });
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -246,7 +248,7 @@ namespace Reports
                 {
                     if(SummaryItems.Count() > 0)
                     {
-                       await ShowImage();
+                        await Spinner.ShowSpinner(this, ShowImage());
                     }
                     else
                     {

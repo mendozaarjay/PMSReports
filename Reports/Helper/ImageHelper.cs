@@ -34,5 +34,18 @@ namespace Reports
             }
             return image;
         }
+        public static Bitmap ConvertByteToImageWithResizing(byte[] imageArray)
+        {
+            Bitmap bitmap;
+            using (MemoryStream ms = new MemoryStream(imageArray))
+            {
+                var image = Image.FromStream(ms);
+                int width = (int) image.Width / 4;
+                int height = (int) image.Height / 4;
+
+                bitmap = new Bitmap(image, new Size(width, height));
+            }
+            return bitmap;
+        }
     }
 }

@@ -144,21 +144,21 @@
   <data name="btnCsv.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMhSURBVDhPjZNtTFNnGIZfF8wW46KLcc5sbuhijAZj/Epc
-        goJDRTaj2w81U4w/TDCZVhwM1CopY2GiQopg7RSlgkIBa0EsX1UwCEiB6gYF8YNplTo+CgUaBTRZrr09
-        qfHHYrI7ufIk59x3nuc5532FyGqbsUhfV/2t3sr/JTzdMrZA31gsfAo6VVd98Kqdpude7P1jNPeNYZM0
-        9IxSJ6n9e5Qa10tuSKzdL6l89oJrXR5UJhtfnrYZRHhmOTXOIcqevqCgy0v+Iy+5D0Yw3B/hXOcwSeV2
-        NBY7mY4h0ts8pLV6+L1jmJy2XsK0JWNi7UkLFU9GlIe69iEypFErTal/enijaHMTiS0DJDQPoG5yE9/o
-        JssxiC8rwrSlStfkO4Mk2QfQSOORZjeHbG5/HHYaG1HV9fHjrT6ianvZdbOXlLuDcoJSxNdpJehl95iG
-        fqLr+9krjZFFdrZcavDHYVNOPRsM9URk1xNuaGCjxak08GVF6Akzx/4YZGdND5HVPTzxvvbH/ivv63/Y
-        WuViZckz9shGvqxYddyk7LWh3EVEmYvvK5/zcPiVP/JW9zzjRFi6CSp4zALjYyKvuwg+WogITilSxv7K
-        /JTlJidLLzsJNjuVwBs53KMszHvIrOxOZma18/EZB5tK/2JFYg5ixa957LB2Mzf3AXMudPJF9j0+O9fB
-        vAsdtMlga/8on59t5cMMO5PSW3hf20xAqo3VxnaWqc8glh05z3dXu5imu8sUaZp8soUP1JeZeKCQaRoz
-        HyWYmPBzPiI2DxFzSXIRkXyTkNw7LI5NRyyO0xFmdPBeyi0mHK31D/1uCdV5hKaCUIONoL0piIXRqawz
-        3EYkWRGJVX7buyXUxYhDZsJPVzE/6hfEvF1J4+t1FQSm3iAgQR6Mw/LfSoPCwSsSEyK+SCK/eFwBAXK1
-        wORSvkkrZGaUZlhMV+eXLd93jLC0K6zVVRKiryZUEqK7LrES6qunqgjJlO8yKlinLWbNbxdZslvD1Pi8
-        AuVGTlHnGz/Zfnh89rZYFH6IYfbWnyT7JdEEbpFs9lWVrCo+3RE/MjUup1AIIf4FMDTW3/j7F8kAAAAA
-        SUVORK5CYII=
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMgSURBVDhPjZN/SJR3HMe/hbGIRo1oEW3NGhGFEa2CBi5d
+        rpwr+vFHRstoMDCobpZOqys5c1jWlDPtusry0tJTu850/rzSMHWeerXpaVZzdeWVP05PPUpdEK997+Gi
+        P0awN7z4wPO833w+n+f5foXIbJu1VF9XvV5v4f8Sqi0eW6xvLBJeBZypqz5UbKPpuQdb/xjNfWNYJQ09
+        o9RJal+MUuN8xS2JpfsVlc9e8luXG5XJyudnrQYRmlFOjWOIsqcvye/ykPeXh5yHIxgejHCxc5jEchua
+        UhsZ9iHS2tyktro51zFMdlsvIdqiMbH2dCkVT0aUh7r2IdKlUStNKX+6easocxMJLQPENw+gbnIR1+gi
+        0z6INytCtCVK16S7gyTaBtBI49FmF4etLl8cdhkbUdX1sedOH5G1vfx4u5fke4NyghLEmtQb6GX36IZ+
+        our72SeNEYU2wq82+OKwKbueDYZ6wrLqCTU0sLHUoTTwZkXwr2ZO/jHIrpoeIqp7eOJ57Yv9V57Xb9hW
+        5eSrG8/YKxt5s2L1KZOy14ZyJ2FlTrZUPufR8D++yDvdd48TVtpNQP5jFhsfE3HTSeCJAkRgcqEy9pfm
+        p6w0OVh+zUGg2aEE3sruGmVJ7iM+zepkdmY7H5+3s6nkb1YlZCNW/ZLLTks3C3IeMv9yJ59l3eeTix0s
+        vNxBmwy29o8y90IrH6bbmJLWwgfaZvxSrHxtbGeF+jxixdFLbC7uYobuHtOkaerpFiarrzHpYAEzNGY+
+        ijcx4ec8REwuIvqq5Aoi6TZBOXdZFpOGWBarI8RoZ2LyHSacqPUN/X4J1SWEpoJgg5WAfcmIJVEprDP8
+        jki0IBKqfLb3S6iLEIfNhJ6tYlHkMcTCHzTj3+oq8E+5hV+8PBhH5L+VBoVD1yUmRFyhRH7x2Hz85Gr+
+        SSV8l1rA7EjNsJipzitb+dNJQlKvs1ZXSZC+mmBJkO6mxEKwt56pIihDvkuvYJ22iG+OX+GL3Rqmx+Xm
+        KzdymjrPOHPHkfF538egsD2aedsOSPZLovAPl2z1VpWsKubsjBuZHptdIIQQ/wIYVdbRST8RBgAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="btnExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -205,22 +205,22 @@
   <data name="btnFind.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANYSURBVDhPVVJdTJtVGB7zZzPRK2OiJIBRIoYbb7zThAvi
-        vNkNZnhruMELY9REk2FMqokL2Ujd2IUbf2tt+aA/tIOtX0sLlnYf0EKhKyuUUlq2ry0UGKXtWkrx6zmP
-        5+vojE/y5D0X53ne93nPOVMFgBq9bbGp32i3aUZtGb3eQjR/8WWOm0wO6yw3VCrD2+xSzen1/4OJz/5h
-        fnBdq7tP1JM+DHpE3JhPoUfYRu+8CK13szQ7N1fQas1fnkr+gyxW3vUMafVWDHgSmAhnsbB9BMdWAf0r
-        WfziforLzl10C3FEtsRnHGduP5U+x1XrSiuns+C2Jw5/qgiJUBweE6w8lXAvdgLl0hG6HqTxs3sPvzmj
-        VBD82UqcKgbve9c1Dh+smzkUJYoyBQ5LFBsZwJmgUIckXH9YwhVvDte8++ADsQON2titUCjOVgw40zQZ
-        8W9jPnEEMUewV6RI5IG1NMVMkkIfIVCtEfQF/8EtfwZDy0mo1aZwZ1/fK5Wlsm1j8GEa9lgBy3ukIlw9
-        oFjYpbCLFKYohWGTYDRShm69AFUgBZWKk77t7T3XbjC8dMZg5HHTlwYXzGNSJHAlCdys81Scgn9CYXnM
-        uEUYy+BjxzA92sXAgKn4g1L/WmWKO6NWOujbR+9iBhqW17hZhjlGwDOhg03gShDM7ZQZJSylSrCHdliE
-        sbBSXzXgl7Z4fxzXhH38GSjhDjPRsXHvsa5OJpZjracJopkyxOwJrN7lZ5zW3KNQqc5XFtltD7UJngD6
-        vCkovYfoZ8saDkuYiElwJySsHRBs5wn2c3kEgqsYGRmXxsYsDZX8MmSXW46gIRSLQ+NL4fZyDtq1Y4xH
-        SxCSJ4hlJKSLZWxEo3C55mEas0CrMeLFM8qQ3dTOkCYYjtDZ9QQc4QMIT/J4tFuEmC5gNfKYTk3PYvyu
-        DTt7O/jxbxHt/RM4lT+HbMIJq59O+zZ804srxSmnQGdm3GTKJWTN/MzEkKnn15FhMy5pF9BhSyLK/soL
-        k5aWlpebm5tfbWhoOM/Or1/q6Hir43vFe51dig+/uaz44Kuvv3v387a2dy52dbbKIpmySdWgprGx8VxT
-        U9MbtbW1b9bV1dUyvl9fX9/M6sesfsLqZ6xeZA2++OhC65WqSdvvP3X/Cw+Wnygq/uU5AAAAAElFTkSu
-        QmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANXSURBVDhPVVJNTGNVGB3GnxkTXRkTJQGMEjFs3LjThAVR
+        N7PBDG4NG1wYoyaaDMakLpwQh9QZXDjD72v6eDP9oZ1h6KO0RVrmAS0UOu1Af4AWpz9QYChtp6UUX+89
+        3tcpYzzJyXcX95zvO9+9584AoE5vXW4ZNNqs2jvWrF5vIdyoWBGE6dSYznKD4wxvskt1tev/BxOf/938
+        4DqvmySaaS+G3XHcWEyjT9pB/2IcvGerPL+wUOR58xc1yX9QxOq77hFeP4UhdxITkRyWdo5h3y5iMJDD
+        z3NPcGV2D71SApvb8aeCYO6sSZ/ht6lAu6Cz4JY7AV+6BJlQHJ0QBJ7IuB87hXrlGD0PMvhpbh8qxwaV
+        JF+uGucMw5OesNbuxdRWHiWZokKBozLFRhaYTVJoQjKuPyzjqiePa54DiP7YoVZj7FWpVOerBoJphtz2
+        7WAxeYx4nmC/RJEsAMEMhTNFod8k4IIEA2v/4KYvi5HVFDQaU6R7YOCl6lLZtjH8MANbrIjVfVIVrh9S
+        LO1R2OIUpiiFYYvgzmYFunARnD8NjtPK3/T3X+g0GF44ZzCK+MObgbBWwHScwJUimGOdHQkK8TGF5W/G
+        bcJYgRg7genRHoaGTKXv1fpXqlMMjU3SYe8B+pez0LK8xq0KzDECkQntbAJXkmBht8IoYyVdhi20yyKM
+        R9T6msGouLIt+hK4Jh3gT38Zo8xEx8a9z7rOMrESK5whiGYriOdOMeVZfSrw5j4Vx12sLrLXFuqQ3H4M
+        eNJQe44wyJY1FpExEZMxl5QRPCTYKRAc5Avwr62D503y+LilqZpfgeJy075mCMUS0HrTuLWaBx88wb1o
+        GVLqFLGsjEypgo1oFC7XIkzjFvBaI54/owLFTTMb0vqDYTofTsIeOYT0uIBHeyXEM0UEwlHqmJnHvbtW
+        7O7v4oe/4ugcnEBN/gyKiSCtfzzj3fDalgOlaYeLOp1O4nBJObPonBgx9f1ye8yMy/wSuqwpRNlfeW7S
+        1tb2Ymtr68tNTU0X2fnVy11db3R9p3qnu0f1/tdXVO99+dW3b3/W0fHWpZ7udkWkUDE5M6hrbm6+0NLS
+        8lp9ff3rDQ0N9YzvNjY2trL6IasfsfoJq5dYg88/+LT96plJx68/9v4LoAee5XonfqcAAAAASUVORK5C
+        YII=
 </value>
   </data>
   <metadata name="dtlAllTransitId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -266,6 +266,141 @@
     <value>True</value>
   </metadata>
   <metadata name="dtlAllExitImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllTransitId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllTerminal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllORNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllPlateNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllTicketNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllDateTimeIn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllDateTimeOut.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllDurationOfStay.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllRatesName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllCoupon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllMonthlyRFID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllMonthlyName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllEntranceImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlAllExitImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInTransitId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInTerminal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInORNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInPlateNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInTicketNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInDateTimeIn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInDateTimeOut.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInDurationOfStay.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInRatesName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInCoupon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInMonthlyRFID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInMonthlyName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInEntranceImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInExitImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInTransitId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInTerminal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInORNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInPlateNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInTicketNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInDateTimeIn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInDateTimeOut.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInDurationOfStay.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInRatesName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInCoupon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInMonthlyRFID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInMonthlyName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInEntranceImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dtlParkerInExitImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\ARJAY\AppData\Local\Temp\vs152A.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\ARJAYM~1\AppData\Local\Temp\vs608D.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\ARJAY\AppData\Local\Temp\vs152A.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\ARJAYM~1\AppData\Local\Temp\vs608D.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>reporticon.ico</ApplicationIcon>
@@ -88,6 +88,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cSpinner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cSpinner.Designer.cs">
+      <DependentUpon>cSpinner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAccessMatrix.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,7 @@
       <DependentUpon>UserAccessMatrix.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\ExportToExcelFile.cs" />
+    <Compile Include="Spinner.cs" />
     <Compile Include="Models\UserAccessMatrixItemModel.cs" />
     <Compile Include="Services\UserAccessMatrixServices.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -307,6 +314,9 @@
     <Compile Include="Forms\ZReading.Designer.cs">
       <DependentUpon>ZReading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="cSpinner.resx">
+      <DependentUpon>cSpinner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAccessMatrix.resx">
       <DependentUpon>UserAccessMatrix.cs</DependentUpon>
     </EmbeddedResource>

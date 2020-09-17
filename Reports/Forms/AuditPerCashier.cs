@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserAccess.Models;
 
@@ -42,16 +43,24 @@ namespace Reports
         }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
             btnGenerate.Enabled = false;
             var items = await services.AuditPerCashierAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
             var ticketaccountability = await services.TicketAccountabilityAsync(dtDate.Value);
             var proccessedtickets = await services.ProcessedTicketsAsync(dtDate.Value);
-            LoadAuditPerCashier(items);
-            LoadTicketAccountability(ticketaccountability);
-            LoadProcessedTickets(proccessedtickets);
+            await Spinner.ShowSpinner(this, LoadData(items, ticketaccountability, proccessedtickets));
             btnGenerate.Enabled = true;
         }
 
+        private async Task LoadData(IEnumerable<AuditPerCashierModel> items, IEnumerable<AuditPerCashierTicketAccountabilityModel> ticketaccountability,IEnumerable<AuditPerCashierProcessedTicketModel> proccessedtickets)
+        {
+            await Task.Run(() =>
+            {
+                LoadAuditPerCashier(items);
+                LoadTicketAccountability(ticketaccountability);
+                LoadProcessedTickets(proccessedtickets);
+            });
+        }
         private void LoadAuditPerCashier(IEnumerable<AuditPerCashierModel> items)
         {
             dgAuditPerCashier.Rows.Clear();

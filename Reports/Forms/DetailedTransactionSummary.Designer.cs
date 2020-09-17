@@ -430,7 +430,7 @@
             this.dtlEntranceImage.MinimumWidth = 6;
             this.dtlEntranceImage.Name = "dtlEntranceImage";
             this.dtlEntranceImage.ReadOnly = true;
-            this.dtlEntranceImage.Width = 150;
+            this.dtlEntranceImage.Width = 250;
             // 
             // dtlExitImage
             // 
@@ -439,7 +439,7 @@
             this.dtlExitImage.MinimumWidth = 6;
             this.dtlExitImage.Name = "dtlExitImage";
             this.dtlExitImage.ReadOnly = true;
-            this.dtlExitImage.Width = 150;
+            this.dtlExitImage.Width = 250;
             // 
             // dtlViewImage
             // 

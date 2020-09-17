@@ -22,6 +22,7 @@ namespace Reports
         {
             dgEncoding.Columns[dtlEntranceImage.Index].Visible = false;
             dgEncoding.Columns[dtlExitImage.Index].Visible = false;
+            this.DoubleBuffered = true;
             CheckForIllegalCrossThreadCalls = false;
             LoadAccess();
             base.OnLoad(e);
@@ -34,16 +35,18 @@ namespace Reports
         {
             btnGenerate.Enabled = false;
             var items = await services.CardEncodingAsync(dtDate.Value.Maximum(), txtSearch.Text);
-            PopulateEncoding(items);
-            if(cbShowImages.Checked)
+
+            await Spinner.ShowSpinner(this, PopulateEncoding(items));
+            if (cbShowImages.Checked)
             {
-                await ShowImages();
+                await Spinner.ShowSpinner(this, ShowImages());
             }
             btnGenerate.Enabled = true;
         }
 
         private async Task ShowImages()
         {
+            dgEncoding.Enabled = false;
             dgEncoding.Columns[dtlEntranceImage.Index].Visible = true;
             dgEncoding.Columns[dtlExitImage.Index].Visible = true;
 
@@ -51,59 +54,71 @@ namespace Reports
             {
                 for (int i = 0; i <= dgEncoding.Rows.Count - 1; i++)
                 {
-                    await Task.Run(() =>
+                    try
                     {
-                        var item = CardEncodingItems.FirstOrDefault(a => a.Id.ToString() == dgEncoding[dtlId.Index, i].Value.ToString());
-                        dgEncoding.Columns[dtlEntranceImage.Index].Width = 150;
-
-                        if (item.EntranceImage != null)
+                        await Task.Run(() =>
                         {
+                            var item = CardEncodingItems.FirstOrDefault(a => a.Id.ToString() == dgEncoding[dtlId.Index, i].Value.ToString());
+                            dgEncoding.Columns[dtlEntranceImage.Index].Width = 250;
 
-                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
-                            var col = new DataGridViewImageCell();
-                            col.Value = entranceImage;
-                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
-                            dgEncoding[dtlEntranceImage.Index, i] = col;
-                            dgEncoding.Rows[i].Height = 150;
-                            dgEncoding[dtlEntranceImage.Index, i].ReadOnly = true;
-                            
-                        }
-                        else
-                        {
-                            var col = new DataGridViewTextBoxCell();
-                            col.Value = string.Empty;
+                            if (item.EntranceImage != null)
+                            {
 
-                            dgEncoding[dtlEntranceImage.Index, i] = col;
-                            dgEncoding.Rows[i].Height = 24;
-                            dgEncoding[dtlEntranceImage.Index, i].ReadOnly = true;
-                        }
+                                var entranceImage = ImageHelper.ConvertByteToImageWithResizing(item.EntranceImage);
+                                var col = new DataGridViewImageCell();
+                                col.Value = entranceImage;
+                                col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                                dgEncoding[dtlEntranceImage.Index, i] = col;
+                                dgEncoding.Rows[i].Height = 250;
+                                dgEncoding[dtlEntranceImage.Index, i].ReadOnly = true;
+
+                            }
+                            else
+                            {
+                                var col = new DataGridViewTextBoxCell();
+                                col.Value = string.Empty;
+
+                                dgEncoding[dtlEntranceImage.Index, i] = col;
+                                dgEncoding.Rows[i].Height = 24;
+                                dgEncoding[dtlEntranceImage.Index, i].ReadOnly = true;
+                            }
 
 
-                        if (item.ExitImage != null)
-                        {
+                            if (item.ExitImage != null)
+                            {
 
-                            var exitImage = ImageHelper.ConvertByteToImage(item.ExitImage);
-                            var col = new DataGridViewImageCell();
-                            col.Value = exitImage;
-                            col.ImageLayout = DataGridViewImageCellLayout.Stretch;
-                            dgEncoding[dtlExitImage.Index, i] = col;
-                            dgEncoding.Rows[i].Height = 150;
-                            dgEncoding[dtlExitImage.Index, i].ReadOnly = true;
-                        }
-                        else
-                        {
-                            var col = new DataGridViewTextBoxCell();
-                            col.Value = string.Empty;
+                                var exitImage = ImageHelper.ConvertByteToImageWithResizing(item.ExitImage);
+                                var col = new DataGridViewImageCell();
+                                col.Value = exitImage;
+                                col.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                                dgEncoding[dtlExitImage.Index, i] = col;
+                                dgEncoding.Rows[i].Height = 250;
+                                dgEncoding[dtlExitImage.Index, i].ReadOnly = true;
+                            }
+                            else
+                            {
+                                var col = new DataGridViewTextBoxCell();
+                                col.Value = string.Empty;
 
-                            dgEncoding[dtlExitImage.Index, i] = col;
-                            dgEncoding.Rows[i].Height = 24;
-                            dgEncoding[dtlExitImage.Index, i].ReadOnly = true;
-                        }
-                    });
+                                dgEncoding[dtlExitImage.Index, i] = col;
+                                dgEncoding.Rows[i].Height = 24;
+                                dgEncoding[dtlExitImage.Index, i].ReadOnly = true;
+                            }
+
+                            if (item.EntranceImage != null || item.ExitImage != null)
+                                dgEncoding.Rows[i].Height = 250;
+
+                        });
+                    }
+                    catch (Exception)
+                    {
+
+                    }
 
 
                 }
             }
+            dgEncoding.Enabled = true;
         }
         private void HideImage()
         {
@@ -118,7 +133,7 @@ namespace Reports
             }
         }
 
-        private void PopulateEncoding(IEnumerable<CardEncodingModel> items)
+        private async Task PopulateEncoding(IEnumerable<CardEncodingModel> items)
         {
             dgEncoding.Rows.Clear();
             if (items.Count() > 0)
@@ -126,17 +141,21 @@ namespace Reports
                 dgEncoding.Rows.Add(items.Count());
                 this.CardEncodingItems = items.ToList();
             }
-            var row = 0;
-            foreach(var item in items)
-            {
-                dgEncoding[dtlId.Index, row].Value = item.Id;
-                dgEncoding[dtlNo.Index, row].Value = item.No;
-                dgEncoding[dtlTimeIn.Index, row].Value = item.TimeIn;
-                dgEncoding[dtlPlateNo.Index, row].Value = item.PlateNo;
-                dgEncoding[dtlTicketNo.Index, row].Value = item.TicketNumber;
-                row++;
-            }
-            
+
+           await Task.Run(() =>
+           {
+               var row = 0;
+               foreach (var item in items)
+               {
+                   dgEncoding[dtlId.Index, row].Value = item.Id;
+                   dgEncoding[dtlNo.Index, row].Value = item.No;
+                   dgEncoding[dtlTimeIn.Index, row].Value = item.TimeIn;
+                   dgEncoding[dtlPlateNo.Index, row].Value = item.PlateNo;
+                   dgEncoding[dtlTicketNo.Index, row].Value = item.TicketNumber;
+                   row++;
+               }
+           });
+
         }
 
         private async void cbShowImages_CheckedChanged(object sender, EventArgs e)
@@ -147,7 +166,7 @@ namespace Reports
                 {
                     if (CardEncodingItems.Count() > 0)
                     {
-                        await ShowImages();
+                        await Spinner.ShowSpinner(this, ShowImages());
                     }
                     else
                     {
@@ -181,9 +200,9 @@ namespace Reports
 
         private void dgEncoding_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode.ToString() == "Return")
+            if (e.KeyCode.ToString() == "Return")
             {
-                if(dgEncoding.CurrentRow.Index >= 0)
+                if (dgEncoding.CurrentRow.Index >= 0)
                 {
                     if (UserAccess.CanEdit)
                     {
@@ -196,7 +215,7 @@ namespace Reports
                         {
                             dgEncoding[dtlPlateNo.Index, current].Value = newPlate;
                         }
-                        dgEncoding.Rows[current].Cells[dtlPlateNo.Index].Selected = true; 
+                        dgEncoding.Rows[current].Cells[dtlPlateNo.Index].Selected = true;
                     }
                 }
 
