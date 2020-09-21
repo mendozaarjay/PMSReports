@@ -68,7 +68,7 @@ namespace Reports
             HistoryItems = null;
             HistoryItems = items.ToList();
             //PopulateHistory(items, parkerIn, parkerOut, monthlyIn, monthlyOut)
-            Spinner.ShowSpinnerNonAsync(this, () => {
+            Spinner.ShowSpinner(this, () => {
                 PopulateHistoryAll(items);
                 PopulateHistoryParkerIn(parkerIn);
                 PopulateHistoryParkerOut(parkerOut);
@@ -77,7 +77,7 @@ namespace Reports
             });
             if(cbShowImages.Checked)
             {
-                await Spinner.ShowSpinner(this, ShowImage());
+                await Spinner.ShowSpinnerAsync(this, ShowImage());
             }
             for(int i = 0; i < tabControl1.TabCount;i++)
             {
@@ -338,7 +338,7 @@ namespace Reports
                 {
                     if (HistoryItems.Count() > 0)
                     {
-                        await Spinner.ShowSpinner(this, ShowImage());
+                        await Spinner.ShowSpinnerAsync(this, ShowImage());
 
                     }
                     else

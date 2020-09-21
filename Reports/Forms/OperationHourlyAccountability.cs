@@ -33,7 +33,11 @@ namespace Reports
         {
             btnGenerate.Enabled = false;
             var items = await services.OperationHourlyAccountabilityAsync(dtDate.Value);
-            LoadOperationHourlyAccountability(items);
+            Spinner.ShowSpinner(this, () =>
+            {
+                LoadOperationHourlyAccountability(items);
+            });
+
             btnGenerate.Enabled = true;
         }
 

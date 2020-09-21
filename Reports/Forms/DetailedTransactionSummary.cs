@@ -42,10 +42,10 @@ namespace Reports
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
             var result = await services.DetailedTransactionSummaryAsync(from,to, txtSearch.Text.Trim());
-            await Spinner.ShowSpinner(this, PopulateDetailedTransactionSummary(result));
+            await Spinner.ShowSpinnerAsync(this, PopulateDetailedTransactionSummary(result));
             if(cbShowImages.Checked)
             {
-                await Spinner.ShowSpinner(this, ShowImage());
+                await Spinner.ShowSpinnerAsync(this, ShowImage());
             }
             btnGenerate.Enabled = true;
         }
@@ -248,7 +248,7 @@ namespace Reports
                 {
                     if(SummaryItems.Count() > 0)
                     {
-                        await Spinner.ShowSpinner(this, ShowImage());
+                        await Spinner.ShowSpinnerAsync(this, ShowImage());
                     }
                     else
                     {

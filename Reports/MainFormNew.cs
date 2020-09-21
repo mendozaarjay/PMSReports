@@ -497,5 +497,14 @@ namespace Reports
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
+
+        private void userAccessMatrixToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserAccessMatrix frm = new UserAccessMatrix();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RUAM");
+            frm.UserAccess = item;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
+        }
     }
 }

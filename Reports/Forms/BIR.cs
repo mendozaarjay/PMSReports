@@ -92,7 +92,11 @@ namespace Reports
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
 
             var result = await services.BIRReportAsync(dateFrom, dateTo,cbTerminal.SelectedValue.ToString());
-            PopulateBIRReport(result);
+            Spinner.ShowSpinner(this, () =>
+             {
+                 PopulateBIRReport(result);
+             });
+
             btnGenerate.Enabled = true;
 
         }

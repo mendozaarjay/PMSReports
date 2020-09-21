@@ -50,10 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dgHistoryAll = new System.Windows.Forms.DataGridView();
             this.dtlAllTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +66,7 @@
             this.dtlAllMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlAllExitImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgParkerIn = new System.Windows.Forms.DataGridView();
             this.dtlParkerInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +83,7 @@
             this.dtlParkerInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlParkerInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgParkerOut = new System.Windows.Forms.DataGridView();
             this.dtlParkerOutTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,6 +100,7 @@
             this.dtlParkerOutMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlParkerOutExitImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgMonthlyIn = new System.Windows.Forms.DataGridView();
             this.dtlMonthlyInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,6 +117,7 @@
             this.dtlMonthlyInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dgMonthlyOut = new System.Windows.Forms.DataGridView();
             this.dtlMonthlyOutTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,14 +143,14 @@
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgHistoryAll)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).BeginInit();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyOut)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +173,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1011, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1011, 31);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -182,7 +182,7 @@
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(82, 24);
+            this.btnRefresh.Size = new System.Drawing.Size(82, 28);
             this.btnRefresh.Text = "&Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -191,7 +191,7 @@
             this.btnCsv.Image = ((System.Drawing.Image)(resources.GetObject("btnCsv.Image")));
             this.btnCsv.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCsv.Name = "btnCsv";
-            this.btnCsv.Size = new System.Drawing.Size(59, 24);
+            this.btnCsv.Size = new System.Drawing.Size(59, 28);
             this.btnCsv.Text = "&CSV";
             this.btnCsv.Click += new System.EventHandler(this.btnCsv_Click);
             // 
@@ -200,7 +200,7 @@
             this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
             this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(67, 24);
+            this.btnExcel.Size = new System.Drawing.Size(67, 28);
             this.btnExcel.Text = "&Excel";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
@@ -209,7 +209,7 @@
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(63, 24);
+            this.btnPrint.Size = new System.Drawing.Size(63, 28);
             this.btnPrint.Text = "&Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -218,7 +218,7 @@
             this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
             this.btnFind.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(61, 24);
+            this.btnFind.Size = new System.Drawing.Size(61, 28);
             this.btnFind.Text = "&Find";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -226,7 +226,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 31);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -237,7 +237,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1011, 559);
+            this.splitContainer1.Size = new System.Drawing.Size(1011, 555);
             this.splitContainer1.SplitterDistance = 213;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -370,7 +370,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1011, 342);
+            this.tabControl1.Size = new System.Drawing.Size(1011, 338);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -379,54 +379,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1003, 306);
+            this.tabPage1.Size = new System.Drawing.Size(1003, 302);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "All";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dgParkerIn);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1003, 306);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Parker In";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.dgParkerOut);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1003, 306);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Parker Out";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.dgMonthlyIn);
-            this.tabPage4.Location = new System.Drawing.Point(4, 32);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1003, 306);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Monthly In";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.dgMonthlyOut);
-            this.tabPage5.Location = new System.Drawing.Point(4, 32);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1003, 306);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Monthly Out";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // dgHistoryAll
             // 
@@ -456,7 +412,7 @@
             this.dgHistoryAll.ReadOnly = true;
             this.dgHistoryAll.RowHeadersWidth = 51;
             this.dgHistoryAll.RowTemplate.Height = 24;
-            this.dgHistoryAll.Size = new System.Drawing.Size(997, 300);
+            this.dgHistoryAll.Size = new System.Drawing.Size(997, 296);
             this.dgHistoryAll.TabIndex = 1;
             // 
             // dtlAllTransitId
@@ -582,6 +538,17 @@
             this.dtlAllExitImage.ReadOnly = true;
             this.dtlAllExitImage.Width = 250;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgParkerIn);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1003, 313);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Parker In";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // dgParkerIn
             // 
             this.dgParkerIn.AllowUserToAddRows = false;
@@ -610,7 +577,7 @@
             this.dgParkerIn.ReadOnly = true;
             this.dgParkerIn.RowHeadersWidth = 51;
             this.dgParkerIn.RowTemplate.Height = 24;
-            this.dgParkerIn.Size = new System.Drawing.Size(997, 300);
+            this.dgParkerIn.Size = new System.Drawing.Size(997, 307);
             this.dgParkerIn.TabIndex = 0;
             // 
             // dtlParkerInTransitId
@@ -736,6 +703,17 @@
             this.dtlParkerInExitImage.ReadOnly = true;
             this.dtlParkerInExitImage.Width = 250;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgParkerOut);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1003, 313);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Parker Out";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // dgParkerOut
             // 
             this.dgParkerOut.AllowUserToAddRows = false;
@@ -764,7 +742,7 @@
             this.dgParkerOut.ReadOnly = true;
             this.dgParkerOut.RowHeadersWidth = 51;
             this.dgParkerOut.RowTemplate.Height = 24;
-            this.dgParkerOut.Size = new System.Drawing.Size(997, 300);
+            this.dgParkerOut.Size = new System.Drawing.Size(997, 307);
             this.dgParkerOut.TabIndex = 2;
             // 
             // dtlParkerOutTransitId
@@ -890,6 +868,17 @@
             this.dtlParkerOutExitImage.ReadOnly = true;
             this.dtlParkerOutExitImage.Width = 250;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dgMonthlyIn);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1003, 313);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Monthly In";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // dgMonthlyIn
             // 
             this.dgMonthlyIn.AllowUserToAddRows = false;
@@ -918,7 +907,7 @@
             this.dgMonthlyIn.ReadOnly = true;
             this.dgMonthlyIn.RowHeadersWidth = 51;
             this.dgMonthlyIn.RowTemplate.Height = 24;
-            this.dgMonthlyIn.Size = new System.Drawing.Size(997, 300);
+            this.dgMonthlyIn.Size = new System.Drawing.Size(997, 307);
             this.dgMonthlyIn.TabIndex = 2;
             // 
             // dtlMonthlyInTransitId
@@ -1044,6 +1033,17 @@
             this.dtlMonthlyInExitImage.ReadOnly = true;
             this.dtlMonthlyInExitImage.Width = 250;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dgMonthlyOut);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1003, 313);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Monthly Out";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // dgMonthlyOut
             // 
             this.dgMonthlyOut.AllowUserToAddRows = false;
@@ -1072,7 +1072,7 @@
             this.dgMonthlyOut.ReadOnly = true;
             this.dgMonthlyOut.RowHeadersWidth = 51;
             this.dgMonthlyOut.RowTemplate.Height = 24;
-            this.dgMonthlyOut.Size = new System.Drawing.Size(997, 300);
+            this.dgMonthlyOut.Size = new System.Drawing.Size(997, 307);
             this.dgMonthlyOut.TabIndex = 2;
             // 
             // dtlMonthlyOutTransitId
@@ -1221,14 +1221,14 @@
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgHistoryAll)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).EndInit();
+            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyOut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

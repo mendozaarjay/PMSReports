@@ -33,11 +33,17 @@ namespace Reports
         {
             btnGenerate.Enabled = false;
             var items = await services.RemainingCarsAsync(dtDate.Value.Maximum());
-            PopulateRemainingCars(items);
+
             var regular = items.Where(a => a.ParkerType.ToLower().Contains("regular"));
-            PopulateRegular(regular);
+
             var visitor = items.Where(a => a.ParkerType.ToLower().Contains("visitor"));
-            PopulateVisitor(visitor);
+
+            Spinner.ShowSpinner(this, () =>
+            {
+                PopulateRemainingCars(items);
+                PopulateRegular(regular);
+                PopulateVisitor(visitor);
+            });
             btnGenerate.Enabled = true;
         }
 

@@ -9,7 +9,7 @@ namespace Reports
 {
     public static class Spinner
     {
-        public static async Task ShowSpinner(Form form,Task task)
+        public static async Task ShowSpinnerAsync(Form form,Task task)
         {
             var spinner = new cSpinner();
             spinner.Height = 150;
@@ -28,7 +28,7 @@ namespace Reports
                 form.Enabled = true;
             }
         }
-        public static void ShowSpinnerNonAsync(Form form, Action task)
+        public static void ShowSpinner(Form form, Action task)
         {
             var spinner = new cSpinner();
             spinner.Height = 150;

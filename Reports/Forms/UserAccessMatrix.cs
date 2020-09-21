@@ -43,7 +43,12 @@ namespace Reports
         {
             btnGenerate.Enabled = false;
             var items = await services.GetUserAccessMatrixAsync(cboUser.SelectedValue.ToString());
-            PopulateUserAccessMatrix(items);
+
+            Spinner.ShowSpinner(this, () =>
+            {
+                PopulateUserAccessMatrix(items);
+            });
+
             btnGenerate.Enabled = true;
         }
 

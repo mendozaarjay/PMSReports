@@ -49,7 +49,11 @@ namespace Reports
             btnGenerate.Enabled = false;
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
             var items =  await services.CashierAccountabilityAsync(dtDate.Value, terminal);
-            LoadCashierAccountability(items);
+            Spinner.ShowSpinner(this, () =>
+            {
+                LoadCashierAccountability(items);
+            });
+
             btnGenerate.Enabled = true;
         }
 

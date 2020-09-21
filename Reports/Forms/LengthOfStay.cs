@@ -33,7 +33,11 @@ namespace Reports
         {
             btnGenerate.Enabled = false;
             var items = await services.LengthOfStayAsync(dtDate.Value);
-            PopulateLengthOfStay(items);
+            Spinner.ShowSpinner(this, () =>
+            {
+                PopulateLengthOfStay(items);
+            });
+
             btnGenerate.Enabled = true;
         }
 

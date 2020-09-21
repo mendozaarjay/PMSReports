@@ -33,7 +33,11 @@ namespace Reports
         {
             btnGenerate.Enabled = false;
             var items = await services.PeakLoadReportAsync(dtDate.Value);
-            PopulatePeakLoadReport(items);
+            Spinner.ShowSpinner(this, () =>
+            {
+                PopulatePeakLoadReport(items);
+            });
+
             btnGenerate.Enabled = true;
         }
 

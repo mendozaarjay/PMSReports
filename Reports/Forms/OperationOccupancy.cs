@@ -34,7 +34,11 @@ namespace Reports
         {
             btnGenerate.Enabled = false;
             var items = await services.OperationOccupancyReportAsync(dtDate.Value);
-            PopulateOperationOccupancy(items);
+            Spinner.ShowSpinner(this, () =>
+            {
+                PopulateOperationOccupancy(items);
+            });
+
             btnGenerate.Enabled = true;
         }
         private void btnRefresh_Click(object sender, EventArgs e)

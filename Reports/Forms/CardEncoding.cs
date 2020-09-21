@@ -36,10 +36,10 @@ namespace Reports
             btnGenerate.Enabled = false;
             var items = await services.CardEncodingAsync(dtDate.Value.Maximum(), txtSearch.Text);
 
-            await Spinner.ShowSpinner(this, PopulateEncoding(items));
+            await Spinner.ShowSpinnerAsync(this, PopulateEncoding(items));
             if (cbShowImages.Checked)
             {
-                await Spinner.ShowSpinner(this, ShowImages());
+                await Spinner.ShowSpinnerAsync(this, ShowImages());
             }
             btnGenerate.Enabled = true;
         }
@@ -166,7 +166,7 @@ namespace Reports
                 {
                     if (CardEncodingItems.Count() > 0)
                     {
-                        await Spinner.ShowSpinner(this, ShowImages());
+                        await Spinner.ShowSpinnerAsync(this, ShowImages());
                     }
                     else
                     {

@@ -48,7 +48,7 @@ namespace Reports
             var items = await services.AuditPerCashierAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
             var ticketaccountability = await services.TicketAccountabilityAsync(dtDate.Value);
             var proccessedtickets = await services.ProcessedTicketsAsync(dtDate.Value);
-            await Spinner.ShowSpinner(this, LoadData(items, ticketaccountability, proccessedtickets));
+            await Spinner.ShowSpinnerAsync(this, LoadData(items, ticketaccountability, proccessedtickets));
             btnGenerate.Enabled = true;
         }
 

@@ -89,7 +89,10 @@ namespace Reports
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
 
             var result = await services.ZReadingAsync(dateFrom, dateTo,cbTerminal.SelectedValue.ToString());
-            PopulateReport(result);
+            Spinner.ShowSpinner(this, () =>
+            {
+                PopulateReport(result);
+            });
             btnGenerate.Enabled = true;
         }
 

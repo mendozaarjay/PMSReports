@@ -44,10 +44,13 @@ namespace Reports
             var auditperterminal = await services.AuditPerTerminalAsync(dtDate.Value);
             var processedtickets = await services.AuditPerTerminalProcessedTicketsAsync(dtDate.Value);
             var ticketaccountability = await services.AuditPerTerminalTicketAccountabilityAsync(dtDate.Value);
+            Spinner.ShowSpinner(this, () =>
+             {
+                 LoadAuditPerTerminal(auditperterminal);
+                 LoadProcessedTickets(processedtickets);
+                 LoadTicketAccountability(ticketaccountability);
+             });
 
-            LoadAuditPerTerminal(auditperterminal);
-            LoadProcessedTickets(processedtickets);
-            LoadTicketAccountability(ticketaccountability);
             btnGenerate.Enabled = true;
         }
 

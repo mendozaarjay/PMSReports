@@ -47,12 +47,18 @@ namespace Reports
             var discount = result.Where(a => a.Discount > 0 && !a.IsErased).ToList();
             var erased = result.Where(a => a.IsErased).ToList();
             var fee = result.Where(a => a.AmountDue > 0 && !a.IsErased).ToList();
-            PopulateSalesAll(all);
-            PopulateSalesTransactions(transaction);
-            PopulateSalesCollection(collection);
-            PopulateSalesDiscount(discount);
-            PopulateSalesErased(erased);
-            PopulateSalesFee(fee);
+
+            Spinner.ShowSpinner(this, () =>
+            {
+
+                PopulateSalesAll(all);
+                PopulateSalesTransactions(transaction);
+                PopulateSalesCollection(collection);
+                PopulateSalesDiscount(discount);
+                PopulateSalesErased(erased);
+                PopulateSalesFee(fee);
+            });
+
             btnGenerate.Enabled = true;
         }
         private void PopulateSalesAll(IEnumerable<SalesModel> items)

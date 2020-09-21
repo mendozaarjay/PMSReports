@@ -15,32 +15,35 @@ namespace Reports.Services
         private const string SummaryReportPerTerminalTicketAccountability = "[dbo].[spSummaryReportPerTerminalTickeAccountability]";
         private const string SummaryReportPerTerminalProcessedTickets = "[dbo].[spSummaryReportPerTerminalProcessedTickets]";
 
-        public async Task<DataTable> SummaryReportPerTerminalDataTableAsync(DateTime  date, string terminal)
+        public async Task<DataTable> SummaryReportPerTerminalDataTableAsync(DateTime from,DateTime to, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = SummaryReportPerTerminal;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@TerminalId", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<DataTable> SummaryReportPerTerminalTicketAccountabilityDataTableAsync(DateTime date, string terminal)
+        public async Task<DataTable> SummaryReportPerTerminalTicketAccountabilityDataTableAsync(DateTime from, DateTime to, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = SummaryReportPerTerminalTicketAccountability;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@TerminalId", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<DataTable> SummaryReportPerTerminalProcessedTicketsDataTableAsync(DateTime date, string terminal)
+        public async Task<DataTable> SummaryReportPerTerminalProcessedTicketsDataTableAsync(DateTime from,DateTime to, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = SummaryReportPerTerminalProcessedTickets;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@TerminalId", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
@@ -51,13 +54,14 @@ namespace Reports.Services
             return gates;
         }
 
-        public async Task<IEnumerable<SummaryReportPerTerminalModel>> SummaryReportPerTerminalAsync(DateTime date, string terminal)
+        public async Task<IEnumerable<SummaryReportPerTerminalModel>> SummaryReportPerTerminalAsync(DateTime from,DateTime to, string terminal)
         {
             var items = new List<SummaryReportPerTerminalModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = SummaryReportPerTerminal;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@TerminalId", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
@@ -80,13 +84,14 @@ namespace Reports.Services
             }
             return items;
         }
-        public async Task<IEnumerable<SummaryReportPerTerminalTickeAccountabilityModel>> SummaryReportPerTerminalTicketAccountabilityAsync(DateTime date, string terminal)
+        public async Task<IEnumerable<SummaryReportPerTerminalTickeAccountabilityModel>> SummaryReportPerTerminalTicketAccountabilityAsync(DateTime from,DateTime to, string terminal)
         {
             var items = new List<SummaryReportPerTerminalTickeAccountabilityModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = SummaryReportPerTerminalTicketAccountability;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@TerminalId", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
@@ -104,14 +109,15 @@ namespace Reports.Services
             }
             return items;
         }
-        public async Task<IEnumerable<SummaryReportPerTerminalProcessedTicketsModel>> SummaryReportPerTerminalProcessedTicketsAsync(DateTime date, string terminal)
+        public async Task<IEnumerable<SummaryReportPerTerminalProcessedTicketsModel>> SummaryReportPerTerminalProcessedTicketsAsync(DateTime from,DateTime to, string terminal)
         {
             var items = new List<SummaryReportPerTerminalProcessedTicketsModel>();
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = SummaryReportPerTerminalProcessedTickets;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@TerminalId", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if (result != null)

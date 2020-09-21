@@ -47,22 +47,23 @@ namespace Reports
             PopulateAll(items);
 
             var shiftIn = items.Where(a => a.Type == "Shift In");
-            PopulateShiftIn(shiftIn);
-
             var shiftOut = items.Where(a => a.Type == "Shift Out");
-            PopulateShiftOut(shiftOut);
-
             var partial = items.Where(a => a.Type == "Partial");
-            PopulatePartial(partial);
-
             var dutyOff = items.Where(a => a.Type == "Duty Off");
-            PopulateDutyOff(dutyOff);
-
             var cutOff = items.Where(a => a.Type == "Cut Off");
-            PopulateCutOff(cutOff);
-
             var endOfDay = items.Where(a => a.Type == "End of Day");
-            PopulateEndOfDay(endOfDay);
+
+
+            Spinner.ShowSpinner(this, () =>
+            {
+                PopulateShiftIn(shiftIn);
+                PopulateShiftOut(shiftOut);
+                PopulatePartial(partial);
+                PopulateDutyOff(dutyOff);
+                PopulateCutOff(cutOff);
+                PopulateEndOfDay(endOfDay);
+            });
+
             btnGenerate.Enabled = true;
         }
         #region Populate Report

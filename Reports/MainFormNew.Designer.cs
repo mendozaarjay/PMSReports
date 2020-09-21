@@ -60,6 +60,7 @@
             this.hourlyAccountabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operationHourlyAccoutabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.summaryReportPerTerminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userAccessMatrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lenghtOfStayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operationOccupancyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +76,6 @@
             this.cWeeklyOccupancy = new LiveCharts.WinForms.CartesianChart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.cWeeklySales = new LiveCharts.WinForms.CartesianChart();
-            this.userAccessMatrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -392,6 +392,13 @@
             this.summaryReportPerTerminalToolStripMenuItem.Text = "Summary Report Per Terminal";
             this.summaryReportPerTerminalToolStripMenuItem.Click += new System.EventHandler(this.summaryReportPerTerminalToolStripMenuItem_Click);
             // 
+            // userAccessMatrixToolStripMenuItem
+            // 
+            this.userAccessMatrixToolStripMenuItem.Name = "userAccessMatrixToolStripMenuItem";
+            this.userAccessMatrixToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.userAccessMatrixToolStripMenuItem.Text = "User Access Matrix";
+            this.userAccessMatrixToolStripMenuItem.Click += new System.EventHandler(this.userAccessMatrixToolStripMenuItem_Click);
+            // 
             // statisticsReportToolStripMenuItem
             // 
             this.statisticsReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -443,14 +450,14 @@
             // bIRToolStripMenuItem
             // 
             this.bIRToolStripMenuItem.Name = "bIRToolStripMenuItem";
-            this.bIRToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bIRToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.bIRToolStripMenuItem.Text = "BIR";
             this.bIRToolStripMenuItem.Click += new System.EventHandler(this.bIRToolStripMenuItem_Click);
             // 
             // zReadingToolStripMenuItem
             // 
             this.zReadingToolStripMenuItem.Name = "zReadingToolStripMenuItem";
-            this.zReadingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zReadingToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.zReadingToolStripMenuItem.Text = "Z Reading";
             this.zReadingToolStripMenuItem.Click += new System.EventHandler(this.zReadingToolStripMenuItem_Click);
             // 
@@ -525,12 +532,6 @@
             this.cWeeklySales.Size = new System.Drawing.Size(1161, 293);
             this.cWeeklySales.TabIndex = 0;
             this.cWeeklySales.Text = "cartesianChart1";
-            // 
-            // userAccessMatrixToolStripMenuItem
-            // 
-            this.userAccessMatrixToolStripMenuItem.Name = "userAccessMatrixToolStripMenuItem";
-            this.userAccessMatrixToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
-            this.userAccessMatrixToolStripMenuItem.Text = "User Access Matrix";
             // 
             // MainFormNew
             // 
