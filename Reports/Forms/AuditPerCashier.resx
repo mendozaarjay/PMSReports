@@ -205,94 +205,58 @@
   <data name="btnFind.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
         QmCC
 </value>
   </data>
   <metadata name="dtlapcDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlapcCashier1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlapcCashier2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlapcCashier3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlapcCashier4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlapcCashier5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlapcCashier6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlapcTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlapcValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dtltaDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtltaCashier1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaCashier2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaCashier3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaCashier4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaCashier5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaCashier6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtltaValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dtlptDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptCashier1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlptValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptCashier2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlapcDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptCashier3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlapcValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptCashier4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtltaDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptCashier5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtltaValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptCashier6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlptDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlptValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

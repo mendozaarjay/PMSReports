@@ -25,8 +25,8 @@ namespace Reports.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=MAGNOLIA_SERVER;Persist Security Info=Tr" +
-            "ue;User ID=sa;Password=zealadmin01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=MAGNOLIA09272020;;Persist Security Info=" +
+            "True;User ID=sa;Password=zealadmin01")]
         public string UserConnectionString {
             get {
                 return ((string)(this["UserConnectionString"]));

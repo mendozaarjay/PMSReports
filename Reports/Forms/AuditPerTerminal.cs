@@ -23,8 +23,21 @@ namespace Reports
         {
             CheckForIllegalCrossThreadCalls = false;
             LoadAccess();
+            LoadGates();
+            LoadAccess();
+            timeFrom.Value = DateTime.Now.Minimun();
+            timeTo.Value = DateTime.Now.Maximum();
             base.OnLoad(e);
         }
+
+        private void LoadGates()
+        {
+            var items = services.Gates();
+            cbTerminal.DataSource = items;
+            cbTerminal.ValueMember = "Id";
+            cbTerminal.DisplayMember = "Name";
+        }
+
         private void LoadAccess()
         {
             btnPrint.Visible = UserAccess.CanPrint;
@@ -41,9 +54,13 @@ namespace Reports
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
-            var auditperterminal = await services.AuditPerTerminalAsync(dtDate.Value);
-            var processedtickets = await services.AuditPerTerminalProcessedTicketsAsync(dtDate.Value);
-            var ticketaccountability = await services.AuditPerTerminalTicketAccountabilityAsync(dtDate.Value);
+
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var auditperterminal = await services.AuditPerTerminalAsync(from,to,cbTerminal.SelectedValue.ToString());
+            var processedtickets = await services.AuditPerTerminalProcessedTicketsAsync(from, to, cbTerminal.SelectedValue.ToString());
+            var ticketaccountability = await services.AuditPerTerminalTicketAccountabilityAsync(from, to, cbTerminal.SelectedValue.ToString());
             Spinner.ShowSpinner(this, () =>
              {
                  LoadAuditPerTerminal(auditperterminal);
@@ -65,10 +82,7 @@ namespace Reports
             foreach(var item in items)
             {
                 dgAuditPerTerminal[dtlaptDescription.Index, row].Value = item.Description;
-                dgAuditPerTerminal[dtlaptTerminal1.Index, row].Value = item.Terminal_1;
-                dgAuditPerTerminal[dtlaptTerminal2.Index, row].Value = item.Terminal_2;
-                dgAuditPerTerminal[dtlaptTerminal3.Index, row].Value = item.Terminal_3;
-                dgAuditPerTerminal[dtlaptTotal.Index, row].Value = item.Total;
+                dgAuditPerTerminal[dtlaptValue.Index, row].Value = item.Value;
                 row++;
             }
             dgAuditPerTerminal.AutoResizeColumns();
@@ -86,10 +100,7 @@ namespace Reports
             foreach (var item in items)
             {
                 dgProcessedTickets[dtlptDescription.Index, row].Value = item.Description;
-                dgProcessedTickets[dtlptTerminal1.Index, row].Value = item.Terminal_1;
-                dgProcessedTickets[dtlptTerminal2.Index, row].Value = item.Terminal_2;
-                dgProcessedTickets[dtlptTerminal3.Index, row].Value = item.Terminal_3;
-                dgProcessedTickets[dtlptTotal.Index, row].Value = item.Total;
+                dgProcessedTickets[dtlptValue.Index, row].Value = item.Value;
                 row++;
             }
             dgProcessedTickets.AutoResizeColumns();
@@ -106,10 +117,7 @@ namespace Reports
             foreach (var item in items)
             {
                 dgTicketAccountability[dtltaDescription.Index, row].Value = item.Description;
-                dgTicketAccountability[dtltaTerminal1.Index, row].Value = item.Terminal_1;
-                dgTicketAccountability[dtltaTerminal2.Index, row].Value = item.Terminal_2;
-                dgTicketAccountability[dtltaTerminal3.Index, row].Value = item.Terminal_3;
-                dgTicketAccountability[dtltaTotal.Index, row].Value = item.Total;
+                dgTicketAccountability[dtltaValue.Index, row].Value = item.Value;
                 row++;
             }
             dgTicketAccountability.AutoResizeColumns();
@@ -118,11 +126,13 @@ namespace Reports
         private async void btnCsv_Click(object sender, EventArgs e)
         {
             btnCsv.Enabled = false;
-            var dt = await services.AuditPerTerminalDataTableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.AuditPerTerminalDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Audit Per Terminal Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Terminal Report " + from.ToString("MMddyyyy") + "-" + to.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -133,11 +143,14 @@ namespace Reports
         private async void btnExcel_Click(object sender, EventArgs e)
         {
             btnExcel.Enabled = false;
-            var dt = await services.AuditPerTerminalDataTableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var dt = await services.AuditPerTerminalDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Audit Per Terminal Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Terminal Report " + from.ToString("MMddyyyy") + "-" + to.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -150,21 +163,24 @@ namespace Reports
             btnPrint.Enabled = false;
             var sources = new List<DataTable>();
 
-            var _auditPerTerminal = await services.AuditPerTerminalDataTableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var _auditPerTerminal = await services.AuditPerTerminalDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
             _auditPerTerminal.TableName = "AuditPerTerminal";
             sources.Add(_auditPerTerminal);
 
-            var _ticketAccountability = await services.AuditPerTerminalTicketAccountabilityDataTableAsync(dtDate.Value);
+            var _ticketAccountability = await services.AuditPerTerminalTicketAccountabilityDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
             _ticketAccountability.TableName = "AuditPerTerminalTicketAccountability";
             sources.Add(_ticketAccountability);
 
-            var _processedTickets = await services.AuditPerTerminalProcessedTicketsDataTableAsync(dtDate.Value);
+            var _processedTickets = await services.AuditPerTerminalProcessedTicketsDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
             _processedTickets.TableName = "AuditPerTerminalProcessedTickets";
             sources.Add(_processedTickets);
 
             var viewer = new Viewer();
             viewer.IsMultipleSource = true;
-            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
+            viewer.DateCovered = from.ToString("MMddyyyy") + "~" + to.ToString("MMddyyyy");
             viewer.ReportType = ReportType.AuditPerTerminal;
             viewer.ReportSources = sources;
             viewer.ShowDialog();

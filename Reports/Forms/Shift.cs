@@ -27,6 +27,7 @@ namespace Reports
             CheckForIllegalCrossThreadCalls = false;
             this.PerformLayout();
             LoadAccess();
+            LoadAllTerminal();
             base.OnLoad(e);
         }
         private void LoadAccess()
@@ -35,13 +36,24 @@ namespace Reports
             btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
             btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
+        private void LoadAllTerminal()
+        {
+            var items = services.Terminals();
+            if (items != null)
+            {
+                cboTerminal.DataSource = null;
+                cboTerminal.DataSource = items;
+                cboTerminal.DisplayMember = "Name";
+                cboTerminal.ValueMember = "Id";
+            }
+        }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var items = await services.ShiftReportAsync(from, to, txtSearch.Text);
+            var items = await services.ShiftReportAsync(from, to, txtSearch.Text,cboTerminal.SelectedValue.ToString());
 
 
             PopulateAll(items);
@@ -51,7 +63,7 @@ namespace Reports
             var partial = items.Where(a => a.Type == "Partial");
             var dutyOff = items.Where(a => a.Type == "Duty Off");
             var cutOff = items.Where(a => a.Type == "Cut Off");
-            var endOfDay = items.Where(a => a.Type == "End of Day");
+            var endOfDay = items.Where(a => a.Type == "End Of Day");
 
 
             Spinner.ShowSpinner(this, () =>
@@ -93,7 +105,7 @@ namespace Reports
                 dgAll[dtlAllChangeFund.Index, row].Value = item.ChangeFund;
                 dgAll[dtlAllTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgAll[dtlAllVariance.Index, row].Value = item.Variance;
-                dgAll[dtlAllUpdateUser.Index, row].Value = item.Username;
+                dgAll[dtlAllUpdateUser.Index, row].Value = item.Cashier;
                 row++;
             }
             dgAll.AutoResizeColumns();
@@ -123,7 +135,7 @@ namespace Reports
                 dgShiftIn[dtlShiftInChangeFund.Index, row].Value = item.ChangeFund;
                 dgShiftIn[dtlShiftInTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgShiftIn[dtlShiftInVariance.Index, row].Value = item.Variance;
-                dgShiftIn[dtlShiftInUpdateUser.Index, row].Value = item.Username;
+                dgShiftIn[dtlShiftInUpdateUser.Index, row].Value = item.Cashier;
                 row++;
             }
             dgShiftIn.AutoResizeColumns();
@@ -153,7 +165,7 @@ namespace Reports
                 dgShiftOut[dtlShiftOutChangeFund.Index, row].Value = item.ChangeFund;
                 dgShiftOut[dtlShiftOutTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgShiftOut[dtlShiftOutVariance.Index, row].Value = item.Variance;
-                dgShiftOut[dtlShiftOutUpdateUser.Index, row].Value = item.Username;
+                dgShiftOut[dtlShiftOutUpdateUser.Index, row].Value = item.Cashier;
                 row++;
             }
             dgShiftOut.AutoResizeColumns();
@@ -183,7 +195,7 @@ namespace Reports
                 dgPartial[dtlPartialChangeFund.Index, row].Value = item.ChangeFund;
                 dgPartial[dtlPartialTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgPartial[dtlPartialVariance.Index, row].Value = item.Variance;
-                dgPartial[dtlPartialUpdateUser.Index, row].Value = item.Username;
+                dgPartial[dtlPartialUpdateUser.Index, row].Value = item.Cashier;
                 row++;
             }
             dgPartial.AutoResizeColumns();
@@ -214,7 +226,7 @@ namespace Reports
                 dgDutyOff[dtlDutyOffChangeFund.Index, row].Value = item.ChangeFund;
                 dgDutyOff[dtlDutyOffTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgDutyOff[dtlDutyOffVariance.Index, row].Value = item.Variance;
-                dgDutyOff[dtlDutyOffUpdateUser.Index, row].Value = item.Username;
+                dgDutyOff[dtlDutyOffUpdateUser.Index, row].Value = item.Cashier;
                 row++;
             }
             dgDutyOff.AutoResizeColumns();
@@ -245,7 +257,7 @@ namespace Reports
                 dgCutOff[dtlCutOffChangeFund.Index, row].Value = item.ChangeFund;
                 dgCutOff[dtlCutOffTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgCutOff[dtlCutOffVariance.Index, row].Value = item.Variance;
-                dgCutOff[dtlCutOffUpdateUser.Index, row].Value = item.Username;
+                dgCutOff[dtlCutOffUpdateUser.Index, row].Value = item.Cashier;
                 row++;
             }
             dgCutOff.AutoResizeColumns();
@@ -276,7 +288,7 @@ namespace Reports
                 dgEndOfDay[dtlEndOfDayChangeFund.Index, row].Value = item.ChangeFund;
                 dgEndOfDay[dtlEndOfDayTenderDeclaration.Index, row].Value = item.TenderDeclaration;
                 dgEndOfDay[dtlEndOfDayVariance.Index, row].Value = item.Variance;
-                dgEndOfDay[dtlEndOfDayUpdateUser.Index, row].Value = item.Username;
+                dgEndOfDay[dtlEndOfDayUpdateUser.Index, row].Value = item.Cashier;
                 row++;
             }
             dgEndOfDay.AutoResizeColumns();
@@ -296,7 +308,7 @@ namespace Reports
             btnCsv.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text);
+            var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text, cboTerminal.SelectedValue.ToString());
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
@@ -314,7 +326,7 @@ namespace Reports
             btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text);
+            var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text, cboTerminal.SelectedValue.ToString());
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
@@ -333,7 +345,7 @@ namespace Reports
             btnPrint.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text);
+            var dt = await services.ShiftReportDataTableAsync(from, to, txtSearch.Text, cboTerminal.SelectedValue.ToString());
 
             dt.TableName = "Shift";
             var viewer = new Viewer();

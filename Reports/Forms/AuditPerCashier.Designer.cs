@@ -38,42 +38,30 @@
             this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboCashier = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbTerminal = new System.Windows.Forms.ComboBox();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgAuditPerCashier = new System.Windows.Forms.DataGridView();
-            this.dtlapcDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlapcCashier1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlapcCashier2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlapcCashier3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlapcCashier4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlapcCashier5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlapcCashier6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlapcTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgTicketAccountability = new System.Windows.Forms.DataGridView();
-            this.dtltaDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaCashier1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaCashier2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaCashier3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaCashier4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaCashier5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaCashier6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgProcessedTickets = new System.Windows.Forms.DataGridView();
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtlapcDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlapcValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtltaDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtltaValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptCashier1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptCashier2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptCashier3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptCashier4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptCashier5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptCashier6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -174,7 +162,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1013, 647);
-            this.splitContainer1.SplitterDistance = 208;
+            this.splitContainer1.SplitterDistance = 273;
             this.splitContainer1.TabIndex = 11;
             // 
             // groupBox1
@@ -182,23 +170,48 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.timeTo);
+            this.groupBox1.Controls.Add(this.timeFrom);
+            this.groupBox1.Controls.Add(this.dtTo);
+            this.groupBox1.Controls.Add(this.dtFrom);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cboCashier);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbTerminal);
             this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.dtDate);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(989, 192);
+            this.groupBox1.Size = new System.Drawing.Size(989, 257);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 156);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 23);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Cashier";
+            // 
+            // cboCashier
+            // 
+            this.cboCashier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCashier.FormattingEnabled = true;
+            this.cboCashier.Location = new System.Drawing.Point(149, 157);
+            this.cboCashier.Name = "cboCashier";
+            this.cboCashier.Size = new System.Drawing.Size(306, 31);
+            this.cboCashier.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 90);
+            this.label2.Location = new System.Drawing.Point(28, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 23);
             this.label2.TabIndex = 8;
@@ -208,39 +221,21 @@
             // 
             this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTerminal.FormattingEnabled = true;
-            this.cbTerminal.Location = new System.Drawing.Point(135, 87);
+            this.cbTerminal.Location = new System.Drawing.Point(149, 118);
             this.cbTerminal.Name = "cbTerminal";
             this.cbTerminal.Size = new System.Drawing.Size(306, 31);
-            this.cbTerminal.TabIndex = 1;
+            this.cbTerminal.TabIndex = 4;
+            this.cbTerminal.SelectedValueChanged += new System.EventHandler(this.cbTerminal_SelectedValueChanged);
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(135, 124);
+            this.btnGenerate.Location = new System.Drawing.Point(149, 196);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(306, 32);
-            this.btnGenerate.TabIndex = 2;
+            this.btnGenerate.TabIndex = 6;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // dtDate
-            // 
-            this.dtDate.CustomFormat = "MM/dd/yyyy";
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(135, 50);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(306, 30);
-            this.dtDate.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Date";
             // 
             // tabControl1
             // 
@@ -251,7 +246,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1013, 435);
+            this.tabControl1.Size = new System.Drawing.Size(1013, 370);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -260,7 +255,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1005, 399);
+            this.tabPage1.Size = new System.Drawing.Size(1005, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Audit Per Cashier";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -273,93 +268,23 @@
             this.dgAuditPerCashier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAuditPerCashier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlapcDescription,
-            this.dtlapcCashier1,
-            this.dtlapcCashier2,
-            this.dtlapcCashier3,
-            this.dtlapcCashier4,
-            this.dtlapcCashier5,
-            this.dtlapcCashier6,
-            this.dtlapcTotal});
+            this.dtlapcValue});
             this.dgAuditPerCashier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgAuditPerCashier.Location = new System.Drawing.Point(3, 3);
             this.dgAuditPerCashier.Name = "dgAuditPerCashier";
             this.dgAuditPerCashier.ReadOnly = true;
             this.dgAuditPerCashier.RowHeadersWidth = 51;
             this.dgAuditPerCashier.RowTemplate.Height = 24;
-            this.dgAuditPerCashier.Size = new System.Drawing.Size(999, 393);
+            this.dgAuditPerCashier.Size = new System.Drawing.Size(999, 328);
             this.dgAuditPerCashier.TabIndex = 0;
-            // 
-            // dtlapcDescription
-            // 
-            this.dtlapcDescription.HeaderText = "Description";
-            this.dtlapcDescription.MinimumWidth = 6;
-            this.dtlapcDescription.Name = "dtlapcDescription";
-            this.dtlapcDescription.ReadOnly = true;
-            this.dtlapcDescription.Width = 150;
-            // 
-            // dtlapcCashier1
-            // 
-            this.dtlapcCashier1.HeaderText = "Cashier-1";
-            this.dtlapcCashier1.MinimumWidth = 6;
-            this.dtlapcCashier1.Name = "dtlapcCashier1";
-            this.dtlapcCashier1.ReadOnly = true;
-            this.dtlapcCashier1.Width = 125;
-            // 
-            // dtlapcCashier2
-            // 
-            this.dtlapcCashier2.HeaderText = "Cashier-2";
-            this.dtlapcCashier2.MinimumWidth = 6;
-            this.dtlapcCashier2.Name = "dtlapcCashier2";
-            this.dtlapcCashier2.ReadOnly = true;
-            this.dtlapcCashier2.Width = 125;
-            // 
-            // dtlapcCashier3
-            // 
-            this.dtlapcCashier3.HeaderText = "Cashier-3";
-            this.dtlapcCashier3.MinimumWidth = 6;
-            this.dtlapcCashier3.Name = "dtlapcCashier3";
-            this.dtlapcCashier3.ReadOnly = true;
-            this.dtlapcCashier3.Width = 125;
-            // 
-            // dtlapcCashier4
-            // 
-            this.dtlapcCashier4.HeaderText = "Cashier-4";
-            this.dtlapcCashier4.MinimumWidth = 6;
-            this.dtlapcCashier4.Name = "dtlapcCashier4";
-            this.dtlapcCashier4.ReadOnly = true;
-            this.dtlapcCashier4.Width = 125;
-            // 
-            // dtlapcCashier5
-            // 
-            this.dtlapcCashier5.HeaderText = "Cashier-5";
-            this.dtlapcCashier5.MinimumWidth = 6;
-            this.dtlapcCashier5.Name = "dtlapcCashier5";
-            this.dtlapcCashier5.ReadOnly = true;
-            this.dtlapcCashier5.Width = 125;
-            // 
-            // dtlapcCashier6
-            // 
-            this.dtlapcCashier6.HeaderText = "Cashier-6";
-            this.dtlapcCashier6.MinimumWidth = 6;
-            this.dtlapcCashier6.Name = "dtlapcCashier6";
-            this.dtlapcCashier6.ReadOnly = true;
-            this.dtlapcCashier6.Width = 125;
-            // 
-            // dtlapcTotal
-            // 
-            this.dtlapcTotal.HeaderText = "Total";
-            this.dtlapcTotal.MinimumWidth = 6;
-            this.dtlapcTotal.Name = "dtlapcTotal";
-            this.dtlapcTotal.ReadOnly = true;
-            this.dtlapcTotal.Width = 125;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgTicketAccountability);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1005, 406);
+            this.tabPage2.Size = new System.Drawing.Size(1005, 334);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ticket Accountability";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -372,93 +297,23 @@
             this.dgTicketAccountability.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTicketAccountability.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtltaDescription,
-            this.dtltaCashier1,
-            this.dtltaCashier2,
-            this.dtltaCashier3,
-            this.dtltaCashier4,
-            this.dtltaCashier5,
-            this.dtltaCashier6,
-            this.dtltaTotal});
+            this.dtltaValue});
             this.dgTicketAccountability.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTicketAccountability.Location = new System.Drawing.Point(3, 3);
             this.dgTicketAccountability.Name = "dgTicketAccountability";
             this.dgTicketAccountability.ReadOnly = true;
             this.dgTicketAccountability.RowHeadersWidth = 51;
             this.dgTicketAccountability.RowTemplate.Height = 24;
-            this.dgTicketAccountability.Size = new System.Drawing.Size(999, 400);
+            this.dgTicketAccountability.Size = new System.Drawing.Size(999, 328);
             this.dgTicketAccountability.TabIndex = 1;
-            // 
-            // dtltaDescription
-            // 
-            this.dtltaDescription.HeaderText = "Description";
-            this.dtltaDescription.MinimumWidth = 6;
-            this.dtltaDescription.Name = "dtltaDescription";
-            this.dtltaDescription.ReadOnly = true;
-            this.dtltaDescription.Width = 150;
-            // 
-            // dtltaCashier1
-            // 
-            this.dtltaCashier1.HeaderText = "Cashier-1";
-            this.dtltaCashier1.MinimumWidth = 6;
-            this.dtltaCashier1.Name = "dtltaCashier1";
-            this.dtltaCashier1.ReadOnly = true;
-            this.dtltaCashier1.Width = 125;
-            // 
-            // dtltaCashier2
-            // 
-            this.dtltaCashier2.HeaderText = "Cashier-2";
-            this.dtltaCashier2.MinimumWidth = 6;
-            this.dtltaCashier2.Name = "dtltaCashier2";
-            this.dtltaCashier2.ReadOnly = true;
-            this.dtltaCashier2.Width = 125;
-            // 
-            // dtltaCashier3
-            // 
-            this.dtltaCashier3.HeaderText = "Cashier-3";
-            this.dtltaCashier3.MinimumWidth = 6;
-            this.dtltaCashier3.Name = "dtltaCashier3";
-            this.dtltaCashier3.ReadOnly = true;
-            this.dtltaCashier3.Width = 125;
-            // 
-            // dtltaCashier4
-            // 
-            this.dtltaCashier4.HeaderText = "Cashier-4";
-            this.dtltaCashier4.MinimumWidth = 6;
-            this.dtltaCashier4.Name = "dtltaCashier4";
-            this.dtltaCashier4.ReadOnly = true;
-            this.dtltaCashier4.Width = 125;
-            // 
-            // dtltaCashier5
-            // 
-            this.dtltaCashier5.HeaderText = "Cashier-5";
-            this.dtltaCashier5.MinimumWidth = 6;
-            this.dtltaCashier5.Name = "dtltaCashier5";
-            this.dtltaCashier5.ReadOnly = true;
-            this.dtltaCashier5.Width = 125;
-            // 
-            // dtltaCashier6
-            // 
-            this.dtltaCashier6.HeaderText = "Cashier-6";
-            this.dtltaCashier6.MinimumWidth = 6;
-            this.dtltaCashier6.Name = "dtltaCashier6";
-            this.dtltaCashier6.ReadOnly = true;
-            this.dtltaCashier6.Width = 125;
-            // 
-            // dtltaTotal
-            // 
-            this.dtltaTotal.HeaderText = "Total";
-            this.dtltaTotal.MinimumWidth = 6;
-            this.dtltaTotal.Name = "dtltaTotal";
-            this.dtltaTotal.ReadOnly = true;
-            this.dtltaTotal.Width = 125;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgProcessedTickets);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1005, 406);
+            this.tabPage3.Size = new System.Drawing.Size(1005, 334);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Processed Tickets";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -471,21 +326,109 @@
             this.dgProcessedTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProcessedTickets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlptDescription,
-            this.dtlptCashier1,
-            this.dtlptCashier2,
-            this.dtlptCashier3,
-            this.dtlptCashier4,
-            this.dtlptCashier5,
-            this.dtlptCashier6,
-            this.dtlptTotal});
+            this.dtlptValue});
             this.dgProcessedTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgProcessedTickets.Location = new System.Drawing.Point(3, 3);
             this.dgProcessedTickets.Name = "dgProcessedTickets";
             this.dgProcessedTickets.ReadOnly = true;
             this.dgProcessedTickets.RowHeadersWidth = 51;
             this.dgProcessedTickets.RowTemplate.Height = 24;
-            this.dgProcessedTickets.Size = new System.Drawing.Size(999, 400);
+            this.dgProcessedTickets.Size = new System.Drawing.Size(999, 328);
             this.dgProcessedTickets.TabIndex = 2;
+            // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(328, 81);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 3;
+            this.timeTo.ValueChanged += new System.EventHandler(this.timeTo_ValueChanged);
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(328, 42);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 1;
+            this.timeFrom.ValueChanged += new System.EventHandler(this.timeFrom_ValueChanged);
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(149, 81);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 2;
+            this.dtTo.ValueChanged += new System.EventHandler(this.dtTo_ValueChanged);
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(149, 42);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 0;
+            this.dtFrom.ValueChanged += new System.EventHandler(this.dtFrom_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 23);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Date To";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Date From";
+            // 
+            // dtlapcDescription
+            // 
+            this.dtlapcDescription.HeaderText = "Description";
+            this.dtlapcDescription.MinimumWidth = 6;
+            this.dtlapcDescription.Name = "dtlapcDescription";
+            this.dtlapcDescription.ReadOnly = true;
+            this.dtlapcDescription.Width = 150;
+            // 
+            // dtlapcValue
+            // 
+            this.dtlapcValue.HeaderText = "Value";
+            this.dtlapcValue.MinimumWidth = 6;
+            this.dtlapcValue.Name = "dtlapcValue";
+            this.dtlapcValue.ReadOnly = true;
+            this.dtlapcValue.Width = 125;
+            // 
+            // dtltaDescription
+            // 
+            this.dtltaDescription.HeaderText = "Description";
+            this.dtltaDescription.MinimumWidth = 6;
+            this.dtltaDescription.Name = "dtltaDescription";
+            this.dtltaDescription.ReadOnly = true;
+            this.dtltaDescription.Width = 150;
+            // 
+            // dtltaValue
+            // 
+            this.dtltaValue.HeaderText = "Value";
+            this.dtltaValue.MinimumWidth = 6;
+            this.dtltaValue.Name = "dtltaValue";
+            this.dtltaValue.ReadOnly = true;
+            this.dtltaValue.Width = 125;
             // 
             // dtlptDescription
             // 
@@ -495,61 +438,13 @@
             this.dtlptDescription.ReadOnly = true;
             this.dtlptDescription.Width = 150;
             // 
-            // dtlptCashier1
+            // dtlptValue
             // 
-            this.dtlptCashier1.HeaderText = "Cashier-1";
-            this.dtlptCashier1.MinimumWidth = 6;
-            this.dtlptCashier1.Name = "dtlptCashier1";
-            this.dtlptCashier1.ReadOnly = true;
-            this.dtlptCashier1.Width = 125;
-            // 
-            // dtlptCashier2
-            // 
-            this.dtlptCashier2.HeaderText = "Cashier-2";
-            this.dtlptCashier2.MinimumWidth = 6;
-            this.dtlptCashier2.Name = "dtlptCashier2";
-            this.dtlptCashier2.ReadOnly = true;
-            this.dtlptCashier2.Width = 125;
-            // 
-            // dtlptCashier3
-            // 
-            this.dtlptCashier3.HeaderText = "Cashier-3";
-            this.dtlptCashier3.MinimumWidth = 6;
-            this.dtlptCashier3.Name = "dtlptCashier3";
-            this.dtlptCashier3.ReadOnly = true;
-            this.dtlptCashier3.Width = 125;
-            // 
-            // dtlptCashier4
-            // 
-            this.dtlptCashier4.HeaderText = "Cashier-4";
-            this.dtlptCashier4.MinimumWidth = 6;
-            this.dtlptCashier4.Name = "dtlptCashier4";
-            this.dtlptCashier4.ReadOnly = true;
-            this.dtlptCashier4.Width = 125;
-            // 
-            // dtlptCashier5
-            // 
-            this.dtlptCashier5.HeaderText = "Cashier-5";
-            this.dtlptCashier5.MinimumWidth = 6;
-            this.dtlptCashier5.Name = "dtlptCashier5";
-            this.dtlptCashier5.ReadOnly = true;
-            this.dtlptCashier5.Width = 125;
-            // 
-            // dtlptCashier6
-            // 
-            this.dtlptCashier6.HeaderText = "Cashier-6";
-            this.dtlptCashier6.MinimumWidth = 6;
-            this.dtlptCashier6.Name = "dtlptCashier6";
-            this.dtlptCashier6.ReadOnly = true;
-            this.dtlptCashier6.Width = 125;
-            // 
-            // dtlptTotal
-            // 
-            this.dtlptTotal.HeaderText = "Total";
-            this.dtlptTotal.MinimumWidth = 6;
-            this.dtlptTotal.Name = "dtlptTotal";
-            this.dtlptTotal.ReadOnly = true;
-            this.dtlptTotal.Width = 125;
+            this.dtlptValue.HeaderText = "Value";
+            this.dtlptValue.MinimumWidth = 6;
+            this.dtlptValue.Name = "dtlptValue";
+            this.dtlptValue.ReadOnly = true;
+            this.dtlptValue.Width = 125;
             // 
             // AuditPerCashier
             // 
@@ -597,8 +492,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbTerminal;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.DateTimePicker dtDate;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -606,29 +499,19 @@
         private System.Windows.Forms.DataGridView dgAuditPerCashier;
         private System.Windows.Forms.DataGridView dgTicketAccountability;
         private System.Windows.Forms.DataGridView dgProcessedTickets;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboCashier;
+        private System.Windows.Forms.DateTimePicker timeTo;
+        private System.Windows.Forms.DateTimePicker timeFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.DateTimePicker dtFrom;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcCashier1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcCashier2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcCashier3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcCashier4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcCashier5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcCashier6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlapcValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtltaDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaCashier1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaCashier2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaCashier3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaCashier4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaCashier5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaCashier6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlptDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptCashier1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptCashier2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptCashier3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptCashier4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptCashier5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptCashier6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptValue;
     }
 }

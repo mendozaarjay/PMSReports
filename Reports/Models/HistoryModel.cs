@@ -20,5 +20,6 @@
         public string UpdateId { get; set; }
         public byte[] EntranceImage { get; set; }
         public byte[] ExitImage { get; set; }
+        public string EntranceGate { get; set; }
     }
 }

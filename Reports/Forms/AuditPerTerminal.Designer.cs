@@ -32,18 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuditPerTerminal));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgTicketAccountability = new System.Windows.Forms.DataGridView();
-            this.dtltaDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaTerminal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaTerminal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaTerminal3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgProcessedTickets = new System.Windows.Forms.DataGridView();
-            this.dtlptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptTerminal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptTerminal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptTerminal3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnCsv = new System.Windows.Forms.ToolStripButton();
@@ -53,16 +43,23 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgAuditPerTerminal = new System.Windows.Forms.DataGridView();
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbTerminal = new System.Windows.Forms.ComboBox();
+            this.dtlptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtltaDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtltaValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlaptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlaptTerminal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlaptTerminal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlaptTerminal3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlaptTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlaptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTicketAccountability)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -85,7 +82,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(892, 447);
+            this.tabPage2.Size = new System.Drawing.Size(892, 382);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ticket Accountability";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -98,58 +95,15 @@
             this.dgTicketAccountability.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTicketAccountability.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtltaDescription,
-            this.dtltaTerminal1,
-            this.dtltaTerminal2,
-            this.dtltaTerminal3,
-            this.dtltaTotal});
+            this.dtltaValue});
             this.dgTicketAccountability.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTicketAccountability.Location = new System.Drawing.Point(3, 3);
             this.dgTicketAccountability.Name = "dgTicketAccountability";
             this.dgTicketAccountability.ReadOnly = true;
             this.dgTicketAccountability.RowHeadersWidth = 51;
             this.dgTicketAccountability.RowTemplate.Height = 24;
-            this.dgTicketAccountability.Size = new System.Drawing.Size(886, 441);
+            this.dgTicketAccountability.Size = new System.Drawing.Size(886, 376);
             this.dgTicketAccountability.TabIndex = 1;
-            // 
-            // dtltaDescription
-            // 
-            this.dtltaDescription.HeaderText = "Description";
-            this.dtltaDescription.MinimumWidth = 6;
-            this.dtltaDescription.Name = "dtltaDescription";
-            this.dtltaDescription.ReadOnly = true;
-            this.dtltaDescription.Width = 150;
-            // 
-            // dtltaTerminal1
-            // 
-            this.dtltaTerminal1.HeaderText = "Terminal-1";
-            this.dtltaTerminal1.MinimumWidth = 6;
-            this.dtltaTerminal1.Name = "dtltaTerminal1";
-            this.dtltaTerminal1.ReadOnly = true;
-            this.dtltaTerminal1.Width = 125;
-            // 
-            // dtltaTerminal2
-            // 
-            this.dtltaTerminal2.HeaderText = "Terminal-2";
-            this.dtltaTerminal2.MinimumWidth = 6;
-            this.dtltaTerminal2.Name = "dtltaTerminal2";
-            this.dtltaTerminal2.ReadOnly = true;
-            this.dtltaTerminal2.Width = 125;
-            // 
-            // dtltaTerminal3
-            // 
-            this.dtltaTerminal3.HeaderText = "Terminal-3";
-            this.dtltaTerminal3.MinimumWidth = 6;
-            this.dtltaTerminal3.Name = "dtltaTerminal3";
-            this.dtltaTerminal3.ReadOnly = true;
-            this.dtltaTerminal3.Width = 125;
-            // 
-            // dtltaTotal
-            // 
-            this.dtltaTotal.HeaderText = "Total";
-            this.dtltaTotal.MinimumWidth = 6;
-            this.dtltaTotal.Name = "dtltaTotal";
-            this.dtltaTotal.ReadOnly = true;
-            this.dtltaTotal.Width = 125;
             // 
             // tabPage3
             // 
@@ -157,7 +111,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(892, 447);
+            this.tabPage3.Size = new System.Drawing.Size(892, 382);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Processed Tickets";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -170,58 +124,15 @@
             this.dgProcessedTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProcessedTickets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlptDescription,
-            this.dtlptTerminal1,
-            this.dtlptTerminal2,
-            this.dtlptTerminal3,
-            this.dtlptTotal});
+            this.dtlptValue});
             this.dgProcessedTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgProcessedTickets.Location = new System.Drawing.Point(3, 3);
             this.dgProcessedTickets.Name = "dgProcessedTickets";
             this.dgProcessedTickets.ReadOnly = true;
             this.dgProcessedTickets.RowHeadersWidth = 51;
             this.dgProcessedTickets.RowTemplate.Height = 24;
-            this.dgProcessedTickets.Size = new System.Drawing.Size(886, 441);
+            this.dgProcessedTickets.Size = new System.Drawing.Size(886, 376);
             this.dgProcessedTickets.TabIndex = 2;
-            // 
-            // dtlptDescription
-            // 
-            this.dtlptDescription.HeaderText = "Description";
-            this.dtlptDescription.MinimumWidth = 6;
-            this.dtlptDescription.Name = "dtlptDescription";
-            this.dtlptDescription.ReadOnly = true;
-            this.dtlptDescription.Width = 150;
-            // 
-            // dtlptTerminal1
-            // 
-            this.dtlptTerminal1.HeaderText = "Terminal-1";
-            this.dtlptTerminal1.MinimumWidth = 6;
-            this.dtlptTerminal1.Name = "dtlptTerminal1";
-            this.dtlptTerminal1.ReadOnly = true;
-            this.dtlptTerminal1.Width = 125;
-            // 
-            // dtlptTerminal2
-            // 
-            this.dtlptTerminal2.HeaderText = "Terminal-2";
-            this.dtlptTerminal2.MinimumWidth = 6;
-            this.dtlptTerminal2.Name = "dtlptTerminal2";
-            this.dtlptTerminal2.ReadOnly = true;
-            this.dtlptTerminal2.Width = 125;
-            // 
-            // dtlptTerminal3
-            // 
-            this.dtlptTerminal3.HeaderText = "Terminal-3";
-            this.dtlptTerminal3.MinimumWidth = 6;
-            this.dtlptTerminal3.Name = "dtlptTerminal3";
-            this.dtlptTerminal3.ReadOnly = true;
-            this.dtlptTerminal3.Width = 125;
-            // 
-            // dtlptTotal
-            // 
-            this.dtlptTotal.HeaderText = "Total";
-            this.dtlptTotal.MinimumWidth = 6;
-            this.dtlptTotal.Name = "dtlptTotal";
-            this.dtlptTotal.ReadOnly = true;
-            this.dtlptTotal.Width = 125;
             // 
             // bindingNavigator1
             // 
@@ -307,7 +218,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(900, 647);
-            this.splitContainer1.SplitterDistance = 160;
+            this.splitContainer1.SplitterDistance = 225;
             this.splitContainer1.TabIndex = 13;
             // 
             // groupBox1
@@ -315,44 +226,31 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.dtDate);
+            this.groupBox1.Controls.Add(this.timeTo);
+            this.groupBox1.Controls.Add(this.timeFrom);
+            this.groupBox1.Controls.Add(this.dtTo);
+            this.groupBox1.Controls.Add(this.dtFrom);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbTerminal);
+            this.groupBox1.Controls.Add(this.btnGenerate);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(876, 144);
+            this.groupBox1.Size = new System.Drawing.Size(876, 209);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(135, 91);
+            this.btnGenerate.Location = new System.Drawing.Point(143, 163);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(306, 32);
             this.btnGenerate.TabIndex = 2;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // dtDate
-            // 
-            this.dtDate.CustomFormat = "MM/dd/yyyy";
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(135, 50);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(306, 30);
-            this.dtDate.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Date";
             // 
             // tabControl1
             // 
@@ -363,7 +261,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(900, 483);
+            this.tabControl1.Size = new System.Drawing.Size(900, 418);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -372,7 +270,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(892, 447);
+            this.tabPage1.Size = new System.Drawing.Size(892, 382);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Audit Per Terminal";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -385,18 +283,124 @@
             this.dgAuditPerTerminal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAuditPerTerminal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlaptDescription,
-            this.dtlaptTerminal1,
-            this.dtlaptTerminal2,
-            this.dtlaptTerminal3,
-            this.dtlaptTotal});
+            this.dtlaptValue});
             this.dgAuditPerTerminal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgAuditPerTerminal.Location = new System.Drawing.Point(3, 3);
             this.dgAuditPerTerminal.Name = "dgAuditPerTerminal";
             this.dgAuditPerTerminal.ReadOnly = true;
             this.dgAuditPerTerminal.RowHeadersWidth = 51;
             this.dgAuditPerTerminal.RowTemplate.Height = 24;
-            this.dgAuditPerTerminal.Size = new System.Drawing.Size(886, 441);
+            this.dgAuditPerTerminal.Size = new System.Drawing.Size(886, 376);
             this.dgAuditPerTerminal.TabIndex = 0;
+            // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(322, 89);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 18;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(322, 50);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 16;
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(143, 89);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 17;
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(143, 50);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 23);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Date To";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Date From";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Terminal";
+            // 
+            // cbTerminal
+            // 
+            this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTerminal.FormattingEnabled = true;
+            this.cbTerminal.Location = new System.Drawing.Point(143, 126);
+            this.cbTerminal.Name = "cbTerminal";
+            this.cbTerminal.Size = new System.Drawing.Size(306, 31);
+            this.cbTerminal.TabIndex = 19;
+            // 
+            // dtlptDescription
+            // 
+            this.dtlptDescription.HeaderText = "Description";
+            this.dtlptDescription.MinimumWidth = 6;
+            this.dtlptDescription.Name = "dtlptDescription";
+            this.dtlptDescription.ReadOnly = true;
+            this.dtlptDescription.Width = 150;
+            // 
+            // dtlptValue
+            // 
+            this.dtlptValue.HeaderText = "Value";
+            this.dtlptValue.MinimumWidth = 6;
+            this.dtlptValue.Name = "dtlptValue";
+            this.dtlptValue.ReadOnly = true;
+            this.dtlptValue.Width = 125;
+            // 
+            // dtltaDescription
+            // 
+            this.dtltaDescription.HeaderText = "Description";
+            this.dtltaDescription.MinimumWidth = 6;
+            this.dtltaDescription.Name = "dtltaDescription";
+            this.dtltaDescription.ReadOnly = true;
+            this.dtltaDescription.Width = 150;
+            // 
+            // dtltaValue
+            // 
+            this.dtltaValue.HeaderText = "Value";
+            this.dtltaValue.MinimumWidth = 6;
+            this.dtltaValue.Name = "dtltaValue";
+            this.dtltaValue.ReadOnly = true;
+            this.dtltaValue.Width = 125;
             // 
             // dtlaptDescription
             // 
@@ -406,37 +410,13 @@
             this.dtlaptDescription.ReadOnly = true;
             this.dtlaptDescription.Width = 150;
             // 
-            // dtlaptTerminal1
+            // dtlaptValue
             // 
-            this.dtlaptTerminal1.HeaderText = "Terminal-1";
-            this.dtlaptTerminal1.MinimumWidth = 6;
-            this.dtlaptTerminal1.Name = "dtlaptTerminal1";
-            this.dtlaptTerminal1.ReadOnly = true;
-            this.dtlaptTerminal1.Width = 125;
-            // 
-            // dtlaptTerminal2
-            // 
-            this.dtlaptTerminal2.HeaderText = "Terminal-2";
-            this.dtlaptTerminal2.MinimumWidth = 6;
-            this.dtlaptTerminal2.Name = "dtlaptTerminal2";
-            this.dtlaptTerminal2.ReadOnly = true;
-            this.dtlaptTerminal2.Width = 125;
-            // 
-            // dtlaptTerminal3
-            // 
-            this.dtlaptTerminal3.HeaderText = "Terminal-3";
-            this.dtlaptTerminal3.MinimumWidth = 6;
-            this.dtlaptTerminal3.Name = "dtlaptTerminal3";
-            this.dtlaptTerminal3.ReadOnly = true;
-            this.dtlaptTerminal3.Width = 125;
-            // 
-            // dtlaptTotal
-            // 
-            this.dtlaptTotal.HeaderText = "Total";
-            this.dtlaptTotal.MinimumWidth = 6;
-            this.dtlaptTotal.Name = "dtlaptTotal";
-            this.dtlaptTotal.ReadOnly = true;
-            this.dtlaptTotal.Width = 125;
+            this.dtlaptValue.HeaderText = "Value";
+            this.dtlaptValue.MinimumWidth = 6;
+            this.dtlaptValue.Name = "dtlaptValue";
+            this.dtlaptValue.ReadOnly = true;
+            this.dtlaptValue.Width = 125;
             // 
             // AuditPerTerminal
             // 
@@ -483,27 +463,24 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.DateTimePicker dtDate;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dgAuditPerTerminal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlaptDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlaptTerminal1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlaptTerminal2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlaptTerminal3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlaptTotal;
         private System.Windows.Forms.DataGridView dgTicketAccountability;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaTerminal1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaTerminal2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaTerminal3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaTotal;
         private System.Windows.Forms.DataGridView dgProcessedTickets;
+        private System.Windows.Forms.DateTimePicker timeTo;
+        private System.Windows.Forms.DateTimePicker timeFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.DateTimePicker dtFrom;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlptDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptTerminal1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptTerminal2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptTerminal3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlptValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtltaValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlaptDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlaptValue;
     }
 }

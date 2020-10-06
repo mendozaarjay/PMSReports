@@ -12,9 +12,9 @@ namespace Reports
         public static DateTime GetDateTime(DateTimePicker datePart, DateTimePicker timePart)
         {
             var date = datePart.Value.ToString("MM/dd/yyyy");
-            var time = timePart.Value.ToString("hh:mm tt");
+            var time = timePart.Value.ToString("hh:mm:ss tt");
             var newDate = $"{date} {time}";
-            var formattedDate = DateTime.ParseExact(newDate, "MM/dd/yyyy hh:mm tt", null);
+            var formattedDate = DateTime.ParseExact(newDate, "MM/dd/yyyy hh:mm:ss tt", null);
             return formattedDate;
         }
     }

@@ -41,8 +41,20 @@ namespace Reports
             //Mnthly Out
             dgMonthlyOut.Columns[dtlMonthlyOutEntranceImage.Index].Visible = false;
             dgMonthlyOut.Columns[dtlMonthlyOutExitImage.Index].Visible = false;
+            LoadAllTerminal();
             LoadAccess();
             base.OnLoad(e);
+        }
+        private void LoadAllTerminal()
+        {
+            var items = services.Terminals();
+            if (items != null)
+            {
+                cboTerminal.DataSource = null;
+                cboTerminal.DataSource = items;
+                cboTerminal.DisplayMember = "Name";
+                cboTerminal.ValueMember = "Id";
+            }
         }
         private void LoadAccess()
         {
@@ -57,7 +69,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var items = await services.GetHistoryReportAsync(from, to, txtSearch.Text.Trim());
+            var items = await services.GetHistoryReportAsync(from, to,cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
 
             var parkerIn = items.Where(a => a.MonthlyName == "" && a.TimeOut == "");
             var parkerOut = items.Where(a => a.MonthlyName == "" && a.TimeOut.Length > 0);
@@ -127,6 +139,7 @@ namespace Reports
                 dgHistoryAll[dtlAllCoupon.Index, row].Value = item.Coupon;
                 dgHistoryAll[dtlAllMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgHistoryAll[dtlAllMonthlyName.Index, row].Value = item.MonthlyName;
+                dgHistoryAll[dtlAllEntranceGate.Index, row].Value = item.EntranceGate;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -156,6 +169,7 @@ namespace Reports
                 dgParkerIn[dtlParkerInCoupon.Index, row].Value = item.Coupon;
                 dgParkerIn[dtlParkerInMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgParkerIn[dtlParkerInMonthlyName.Index, row].Value = item.MonthlyName;
+                dgParkerIn[dtlParkerInEntranceGate.Index, row].Value = item.EntranceGate;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -186,6 +200,7 @@ namespace Reports
                 dgParkerOut[dtlParkerOutCoupon.Index, row].Value = item.Coupon;
                 dgParkerOut[dtlParkerOutMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgParkerOut[dtlParkerOutMonthlyName.Index, row].Value = item.MonthlyName;
+                dgParkerOut[dtlParkerOutEntranceGate.Index, row].Value = item.EntranceGate;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -216,6 +231,7 @@ namespace Reports
                 dgMonthlyIn[dtlMonthlyInCoupon.Index, row].Value = item.Coupon;
                 dgMonthlyIn[dtlMonthlyInMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgMonthlyIn[dtlMonthlyInMonthlyName.Index, row].Value = item.MonthlyName;
+                dgMonthlyIn[dtlMonthlyInEntranceGate.Index, row].Value = item.EntranceGate;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -245,6 +261,7 @@ namespace Reports
                 dgMonthlyOut[dtlMonthlyOutCoupon.Index, row].Value = item.Coupon;
                 dgMonthlyOut[dtlMonthlyOutMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgMonthlyOut[dtlMonthlyOutMonthlyName.Index, row].Value = item.MonthlyName;
+                dgMonthlyOut[dtlMonthlyOutEntranceGate.Index, row].Value = item.EntranceGate;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -258,7 +275,7 @@ namespace Reports
             btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.GetHistoryDataTableAsync(from, to, txtSearch.Text.Trim());
+            var dt = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -279,7 +296,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var items = await services.GetHistoryDataTableAsync(from, to, txtSearch.Text.Trim());
+            var items = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
             items.Columns.Remove("TransitId");
             items.AcceptChanges();
 
@@ -298,7 +315,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var dt = await services.GetHistoryDataTableAsync(from, to, txtSearch.Text.Trim());
+            var dt = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -404,7 +421,7 @@ namespace Reports
 
                         if (item.EntranceImage != null)
                         {
-                            var entranceImage = ImageHelper.ConvertByteToImageWithResizing(item.EntranceImage);
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
                             var col = new DataGridViewImageCell();
                             col.Value = entranceImage;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -425,7 +442,7 @@ namespace Reports
                         if (item.ExitImage != null)
                         {
 
-                            var image = ImageHelper.ConvertByteToImageWithResizing(item.ExitImage);
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
                             var col = new DataGridViewImageCell();
                             col.Value = image;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -466,7 +483,7 @@ namespace Reports
                         if (item.EntranceImage != null)
                         {
 
-                            var entranceImage = ImageHelper.ConvertByteToImageWithResizing(item.EntranceImage);
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
                             var col = new DataGridViewImageCell();
                             col.Value = entranceImage;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -487,7 +504,7 @@ namespace Reports
                         if (item.ExitImage != null)
                         {
 
-                            var image = ImageHelper.ConvertByteToImageWithResizing(item.ExitImage);
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
                             var col = new DataGridViewImageCell();
                             col.Value = image;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -529,7 +546,7 @@ namespace Reports
                         if (item.EntranceImage != null)
                         {
 
-                            var entranceImage = ImageHelper.ConvertByteToImageWithResizing(item.EntranceImage);
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
                             var col = new DataGridViewImageCell();
                             col.Value = entranceImage;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -550,7 +567,7 @@ namespace Reports
                         if (item.ExitImage != null)
                         {
 
-                            var image = ImageHelper.ConvertByteToImageWithResizing(item.ExitImage);
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
                             var col = new DataGridViewImageCell();
                             col.Value = image;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -593,7 +610,7 @@ namespace Reports
                         if (item.EntranceImage != null)
                         {
 
-                            var entranceImage = ImageHelper.ConvertByteToImageWithResizing(item.EntranceImage);
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
                             var col = new DataGridViewImageCell();
                             col.Value = entranceImage;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -614,7 +631,7 @@ namespace Reports
                         if (item.ExitImage != null)
                         {
 
-                            var image = ImageHelper.ConvertByteToImageWithResizing(item.ExitImage);
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
                             var col = new DataGridViewImageCell();
                             col.Value = image;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -654,7 +671,7 @@ namespace Reports
                         if (item.EntranceImage != null)
                         {
 
-                            var entranceImage = ImageHelper.ConvertByteToImageWithResizing(item.EntranceImage);
+                            var entranceImage = ImageHelper.ConvertByteToImage(item.EntranceImage);
                             var col = new DataGridViewImageCell();
                             col.Value = entranceImage;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -675,7 +692,7 @@ namespace Reports
                         if (item.ExitImage != null)
                         {
 
-                            var image = ImageHelper.ConvertByteToImageWithResizing(item.ExitImage);
+                            var image = ImageHelper.ConvertByteToImage(item.ExitImage);
                             var col = new DataGridViewImageCell();
                             col.Value = image;
                             col.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -752,6 +769,62 @@ namespace Reports
                 {
                     dgMonthlyOut.Rows[i].Height = 24;
                 }
+            }
+        }
+
+        private void dgMonthlyOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            if (e.ColumnIndex == dtlMonthlyOutView.Index)
+            {
+                var id = dgMonthlyOut[dtlMonthlyOutTransitId.Index, e.RowIndex].Value.ToString();
+                ImageViewer.ShowImage(int.Parse(id));
+            }
+        }
+
+        private void dgMonthlyIn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            if (e.ColumnIndex == dtlMonthlyInView.Index)
+            {
+                var id = dgMonthlyIn[dtlMonthlyInTransitId.Index, e.RowIndex].Value.ToString();
+                ImageViewer.ShowImage(int.Parse(id));
+            }
+
+        }
+
+        private void dgParkerOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            if (e.ColumnIndex == dtlParkerOutView.Index)
+            {
+                var id = dgParkerOut[dtlParkerOutTransitId.Index, e.RowIndex].Value.ToString();
+                ImageViewer.ShowImage(int.Parse(id));
+            }
+        }
+
+        private void dgParkerIn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            if (e.ColumnIndex == dtlParkerInView.Index)
+            {
+                var id = dgParkerIn[dtlParkerInTransitId.Index, e.RowIndex].Value.ToString();
+                ImageViewer.ShowImage(int.Parse(id));
+            }
+        }
+
+        private void dgHistoryAll_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            if (e.ColumnIndex == dtlAllView.Index)
+            {
+                var id = dgHistoryAll[dtlAllTransitId.Index, e.RowIndex].Value.ToString();
+                ImageViewer.ShowImage(int.Parse(id));
             }
         }
     }

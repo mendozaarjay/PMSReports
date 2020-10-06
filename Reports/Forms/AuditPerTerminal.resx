@@ -120,61 +120,13 @@
   <metadata name="dtltaDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtltaTerminal1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTerminal2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTerminal3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTerminal1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTerminal2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTerminal3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtltaTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtltaValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dtlptDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlptTerminal1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptTerminal2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptTerminal3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptTerminal1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptTerminal2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptTerminal3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlptTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlptValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="bindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -265,52 +217,34 @@
   <data name="btnFind.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANYSURBVDhPVVJdTJpXGK7dT7tku1qWbCbqspm5eLOb3W2J
-        F2brTW9cam8Xb9zFsmxLtqQuS9jFGrMa1rJ0bUUthE9afoSWlh9BJ9hPAUUQ/xAVbD9AUSsCBRH7cc6z
-        81Hssid58p6L8zzv+7znnDoBgDq9Y7ZFaXQ6NHcdWb3eSv6+bqtotaOpYZ31mkpleJddqqtd/z+Y+PSf
-        5kdXOd1Doh4NYNAn4Jo3jT5+CwqvAM6/UZ6ani5ynPliTfIfJLH8nm+I09sx4EvCEs1hZusQrs0ilAs5
-        /Dr5FJcmdtDLJ7C+KTzTas2dNekL/GFfaNfqrLjlSyCULkEkFAdHBAtPRTyIH0M+d4ieRxn8MrkLmWWe
-        8nwoV41zgsGH/lWNKwD7Rh4lkaJCgYMyxVoWmEhSqCMirs6XcdmfxxX/Hmzh+L5GbeyVyWSnqwZa0zi5
-        E9qCN3kIIU+wW6JIFoCVDIU7RaFfJ1CtEPQvPcfNUBZDwRTUalO0u7//tepS2bYxOJ+BM15EcJdUhcv7
-        FDM7FE6BwhSjMGwQ3F2vQLdahCqchkqlEr9TKM50GgyvnDIYbfgrkIF2qYBRgcCTIphknccSFLYnFNbH
-        jJuEsQJb/AimxR0MDJhKP8r1b1SnUCj1dDCwB8VsFhqW17hRgTlOYGNCF5vAkySY3q4wiphLl+GMbLMI
-        I1G5vmZw2za3aQslcIXfw41wGbeZiY6N+4B1nWBiKdZqhiCWrUDIHcPuDz7TcuY+mUp1trrIXmekg/eF
-        0e9PQ+4/gJItazgqwhIXMZkUsbJPsFUg2MsXEF5aZvk5cWTE2lTNL0FyuelaMkTiCWgCadwK5sGtHOF+
-        rAw+dYx4VkSmVMFaLAaPxwvTiBWcxoiXzyhBclNPRDTeQJBOrSbhiu6Df1LA4k4JQqYIX3CRjo1P4f49
-        B7Z3t/HTPwI6lRbU5C8gmWj55c/HA2uB0dmFktlip263m4x5+JzZ5rYMmfp+uzNsxgVuBl2OFGLsr7w0
-        aWtre7W1tfX1pqams+z85oWurne6fpB90N0j+/jbS7KPvv7m+/fPdXS8d76nu10SSZRMTgzqmpubz7S0
-        tLxVX1//dkNDQz3jh42Nja2sfsrqZ6x+wep51uCrT75sv3xi0vH7z73/AmvBni+Fpez6AAAAAElFTkSu
-        QmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANZSURBVDhPVVJdTJtVGB7zZzPRK2OiJIBRIoYbb7zThAui
+        u9kNZuzWcIMXxqiJJsOY1AsX4kgdOLOt/Oxr+tGtP7SDrR+lBWnZB22hpWsHlAItW3+gwCht11LKvp7z
+        eL6uzPgkT95zcZ7nfZ/3nFMnAFCjty409RttVs0da0avt5C/rwllrXYiOayz9HKc4V12qaZ6/f9g4tN/
+        mh9c5XX3iXrCi0F3DL2uFHrELfS5YuA9G6XZubkCz5svViX/QRYr77qHeP04BtwJjIWzmN86hH2zgP5g
+        Fr/OPMWl6R10i3Gsb8aeabXm9qr0Bf4YD7ZqdRbcdMfhTxUhEYqDI4LgUwn3osdQ+g7R9SCNX2Z2oRj1
+        U1H0ZytxTjB437OqsXsxvpFDUaIoU+CgRLGWAaYTFOqQhKsPS7jsyeGKZw9CILqvURu7FQrF6YqB1jRF
+        bvu34EocIpYj2C1SJPLASprCkaTQrxNwKwSqpee44c9gaDEJtdoU7lSpXqsslW0bgw/TsEULWNwlFeHy
+        PsX8DoUtRmGKUBg2CO6sl6FbLYALpMBxnPRdX9+ZdoPhlVMGo4C/vGlol/KYiBE4kwQzrPNknEJ4QmF5
+        zLhJGMsQokcwPdrBwICp+KNS/0Zlil6Vjg5699C3kIGG5TVulGGOEghMaGcTOBMEc9tlRgm+VAm20DaL
+        MBJW6qsGtwTfpuCP44q4h+uBEm4xEx0b9x7rOs3EcqzVNEEkU0Yse4xxz+IzLW/uUXDc2coiu22hNtEd
+        gMqTgtJzgH62rOGwhLGohJmEhJV9gq08wV4uj8DSMsuvkUZGLA2V/DJklxv2JUMoGofGm8LNxRz4lSOM
+        RkoQk8eIZiSki2WsRSJwOl0wjVjAa4x4+YwyZDf1dEgzt+Cjs6sJ2MP7EJ/k8WiniFi6AJcvSCenZjF6
+        14rt3W389E8M7f1jqMpfQDbRisufT3nXvBMLwaJpVKAOh4NMOsWsWXCMDZl6frs9bMYFfh4d1iQi7K+8
+        NGlpaXm1ubn59YaGhrPs/OaFjo53On5QfNDZpfj420uKj77+5vv3z7W1vXe+q7NVFsmUTU4MahobG880
+        NTW9VVtb+3ZdXV0t44f19fXNrH7K6mesfsHqedbgq0++bL18YtL2+8/d/wJOw54ekdIiHgAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <metadata name="dtlaptDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlaptTerminal1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlaptValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlaptTerminal2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlptDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dtlaptTerminal3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlaptTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlaptDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlaptTerminal1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlaptTerminal2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlaptTerminal3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtlaptTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dtlptValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

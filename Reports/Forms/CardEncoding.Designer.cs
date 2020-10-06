@@ -45,13 +45,15 @@
             this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dgEncoding = new System.Windows.Forms.DataGridView();
+            this.cboTerminal = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dtlId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTimeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTicketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dtlExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlView = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -147,7 +149,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgEncoding);
             this.splitContainer1.Size = new System.Drawing.Size(1126, 564);
-            this.splitContainer1.SplitterDistance = 188;
+            this.splitContainer1.SplitterDistance = 283;
             this.splitContainer1.TabIndex = 9;
             // 
             // groupBox1
@@ -155,6 +157,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cboTerminal);
             this.groupBox1.Controls.Add(this.cbShowImages);
             this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.label3);
@@ -163,7 +167,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1102, 172);
+            this.groupBox1.Size = new System.Drawing.Size(1102, 267);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
@@ -171,26 +175,26 @@
             // cbShowImages
             // 
             this.cbShowImages.AutoSize = true;
-            this.cbShowImages.Location = new System.Drawing.Point(427, 122);
+            this.cbShowImages.Location = new System.Drawing.Point(433, 165);
             this.cbShowImages.Name = "cbShowImages";
             this.cbShowImages.Size = new System.Drawing.Size(133, 27);
-            this.cbShowImages.TabIndex = 14;
+            this.cbShowImages.TabIndex = 4;
             this.cbShowImages.Text = "Show Images";
             this.cbShowImages.UseVisualStyleBackColor = true;
             this.cbShowImages.CheckedChanged += new System.EventHandler(this.cbShowImages_CheckedChanged);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(112, 84);
+            this.txtSearch.Location = new System.Drawing.Point(118, 84);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(306, 30);
-            this.txtSearch.TabIndex = 8;
+            this.txtSearch.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 84);
+            this.label3.Location = new System.Drawing.Point(28, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 23);
             this.label3.TabIndex = 7;
@@ -198,10 +202,10 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(112, 120);
+            this.btnGenerate.Location = new System.Drawing.Point(118, 163);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(306, 32);
-            this.btnGenerate.TabIndex = 6;
+            this.btnGenerate.TabIndex = 3;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
@@ -210,16 +214,16 @@
             // 
             this.dtDate.CustomFormat = "MM/dd/yyyy";
             this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(112, 48);
+            this.dtDate.Location = new System.Drawing.Point(118, 44);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(306, 30);
-            this.dtDate.TabIndex = 3;
+            this.dtDate.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 54);
+            this.label1.Location = new System.Drawing.Point(28, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 23);
             this.label1.TabIndex = 0;
@@ -234,11 +238,11 @@
             this.dgEncoding.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlId,
             this.dtlNo,
+            this.dtlEntranceGate,
             this.dtlTimeIn,
             this.dtlPlateNo,
             this.dtlTicketNo,
             this.dtlEntranceImage,
-            this.dtlExitImage,
             this.dtlView});
             this.dgEncoding.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgEncoding.Location = new System.Drawing.Point(0, 0);
@@ -246,10 +250,29 @@
             this.dgEncoding.ReadOnly = true;
             this.dgEncoding.RowHeadersWidth = 51;
             this.dgEncoding.RowTemplate.Height = 24;
-            this.dgEncoding.Size = new System.Drawing.Size(1126, 372);
+            this.dgEncoding.Size = new System.Drawing.Size(1126, 277);
             this.dgEncoding.TabIndex = 0;
             this.dgEncoding.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgEncoding_CellContentClick);
             this.dgEncoding.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgEncoding_KeyDown);
+            // 
+            // cboTerminal
+            // 
+            this.cboTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTerminal.FormattingEnabled = true;
+            this.cboTerminal.Location = new System.Drawing.Point(118, 123);
+            this.cboTerminal.Name = "cboTerminal";
+            this.cboTerminal.Size = new System.Drawing.Size(306, 31);
+            this.cboTerminal.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Terminal";
             // 
             // dtlId
             // 
@@ -267,6 +290,14 @@
             this.dtlNo.Name = "dtlNo";
             this.dtlNo.ReadOnly = true;
             this.dtlNo.Width = 125;
+            // 
+            // dtlEntranceGate
+            // 
+            this.dtlEntranceGate.HeaderText = "Entrance Gate";
+            this.dtlEntranceGate.MinimumWidth = 6;
+            this.dtlEntranceGate.Name = "dtlEntranceGate";
+            this.dtlEntranceGate.ReadOnly = true;
+            this.dtlEntranceGate.Width = 175;
             // 
             // dtlTimeIn
             // 
@@ -300,15 +331,6 @@
             this.dtlEntranceImage.Name = "dtlEntranceImage";
             this.dtlEntranceImage.ReadOnly = true;
             this.dtlEntranceImage.Width = 250;
-            // 
-            // dtlExitImage
-            // 
-            this.dtlExitImage.HeaderText = "Exit Image";
-            this.dtlExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dtlExitImage.MinimumWidth = 6;
-            this.dtlExitImage.Name = "dtlExitImage";
-            this.dtlExitImage.ReadOnly = true;
-            this.dtlExitImage.Width = 250;
             // 
             // dtlView
             // 
@@ -361,13 +383,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgEncoding;
         private System.Windows.Forms.CheckBox cbShowImages;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEntranceGate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTimeIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlPlateNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTicketNo;
         private System.Windows.Forms.DataGridViewImageColumn dtlEntranceImage;
-        private System.Windows.Forms.DataGridViewImageColumn dtlExitImage;
         private System.Windows.Forms.DataGridViewButtonColumn dtlView;
     }
 }

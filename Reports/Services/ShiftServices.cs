@@ -12,7 +12,7 @@ namespace Reports.Services
     public class ShiftServices
     {
         private const string StoredProcedure = "[dbo].[spShiftReport]";
-        public async Task<DataTable> ShiftReportDataTableAsync(DateTime from, DateTime to, string keyword)
+        public async Task<DataTable> ShiftReportDataTableAsync(DateTime from, DateTime to, string keyword,string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
@@ -20,10 +20,11 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Keyword", keyword);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<IEnumerable<ShiftModel>> ShiftReportAsync(DateTime from, DateTime to, string keyword)
+        public async Task<IEnumerable<ShiftModel>> ShiftReportAsync(DateTime from, DateTime to, string keyword,string terminal)
         {
             var items = new List<ShiftModel>();
             SqlCommand cmd = new SqlCommand();
@@ -32,6 +33,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Keyword", keyword);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -55,11 +57,19 @@ namespace Reports.Services
                         SubTotal = dr["SubTotal"].ToString().Length > 0 ? decimal.Parse(dr["SubTotal"].ToString()) : 0,
                         Variance = dr["Variance"].ToString().Length > 0 ? decimal.Parse(dr["Variance"].ToString()) : 0,
                         Cashier = dr["Cashier"].ToString(),
-                        Username = dr["Username"].ToString(),
+                        Exit = dr["Exit"].ToString(),
                     };
                     items.Add(item);
                 }
             }
+            return items;
+        }
+        public DataTable Terminals()
+        {
+            var sql = @"SELECT [fgag].[Id],
+                               [fgag].[Name]
+                        FROM [dbo].[fnGetAllGates]() [fgag]";
+            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

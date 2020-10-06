@@ -18,7 +18,7 @@
         public decimal TenderDeclaration { get; set; }
         public decimal Variance { get; set; }
         public string Cashier { get; set; }
-        public string Username { get; set; }
+        public string Exit { get; set; }
 
     }
 }

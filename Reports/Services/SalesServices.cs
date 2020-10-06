@@ -13,7 +13,7 @@ namespace Reports.Services
     {
         private const string StoredProcedure = "[dbo].[spSalesReport]";
         
-        public async Task<DataTable> SalesReportDataTableAsync(DateTime datefrom, DateTime dateto, string keyword)
+        public async Task<DataTable> SalesReportDataTableAsync(DateTime datefrom, DateTime dateto, string keyword,string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
@@ -21,11 +21,12 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", datefrom);
             cmd.Parameters.AddWithValue("@DateTo", dateto);
             cmd.Parameters.AddWithValue("@SearchKey", keyword);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             cmd.Parameters.AddWithValue("@IncludeAll", 0);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<IEnumerable<SalesModel>> SalesReportAsync(DateTime datefrom, DateTime dateto, string keyword)
+        public async Task<IEnumerable<SalesModel>> SalesReportAsync(DateTime datefrom, DateTime dateto, string keyword,string terminal)
         {
             List<SalesModel> items = new List<SalesModel>();
 
@@ -35,6 +36,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", datefrom);
             cmd.Parameters.AddWithValue("@DateTo", dateto);
             cmd.Parameters.AddWithValue("@SearchKey", keyword);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -65,6 +67,8 @@ namespace Reports.Services
                         Description = string.Empty,
                         UpdateUser = dr["UpdateUser"].ToString(),
                         Username = dr["Username"].ToString(),
+                        Entrance = dr["Entrance"].ToString(),
+                        Exit = dr["Exit"].ToString(),
                         IsErased = dr["IsErased"].ToString().Equals("1") ? true : false,
                     };
 
@@ -72,6 +76,14 @@ namespace Reports.Services
                 }
             }
 
+            return items;
+        }
+        public DataTable Terminals()
+        {
+            var sql = @"SELECT [fgag].[Id],
+                               [fgag].[Name]
+                        FROM [dbo].[fnGetAllGates]() [fgag]";
+            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

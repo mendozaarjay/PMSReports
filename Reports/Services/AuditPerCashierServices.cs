@@ -12,31 +12,39 @@ namespace Reports.Services
         private const string StoredProcedure = "[dbo].[spAuditPerCashier]";
         private const string ProcessedTicket = "[dbo].[spAuditPerCashierProcessedTickets]";
         private const string TicketAccountability = "[dbo].[spAuditPerCashierTicketAccountability]";
-        public async Task<DataTable> AuditPerCashierDataTableAsync(DateTime date, string terminal)
+        public async Task<DataTable> AuditPerCashierDataTableAsync(DateTime from,DateTime to,string cashier, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
-            cmd.Parameters.AddWithValue("@TerminalId", terminal);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Cashier", cashier);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<DataTable> ProcessedTicketsDataTableAsync(DateTime date)
+        public async Task<DataTable> ProcessedTicketsDataTableAsync(DateTime from, DateTime to, string cashier,string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = ProcessedTicket;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Cashier", cashier);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<DataTable> TicketAccountabilityDataTableAsync(DateTime date)
+        public async Task<DataTable> TicketAccountabilityDataTableAsync(DateTime from, DateTime to, string cashier, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = TicketAccountability;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Cashier", cashier);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
@@ -46,14 +54,16 @@ namespace Reports.Services
             return gates;
         }
 
-        public async Task<IEnumerable<AuditPerCashierModel>> AuditPerCashierAsync(DateTime date, string terminal)
+        public async Task<IEnumerable<AuditPerCashierModel>> AuditPerCashierAsync(DateTime from, DateTime to, string cashier, string terminal)
         {
             var items = new List<AuditPerCashierModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
-            cmd.Parameters.AddWithValue("@TerminalId", terminal);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Cashier", cashier);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -62,32 +72,24 @@ namespace Reports.Services
                     var item = new AuditPerCashierModel
                     {
                         Id = dr["Id"].ToString(),
-                        RunDate = dr["RunDate"].ToString(),
-                        RunTime = dr["RunTime"].ToString(),
-                        Date = dr["Date"].ToString(),
-                        Location = dr["Location"].ToString(),
-                        Terminal = dr["Terminal"].ToString(),
                         Description = dr["Description"].ToString(),
-                        Cashier_1 = dr["Cashier_1"].ToString(),
-                        Cashier_2 = dr["Cashier_2"].ToString(),
-                        Cashier_3 = dr["Cashier_3"].ToString(),
-                        Cashier_4 = dr["Cashier_4"].ToString(),
-                        Cashier_5 = dr["Cashier_5"].ToString(),
-                        Cashier_6 = dr["Cashier_6"].ToString(),
-                        Total = dr["Total"].ToString(),
+                        Value = dr["Value"].ToString(),
                     };
                     items.Add(item);
                 }
             }
             return items;
         }
-        public async Task<IEnumerable<AuditPerCashierProcessedTicketModel>> ProcessedTicketsAsync(DateTime date)
+        public async Task<IEnumerable<AuditPerCashierProcessedTicketModel>> ProcessedTicketsAsync(DateTime from, DateTime to, string cashier, string terminal)
         {
             var items = new List<AuditPerCashierProcessedTicketModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = ProcessedTicket;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Cashier", cashier);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -97,26 +99,23 @@ namespace Reports.Services
                     {
                         Id = dr["Id"].ToString(),
                         Description = dr["Description"].ToString(),
-                        Cashier_1 = dr["Cashier_1"].ToString(),
-                        Cashier_2 = dr["Cashier_2"].ToString(),
-                        Cashier_3 = dr["Cashier_3"].ToString(),
-                        Cashier_4 = dr["Cashier_4"].ToString(),
-                        Cashier_5 = dr["Cashier_5"].ToString(),
-                        Cashier_6 = dr["Cashier_6"].ToString(),
-                        Total = dr["Total"].ToString(),
+                        Value = dr["Value"].ToString(),
                     };
                     items.Add(item);
                 }
             }
             return items;
         }
-        public async Task<IEnumerable<AuditPerCashierTicketAccountabilityModel>> TicketAccountabilityAsync(DateTime date)
+        public async Task<IEnumerable<AuditPerCashierTicketAccountabilityModel>> TicketAccountabilityAsync(DateTime from, DateTime to, string cashier, string terminal)
         {
             var items = new List<AuditPerCashierTicketAccountabilityModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = TicketAccountability;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Cashier", cashier);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -126,17 +125,19 @@ namespace Reports.Services
                     {
                         Id = dr["Id"].ToString(),
                         Description = dr["Description"].ToString(),
-                        Cashier_1 = dr["Cashier_1"].ToString(),
-                        Cashier_2 = dr["Cashier_2"].ToString(),
-                        Cashier_3 = dr["Cashier_3"].ToString(),
-                        Cashier_4 = dr["Cashier_4"].ToString(),
-                        Cashier_5 = dr["Cashier_5"].ToString(),
-                        Cashier_6 = dr["Cashier_6"].ToString(),
-                        Total = dr["Total"].ToString(),
+                        Value = dr["Value"].ToString(),
                     };
                     items.Add(item);
                 }
             }
+            return items;
+        }
+        public DataTable CashiersPerTerminal(DateTime from,DateTime to, string terminal)
+        {
+            var sql = string.Format(@"EXEC [dbo].[spGetCashierPerTerminal] @DateFrom = '{0}', 
+                                     @DateTo = '{1}',   
+                                     @Terminal ={2}", from, to, terminal);
+            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

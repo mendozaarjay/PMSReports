@@ -51,8 +51,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgHistoryAll = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgParkerIn = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgParkerOut = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dgMonthlyIn = new System.Windows.Forms.DataGridView();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dgMonthlyOut = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboTerminal = new System.Windows.Forms.ComboBox();
             this.dtlAllTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,10 +77,10 @@
             this.dtlAllMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlAllExitImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgParkerIn = new System.Windows.Forms.DataGridView();
+            this.dtlAllView = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dtlParkerInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,10 +94,10 @@
             this.dtlParkerInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlParkerInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgParkerOut = new System.Windows.Forms.DataGridView();
+            this.dtlParkerInView = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dtlParkerOutTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,10 +111,10 @@
             this.dtlParkerOutMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlParkerOutExitImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dgMonthlyIn = new System.Windows.Forms.DataGridView();
+            this.dtlParkerOutView = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,10 +128,10 @@
             this.dtlMonthlyInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.dgMonthlyOut = new System.Windows.Forms.DataGridView();
+            this.dtlMonthlyInView = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dtlMonthlyOutTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,6 +145,7 @@
             this.dtlMonthlyOutMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyOutExitImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtlMonthlyOutView = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -173,7 +185,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1011, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1011, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -182,7 +194,7 @@
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(82, 28);
+            this.btnRefresh.Size = new System.Drawing.Size(82, 24);
             this.btnRefresh.Text = "&Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -191,7 +203,7 @@
             this.btnCsv.Image = ((System.Drawing.Image)(resources.GetObject("btnCsv.Image")));
             this.btnCsv.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCsv.Name = "btnCsv";
-            this.btnCsv.Size = new System.Drawing.Size(59, 28);
+            this.btnCsv.Size = new System.Drawing.Size(59, 24);
             this.btnCsv.Text = "&CSV";
             this.btnCsv.Click += new System.EventHandler(this.btnCsv_Click);
             // 
@@ -200,7 +212,7 @@
             this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
             this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(67, 28);
+            this.btnExcel.Size = new System.Drawing.Size(67, 24);
             this.btnExcel.Text = "&Excel";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
@@ -209,7 +221,7 @@
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(63, 28);
+            this.btnPrint.Size = new System.Drawing.Size(63, 24);
             this.btnPrint.Text = "&Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -218,7 +230,7 @@
             this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
             this.btnFind.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(61, 28);
+            this.btnFind.Size = new System.Drawing.Size(61, 24);
             this.btnFind.Text = "&Find";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -226,7 +238,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 31);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -237,8 +249,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1011, 555);
-            this.splitContainer1.SplitterDistance = 213;
+            this.splitContainer1.Size = new System.Drawing.Size(1011, 559);
+            this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.TabIndex = 1;
             // 
             // groupBox1
@@ -246,6 +258,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cboTerminal);
             this.groupBox1.Controls.Add(this.cbShowImages);
             this.groupBox1.Controls.Add(this.timeTo);
             this.groupBox1.Controls.Add(this.timeFrom);
@@ -258,7 +272,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(987, 197);
+            this.groupBox1.Size = new System.Drawing.Size(987, 234);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
@@ -266,7 +280,7 @@
             // cbShowImages
             // 
             this.cbShowImages.AutoSize = true;
-            this.cbShowImages.Location = new System.Drawing.Point(468, 151);
+            this.cbShowImages.Location = new System.Drawing.Point(468, 187);
             this.cbShowImages.Name = "cbShowImages";
             this.cbShowImages.Size = new System.Drawing.Size(133, 27);
             this.cbShowImages.TabIndex = 14;
@@ -314,7 +328,7 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(154, 149);
+            this.btnGenerate.Location = new System.Drawing.Point(154, 185);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(306, 32);
             this.btnGenerate.TabIndex = 6;
@@ -324,7 +338,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(154, 112);
+            this.txtSearch.Location = new System.Drawing.Point(154, 148);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(306, 30);
             this.txtSearch.TabIndex = 5;
@@ -333,7 +347,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 114);
+            this.label3.Location = new System.Drawing.Point(33, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 23);
             this.label3.TabIndex = 2;
@@ -370,7 +384,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1011, 338);
+            this.tabControl1.Size = new System.Drawing.Size(1011, 305);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -379,7 +393,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1003, 302);
+            this.tabPage1.Size = new System.Drawing.Size(1003, 269);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "All";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -393,6 +407,7 @@
             this.dgHistoryAll.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlAllTransitId,
             this.dtlAllRow,
+            this.dtlAllEntranceGate,
             this.dtlAllTerminal,
             this.dtlAllORNo,
             this.dtlAllPlateNo,
@@ -405,15 +420,216 @@
             this.dtlAllMonthlyRFID,
             this.dtlAllMonthlyName,
             this.dtlAllEntranceImage,
-            this.dtlAllExitImage});
+            this.dtlAllExitImage,
+            this.dtlAllView});
             this.dgHistoryAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgHistoryAll.Location = new System.Drawing.Point(3, 3);
             this.dgHistoryAll.Name = "dgHistoryAll";
             this.dgHistoryAll.ReadOnly = true;
             this.dgHistoryAll.RowHeadersWidth = 51;
             this.dgHistoryAll.RowTemplate.Height = 24;
-            this.dgHistoryAll.Size = new System.Drawing.Size(997, 296);
+            this.dgHistoryAll.Size = new System.Drawing.Size(997, 263);
             this.dgHistoryAll.TabIndex = 1;
+            this.dgHistoryAll.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgHistoryAll_CellContentClick);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgParkerIn);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1003, 269);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Parker In";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgParkerIn
+            // 
+            this.dgParkerIn.AllowUserToAddRows = false;
+            this.dgParkerIn.AllowUserToDeleteRows = false;
+            this.dgParkerIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgParkerIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgParkerIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlParkerInTransitId,
+            this.dtlParkerInRow,
+            this.dtlParkerInEntranceGate,
+            this.dtlParkerInTerminal,
+            this.dtlParkerInORNo,
+            this.dtlParkerInPlateNo,
+            this.dtlParkerInTicketNo,
+            this.dtlParkerInDateTimeIn,
+            this.dtlParkerInDateTimeOut,
+            this.dtlParkerInDurationOfStay,
+            this.dtlParkerInRatesName,
+            this.dtlParkerInCoupon,
+            this.dtlParkerInMonthlyRFID,
+            this.dtlParkerInMonthlyName,
+            this.dtlParkerInEntranceImage,
+            this.dtlParkerInExitImage,
+            this.dtlParkerInView});
+            this.dgParkerIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgParkerIn.Location = new System.Drawing.Point(3, 3);
+            this.dgParkerIn.Name = "dgParkerIn";
+            this.dgParkerIn.ReadOnly = true;
+            this.dgParkerIn.RowHeadersWidth = 51;
+            this.dgParkerIn.RowTemplate.Height = 24;
+            this.dgParkerIn.Size = new System.Drawing.Size(997, 263);
+            this.dgParkerIn.TabIndex = 0;
+            this.dgParkerIn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgParkerIn_CellContentClick);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgParkerOut);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1003, 269);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Parker Out";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgParkerOut
+            // 
+            this.dgParkerOut.AllowUserToAddRows = false;
+            this.dgParkerOut.AllowUserToDeleteRows = false;
+            this.dgParkerOut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgParkerOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgParkerOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlParkerOutTransitId,
+            this.dtlParkerOutRow,
+            this.dtlParkerOutEntranceGate,
+            this.dtlParkerOutTerminal,
+            this.dtlParkerOutORNo,
+            this.dtlParkerOutPlateNo,
+            this.dtlParkerOutTicketNo,
+            this.dtlParkerOutDateTimeIn,
+            this.dtlParkerOutDateTimeOut,
+            this.dtlParkerOutDurationOfStay,
+            this.dtlParkerOutRatesName,
+            this.dtlParkerOutCoupon,
+            this.dtlParkerOutMonthlyRFID,
+            this.dtlParkerOutMonthlyName,
+            this.dtlParkerOutEntranceImage,
+            this.dtlParkerOutExitImage,
+            this.dtlParkerOutView});
+            this.dgParkerOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgParkerOut.Location = new System.Drawing.Point(3, 3);
+            this.dgParkerOut.Name = "dgParkerOut";
+            this.dgParkerOut.ReadOnly = true;
+            this.dgParkerOut.RowHeadersWidth = 51;
+            this.dgParkerOut.RowTemplate.Height = 24;
+            this.dgParkerOut.Size = new System.Drawing.Size(997, 263);
+            this.dgParkerOut.TabIndex = 2;
+            this.dgParkerOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgParkerOut_CellContentClick);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dgMonthlyIn);
+            this.tabPage4.Location = new System.Drawing.Point(4, 32);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1003, 269);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Monthly In";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dgMonthlyIn
+            // 
+            this.dgMonthlyIn.AllowUserToAddRows = false;
+            this.dgMonthlyIn.AllowUserToDeleteRows = false;
+            this.dgMonthlyIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgMonthlyIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMonthlyIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlMonthlyInTransitId,
+            this.dtlMonthlyInRow,
+            this.dtlMonthlyInEntranceGate,
+            this.dtlMonthlyInTerminal,
+            this.dtlMonthlyInORNo,
+            this.dtlMonthlyInPlateNo,
+            this.dtlMonthlyInTicketNo,
+            this.dtlMonthlyInDateTimeIn,
+            this.dtlMonthlyInDateTimeOut,
+            this.dtlMonthlyInDurationOfStay,
+            this.dtlMonthlyInRatesName,
+            this.dtlMonthlyInCoupon,
+            this.dtlMonthlyInMonthlyRFID,
+            this.dtlMonthlyInMonthlyName,
+            this.dtlMonthlyInEntranceImage,
+            this.dtlMonthlyInExitImage,
+            this.dtlMonthlyInView});
+            this.dgMonthlyIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgMonthlyIn.Location = new System.Drawing.Point(3, 3);
+            this.dgMonthlyIn.Name = "dgMonthlyIn";
+            this.dgMonthlyIn.ReadOnly = true;
+            this.dgMonthlyIn.RowHeadersWidth = 51;
+            this.dgMonthlyIn.RowTemplate.Height = 24;
+            this.dgMonthlyIn.Size = new System.Drawing.Size(997, 263);
+            this.dgMonthlyIn.TabIndex = 2;
+            this.dgMonthlyIn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMonthlyIn_CellContentClick);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dgMonthlyOut);
+            this.tabPage5.Location = new System.Drawing.Point(4, 32);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1003, 269);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Monthly Out";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // dgMonthlyOut
+            // 
+            this.dgMonthlyOut.AllowUserToAddRows = false;
+            this.dgMonthlyOut.AllowUserToDeleteRows = false;
+            this.dgMonthlyOut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgMonthlyOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMonthlyOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlMonthlyOutTransitId,
+            this.dtlMonthlyOutRow,
+            this.dtlMonthlyOutEntranceGate,
+            this.dtlMonthlyOutTerminal,
+            this.dtlMonthlyOutORNo,
+            this.dtlMonthlyOutPlateNo,
+            this.dtlMonthlyOutTicketNo,
+            this.dtlMonthlyOutDateTimeIn,
+            this.dtlMonthlyOutDateTimeOut,
+            this.dtlMonthlyOutDurationOfStay,
+            this.dtlMonthlyOutRatesName,
+            this.dtlMonthlyOutCoupon,
+            this.dtlMonthlyOutMonthlyRFID,
+            this.dtlMonthlyOutMonthlyName,
+            this.dtlMonthlyOutEntranceImage,
+            this.dtlMonthlyOutExitImage,
+            this.dtlMonthlyOutView});
+            this.dgMonthlyOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgMonthlyOut.Location = new System.Drawing.Point(3, 3);
+            this.dgMonthlyOut.Name = "dgMonthlyOut";
+            this.dgMonthlyOut.ReadOnly = true;
+            this.dgMonthlyOut.RowHeadersWidth = 51;
+            this.dgMonthlyOut.RowTemplate.Height = 24;
+            this.dgMonthlyOut.Size = new System.Drawing.Size(997, 263);
+            this.dgMonthlyOut.TabIndex = 2;
+            this.dgMonthlyOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMonthlyOut_CellContentClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(33, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 23);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Terminal";
+            // 
+            // cboTerminal
+            // 
+            this.cboTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTerminal.FormattingEnabled = true;
+            this.cboTerminal.Location = new System.Drawing.Point(154, 108);
+            this.cboTerminal.Name = "cboTerminal";
+            this.cboTerminal.Size = new System.Drawing.Size(306, 31);
+            this.cboTerminal.TabIndex = 17;
             // 
             // dtlAllTransitId
             // 
@@ -431,6 +647,14 @@
             this.dtlAllRow.Name = "dtlAllRow";
             this.dtlAllRow.ReadOnly = true;
             this.dtlAllRow.Width = 125;
+            // 
+            // dtlAllEntranceGate
+            // 
+            this.dtlAllEntranceGate.HeaderText = "Entrance Gate";
+            this.dtlAllEntranceGate.MinimumWidth = 6;
+            this.dtlAllEntranceGate.Name = "dtlAllEntranceGate";
+            this.dtlAllEntranceGate.ReadOnly = true;
+            this.dtlAllEntranceGate.Width = 200;
             // 
             // dtlAllTerminal
             // 
@@ -538,47 +762,13 @@
             this.dtlAllExitImage.ReadOnly = true;
             this.dtlAllExitImage.Width = 250;
             // 
-            // tabPage2
+            // dtlAllView
             // 
-            this.tabPage2.Controls.Add(this.dgParkerIn);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1003, 313);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Parker In";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dgParkerIn
-            // 
-            this.dgParkerIn.AllowUserToAddRows = false;
-            this.dgParkerIn.AllowUserToDeleteRows = false;
-            this.dgParkerIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgParkerIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgParkerIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlParkerInTransitId,
-            this.dtlParkerInRow,
-            this.dtlParkerInTerminal,
-            this.dtlParkerInORNo,
-            this.dtlParkerInPlateNo,
-            this.dtlParkerInTicketNo,
-            this.dtlParkerInDateTimeIn,
-            this.dtlParkerInDateTimeOut,
-            this.dtlParkerInDurationOfStay,
-            this.dtlParkerInRatesName,
-            this.dtlParkerInCoupon,
-            this.dtlParkerInMonthlyRFID,
-            this.dtlParkerInMonthlyName,
-            this.dtlParkerInEntranceImage,
-            this.dtlParkerInExitImage});
-            this.dgParkerIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgParkerIn.Location = new System.Drawing.Point(3, 3);
-            this.dgParkerIn.Name = "dgParkerIn";
-            this.dgParkerIn.ReadOnly = true;
-            this.dgParkerIn.RowHeadersWidth = 51;
-            this.dgParkerIn.RowTemplate.Height = 24;
-            this.dgParkerIn.Size = new System.Drawing.Size(997, 307);
-            this.dgParkerIn.TabIndex = 0;
+            this.dtlAllView.HeaderText = "View";
+            this.dtlAllView.MinimumWidth = 6;
+            this.dtlAllView.Name = "dtlAllView";
+            this.dtlAllView.ReadOnly = true;
+            this.dtlAllView.Width = 125;
             // 
             // dtlParkerInTransitId
             // 
@@ -596,6 +786,14 @@
             this.dtlParkerInRow.Name = "dtlParkerInRow";
             this.dtlParkerInRow.ReadOnly = true;
             this.dtlParkerInRow.Width = 125;
+            // 
+            // dtlParkerInEntranceGate
+            // 
+            this.dtlParkerInEntranceGate.HeaderText = "Entrance Gate";
+            this.dtlParkerInEntranceGate.MinimumWidth = 6;
+            this.dtlParkerInEntranceGate.Name = "dtlParkerInEntranceGate";
+            this.dtlParkerInEntranceGate.ReadOnly = true;
+            this.dtlParkerInEntranceGate.Width = 200;
             // 
             // dtlParkerInTerminal
             // 
@@ -703,47 +901,13 @@
             this.dtlParkerInExitImage.ReadOnly = true;
             this.dtlParkerInExitImage.Width = 250;
             // 
-            // tabPage3
+            // dtlParkerInView
             // 
-            this.tabPage3.Controls.Add(this.dgParkerOut);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1003, 313);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Parker Out";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dgParkerOut
-            // 
-            this.dgParkerOut.AllowUserToAddRows = false;
-            this.dgParkerOut.AllowUserToDeleteRows = false;
-            this.dgParkerOut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgParkerOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgParkerOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlParkerOutTransitId,
-            this.dtlParkerOutRow,
-            this.dtlParkerOutTerminal,
-            this.dtlParkerOutORNo,
-            this.dtlParkerOutPlateNo,
-            this.dtlParkerOutTicketNo,
-            this.dtlParkerOutDateTimeIn,
-            this.dtlParkerOutDateTimeOut,
-            this.dtlParkerOutDurationOfStay,
-            this.dtlParkerOutRatesName,
-            this.dtlParkerOutCoupon,
-            this.dtlParkerOutMonthlyRFID,
-            this.dtlParkerOutMonthlyName,
-            this.dtlParkerOutEntranceImage,
-            this.dtlParkerOutExitImage});
-            this.dgParkerOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgParkerOut.Location = new System.Drawing.Point(3, 3);
-            this.dgParkerOut.Name = "dgParkerOut";
-            this.dgParkerOut.ReadOnly = true;
-            this.dgParkerOut.RowHeadersWidth = 51;
-            this.dgParkerOut.RowTemplate.Height = 24;
-            this.dgParkerOut.Size = new System.Drawing.Size(997, 307);
-            this.dgParkerOut.TabIndex = 2;
+            this.dtlParkerInView.HeaderText = "View";
+            this.dtlParkerInView.MinimumWidth = 6;
+            this.dtlParkerInView.Name = "dtlParkerInView";
+            this.dtlParkerInView.ReadOnly = true;
+            this.dtlParkerInView.Width = 125;
             // 
             // dtlParkerOutTransitId
             // 
@@ -761,6 +925,14 @@
             this.dtlParkerOutRow.Name = "dtlParkerOutRow";
             this.dtlParkerOutRow.ReadOnly = true;
             this.dtlParkerOutRow.Width = 125;
+            // 
+            // dtlParkerOutEntranceGate
+            // 
+            this.dtlParkerOutEntranceGate.HeaderText = "Entrance Gate";
+            this.dtlParkerOutEntranceGate.MinimumWidth = 6;
+            this.dtlParkerOutEntranceGate.Name = "dtlParkerOutEntranceGate";
+            this.dtlParkerOutEntranceGate.ReadOnly = true;
+            this.dtlParkerOutEntranceGate.Width = 200;
             // 
             // dtlParkerOutTerminal
             // 
@@ -868,47 +1040,13 @@
             this.dtlParkerOutExitImage.ReadOnly = true;
             this.dtlParkerOutExitImage.Width = 250;
             // 
-            // tabPage4
+            // dtlParkerOutView
             // 
-            this.tabPage4.Controls.Add(this.dgMonthlyIn);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1003, 313);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Monthly In";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // dgMonthlyIn
-            // 
-            this.dgMonthlyIn.AllowUserToAddRows = false;
-            this.dgMonthlyIn.AllowUserToDeleteRows = false;
-            this.dgMonthlyIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgMonthlyIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMonthlyIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlMonthlyInTransitId,
-            this.dtlMonthlyInRow,
-            this.dtlMonthlyInTerminal,
-            this.dtlMonthlyInORNo,
-            this.dtlMonthlyInPlateNo,
-            this.dtlMonthlyInTicketNo,
-            this.dtlMonthlyInDateTimeIn,
-            this.dtlMonthlyInDateTimeOut,
-            this.dtlMonthlyInDurationOfStay,
-            this.dtlMonthlyInRatesName,
-            this.dtlMonthlyInCoupon,
-            this.dtlMonthlyInMonthlyRFID,
-            this.dtlMonthlyInMonthlyName,
-            this.dtlMonthlyInEntranceImage,
-            this.dtlMonthlyInExitImage});
-            this.dgMonthlyIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgMonthlyIn.Location = new System.Drawing.Point(3, 3);
-            this.dgMonthlyIn.Name = "dgMonthlyIn";
-            this.dgMonthlyIn.ReadOnly = true;
-            this.dgMonthlyIn.RowHeadersWidth = 51;
-            this.dgMonthlyIn.RowTemplate.Height = 24;
-            this.dgMonthlyIn.Size = new System.Drawing.Size(997, 307);
-            this.dgMonthlyIn.TabIndex = 2;
+            this.dtlParkerOutView.HeaderText = "View";
+            this.dtlParkerOutView.MinimumWidth = 6;
+            this.dtlParkerOutView.Name = "dtlParkerOutView";
+            this.dtlParkerOutView.ReadOnly = true;
+            this.dtlParkerOutView.Width = 125;
             // 
             // dtlMonthlyInTransitId
             // 
@@ -926,6 +1064,14 @@
             this.dtlMonthlyInRow.Name = "dtlMonthlyInRow";
             this.dtlMonthlyInRow.ReadOnly = true;
             this.dtlMonthlyInRow.Width = 125;
+            // 
+            // dtlMonthlyInEntranceGate
+            // 
+            this.dtlMonthlyInEntranceGate.HeaderText = "Entrance Gate";
+            this.dtlMonthlyInEntranceGate.MinimumWidth = 6;
+            this.dtlMonthlyInEntranceGate.Name = "dtlMonthlyInEntranceGate";
+            this.dtlMonthlyInEntranceGate.ReadOnly = true;
+            this.dtlMonthlyInEntranceGate.Width = 200;
             // 
             // dtlMonthlyInTerminal
             // 
@@ -1033,47 +1179,13 @@
             this.dtlMonthlyInExitImage.ReadOnly = true;
             this.dtlMonthlyInExitImage.Width = 250;
             // 
-            // tabPage5
+            // dtlMonthlyInView
             // 
-            this.tabPage5.Controls.Add(this.dgMonthlyOut);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1003, 313);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Monthly Out";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // dgMonthlyOut
-            // 
-            this.dgMonthlyOut.AllowUserToAddRows = false;
-            this.dgMonthlyOut.AllowUserToDeleteRows = false;
-            this.dgMonthlyOut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgMonthlyOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMonthlyOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlMonthlyOutTransitId,
-            this.dtlMonthlyOutRow,
-            this.dtlMonthlyOutTerminal,
-            this.dtlMonthlyOutORNo,
-            this.dtlMonthlyOutPlateNo,
-            this.dtlMonthlyOutTicketNo,
-            this.dtlMonthlyOutDateTimeIn,
-            this.dtlMonthlyOutDateTimeOut,
-            this.dtlMonthlyOutDurationOfStay,
-            this.dtlMonthlyOutRatesName,
-            this.dtlMonthlyOutCoupon,
-            this.dtlMonthlyOutMonthlyRFID,
-            this.dtlMonthlyOutMonthlyName,
-            this.dtlMonthlyOutEntranceImage,
-            this.dtlMonthlyOutExitImage});
-            this.dgMonthlyOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgMonthlyOut.Location = new System.Drawing.Point(3, 3);
-            this.dgMonthlyOut.Name = "dgMonthlyOut";
-            this.dgMonthlyOut.ReadOnly = true;
-            this.dgMonthlyOut.RowHeadersWidth = 51;
-            this.dgMonthlyOut.RowTemplate.Height = 24;
-            this.dgMonthlyOut.Size = new System.Drawing.Size(997, 307);
-            this.dgMonthlyOut.TabIndex = 2;
+            this.dtlMonthlyInView.HeaderText = "View";
+            this.dtlMonthlyInView.MinimumWidth = 6;
+            this.dtlMonthlyInView.Name = "dtlMonthlyInView";
+            this.dtlMonthlyInView.ReadOnly = true;
+            this.dtlMonthlyInView.Width = 125;
             // 
             // dtlMonthlyOutTransitId
             // 
@@ -1091,6 +1203,14 @@
             this.dtlMonthlyOutRow.Name = "dtlMonthlyOutRow";
             this.dtlMonthlyOutRow.ReadOnly = true;
             this.dtlMonthlyOutRow.Width = 125;
+            // 
+            // dtlMonthlyOutEntranceGate
+            // 
+            this.dtlMonthlyOutEntranceGate.HeaderText = "Entrance Gate";
+            this.dtlMonthlyOutEntranceGate.MinimumWidth = 6;
+            this.dtlMonthlyOutEntranceGate.Name = "dtlMonthlyOutEntranceGate";
+            this.dtlMonthlyOutEntranceGate.ReadOnly = true;
+            this.dtlMonthlyOutEntranceGate.Width = 200;
             // 
             // dtlMonthlyOutTerminal
             // 
@@ -1198,6 +1318,14 @@
             this.dtlMonthlyOutExitImage.ReadOnly = true;
             this.dtlMonthlyOutExitImage.Width = 250;
             // 
+            // dtlMonthlyOutView
+            // 
+            this.dtlMonthlyOutView.HeaderText = "View";
+            this.dtlMonthlyOutView.MinimumWidth = 6;
+            this.dtlMonthlyOutView.Name = "dtlMonthlyOutView";
+            this.dtlMonthlyOutView.ReadOnly = true;
+            this.dtlMonthlyOutView.Width = 125;
+            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -1262,8 +1390,15 @@
         private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.CheckBox cbShowImages;
         private System.Windows.Forms.DataGridView dgHistoryAll;
+        private System.Windows.Forms.DataGridView dgParkerIn;
+        private System.Windows.Forms.DataGridView dgParkerOut;
+        private System.Windows.Forms.DataGridView dgMonthlyIn;
+        private System.Windows.Forms.DataGridView dgMonthlyOut;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllRow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllEntranceGate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllORNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllPlateNo;
@@ -1277,9 +1412,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllMonthlyName;
         private System.Windows.Forms.DataGridViewImageColumn dtlAllEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlAllExitImage;
-        private System.Windows.Forms.DataGridView dgParkerIn;
+        private System.Windows.Forms.DataGridViewButtonColumn dtlAllView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInRow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInEntranceGate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInORNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInPlateNo;
@@ -1293,9 +1429,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInMonthlyName;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerInEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerInExitImage;
-        private System.Windows.Forms.DataGridView dgParkerOut;
+        private System.Windows.Forms.DataGridViewButtonColumn dtlParkerInView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutRow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutEntranceGate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutORNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutPlateNo;
@@ -1309,9 +1446,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutMonthlyName;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerOutEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerOutExitImage;
-        private System.Windows.Forms.DataGridView dgMonthlyIn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInRow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInEntranceGate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInORNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInPlateNo;
@@ -1325,9 +1463,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInMonthlyName;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyInEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyInExitImage;
-        private System.Windows.Forms.DataGridView dgMonthlyOut;
+        private System.Windows.Forms.DataGridViewButtonColumn dtlMonthlyInView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutRow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutEntranceGate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutORNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutPlateNo;
@@ -1341,6 +1480,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutMonthlyName;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyOutEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyOutExitImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutView;
     }
 }
 

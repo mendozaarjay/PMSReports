@@ -43,6 +43,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BIR));
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbTerminal = new System.Windows.Forms.ComboBox();
             this.cboYear = new System.Windows.Forms.ComboBox();
             this.cboMonth = new System.Windows.Forms.ComboBox();
             this.btnGenerate = new System.Windows.Forms.Button();
@@ -72,8 +74,6 @@
             this.btnCsv = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbTerminal = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -108,10 +108,29 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(910, 217);
+            this.groupBox1.Size = new System.Drawing.Size(1229, 217);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 23);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Terminal";
+            // 
+            // cbTerminal
+            // 
+            this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTerminal.FormattingEnabled = true;
+            this.cbTerminal.Location = new System.Drawing.Point(154, 117);
+            this.cbTerminal.Name = "cbTerminal";
+            this.cbTerminal.Size = new System.Drawing.Size(306, 31);
+            this.cbTerminal.TabIndex = 2;
             // 
             // cboYear
             // 
@@ -166,7 +185,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgBIR);
-            this.splitContainer1.Size = new System.Drawing.Size(934, 619);
+            this.splitContainer1.Size = new System.Drawing.Size(1253, 619);
             this.splitContainer1.SplitterDistance = 233;
             this.splitContainer1.TabIndex = 5;
             // 
@@ -200,7 +219,7 @@
             this.dgBIR.ReadOnly = true;
             this.dgBIR.RowHeadersWidth = 51;
             this.dgBIR.RowTemplate.Height = 24;
-            this.dgBIR.Size = new System.Drawing.Size(934, 382);
+            this.dgBIR.Size = new System.Drawing.Size(1253, 382);
             this.dgBIR.TabIndex = 0;
             // 
             // dtlDate
@@ -436,34 +455,15 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(934, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1253, 27);
             this.bindingNavigator1.TabIndex = 4;
             this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 23);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Terminal";
-            // 
-            // cbTerminal
-            // 
-            this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTerminal.FormattingEnabled = true;
-            this.cbTerminal.Location = new System.Drawing.Point(154, 117);
-            this.cbTerminal.Name = "cbTerminal";
-            this.cbTerminal.Size = new System.Drawing.Size(306, 31);
-            this.cbTerminal.TabIndex = 2;
             // 
             // BIR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 646);
+            this.ClientSize = new System.Drawing.Size(1253, 646);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.bindingNavigator1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

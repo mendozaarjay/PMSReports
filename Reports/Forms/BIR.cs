@@ -200,7 +200,7 @@ namespace Reports
             viewer.ReportType = ReportType.BIR;
             viewer.Source = dt;
             viewer.ShowDialog();
-            btnPrint.Enabled = false;
+            btnPrint.Enabled = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)

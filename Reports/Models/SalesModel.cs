@@ -26,5 +26,7 @@
         public string UpdateUser { get; set; }
         public string Username { get; set; }
         public bool IsErased { get; set; }
+        public string Entrance { get; set; }
+        public string Exit { get; set; }
     }
 }

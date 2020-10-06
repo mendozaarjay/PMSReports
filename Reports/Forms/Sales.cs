@@ -26,7 +26,19 @@ namespace Reports
             timeTo.Value = DateTime.Now.Maximum();
             CheckForIllegalCrossThreadCalls = false;
             LoadAccess();
+            LoadAllTerminal();
             base.OnLoad(e);
+        }
+        private void LoadAllTerminal()
+        {
+            var items = services.Terminals();
+            if (items != null)
+            {
+                cboTerminal.DataSource = null;
+                cboTerminal.DataSource = items;
+                cboTerminal.DisplayMember = "Name";
+                cboTerminal.ValueMember = "Id";
+            }
         }
         private void LoadAccess()
         {
@@ -40,7 +52,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var result = await services.SalesReportAsync(from, to, txtSearch.Text.Trim());
+            var result = await services.SalesReportAsync(from, to, txtSearch.Text.Trim(),cboTerminal.SelectedValue.ToString());
             var all = result;
             var transaction = result.Where(a => a.AmountDue > 0 && !a.IsErased).ToList();
             var collection = result.Where(a => a.TimeOut.Length > 0 && !a.IsErased).ToList();
@@ -93,6 +105,8 @@ namespace Reports
                 dgAllSales[dtlAllReprint.Index, row].Value = item.Reprint;
                 dgAllSales[dtlAllDescription.Index, row].Value = item.Description;
                 dgAllSales[dtlAllUpdateUser.Index, row].Value = item.Username;
+                dgAllSales[dtlAllEntrance.Index, row].Value = item.Entrance;
+                dgAllSales[dtlAllExit.Index, row].Value = item.Exit;
                 row++;
             }
             dgAllSales.AutoResizeColumns();
@@ -129,6 +143,8 @@ namespace Reports
                 dgTransactions[dtlTransactionReprint.Index, row].Value = item.Reprint;
                 dgTransactions[dtlTransactionDescription.Index, row].Value = item.Description;
                 dgTransactions[dtlTransactionUpdateUser.Index, row].Value = item.Username;
+                dgTransactions[dtlTransactionEntrance.Index, row].Value = item.Entrance;
+                dgTransactions[dtlTransactionExit.Index, row].Value = item.Exit;
                 row++;
             }
             dgTransactions.AutoResizeColumns();
@@ -166,6 +182,8 @@ namespace Reports
                 dgCollections[dtlCollectionReprint.Index, row].Value = item.Reprint;
                 dgCollections[dtlCollectionDescription.Index, row].Value = item.Description;
                 dgCollections[dtlCollectionUpdateUser.Index, row].Value = item.Username;
+                dgCollections[dtlCollectionEntrance.Index, row].Value = item.Entrance;
+                dgCollections[dtlCollectionExit.Index, row].Value = item.Exit;
                 row++;
             }
             dgCollections.AutoResizeColumns();
@@ -202,6 +220,8 @@ namespace Reports
                 dgDiscounts[dtlDiscountReprint.Index, row].Value = item.Reprint;
                 dgDiscounts[dtlDiscountDescription.Index, row].Value = item.Description;
                 dgDiscounts[dtlDiscountUpdateUser.Index, row].Value = item.Username;
+                dgDiscounts[dtlDiscountEntrance.Index, row].Value = item.Entrance;
+                dgDiscounts[dtlDiscountExit.Index, row].Value = item.Exit;
                 row++;
             }
             dgDiscounts.AutoResizeColumns();
@@ -238,6 +258,8 @@ namespace Reports
                 dgErased[dtlEraseReprint.Index, row].Value = item.Reprint;
                 dgErased[dtlEraseDescription.Index, row].Value = item.Description;
                 dgErased[dtlEraseUpdateUser.Index, row].Value = item.Username;
+                dgErased[dtlEraseEntrance.Index, row].Value = item.Entrance;
+                dgErased[dtlEraseExit.Index, row].Value = item.Exit;
                 row++;
             }
             dgErased.AutoResizeColumns();
@@ -275,6 +297,8 @@ namespace Reports
                 dgFees[dtlFeeReprint.Index, row].Value = item.Reprint;
                 dgFees[dtlFeeDescription.Index, row].Value = item.Description;
                 dgFees[dtlFeeUpdateUser.Index, row].Value = item.Username;
+                dgFees[dtlFeeEntrance.Index, row].Value = item.Entrance;
+                dgFees[dtlFeeExit.Index, row].Value = item.Exit;
                 row++;
             }
             dgFees.AutoResizeColumns();
@@ -294,7 +318,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var dt = await services.SalesReportDataTableAsync(from, to, txtSearch.Text.Trim());
+            var dt = await services.SalesReportDataTableAsync(from, to, txtSearch.Text.Trim(), cboTerminal.SelectedValue.ToString());
             dt.Columns.Remove("TransitId");
             dt.Columns.Remove("IsErased");
             dt.AcceptChanges();
@@ -316,7 +340,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var dt = await services.SalesReportDataTableAsync(from, to, txtSearch.Text.Trim());
+            var dt = await services.SalesReportDataTableAsync(from, to, txtSearch.Text.Trim(), cboTerminal.SelectedValue.ToString());
             dt.Columns.Remove("TransitId");
             dt.Columns.Remove("IsErased");
             dt.AcceptChanges();
@@ -338,7 +362,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var dt = await services.SalesReportDataTableAsync(from, to, txtSearch.Text.Trim());
+            var dt = await services.SalesReportDataTableAsync(from, to, txtSearch.Text.Trim(), cboTerminal.SelectedValue.ToString());
             dt.Columns.Remove("TransitId");
             dt.Columns.Remove("IsErased");
             dt.AcceptChanges();

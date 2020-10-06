@@ -9,7 +9,7 @@ namespace Reports.Services
 {
     public class CardEncodingServices
     {
-        public async Task<IEnumerable<CardEncodingModel>> CardEncodingAsync(DateTime date,string keyword)
+        public async Task<IEnumerable<CardEncodingModel>> CardEncodingAsync(DateTime date,string keyword,string terminal)
         {
             var items = new List<CardEncodingModel>();
             SqlCommand cmd = new SqlCommand();
@@ -17,6 +17,7 @@ namespace Reports.Services
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@Date", date);
             cmd.Parameters.AddWithValue("@Keyword", keyword);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
 
             if(result != null)
@@ -26,12 +27,12 @@ namespace Reports.Services
                     var item = new CardEncodingModel
                     {
                         Id = dr["Id"].ToString(),
+                        EntranceGate = dr["EntranceGate"].ToString(),
                         No = dr["No"].ToString(),
                         PlateNo = dr["PlateNo"].ToString(),
                         TimeIn = dr["TimeIn"].ToString(),
                         TicketNumber = dr["TicketNumber"].ToString(),
                         EntranceImage = dr["EntranceImage"].ToString().Length > 0 ? (byte[])dr["EntranceImage"] : null ,
-                        ExitImage = dr["ExitImage"].ToString().Length > 0 ? (byte[])dr["ExitImage"] : null ,
                     };
                     items.Add(item);
                 }
@@ -46,6 +47,14 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@PlateNo", plateno);
             var result = await DatabaseHelper.ExecNonQueryAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
+        }
+        public DataTable Terminals()
+        {
+            var sql = @"SELECT [fgag].[Id],
+                               [fgag].[Name]
+                        FROM [dbo].[fnGetAllGates]() [fgag]";
+            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            return items;
         }
     }
 }

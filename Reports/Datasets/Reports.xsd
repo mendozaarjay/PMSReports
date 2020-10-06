@@ -239,13 +239,7 @@
               <xs:element name="Terminal" msprop:Generator_ColumnVarNameInTable="columnTerminal" msprop:Generator_ColumnPropNameInRow="Terminal" msprop:Generator_ColumnPropNameInTable="TerminalColumn" msprop:Generator_UserColumnName="Terminal" type="xs:string" minOccurs="0" />
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_1" msprop:Generator_ColumnVarNameInTable="columnCashier_1" msprop:Generator_ColumnPropNameInRow="Cashier_1" msprop:Generator_ColumnPropNameInTable="Cashier_1Column" msprop:Generator_UserColumnName="Cashier_1" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_2" msprop:Generator_ColumnVarNameInTable="columnCashier_2" msprop:Generator_ColumnPropNameInRow="Cashier_2" msprop:Generator_ColumnPropNameInTable="Cashier_2Column" msprop:Generator_UserColumnName="Cashier_2" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_3" msprop:Generator_ColumnVarNameInTable="columnCashier_3" msprop:Generator_ColumnPropNameInRow="Cashier_3" msprop:Generator_ColumnPropNameInTable="Cashier_3Column" msprop:Generator_UserColumnName="Cashier_3" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_4" msprop:Generator_ColumnVarNameInTable="columnCashier_4" msprop:Generator_ColumnPropNameInRow="Cashier_4" msprop:Generator_ColumnPropNameInTable="Cashier_4Column" msprop:Generator_UserColumnName="Cashier_4" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_5" msprop:Generator_ColumnVarNameInTable="columnCashier_5" msprop:Generator_ColumnPropNameInRow="Cashier_5" msprop:Generator_ColumnPropNameInTable="Cashier_5Column" msprop:Generator_UserColumnName="Cashier_5" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_6" msprop:Generator_ColumnVarNameInTable="columnCashier_6" msprop:Generator_ColumnPropNameInRow="Cashier_6" msprop:Generator_ColumnPropNameInTable="Cashier_6Column" msprop:Generator_UserColumnName="Cashier_6" type="xs:string" minOccurs="0" />
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -254,13 +248,7 @@
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_1" msprop:Generator_ColumnVarNameInTable="columnCashier_1" msprop:Generator_ColumnPropNameInRow="Cashier_1" msprop:Generator_ColumnPropNameInTable="Cashier_1Column" msprop:Generator_UserColumnName="Cashier_1" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_2" msprop:Generator_ColumnVarNameInTable="columnCashier_2" msprop:Generator_ColumnPropNameInRow="Cashier_2" msprop:Generator_ColumnPropNameInTable="Cashier_2Column" msprop:Generator_UserColumnName="Cashier_2" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_3" msprop:Generator_ColumnVarNameInTable="columnCashier_3" msprop:Generator_ColumnPropNameInRow="Cashier_3" msprop:Generator_ColumnPropNameInTable="Cashier_3Column" msprop:Generator_UserColumnName="Cashier_3" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_4" msprop:Generator_ColumnVarNameInTable="columnCashier_4" msprop:Generator_ColumnPropNameInRow="Cashier_4" msprop:Generator_ColumnPropNameInTable="Cashier_4Column" msprop:Generator_UserColumnName="Cashier_4" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_5" msprop:Generator_ColumnVarNameInTable="columnCashier_5" msprop:Generator_ColumnPropNameInRow="Cashier_5" msprop:Generator_ColumnPropNameInTable="Cashier_5Column" msprop:Generator_UserColumnName="Cashier_5" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_6" msprop:Generator_ColumnVarNameInTable="columnCashier_6" msprop:Generator_ColumnPropNameInRow="Cashier_6" msprop:Generator_ColumnPropNameInTable="Cashier_6Column" msprop:Generator_UserColumnName="Cashier_6" type="xs:string" minOccurs="0" />
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -269,13 +257,7 @@
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_1" msprop:Generator_ColumnVarNameInTable="columnCashier_1" msprop:Generator_ColumnPropNameInRow="Cashier_1" msprop:Generator_ColumnPropNameInTable="Cashier_1Column" msprop:Generator_UserColumnName="Cashier_1" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_2" msprop:Generator_ColumnVarNameInTable="columnCashier_2" msprop:Generator_ColumnPropNameInRow="Cashier_2" msprop:Generator_ColumnPropNameInTable="Cashier_2Column" msprop:Generator_UserColumnName="Cashier_2" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_3" msprop:Generator_ColumnVarNameInTable="columnCashier_3" msprop:Generator_ColumnPropNameInRow="Cashier_3" msprop:Generator_ColumnPropNameInTable="Cashier_3Column" msprop:Generator_UserColumnName="Cashier_3" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_4" msprop:Generator_ColumnVarNameInTable="columnCashier_4" msprop:Generator_ColumnPropNameInRow="Cashier_4" msprop:Generator_ColumnPropNameInTable="Cashier_4Column" msprop:Generator_UserColumnName="Cashier_4" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_5" msprop:Generator_ColumnVarNameInTable="columnCashier_5" msprop:Generator_ColumnPropNameInRow="Cashier_5" msprop:Generator_ColumnPropNameInTable="Cashier_5Column" msprop:Generator_UserColumnName="Cashier_5" type="xs:string" minOccurs="0" />
-              <xs:element name="Cashier_6" msprop:Generator_ColumnVarNameInTable="columnCashier_6" msprop:Generator_ColumnPropNameInRow="Cashier_6" msprop:Generator_ColumnPropNameInTable="Cashier_6Column" msprop:Generator_UserColumnName="Cashier_6" type="xs:string" minOccurs="0" />
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -288,10 +270,7 @@
               <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" type="xs:string" minOccurs="0" />
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_1" msprop:Generator_ColumnVarNameInTable="columnTerminal_1" msprop:Generator_ColumnPropNameInRow="Terminal_1" msprop:Generator_ColumnPropNameInTable="Terminal_1Column" msprop:Generator_UserColumnName="Terminal_1" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_2" msprop:Generator_ColumnVarNameInTable="columnTerminal_2" msprop:Generator_ColumnPropNameInRow="Terminal_2" msprop:Generator_ColumnPropNameInTable="Terminal_2Column" msprop:Generator_UserColumnName="Terminal_2" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_3" msprop:Generator_ColumnVarNameInTable="columnTerminal_3" msprop:Generator_ColumnPropNameInRow="Terminal_3" msprop:Generator_ColumnPropNameInTable="Terminal_3Column" msprop:Generator_UserColumnName="Terminal_3" type="xs:string" minOccurs="0" />
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -300,10 +279,7 @@
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_1" msprop:Generator_ColumnVarNameInTable="columnTerminal_1" msprop:Generator_ColumnPropNameInRow="Terminal_1" msprop:Generator_ColumnPropNameInTable="Terminal_1Column" msprop:Generator_UserColumnName="Terminal_1" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_2" msprop:Generator_ColumnVarNameInTable="columnTerminal_2" msprop:Generator_ColumnPropNameInRow="Terminal_2" msprop:Generator_ColumnPropNameInTable="Terminal_2Column" msprop:Generator_UserColumnName="Terminal_2" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_3" msprop:Generator_ColumnVarNameInTable="columnTerminal_3" msprop:Generator_ColumnPropNameInRow="Terminal_3" msprop:Generator_ColumnPropNameInTable="Terminal_3Column" msprop:Generator_UserColumnName="Terminal_3" type="xs:string" minOccurs="0" />
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -312,10 +288,7 @@
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_1" msprop:Generator_ColumnVarNameInTable="columnTerminal_1" msprop:Generator_ColumnPropNameInRow="Terminal_1" msprop:Generator_ColumnPropNameInTable="Terminal_1Column" msprop:Generator_UserColumnName="Terminal_1" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_2" msprop:Generator_ColumnVarNameInTable="columnTerminal_2" msprop:Generator_ColumnPropNameInRow="Terminal_2" msprop:Generator_ColumnPropNameInTable="Terminal_2Column" msprop:Generator_UserColumnName="Terminal_2" type="xs:string" minOccurs="0" />
-              <xs:element name="Terminal_3" msprop:Generator_ColumnVarNameInTable="columnTerminal_3" msprop:Generator_ColumnPropNameInRow="Terminal_3" msprop:Generator_ColumnPropNameInTable="Terminal_3Column" msprop:Generator_UserColumnName="Terminal_3" type="xs:string" minOccurs="0" />
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

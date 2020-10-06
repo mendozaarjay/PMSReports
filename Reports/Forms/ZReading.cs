@@ -88,7 +88,7 @@ namespace Reports
             var dateFrom = new DateTime(year, month, 1);
             var dateTo = dateFrom.AddMonths(1).AddDays(-1);
 
-            var result = await services.ZReadingAsync(dateFrom, dateTo,cbTerminal.SelectedValue.ToString());
+            var result = await services.ZReadingAsync(dateFrom, dateTo, cbTerminal.SelectedValue.ToString());
             Spinner.ShowSpinner(this, () =>
             {
                 PopulateReport(result);
@@ -111,12 +111,9 @@ namespace Reports
                 dgReading[dtlOldORNo.Index, row].Value = item.OldORNo;
                 dgReading[dtlNewFRNo.Index, row].Value = item.NewFRNo;
                 dgReading[dtlOldFRNo.Index, row].Value = item.OldFRNo;
-                if(item.TodaySales > 0)
-                    dgReading[dtlTodaySales.Index, row].Value = item.TodaySales;
-                if (item.NewSales > 0)
-                    dgReading[dtlNewSales.Index, row].Value = item.NewSales;
-                if (item.OldSales > 0)
-                    dgReading[dtlOldSales.Index, row].Value = item.OldSales;
+                dgReading[dtlTodaySales.Index, row].Value = item.TodaySales;
+                dgReading[dtlNewSales.Index, row].Value = item.NewSales;
+                dgReading[dtlOldSales.Index, row].Value = item.OldSales;
                 row++;
             }
             dgReading.AutoResizeColumns();

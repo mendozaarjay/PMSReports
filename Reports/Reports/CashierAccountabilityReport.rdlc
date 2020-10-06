@@ -402,7 +402,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Amount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -447,7 +449,7 @@
             <Top>8.22537cm</Top>
             <Left>0.10833cm</Left>
             <Height>1.2cm</Height>
-            <Width>15.87cm</Width>
+            <Width>15.87001cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -667,7 +669,9 @@
                   </TextRun>
                   <TextRun>
                     <Value>=Fields!TotalAmount.Value</Value>
-                    <Style />
+                    <Style>
+                      <Format>#,0.00;(#,0.00)</Format>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value xml:space="preserve"> </Value>
@@ -715,6 +719,7 @@
                     <Value>=Fields!TotalChange.Value</Value>
                     <Style>
                       <FontWeight>Normal</FontWeight>
+                      <Format>#,0.00;(#,0.00)</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>

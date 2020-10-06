@@ -15,41 +15,49 @@ namespace Reports.Services
         public const string AuditPerTerminalTicketAccountability = "[dbo].[spAuditPerTerminalTicketAccountability]";
         public const string AuditPerTerminalProcessedTickets = "[dbo].[spAuditPerTerminalProcessedTickets]";
 
-        public async Task<DataTable> AuditPerTerminalDataTableAsync(DateTime date)
+        public async Task<DataTable> AuditPerTerminalDataTableAsync(DateTime from, DateTime to, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = AuditPerTerminal;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<DataTable> AuditPerTerminalTicketAccountabilityDataTableAsync(DateTime date)
+        public async Task<DataTable> AuditPerTerminalTicketAccountabilityDataTableAsync(DateTime from, DateTime to, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = AuditPerTerminalTicketAccountability;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<DataTable> AuditPerTerminalProcessedTicketsDataTableAsync(DateTime date)
+        public async Task<DataTable> AuditPerTerminalProcessedTicketsDataTableAsync(DateTime from, DateTime to, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = AuditPerTerminalProcessedTickets;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
 
-        public async Task<IEnumerable<AuditPerTerminalModel>> AuditPerTerminalAsync(DateTime date)
+        public async Task<IEnumerable<AuditPerTerminalModel>> AuditPerTerminalAsync(DateTime from, DateTime to, string terminal)
         {
             var items = new List<AuditPerTerminalModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = AuditPerTerminal;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -63,23 +71,22 @@ namespace Reports.Services
                         Description = dr["Description"].ToString(),
                         Id = dr["Id"].ToString(),
                         Location = dr["Location"].ToString(),
-                        Terminal_1 = dr["Terminal_1"].ToString(),
-                        Terminal_2 = dr["Terminal_2"].ToString(),
-                        Terminal_3 = dr["Terminal_3"].ToString(),
-                        Total = dr["Total"].ToString(),
+                        Value = dr["Value"].ToString(),
                     };
                     items.Add(item);
                 }
             }
             return items;
         }
-        public async Task<IEnumerable<AuditPerTerminalTicketAccountabilityModel>> AuditPerTerminalTicketAccountabilityAsync(DateTime date)
+        public async Task<IEnumerable<AuditPerTerminalTicketAccountabilityModel>> AuditPerTerminalTicketAccountabilityAsync(DateTime from, DateTime to, string terminal)
         {
             var items = new List<AuditPerTerminalTicketAccountabilityModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = AuditPerTerminalTicketAccountability;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -89,23 +96,22 @@ namespace Reports.Services
                     {
                         Id = dr["Id"].ToString(),
                         Description = dr["Description"].ToString(),
-                        Terminal_1 = dr["Terminal_1"].ToString(),
-                        Terminal_2 = dr["Terminal_2"].ToString(),
-                        Terminal_3 = dr["Terminal_3"].ToString(),
-                        Total = dr["Total"].ToString(),
+                        Value = dr["Value"].ToString(),
                     };
                     items.Add(item);
                 }
             }
             return items;
         }
-        public async Task<IEnumerable<AuditPerTerminalProcessedTicketsModel>> AuditPerTerminalProcessedTicketsAsync(DateTime date)
+        public async Task<IEnumerable<AuditPerTerminalProcessedTicketsModel>> AuditPerTerminalProcessedTicketsAsync(DateTime from, DateTime to, string terminal)
         {
             var items = new List<AuditPerTerminalProcessedTicketsModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = AuditPerTerminalProcessedTickets;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -115,15 +121,18 @@ namespace Reports.Services
                     {
                         Id = dr["Id"].ToString(),
                         Description = dr["Description"].ToString(),
-                        Terminal_1 = dr["Terminal_1"].ToString(),
-                        Terminal_2 = dr["Terminal_2"].ToString(),
-                        Terminal_3 = dr["Terminal_3"].ToString(),
-                        Total = dr["Total"].ToString(),
+                        Value = dr["Value"].ToString(),
                     };
                     items.Add(item);
                 }
             }
             return items;
+        }
+
+        public DataTable Gates()
+        {
+            var gates = DatabaseHelper.LoadDataTable("SELECT [g].[GateID] AS [Id],[g].[GateName] AS [Name] FROM  [dbo].[Gates] [g] WHERE ISNULL([g].[IsDeleted],0) = 0 ", Properties.Settings.Default.UserConnectionString);
+            return gates;
         }
 
     }

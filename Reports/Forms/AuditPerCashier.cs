@@ -24,6 +24,11 @@ namespace Reports
             CheckForIllegalCrossThreadCalls = false;
             LoadGates();
             LoadAccess();
+            timeFrom.Value = DateTime.Now.Minimun();
+            timeTo.Value = DateTime.Now.Maximum();
+
+
+            cbTerminal_SelectedValueChanged(null, null);
             base.OnLoad(e);
         }
 
@@ -45,9 +50,12 @@ namespace Reports
         {
             this.Enabled = false;
             btnGenerate.Enabled = false;
-            var items = await services.AuditPerCashierAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
-            var ticketaccountability = await services.TicketAccountabilityAsync(dtDate.Value);
-            var proccessedtickets = await services.ProcessedTicketsAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var items = await services.AuditPerCashierAsync(from, to, cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
+            var ticketaccountability = await services.TicketAccountabilityAsync(from, to, cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
+            var proccessedtickets = await services.ProcessedTicketsAsync(from, to, cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
             await Spinner.ShowSpinnerAsync(this, LoadData(items, ticketaccountability, proccessedtickets));
             btnGenerate.Enabled = true;
         }
@@ -70,13 +78,7 @@ namespace Reports
             foreach(var item in items)
             {
                 dgAuditPerCashier[dtlapcDescription.Index,row].Value = item.Description;
-                dgAuditPerCashier[dtlapcCashier1.Index,row].Value = item.Cashier_1;
-                dgAuditPerCashier[dtlapcCashier2.Index,row].Value = item.Cashier_2;
-                dgAuditPerCashier[dtlapcCashier3.Index,row].Value = item.Cashier_3;
-                dgAuditPerCashier[dtlapcCashier4.Index,row].Value = item.Cashier_4;
-                dgAuditPerCashier[dtlapcCashier5.Index,row].Value = item.Cashier_5;
-                dgAuditPerCashier[dtlapcCashier6.Index,row].Value = item.Cashier_6;
-                dgAuditPerCashier[dtlapcTotal.Index, row].Value = item.Total;
+                dgAuditPerCashier[dtlapcValue.Index, row].Value = item.Value;
                 row++;
             }
             dgAuditPerCashier.AutoResizeColumns(); 
@@ -91,13 +93,7 @@ namespace Reports
             foreach (var item in items)
             {
                 dgTicketAccountability[dtltaDescription.Index, row].Value = item.Description;
-                dgTicketAccountability[dtltaCashier1.Index, row].Value = item.Cashier_1;
-                dgTicketAccountability[dtltaCashier2.Index, row].Value = item.Cashier_2;
-                dgTicketAccountability[dtltaCashier3.Index, row].Value = item.Cashier_3;
-                dgTicketAccountability[dtltaCashier4.Index, row].Value = item.Cashier_4;
-                dgTicketAccountability[dtltaCashier5.Index, row].Value = item.Cashier_5;
-                dgTicketAccountability[dtltaCashier6.Index, row].Value = item.Cashier_6;
-                dgTicketAccountability[dtltaTotal.Index, row].Value = item.Total;
+                dgTicketAccountability[dtltaValue.Index, row].Value = item.Value;
                 row++;
             }
             dgTicketAccountability.AutoResizeColumns();
@@ -112,13 +108,7 @@ namespace Reports
             foreach (var item in items)
             {
                 dgProcessedTickets[dtlptDescription.Index, row].Value = item.Description;
-                dgProcessedTickets[dtlptCashier1.Index, row].Value = item.Cashier_1;
-                dgProcessedTickets[dtlptCashier2.Index, row].Value = item.Cashier_2;
-                dgProcessedTickets[dtlptCashier3.Index, row].Value = item.Cashier_3;
-                dgProcessedTickets[dtlptCashier4.Index, row].Value = item.Cashier_4;
-                dgProcessedTickets[dtlptCashier5.Index, row].Value = item.Cashier_5;
-                dgProcessedTickets[dtlptCashier6.Index, row].Value = item.Cashier_6;
-                dgProcessedTickets[dtlptTotal.Index, row].Value = item.Total;
+                dgProcessedTickets[dtlptValue.Index, row].Value = item.Value;
                 row++;
             }
             dgProcessedTickets.AutoResizeColumns();
@@ -134,11 +124,13 @@ namespace Reports
         private async void btnCsv_Click(object sender, EventArgs e)
         {
             btnCsv.Enabled = false;
-            var dt = await services.AuditPerCashierDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.AuditPerCashierDataTableAsync(from, to, cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Audit Per Cashier Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Cashier Report " + from.ToString("MMddyyyy") + '-' + to.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -149,11 +141,13 @@ namespace Reports
         private async void btnExcel_Click(object sender, EventArgs e)
         {
             btnExcel.Enabled = false;
-            var dt = await services.AuditPerCashierDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.AuditPerCashierDataTableAsync(from, to, cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Audit Per Cashier Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Cashier Report " + from.ToString("MMddyyyy") + '-' + to.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -166,20 +160,23 @@ namespace Reports
             btnPrint.Enabled = false;
             var sources = new List<DataTable>();
 
-            var auditpercashier = await services.AuditPerCashierDataTableAsync(dtDate.Value, cbTerminal.SelectedValue.ToString());
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
+            var auditpercashier = await services.AuditPerCashierDataTableAsync(from,to,cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
             auditpercashier.TableName = "AuditPerCashier";
             sources.Add(auditpercashier);
 
-            var processedtickets = await services.ProcessedTicketsDataTableAsync(dtDate.Value);
+            var processedtickets = await services.ProcessedTicketsDataTableAsync(from, to, cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
             processedtickets.TableName = "AuditPerCashierProcessedTickets";
             sources.Add(processedtickets);
 
-            var ticketaccountability = await services.TicketAccountabilityDataTableAsync(dtDate.Value);
+            var ticketaccountability = await services.TicketAccountabilityDataTableAsync(from, to, cboCashier.SelectedValue.ToString(), cbTerminal.SelectedValue.ToString());
             ticketaccountability.TableName = "AuditPerCashierTicketAccountability";
             sources.Add(ticketaccountability);
 
             var viewer = new Viewer();
-            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
+            viewer.DateCovered = from.ToString() + '~' + to.ToString();
             viewer.IsMultipleSource = true;
             viewer.ReportType = ReportType.AuditPerCashier;
             viewer.ReportSources = sources;
@@ -193,6 +190,75 @@ namespace Reports
                 return;
             var key = Finder.SearchResult();
             dgAuditPerCashier.FindValue(key);
+        }
+
+        private void cbTerminal_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadCashier();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        void LoadCashier()
+        {
+            cboCashier.DataSource = null;
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var items = services.CashiersPerTerminal(from, to, cbTerminal.SelectedValue.ToString());
+            cboCashier.DataSource = items;
+            cboCashier.ValueMember = "UserId";
+            cboCashier.DisplayMember = "Username";
+        }
+        private void dtFrom_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadCashier();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void dtTo_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadCashier();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void timeFrom_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadCashier();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void timeTo_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadCashier();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

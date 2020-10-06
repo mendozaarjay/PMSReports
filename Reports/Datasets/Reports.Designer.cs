@@ -5990,19 +5990,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnDescription;
             
-            private global::System.Data.DataColumn columnCashier_1;
-            
-            private global::System.Data.DataColumn columnCashier_2;
-            
-            private global::System.Data.DataColumn columnCashier_3;
-            
-            private global::System.Data.DataColumn columnCashier_4;
-            
-            private global::System.Data.DataColumn columnCashier_5;
-            
-            private global::System.Data.DataColumn columnCashier_6;
-            
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnValue;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -6095,57 +6083,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_1Column {
+            public global::System.Data.DataColumn ValueColumn {
                 get {
-                    return this.columnCashier_1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_2Column {
-                get {
-                    return this.columnCashier_2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_3Column {
-                get {
-                    return this.columnCashier_3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_4Column {
-                get {
-                    return this.columnCashier_4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_5Column {
-                get {
-                    return this.columnCashier_5;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_6Column {
-                get {
-                    return this.columnCashier_6;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
-                get {
-                    return this.columnTotal;
+                    return this.columnValue;
                 }
             }
             
@@ -6186,7 +6126,7 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AuditPerCashierRow AddAuditPerCashierRow(string RunDate, string RunTime, string Date, string Location, string Terminal, string Id, string Description, string Cashier_1, string Cashier_2, string Cashier_3, string Cashier_4, string Cashier_5, string Cashier_6, string Total) {
+            public AuditPerCashierRow AddAuditPerCashierRow(string RunDate, string RunTime, string Date, string Location, string Terminal, string Id, string Description, string Value) {
                 AuditPerCashierRow rowAuditPerCashierRow = ((AuditPerCashierRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RunDate,
@@ -6196,13 +6136,7 @@ namespace Reports.Datasets {
                         Terminal,
                         Id,
                         Description,
-                        Cashier_1,
-                        Cashier_2,
-                        Cashier_3,
-                        Cashier_4,
-                        Cashier_5,
-                        Cashier_6,
-                        Total};
+                        Value};
                 rowAuditPerCashierRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAuditPerCashierRow);
                 return rowAuditPerCashierRow;
@@ -6232,13 +6166,7 @@ namespace Reports.Datasets {
                 this.columnTerminal = base.Columns["Terminal"];
                 this.columnId = base.Columns["Id"];
                 this.columnDescription = base.Columns["Description"];
-                this.columnCashier_1 = base.Columns["Cashier_1"];
-                this.columnCashier_2 = base.Columns["Cashier_2"];
-                this.columnCashier_3 = base.Columns["Cashier_3"];
-                this.columnCashier_4 = base.Columns["Cashier_4"];
-                this.columnCashier_5 = base.Columns["Cashier_5"];
-                this.columnCashier_6 = base.Columns["Cashier_6"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnValue = base.Columns["Value"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6258,20 +6186,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
-                this.columnCashier_1 = new global::System.Data.DataColumn("Cashier_1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_1);
-                this.columnCashier_2 = new global::System.Data.DataColumn("Cashier_2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_2);
-                this.columnCashier_3 = new global::System.Data.DataColumn("Cashier_3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_3);
-                this.columnCashier_4 = new global::System.Data.DataColumn("Cashier_4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_4);
-                this.columnCashier_5 = new global::System.Data.DataColumn("Cashier_5", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_5);
-                this.columnCashier_6 = new global::System.Data.DataColumn("Cashier_6", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_6);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValue);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6409,19 +6325,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnDescription;
             
-            private global::System.Data.DataColumn columnCashier_1;
-            
-            private global::System.Data.DataColumn columnCashier_2;
-            
-            private global::System.Data.DataColumn columnCashier_3;
-            
-            private global::System.Data.DataColumn columnCashier_4;
-            
-            private global::System.Data.DataColumn columnCashier_5;
-            
-            private global::System.Data.DataColumn columnCashier_6;
-            
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnValue;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -6474,57 +6378,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_1Column {
+            public global::System.Data.DataColumn ValueColumn {
                 get {
-                    return this.columnCashier_1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_2Column {
-                get {
-                    return this.columnCashier_2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_3Column {
-                get {
-                    return this.columnCashier_3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_4Column {
-                get {
-                    return this.columnCashier_4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_5Column {
-                get {
-                    return this.columnCashier_5;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_6Column {
-                get {
-                    return this.columnCashier_6;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
-                get {
-                    return this.columnTotal;
+                    return this.columnValue;
                 }
             }
             
@@ -6565,18 +6421,12 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AuditPerCashierProcessedTicketsRow AddAuditPerCashierProcessedTicketsRow(string Id, string Description, string Cashier_1, string Cashier_2, string Cashier_3, string Cashier_4, string Cashier_5, string Cashier_6, string Total) {
+            public AuditPerCashierProcessedTicketsRow AddAuditPerCashierProcessedTicketsRow(string Id, string Description, string Value) {
                 AuditPerCashierProcessedTicketsRow rowAuditPerCashierProcessedTicketsRow = ((AuditPerCashierProcessedTicketsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         Description,
-                        Cashier_1,
-                        Cashier_2,
-                        Cashier_3,
-                        Cashier_4,
-                        Cashier_5,
-                        Cashier_6,
-                        Total};
+                        Value};
                 rowAuditPerCashierProcessedTicketsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAuditPerCashierProcessedTicketsRow);
                 return rowAuditPerCashierProcessedTicketsRow;
@@ -6601,13 +6451,7 @@ namespace Reports.Datasets {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnDescription = base.Columns["Description"];
-                this.columnCashier_1 = base.Columns["Cashier_1"];
-                this.columnCashier_2 = base.Columns["Cashier_2"];
-                this.columnCashier_3 = base.Columns["Cashier_3"];
-                this.columnCashier_4 = base.Columns["Cashier_4"];
-                this.columnCashier_5 = base.Columns["Cashier_5"];
-                this.columnCashier_6 = base.Columns["Cashier_6"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnValue = base.Columns["Value"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6617,20 +6461,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
-                this.columnCashier_1 = new global::System.Data.DataColumn("Cashier_1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_1);
-                this.columnCashier_2 = new global::System.Data.DataColumn("Cashier_2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_2);
-                this.columnCashier_3 = new global::System.Data.DataColumn("Cashier_3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_3);
-                this.columnCashier_4 = new global::System.Data.DataColumn("Cashier_4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_4);
-                this.columnCashier_5 = new global::System.Data.DataColumn("Cashier_5", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_5);
-                this.columnCashier_6 = new global::System.Data.DataColumn("Cashier_6", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_6);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValue);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6768,19 +6600,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnDescription;
             
-            private global::System.Data.DataColumn columnCashier_1;
-            
-            private global::System.Data.DataColumn columnCashier_2;
-            
-            private global::System.Data.DataColumn columnCashier_3;
-            
-            private global::System.Data.DataColumn columnCashier_4;
-            
-            private global::System.Data.DataColumn columnCashier_5;
-            
-            private global::System.Data.DataColumn columnCashier_6;
-            
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnValue;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -6833,57 +6653,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_1Column {
+            public global::System.Data.DataColumn ValueColumn {
                 get {
-                    return this.columnCashier_1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_2Column {
-                get {
-                    return this.columnCashier_2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_3Column {
-                get {
-                    return this.columnCashier_3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_4Column {
-                get {
-                    return this.columnCashier_4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_5Column {
-                get {
-                    return this.columnCashier_5;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cashier_6Column {
-                get {
-                    return this.columnCashier_6;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
-                get {
-                    return this.columnTotal;
+                    return this.columnValue;
                 }
             }
             
@@ -6924,18 +6696,12 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AuditPerCashierTicketAccountabilityRow AddAuditPerCashierTicketAccountabilityRow(string Id, string Description, string Cashier_1, string Cashier_2, string Cashier_3, string Cashier_4, string Cashier_5, string Cashier_6, string Total) {
+            public AuditPerCashierTicketAccountabilityRow AddAuditPerCashierTicketAccountabilityRow(string Id, string Description, string Value) {
                 AuditPerCashierTicketAccountabilityRow rowAuditPerCashierTicketAccountabilityRow = ((AuditPerCashierTicketAccountabilityRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         Description,
-                        Cashier_1,
-                        Cashier_2,
-                        Cashier_3,
-                        Cashier_4,
-                        Cashier_5,
-                        Cashier_6,
-                        Total};
+                        Value};
                 rowAuditPerCashierTicketAccountabilityRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAuditPerCashierTicketAccountabilityRow);
                 return rowAuditPerCashierTicketAccountabilityRow;
@@ -6960,13 +6726,7 @@ namespace Reports.Datasets {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnDescription = base.Columns["Description"];
-                this.columnCashier_1 = base.Columns["Cashier_1"];
-                this.columnCashier_2 = base.Columns["Cashier_2"];
-                this.columnCashier_3 = base.Columns["Cashier_3"];
-                this.columnCashier_4 = base.Columns["Cashier_4"];
-                this.columnCashier_5 = base.Columns["Cashier_5"];
-                this.columnCashier_6 = base.Columns["Cashier_6"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnValue = base.Columns["Value"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6976,20 +6736,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
-                this.columnCashier_1 = new global::System.Data.DataColumn("Cashier_1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_1);
-                this.columnCashier_2 = new global::System.Data.DataColumn("Cashier_2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_2);
-                this.columnCashier_3 = new global::System.Data.DataColumn("Cashier_3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_3);
-                this.columnCashier_4 = new global::System.Data.DataColumn("Cashier_4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_4);
-                this.columnCashier_5 = new global::System.Data.DataColumn("Cashier_5", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_5);
-                this.columnCashier_6 = new global::System.Data.DataColumn("Cashier_6", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCashier_6);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValue);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7135,13 +6883,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnDescription;
             
-            private global::System.Data.DataColumn columnTerminal_1;
-            
-            private global::System.Data.DataColumn columnTerminal_2;
-            
-            private global::System.Data.DataColumn columnTerminal_3;
-            
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnValue;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -7226,33 +6968,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_1Column {
+            public global::System.Data.DataColumn ValueColumn {
                 get {
-                    return this.columnTerminal_1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_2Column {
-                get {
-                    return this.columnTerminal_2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_3Column {
-                get {
-                    return this.columnTerminal_3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
-                get {
-                    return this.columnTotal;
+                    return this.columnValue;
                 }
             }
             
@@ -7293,7 +7011,7 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AuditPerTerminalRow AddAuditPerTerminalRow(string RunDate, string RunTime, string Date, string Location, string Id, string Description, string Terminal_1, string Terminal_2, string Terminal_3, string Total) {
+            public AuditPerTerminalRow AddAuditPerTerminalRow(string RunDate, string RunTime, string Date, string Location, string Id, string Description, string Value) {
                 AuditPerTerminalRow rowAuditPerTerminalRow = ((AuditPerTerminalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RunDate,
@@ -7302,10 +7020,7 @@ namespace Reports.Datasets {
                         Location,
                         Id,
                         Description,
-                        Terminal_1,
-                        Terminal_2,
-                        Terminal_3,
-                        Total};
+                        Value};
                 rowAuditPerTerminalRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAuditPerTerminalRow);
                 return rowAuditPerTerminalRow;
@@ -7334,10 +7049,7 @@ namespace Reports.Datasets {
                 this.columnLocation = base.Columns["Location"];
                 this.columnId = base.Columns["Id"];
                 this.columnDescription = base.Columns["Description"];
-                this.columnTerminal_1 = base.Columns["Terminal_1"];
-                this.columnTerminal_2 = base.Columns["Terminal_2"];
-                this.columnTerminal_3 = base.Columns["Terminal_3"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnValue = base.Columns["Value"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7355,14 +7067,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
-                this.columnTerminal_1 = new global::System.Data.DataColumn("Terminal_1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_1);
-                this.columnTerminal_2 = new global::System.Data.DataColumn("Terminal_2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_2);
-                this.columnTerminal_3 = new global::System.Data.DataColumn("Terminal_3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_3);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValue);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7500,13 +7206,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnDescription;
             
-            private global::System.Data.DataColumn columnTerminal_1;
-            
-            private global::System.Data.DataColumn columnTerminal_2;
-            
-            private global::System.Data.DataColumn columnTerminal_3;
-            
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnValue;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -7559,33 +7259,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_1Column {
+            public global::System.Data.DataColumn ValueColumn {
                 get {
-                    return this.columnTerminal_1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_2Column {
-                get {
-                    return this.columnTerminal_2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_3Column {
-                get {
-                    return this.columnTerminal_3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
-                get {
-                    return this.columnTotal;
+                    return this.columnValue;
                 }
             }
             
@@ -7626,15 +7302,12 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AuditPerTerminalTicketAccountabilityRow AddAuditPerTerminalTicketAccountabilityRow(string Id, string Description, string Terminal_1, string Terminal_2, string Terminal_3, string Total) {
+            public AuditPerTerminalTicketAccountabilityRow AddAuditPerTerminalTicketAccountabilityRow(string Id, string Description, string Value) {
                 AuditPerTerminalTicketAccountabilityRow rowAuditPerTerminalTicketAccountabilityRow = ((AuditPerTerminalTicketAccountabilityRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         Description,
-                        Terminal_1,
-                        Terminal_2,
-                        Terminal_3,
-                        Total};
+                        Value};
                 rowAuditPerTerminalTicketAccountabilityRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAuditPerTerminalTicketAccountabilityRow);
                 return rowAuditPerTerminalTicketAccountabilityRow;
@@ -7659,10 +7332,7 @@ namespace Reports.Datasets {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnDescription = base.Columns["Description"];
-                this.columnTerminal_1 = base.Columns["Terminal_1"];
-                this.columnTerminal_2 = base.Columns["Terminal_2"];
-                this.columnTerminal_3 = base.Columns["Terminal_3"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnValue = base.Columns["Value"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7672,14 +7342,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
-                this.columnTerminal_1 = new global::System.Data.DataColumn("Terminal_1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_1);
-                this.columnTerminal_2 = new global::System.Data.DataColumn("Terminal_2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_2);
-                this.columnTerminal_3 = new global::System.Data.DataColumn("Terminal_3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_3);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValue);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7817,13 +7481,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnDescription;
             
-            private global::System.Data.DataColumn columnTerminal_1;
-            
-            private global::System.Data.DataColumn columnTerminal_2;
-            
-            private global::System.Data.DataColumn columnTerminal_3;
-            
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnValue;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -7876,33 +7534,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_1Column {
+            public global::System.Data.DataColumn ValueColumn {
                 get {
-                    return this.columnTerminal_1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_2Column {
-                get {
-                    return this.columnTerminal_2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Terminal_3Column {
-                get {
-                    return this.columnTerminal_3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
-                get {
-                    return this.columnTotal;
+                    return this.columnValue;
                 }
             }
             
@@ -7943,15 +7577,12 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AuditPerTerminalProcessedTicketsRow AddAuditPerTerminalProcessedTicketsRow(string Id, string Description, string Terminal_1, string Terminal_2, string Terminal_3, string Total) {
+            public AuditPerTerminalProcessedTicketsRow AddAuditPerTerminalProcessedTicketsRow(string Id, string Description, string Value) {
                 AuditPerTerminalProcessedTicketsRow rowAuditPerTerminalProcessedTicketsRow = ((AuditPerTerminalProcessedTicketsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         Description,
-                        Terminal_1,
-                        Terminal_2,
-                        Terminal_3,
-                        Total};
+                        Value};
                 rowAuditPerTerminalProcessedTicketsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAuditPerTerminalProcessedTicketsRow);
                 return rowAuditPerTerminalProcessedTicketsRow;
@@ -7976,10 +7607,7 @@ namespace Reports.Datasets {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnDescription = base.Columns["Description"];
-                this.columnTerminal_1 = base.Columns["Terminal_1"];
-                this.columnTerminal_2 = base.Columns["Terminal_2"];
-                this.columnTerminal_3 = base.Columns["Terminal_3"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnValue = base.Columns["Value"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7989,14 +7617,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
-                this.columnTerminal_1 = new global::System.Data.DataColumn("Terminal_1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_1);
-                this.columnTerminal_2 = new global::System.Data.DataColumn("Terminal_2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_2);
-                this.columnTerminal_3 = new global::System.Data.DataColumn("Terminal_3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTerminal_3);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValue);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14343,113 +13965,17 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_1 {
+            public string Value {
                 get {
                     try {
-                        return ((string)(this[this.tableAuditPerCashier.Cashier_1Column]));
+                        return ((string)(this[this.tableAuditPerCashier.ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_1\' in table \'AuditPerCashier\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'AuditPerCashier\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAuditPerCashier.Cashier_1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashier.Cashier_2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_2\' in table \'AuditPerCashier\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashier.Cashier_2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashier.Cashier_3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_3\' in table \'AuditPerCashier\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashier.Cashier_3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_4 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashier.Cashier_4Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_4\' in table \'AuditPerCashier\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashier.Cashier_4Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_5 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashier.Cashier_5Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_5\' in table \'AuditPerCashier\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashier.Cashier_5Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_6 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashier.Cashier_6Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_6\' in table \'AuditPerCashier\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashier.Cashier_6Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Total {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashier.TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'AuditPerCashier\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashier.TotalColumn] = value;
+                    this[this.tableAuditPerCashier.ValueColumn] = value;
                 }
             }
             
@@ -14539,86 +14065,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_1Null() {
-                return this.IsNull(this.tableAuditPerCashier.Cashier_1Column);
+            public bool IsValueNull() {
+                return this.IsNull(this.tableAuditPerCashier.ValueColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_1Null() {
-                this[this.tableAuditPerCashier.Cashier_1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_2Null() {
-                return this.IsNull(this.tableAuditPerCashier.Cashier_2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_2Null() {
-                this[this.tableAuditPerCashier.Cashier_2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_3Null() {
-                return this.IsNull(this.tableAuditPerCashier.Cashier_3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_3Null() {
-                this[this.tableAuditPerCashier.Cashier_3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_4Null() {
-                return this.IsNull(this.tableAuditPerCashier.Cashier_4Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_4Null() {
-                this[this.tableAuditPerCashier.Cashier_4Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_5Null() {
-                return this.IsNull(this.tableAuditPerCashier.Cashier_5Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_5Null() {
-                this[this.tableAuditPerCashier.Cashier_5Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_6Null() {
-                return this.IsNull(this.tableAuditPerCashier.Cashier_6Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_6Null() {
-                this[this.tableAuditPerCashier.Cashier_6Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableAuditPerCashier.TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableAuditPerCashier.TotalColumn] = global::System.Convert.DBNull;
+            public void SetValueNull() {
+                this[this.tableAuditPerCashier.ValueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -14671,120 +14125,18 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_1 {
+            public string Value {
                 get {
                     try {
-                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.Cashier_1Column]));
+                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_1\' in table \'AuditPerCashierProcessedTickets\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierProcessedTickets.Cashier_1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.Cashier_2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_2\' in table \'AuditPerCashierProcessedTickets\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierProcessedTickets.Cashier_2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.Cashier_3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_3\' in table \'AuditPerCashierProcessedTickets\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierProcessedTickets.Cashier_3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_4 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.Cashier_4Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_4\' in table \'AuditPerCashierProcessedTickets\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierProcessedTickets.Cashier_4Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_5 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.Cashier_5Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_5\' in table \'AuditPerCashierProcessedTickets\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierProcessedTickets.Cashier_5Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_6 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.Cashier_6Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_6\' in table \'AuditPerCashierProcessedTickets\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierProcessedTickets.Cashier_6Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Total {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierProcessedTickets.TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'AuditPerCashierProcessedTickets\' is DBNull" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'AuditPerCashierProcessedTickets\' is DBNull" +
                                 ".", e);
                     }
                 }
                 set {
-                    this[this.tableAuditPerCashierProcessedTickets.TotalColumn] = value;
+                    this[this.tableAuditPerCashierProcessedTickets.ValueColumn] = value;
                 }
             }
             
@@ -14814,86 +14166,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_1Null() {
-                return this.IsNull(this.tableAuditPerCashierProcessedTickets.Cashier_1Column);
+            public bool IsValueNull() {
+                return this.IsNull(this.tableAuditPerCashierProcessedTickets.ValueColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_1Null() {
-                this[this.tableAuditPerCashierProcessedTickets.Cashier_1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_2Null() {
-                return this.IsNull(this.tableAuditPerCashierProcessedTickets.Cashier_2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_2Null() {
-                this[this.tableAuditPerCashierProcessedTickets.Cashier_2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_3Null() {
-                return this.IsNull(this.tableAuditPerCashierProcessedTickets.Cashier_3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_3Null() {
-                this[this.tableAuditPerCashierProcessedTickets.Cashier_3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_4Null() {
-                return this.IsNull(this.tableAuditPerCashierProcessedTickets.Cashier_4Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_4Null() {
-                this[this.tableAuditPerCashierProcessedTickets.Cashier_4Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_5Null() {
-                return this.IsNull(this.tableAuditPerCashierProcessedTickets.Cashier_5Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_5Null() {
-                this[this.tableAuditPerCashierProcessedTickets.Cashier_5Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_6Null() {
-                return this.IsNull(this.tableAuditPerCashierProcessedTickets.Cashier_6Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_6Null() {
-                this[this.tableAuditPerCashierProcessedTickets.Cashier_6Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableAuditPerCashierProcessedTickets.TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableAuditPerCashierProcessedTickets.TotalColumn] = global::System.Convert.DBNull;
+            public void SetValueNull() {
+                this[this.tableAuditPerCashierProcessedTickets.ValueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -14947,120 +14227,18 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_1 {
+            public string Value {
                 get {
                     try {
-                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.Cashier_1Column]));
+                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_1\' in table \'AuditPerCashierTicketAccountability\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierTicketAccountability.Cashier_1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.Cashier_2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_2\' in table \'AuditPerCashierTicketAccountability\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierTicketAccountability.Cashier_2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.Cashier_3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_3\' in table \'AuditPerCashierTicketAccountability\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierTicketAccountability.Cashier_3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_4 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.Cashier_4Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_4\' in table \'AuditPerCashierTicketAccountability\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierTicketAccountability.Cashier_4Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_5 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.Cashier_5Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_5\' in table \'AuditPerCashierTicketAccountability\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierTicketAccountability.Cashier_5Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cashier_6 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.Cashier_6Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cashier_6\' in table \'AuditPerCashierTicketAccountability\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerCashierTicketAccountability.Cashier_6Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Total {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerCashierTicketAccountability.TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'AuditPerCashierTicketAccountability\' is DB" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'AuditPerCashierTicketAccountability\' is DB" +
                                 "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableAuditPerCashierTicketAccountability.TotalColumn] = value;
+                    this[this.tableAuditPerCashierTicketAccountability.ValueColumn] = value;
                 }
             }
             
@@ -15090,86 +14268,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_1Null() {
-                return this.IsNull(this.tableAuditPerCashierTicketAccountability.Cashier_1Column);
+            public bool IsValueNull() {
+                return this.IsNull(this.tableAuditPerCashierTicketAccountability.ValueColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_1Null() {
-                this[this.tableAuditPerCashierTicketAccountability.Cashier_1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_2Null() {
-                return this.IsNull(this.tableAuditPerCashierTicketAccountability.Cashier_2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_2Null() {
-                this[this.tableAuditPerCashierTicketAccountability.Cashier_2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_3Null() {
-                return this.IsNull(this.tableAuditPerCashierTicketAccountability.Cashier_3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_3Null() {
-                this[this.tableAuditPerCashierTicketAccountability.Cashier_3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_4Null() {
-                return this.IsNull(this.tableAuditPerCashierTicketAccountability.Cashier_4Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_4Null() {
-                this[this.tableAuditPerCashierTicketAccountability.Cashier_4Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_5Null() {
-                return this.IsNull(this.tableAuditPerCashierTicketAccountability.Cashier_5Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_5Null() {
-                this[this.tableAuditPerCashierTicketAccountability.Cashier_5Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCashier_6Null() {
-                return this.IsNull(this.tableAuditPerCashierTicketAccountability.Cashier_6Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCashier_6Null() {
-                this[this.tableAuditPerCashierTicketAccountability.Cashier_6Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableAuditPerCashierTicketAccountability.TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableAuditPerCashierTicketAccountability.TotalColumn] = global::System.Convert.DBNull;
+            public void SetValueNull() {
+                this[this.tableAuditPerCashierTicketAccountability.ValueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15285,65 +14391,17 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_1 {
+            public string Value {
                 get {
                     try {
-                        return ((string)(this[this.tableAuditPerTerminal.Terminal_1Column]));
+                        return ((string)(this[this.tableAuditPerTerminal.ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_1\' in table \'AuditPerTerminal\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'AuditPerTerminal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAuditPerTerminal.Terminal_1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminal.Terminal_2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_2\' in table \'AuditPerTerminal\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminal.Terminal_2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminal.Terminal_3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_3\' in table \'AuditPerTerminal\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminal.Terminal_3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Total {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminal.TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'AuditPerTerminal\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminal.TotalColumn] = value;
+                    this[this.tableAuditPerTerminal.ValueColumn] = value;
                 }
             }
             
@@ -15421,50 +14479,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_1Null() {
-                return this.IsNull(this.tableAuditPerTerminal.Terminal_1Column);
+            public bool IsValueNull() {
+                return this.IsNull(this.tableAuditPerTerminal.ValueColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_1Null() {
-                this[this.tableAuditPerTerminal.Terminal_1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_2Null() {
-                return this.IsNull(this.tableAuditPerTerminal.Terminal_2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_2Null() {
-                this[this.tableAuditPerTerminal.Terminal_2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_3Null() {
-                return this.IsNull(this.tableAuditPerTerminal.Terminal_3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_3Null() {
-                this[this.tableAuditPerTerminal.Terminal_3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableAuditPerTerminal.TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableAuditPerTerminal.TotalColumn] = global::System.Convert.DBNull;
+            public void SetValueNull() {
+                this[this.tableAuditPerTerminal.ValueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15518,69 +14540,18 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_1 {
+            public string Value {
                 get {
                     try {
-                        return ((string)(this[this.tableAuditPerTerminalTicketAccountability.Terminal_1Column]));
+                        return ((string)(this[this.tableAuditPerTerminalTicketAccountability.ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_1\' in table \'AuditPerTerminalTicketAccountability\'" +
-                                " is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminalTicketAccountability.Terminal_1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminalTicketAccountability.Terminal_2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_2\' in table \'AuditPerTerminalTicketAccountability\'" +
-                                " is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminalTicketAccountability.Terminal_2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminalTicketAccountability.Terminal_3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_3\' in table \'AuditPerTerminalTicketAccountability\'" +
-                                " is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminalTicketAccountability.Terminal_3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Total {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminalTicketAccountability.TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'AuditPerTerminalTicketAccountability\' is D" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'AuditPerTerminalTicketAccountability\' is D" +
                                 "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAuditPerTerminalTicketAccountability.TotalColumn] = value;
+                    this[this.tableAuditPerTerminalTicketAccountability.ValueColumn] = value;
                 }
             }
             
@@ -15610,50 +14581,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_1Null() {
-                return this.IsNull(this.tableAuditPerTerminalTicketAccountability.Terminal_1Column);
+            public bool IsValueNull() {
+                return this.IsNull(this.tableAuditPerTerminalTicketAccountability.ValueColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_1Null() {
-                this[this.tableAuditPerTerminalTicketAccountability.Terminal_1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_2Null() {
-                return this.IsNull(this.tableAuditPerTerminalTicketAccountability.Terminal_2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_2Null() {
-                this[this.tableAuditPerTerminalTicketAccountability.Terminal_2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_3Null() {
-                return this.IsNull(this.tableAuditPerTerminalTicketAccountability.Terminal_3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_3Null() {
-                this[this.tableAuditPerTerminalTicketAccountability.Terminal_3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableAuditPerTerminalTicketAccountability.TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableAuditPerTerminalTicketAccountability.TotalColumn] = global::System.Convert.DBNull;
+            public void SetValueNull() {
+                this[this.tableAuditPerTerminalTicketAccountability.ValueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15706,69 +14641,18 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_1 {
+            public string Value {
                 get {
                     try {
-                        return ((string)(this[this.tableAuditPerTerminalProcessedTickets.Terminal_1Column]));
+                        return ((string)(this[this.tableAuditPerTerminalProcessedTickets.ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_1\' in table \'AuditPerTerminalProcessedTickets\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminalProcessedTickets.Terminal_1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminalProcessedTickets.Terminal_2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_2\' in table \'AuditPerTerminalProcessedTickets\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminalProcessedTickets.Terminal_2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Terminal_3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminalProcessedTickets.Terminal_3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Terminal_3\' in table \'AuditPerTerminalProcessedTickets\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAuditPerTerminalProcessedTickets.Terminal_3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Total {
-                get {
-                    try {
-                        return ((string)(this[this.tableAuditPerTerminalProcessedTickets.TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'AuditPerTerminalProcessedTickets\' is DBNul" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'AuditPerTerminalProcessedTickets\' is DBNul" +
                                 "l.", e);
                     }
                 }
                 set {
-                    this[this.tableAuditPerTerminalProcessedTickets.TotalColumn] = value;
+                    this[this.tableAuditPerTerminalProcessedTickets.ValueColumn] = value;
                 }
             }
             
@@ -15798,50 +14682,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_1Null() {
-                return this.IsNull(this.tableAuditPerTerminalProcessedTickets.Terminal_1Column);
+            public bool IsValueNull() {
+                return this.IsNull(this.tableAuditPerTerminalProcessedTickets.ValueColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_1Null() {
-                this[this.tableAuditPerTerminalProcessedTickets.Terminal_1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_2Null() {
-                return this.IsNull(this.tableAuditPerTerminalProcessedTickets.Terminal_2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_2Null() {
-                this[this.tableAuditPerTerminalProcessedTickets.Terminal_2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTerminal_3Null() {
-                return this.IsNull(this.tableAuditPerTerminalProcessedTickets.Terminal_3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTerminal_3Null() {
-                this[this.tableAuditPerTerminalProcessedTickets.Terminal_3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableAuditPerTerminalProcessedTickets.TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableAuditPerTerminalProcessedTickets.TotalColumn] = global::System.Convert.DBNull;
+            public void SetValueNull() {
+                this[this.tableAuditPerTerminalProcessedTickets.ValueColumn] = global::System.Convert.DBNull;
             }
         }
         
