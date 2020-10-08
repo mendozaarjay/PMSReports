@@ -38,6 +38,12 @@
             this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cboCashier = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,20 +52,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgAuditPerCashier = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgTicketAccountability = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgProcessedTickets = new System.Windows.Forms.DataGridView();
-            this.timeTo = new System.Windows.Forms.DateTimePicker();
-            this.timeFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtTo = new System.Windows.Forms.DateTimePicker();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dtlapcDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlapcValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgTicketAccountability = new System.Windows.Forms.DataGridView();
             this.dtltaDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtltaValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgProcessedTickets = new System.Windows.Forms.DataGridView();
             this.dtlptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -188,6 +188,68 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
             // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm:ss tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(328, 81);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 3;
+            this.timeTo.ValueChanged += new System.EventHandler(this.timeTo_ValueChanged);
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm:ss tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(328, 42);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 1;
+            this.timeFrom.ValueChanged += new System.EventHandler(this.timeFrom_ValueChanged);
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(149, 81);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 2;
+            this.dtTo.ValueChanged += new System.EventHandler(this.dtTo_ValueChanged);
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(149, 42);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 0;
+            this.dtFrom.ValueChanged += new System.EventHandler(this.dtFrom_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 23);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Date To";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Date From";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -278,13 +340,29 @@
             this.dgAuditPerCashier.Size = new System.Drawing.Size(999, 328);
             this.dgAuditPerCashier.TabIndex = 0;
             // 
+            // dtlapcDescription
+            // 
+            this.dtlapcDescription.HeaderText = "Description";
+            this.dtlapcDescription.MinimumWidth = 6;
+            this.dtlapcDescription.Name = "dtlapcDescription";
+            this.dtlapcDescription.ReadOnly = true;
+            this.dtlapcDescription.Width = 150;
+            // 
+            // dtlapcValue
+            // 
+            this.dtlapcValue.HeaderText = "Value";
+            this.dtlapcValue.MinimumWidth = 6;
+            this.dtlapcValue.Name = "dtlapcValue";
+            this.dtlapcValue.ReadOnly = true;
+            this.dtlapcValue.Width = 125;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgTicketAccountability);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1005, 334);
+            this.tabPage2.Size = new System.Drawing.Size(1005, 341);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ticket Accountability";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -304,16 +382,32 @@
             this.dgTicketAccountability.ReadOnly = true;
             this.dgTicketAccountability.RowHeadersWidth = 51;
             this.dgTicketAccountability.RowTemplate.Height = 24;
-            this.dgTicketAccountability.Size = new System.Drawing.Size(999, 328);
+            this.dgTicketAccountability.Size = new System.Drawing.Size(999, 335);
             this.dgTicketAccountability.TabIndex = 1;
+            // 
+            // dtltaDescription
+            // 
+            this.dtltaDescription.HeaderText = "Description";
+            this.dtltaDescription.MinimumWidth = 6;
+            this.dtltaDescription.Name = "dtltaDescription";
+            this.dtltaDescription.ReadOnly = true;
+            this.dtltaDescription.Width = 150;
+            // 
+            // dtltaValue
+            // 
+            this.dtltaValue.HeaderText = "Value";
+            this.dtltaValue.MinimumWidth = 6;
+            this.dtltaValue.Name = "dtltaValue";
+            this.dtltaValue.ReadOnly = true;
+            this.dtltaValue.Width = 125;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgProcessedTickets);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1005, 334);
+            this.tabPage3.Size = new System.Drawing.Size(1005, 341);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Processed Tickets";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -333,102 +427,8 @@
             this.dgProcessedTickets.ReadOnly = true;
             this.dgProcessedTickets.RowHeadersWidth = 51;
             this.dgProcessedTickets.RowTemplate.Height = 24;
-            this.dgProcessedTickets.Size = new System.Drawing.Size(999, 328);
+            this.dgProcessedTickets.Size = new System.Drawing.Size(999, 335);
             this.dgProcessedTickets.TabIndex = 2;
-            // 
-            // timeTo
-            // 
-            this.timeTo.CustomFormat = "hh:mm tt";
-            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeTo.Location = new System.Drawing.Point(328, 81);
-            this.timeTo.Name = "timeTo";
-            this.timeTo.ShowUpDown = true;
-            this.timeTo.Size = new System.Drawing.Size(127, 30);
-            this.timeTo.TabIndex = 3;
-            this.timeTo.ValueChanged += new System.EventHandler(this.timeTo_ValueChanged);
-            // 
-            // timeFrom
-            // 
-            this.timeFrom.CustomFormat = "hh:mm tt";
-            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeFrom.Location = new System.Drawing.Point(328, 42);
-            this.timeFrom.Name = "timeFrom";
-            this.timeFrom.ShowUpDown = true;
-            this.timeFrom.Size = new System.Drawing.Size(127, 30);
-            this.timeFrom.TabIndex = 1;
-            this.timeFrom.ValueChanged += new System.EventHandler(this.timeFrom_ValueChanged);
-            // 
-            // dtTo
-            // 
-            this.dtTo.CustomFormat = "MM/dd/yyyy";
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(149, 81);
-            this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(171, 30);
-            this.dtTo.TabIndex = 2;
-            this.dtTo.ValueChanged += new System.EventHandler(this.dtTo_ValueChanged);
-            // 
-            // dtFrom
-            // 
-            this.dtFrom.CustomFormat = "MM/dd/yyyy";
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(149, 42);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(171, 30);
-            this.dtFrom.TabIndex = 0;
-            this.dtFrom.ValueChanged += new System.EventHandler(this.dtFrom_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 23);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Date To";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 23);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Date From";
-            // 
-            // dtlapcDescription
-            // 
-            this.dtlapcDescription.HeaderText = "Description";
-            this.dtlapcDescription.MinimumWidth = 6;
-            this.dtlapcDescription.Name = "dtlapcDescription";
-            this.dtlapcDescription.ReadOnly = true;
-            this.dtlapcDescription.Width = 150;
-            // 
-            // dtlapcValue
-            // 
-            this.dtlapcValue.HeaderText = "Value";
-            this.dtlapcValue.MinimumWidth = 6;
-            this.dtlapcValue.Name = "dtlapcValue";
-            this.dtlapcValue.ReadOnly = true;
-            this.dtlapcValue.Width = 125;
-            // 
-            // dtltaDescription
-            // 
-            this.dtltaDescription.HeaderText = "Description";
-            this.dtltaDescription.MinimumWidth = 6;
-            this.dtltaDescription.Name = "dtltaDescription";
-            this.dtltaDescription.ReadOnly = true;
-            this.dtltaDescription.Width = 150;
-            // 
-            // dtltaValue
-            // 
-            this.dtltaValue.HeaderText = "Value";
-            this.dtltaValue.MinimumWidth = 6;
-            this.dtltaValue.Name = "dtltaValue";
-            this.dtltaValue.ReadOnly = true;
-            this.dtltaValue.Width = 125;
             // 
             // dtlptDescription
             // 

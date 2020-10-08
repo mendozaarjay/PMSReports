@@ -41,7 +41,6 @@
             this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.dgItems = new System.Windows.Forms.DataGridView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtlRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +54,7 @@
             this.dtlCanPrint = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dtlCanExport = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dtlCanAccess = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -84,14 +84,14 @@
             // 
             this.cboUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUser.FormattingEnabled = true;
-            this.cboUser.Location = new System.Drawing.Point(135, 53);
+            this.cboUser.Location = new System.Drawing.Point(135, 45);
             this.cboUser.Name = "cboUser";
             this.cboUser.Size = new System.Drawing.Size(306, 31);
             this.cboUser.TabIndex = 7;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(135, 97);
+            this.btnGenerate.Location = new System.Drawing.Point(135, 89);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(306, 32);
             this.btnGenerate.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 56);
+            this.label1.Location = new System.Drawing.Point(56, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 23);
             this.label1.TabIndex = 0;
@@ -206,25 +206,6 @@
             this.dgItems.Size = new System.Drawing.Size(929, 377);
             this.dgItems.TabIndex = 0;
             this.dgItems.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgItems_DataError);
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgItems);
-            this.splitContainer1.Size = new System.Drawing.Size(929, 552);
-            this.splitContainer1.SplitterDistance = 171;
-            this.splitContainer1.TabIndex = 7;
             // 
             // dtlRow
             // 
@@ -345,6 +326,25 @@
             this.dtlCanAccess.ReadOnly = true;
             this.dtlCanAccess.TrueValue = "1";
             this.dtlCanAccess.Width = 125;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dgItems);
+            this.splitContainer1.Size = new System.Drawing.Size(929, 552);
+            this.splitContainer1.SplitterDistance = 171;
+            this.splitContainer1.TabIndex = 7;
             // 
             // UserAccessMatrix
             // 

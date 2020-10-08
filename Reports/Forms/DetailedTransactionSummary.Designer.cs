@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailedTransactionSummary));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,12 +44,6 @@
             this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgDetailedTransaction = new System.Windows.Forms.DataGridView();
-            this.btnFind = new System.Windows.Forms.ToolStripButton();
-            this.btnPrint = new System.Windows.Forms.ToolStripButton();
-            this.btnExcel = new System.Windows.Forms.ToolStripButton();
-            this.btnCsv = new System.Windows.Forms.ToolStripButton();
-            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.dtlRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +60,12 @@
             this.dtlEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlViewImage = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnFind = new System.Windows.Forms.ToolStripButton();
+            this.btnPrint = new System.Windows.Forms.ToolStripButton();
+            this.btnExcel = new System.Windows.Forms.ToolStripButton();
+            this.btnCsv = new System.Windows.Forms.ToolStripButton();
+            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -158,7 +158,7 @@
             // 
             // timeTo
             // 
-            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.CustomFormat = "hh:mm:ss tt";
             this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeTo.Location = new System.Drawing.Point(333, 74);
             this.timeTo.Name = "timeTo";
@@ -168,7 +168,7 @@
             // 
             // timeFrom
             // 
-            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.CustomFormat = "hh:mm:ss tt";
             this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeFrom.Location = new System.Drawing.Point(333, 35);
             this.timeFrom.Name = "timeFrom";
@@ -245,74 +245,6 @@
             this.dgDetailedTransaction.Size = new System.Drawing.Size(1384, 404);
             this.dgDetailedTransaction.TabIndex = 0;
             this.dgDetailedTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDetailedTransaction_CellContentClick);
-            // 
-            // btnFind
-            // 
-            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
-            this.btnFind.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(61, 24);
-            this.btnFind.Text = "&Find";
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(63, 24);
-            this.btnPrint.Text = "&Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
-            this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(67, 24);
-            this.btnExcel.Text = "&Excel";
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // btnCsv
-            // 
-            this.btnCsv.Image = ((System.Drawing.Image)(resources.GetObject("btnCsv.Image")));
-            this.btnCsv.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCsv.Name = "btnCsv";
-            this.btnCsv.Size = new System.Drawing.Size(59, 24);
-            this.btnCsv.Text = "&CSV";
-            this.btnCsv.Click += new System.EventHandler(this.btnCsv_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(82, 24);
-            this.btnRefresh.Text = "&Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // bindingNavigator1
-            // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.CountItem = null;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnRefresh,
-            this.btnCsv,
-            this.btnExcel,
-            this.btnPrint,
-            this.btnFind});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = null;
-            this.bindingNavigator1.MoveLastItem = null;
-            this.bindingNavigator1.MoveNextItem = null;
-            this.bindingNavigator1.MovePreviousItem = null;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1384, 27);
-            this.bindingNavigator1.TabIndex = 2;
-            this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // dtlRow
             // 
@@ -398,9 +330,9 @@
             // 
             // dtlAmount
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtlAmount.HeaderText = "Amount";
             this.dtlAmount.MinimumWidth = 6;
             this.dtlAmount.Name = "dtlAmount";
@@ -450,6 +382,74 @@
             this.dtlViewImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dtlViewImage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dtlViewImage.Width = 50;
+            // 
+            // btnFind
+            // 
+            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
+            this.btnFind.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(61, 24);
+            this.btnFind.Text = "&Find";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(63, 24);
+            this.btnPrint.Text = "&Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
+            this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(67, 24);
+            this.btnExcel.Text = "&Excel";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnCsv
+            // 
+            this.btnCsv.Image = ((System.Drawing.Image)(resources.GetObject("btnCsv.Image")));
+            this.btnCsv.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCsv.Name = "btnCsv";
+            this.btnCsv.Size = new System.Drawing.Size(59, 24);
+            this.btnCsv.Text = "&CSV";
+            this.btnCsv.Click += new System.EventHandler(this.btnCsv_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(82, 24);
+            this.btnRefresh.Text = "&Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.CountItem = null;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnRefresh,
+            this.btnCsv,
+            this.btnExcel,
+            this.btnPrint,
+            this.btnFind});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.MoveFirstItem = null;
+            this.bindingNavigator1.MoveLastItem = null;
+            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.MovePreviousItem = null;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = null;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1384, 27);
+            this.bindingNavigator1.TabIndex = 2;
+            this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // DetailedTransactionSummary
             // 

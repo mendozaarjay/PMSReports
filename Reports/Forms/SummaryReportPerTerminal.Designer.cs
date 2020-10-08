@@ -46,6 +46,12 @@
             this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbTerminal = new System.Windows.Forms.ComboBox();
             this.btnGenerate = new System.Windows.Forms.Button();
@@ -54,12 +60,6 @@
             this.dgSummary = new System.Windows.Forms.DataGridView();
             this.dtlSummaryDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlSummaryValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeTo = new System.Windows.Forms.DateTimePicker();
-            this.timeFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtTo = new System.Windows.Forms.DateTimePicker();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTickets)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -79,10 +79,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgTickets);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(892, 399);
+            this.tabPage2.Size = new System.Drawing.Size(892, 385);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ticket Accountability";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.dgTickets.ReadOnly = true;
             this.dgTickets.RowHeadersWidth = 51;
             this.dgTickets.RowTemplate.Height = 24;
-            this.dgTickets.Size = new System.Drawing.Size(886, 393);
+            this.dgTickets.Size = new System.Drawing.Size(886, 379);
             this.dgTickets.TabIndex = 1;
             // 
             // dtlTicketsDescription
@@ -124,10 +124,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgProcessed);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(892, 399);
+            this.tabPage3.Size = new System.Drawing.Size(892, 385);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Processed Tickets";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -147,7 +147,7 @@
             this.dgProcessed.ReadOnly = true;
             this.dgProcessed.RowHeadersWidth = 51;
             this.dgProcessed.RowTemplate.Height = 24;
-            this.dgProcessed.Size = new System.Drawing.Size(886, 393);
+            this.dgProcessed.Size = new System.Drawing.Size(886, 379);
             this.dgProcessed.TabIndex = 1;
             // 
             // dtlProcessedDescription
@@ -274,6 +274,64 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
             // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm:ss tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(326, 93);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 3;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm:ss tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(326, 54);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 1;
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(147, 93);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 2;
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(147, 54);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 23);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Date To";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 23);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Date From";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -359,64 +417,6 @@
             this.dtlSummaryValue.Name = "dtlSummaryValue";
             this.dtlSummaryValue.ReadOnly = true;
             this.dtlSummaryValue.Width = 125;
-            // 
-            // timeTo
-            // 
-            this.timeTo.CustomFormat = "hh:mm tt";
-            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeTo.Location = new System.Drawing.Point(326, 93);
-            this.timeTo.Name = "timeTo";
-            this.timeTo.ShowUpDown = true;
-            this.timeTo.Size = new System.Drawing.Size(127, 30);
-            this.timeTo.TabIndex = 3;
-            // 
-            // timeFrom
-            // 
-            this.timeFrom.CustomFormat = "hh:mm tt";
-            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeFrom.Location = new System.Drawing.Point(326, 54);
-            this.timeFrom.Name = "timeFrom";
-            this.timeFrom.ShowUpDown = true;
-            this.timeFrom.Size = new System.Drawing.Size(127, 30);
-            this.timeFrom.TabIndex = 1;
-            // 
-            // dtTo
-            // 
-            this.dtTo.CustomFormat = "MM/dd/yyyy";
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(147, 93);
-            this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(171, 30);
-            this.dtTo.TabIndex = 2;
-            // 
-            // dtFrom
-            // 
-            this.dtFrom.CustomFormat = "MM/dd/yyyy";
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(147, 54);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(171, 30);
-            this.dtFrom.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 23);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Date To";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 23);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Date From";
             // 
             // SummaryReportPerTerminal
             // 

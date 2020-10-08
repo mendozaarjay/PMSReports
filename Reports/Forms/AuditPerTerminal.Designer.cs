@@ -32,8 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuditPerTerminal));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgTicketAccountability = new System.Windows.Forms.DataGridView();
+            this.dtltaDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtltaValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgProcessedTickets = new System.Windows.Forms.DataGridView();
+            this.dtlptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnCsv = new System.Windows.Forms.ToolStripButton();
@@ -42,10 +46,6 @@
             this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgAuditPerTerminal = new System.Windows.Forms.DataGridView();
             this.timeTo = new System.Windows.Forms.DateTimePicker();
             this.timeFrom = new System.Windows.Forms.DateTimePicker();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
@@ -54,10 +54,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbTerminal = new System.Windows.Forms.ComboBox();
-            this.dtlptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtltaValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgAuditPerTerminal = new System.Windows.Forms.DataGridView();
             this.dtlaptDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlaptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
@@ -79,10 +79,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgTicketAccountability);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(892, 382);
+            this.tabPage2.Size = new System.Drawing.Size(892, 389);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ticket Accountability";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -102,16 +102,32 @@
             this.dgTicketAccountability.ReadOnly = true;
             this.dgTicketAccountability.RowHeadersWidth = 51;
             this.dgTicketAccountability.RowTemplate.Height = 24;
-            this.dgTicketAccountability.Size = new System.Drawing.Size(886, 376);
+            this.dgTicketAccountability.Size = new System.Drawing.Size(886, 383);
             this.dgTicketAccountability.TabIndex = 1;
+            // 
+            // dtltaDescription
+            // 
+            this.dtltaDescription.HeaderText = "Description";
+            this.dtltaDescription.MinimumWidth = 6;
+            this.dtltaDescription.Name = "dtltaDescription";
+            this.dtltaDescription.ReadOnly = true;
+            this.dtltaDescription.Width = 150;
+            // 
+            // dtltaValue
+            // 
+            this.dtltaValue.HeaderText = "Value";
+            this.dtltaValue.MinimumWidth = 6;
+            this.dtltaValue.Name = "dtltaValue";
+            this.dtltaValue.ReadOnly = true;
+            this.dtltaValue.Width = 125;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgProcessedTickets);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(892, 382);
+            this.tabPage3.Size = new System.Drawing.Size(892, 389);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Processed Tickets";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -131,8 +147,24 @@
             this.dgProcessedTickets.ReadOnly = true;
             this.dgProcessedTickets.RowHeadersWidth = 51;
             this.dgProcessedTickets.RowTemplate.Height = 24;
-            this.dgProcessedTickets.Size = new System.Drawing.Size(886, 376);
+            this.dgProcessedTickets.Size = new System.Drawing.Size(886, 383);
             this.dgProcessedTickets.TabIndex = 2;
+            // 
+            // dtlptDescription
+            // 
+            this.dtlptDescription.HeaderText = "Description";
+            this.dtlptDescription.MinimumWidth = 6;
+            this.dtlptDescription.Name = "dtlptDescription";
+            this.dtlptDescription.ReadOnly = true;
+            this.dtlptDescription.Width = 150;
+            // 
+            // dtlptValue
+            // 
+            this.dtlptValue.HeaderText = "Value";
+            this.dtlptValue.MinimumWidth = 6;
+            this.dtlptValue.Name = "dtlptValue";
+            this.dtlptValue.ReadOnly = true;
+            this.dtlptValue.Width = 125;
             // 
             // bindingNavigator1
             // 
@@ -242,60 +274,9 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
             // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Location = new System.Drawing.Point(143, 163);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(306, 32);
-            this.btnGenerate.TabIndex = 2;
-            this.btnGenerate.Text = "Generate";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(900, 418);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dgAuditPerTerminal);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(892, 382);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Audit Per Terminal";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dgAuditPerTerminal
-            // 
-            this.dgAuditPerTerminal.AllowUserToAddRows = false;
-            this.dgAuditPerTerminal.AllowUserToDeleteRows = false;
-            this.dgAuditPerTerminal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgAuditPerTerminal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAuditPerTerminal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlaptDescription,
-            this.dtlaptValue});
-            this.dgAuditPerTerminal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgAuditPerTerminal.Location = new System.Drawing.Point(3, 3);
-            this.dgAuditPerTerminal.Name = "dgAuditPerTerminal";
-            this.dgAuditPerTerminal.ReadOnly = true;
-            this.dgAuditPerTerminal.RowHeadersWidth = 51;
-            this.dgAuditPerTerminal.RowTemplate.Height = 24;
-            this.dgAuditPerTerminal.Size = new System.Drawing.Size(886, 376);
-            this.dgAuditPerTerminal.TabIndex = 0;
-            // 
             // timeTo
             // 
-            this.timeTo.CustomFormat = "hh:mm tt";
+            this.timeTo.CustomFormat = "hh:mm:ss tt";
             this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeTo.Location = new System.Drawing.Point(322, 89);
             this.timeTo.Name = "timeTo";
@@ -305,7 +286,7 @@
             // 
             // timeFrom
             // 
-            this.timeFrom.CustomFormat = "hh:mm tt";
+            this.timeFrom.CustomFormat = "hh:mm:ss tt";
             this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeFrom.Location = new System.Drawing.Point(322, 50);
             this.timeFrom.Name = "timeFrom";
@@ -370,37 +351,56 @@
             this.cbTerminal.Size = new System.Drawing.Size(306, 31);
             this.cbTerminal.TabIndex = 19;
             // 
-            // dtlptDescription
+            // btnGenerate
             // 
-            this.dtlptDescription.HeaderText = "Description";
-            this.dtlptDescription.MinimumWidth = 6;
-            this.dtlptDescription.Name = "dtlptDescription";
-            this.dtlptDescription.ReadOnly = true;
-            this.dtlptDescription.Width = 150;
+            this.btnGenerate.Location = new System.Drawing.Point(143, 163);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(306, 32);
+            this.btnGenerate.TabIndex = 2;
+            this.btnGenerate.Text = "Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // dtlptValue
+            // tabControl1
             // 
-            this.dtlptValue.HeaderText = "Value";
-            this.dtlptValue.MinimumWidth = 6;
-            this.dtlptValue.Name = "dtlptValue";
-            this.dtlptValue.ReadOnly = true;
-            this.dtlptValue.Width = 125;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(900, 418);
+            this.tabControl1.TabIndex = 0;
             // 
-            // dtltaDescription
+            // tabPage1
             // 
-            this.dtltaDescription.HeaderText = "Description";
-            this.dtltaDescription.MinimumWidth = 6;
-            this.dtltaDescription.Name = "dtltaDescription";
-            this.dtltaDescription.ReadOnly = true;
-            this.dtltaDescription.Width = 150;
+            this.tabPage1.Controls.Add(this.dgAuditPerTerminal);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(892, 382);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Audit Per Terminal";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dtltaValue
+            // dgAuditPerTerminal
             // 
-            this.dtltaValue.HeaderText = "Value";
-            this.dtltaValue.MinimumWidth = 6;
-            this.dtltaValue.Name = "dtltaValue";
-            this.dtltaValue.ReadOnly = true;
-            this.dtltaValue.Width = 125;
+            this.dgAuditPerTerminal.AllowUserToAddRows = false;
+            this.dgAuditPerTerminal.AllowUserToDeleteRows = false;
+            this.dgAuditPerTerminal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgAuditPerTerminal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAuditPerTerminal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlaptDescription,
+            this.dtlaptValue});
+            this.dgAuditPerTerminal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgAuditPerTerminal.Location = new System.Drawing.Point(3, 3);
+            this.dgAuditPerTerminal.Name = "dgAuditPerTerminal";
+            this.dgAuditPerTerminal.ReadOnly = true;
+            this.dgAuditPerTerminal.RowHeadersWidth = 51;
+            this.dgAuditPerTerminal.RowTemplate.Height = 24;
+            this.dgAuditPerTerminal.Size = new System.Drawing.Size(886, 376);
+            this.dgAuditPerTerminal.TabIndex = 0;
             // 
             // dtlaptDescription
             // 
