@@ -51,7 +51,7 @@ namespace Reports
             foreach (var item in items)
             {
                 dgPeakLoad[dtlRow.Index, row].Value = item.Row;
-                dgPeakLoad[dtlDuration.Index, row].Value = item.Duration;
+                dgPeakLoad[dtlDuration.Index, row].Value = item.Time;
                 dgPeakLoad[dtlGrossIn.Index, row].Value = item.GrossIn;
                 dgPeakLoad[dtlCancel.Index, row].Value = item.Cancel;
                 dgPeakLoad[dtlNetIn.Index, row].Value = item.NetIn;

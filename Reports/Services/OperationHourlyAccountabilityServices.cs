@@ -10,22 +10,26 @@ namespace Reports.Services
     public class OperationHourlyAccountabilityServices
     {
         private const string StoredProcedure = "[dbo].[spOperationHourlyAccountabilityReport]";
-        public async Task<DataTable> OperationHourlyAccountabilityDataTableAsync(DateTime date)
+        public async Task<DataTable> OperationHourlyAccountabilityDataTableAsync(DateTime from,DateTime to, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<IEnumerable<OperationHourlyAccountabilityModel>> OperationHourlyAccountabilityAsync(DateTime date)
+        public async Task<IEnumerable<OperationHourlyAccountabilityModel>> OperationHourlyAccountabilityAsync(DateTime from, DateTime to, string terminal)
         {
             var items = new List<OperationHourlyAccountabilityModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
@@ -42,6 +46,11 @@ namespace Reports.Services
                 }
             }
             return items;
+        }
+        public DataTable Gates()
+        {
+            var gates = DatabaseHelper.LoadDataTable("SELECT * FROM  [dbo].[fnGetAllGates]() [fgag]", Properties.Settings.Default.UserConnectionString);
+            return gates;
         }
     }
 }

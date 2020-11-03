@@ -212,7 +212,7 @@
             // 
             // dtlDurationHours
             // 
-            this.dtlDurationHours.HeaderText = "Duration";
+            this.dtlDurationHours.HeaderText = "Time";
             this.dtlDurationHours.MinimumWidth = 6;
             this.dtlDurationHours.Name = "dtlDurationHours";
             this.dtlDurationHours.ReadOnly = true;
@@ -246,6 +246,7 @@
             this.dtlRemaining.MinimumWidth = 6;
             this.dtlRemaining.Name = "dtlRemaining";
             this.dtlRemaining.ReadOnly = true;
+            this.dtlRemaining.Width = 125;
             // 
             // OperationOccupancy
             // 

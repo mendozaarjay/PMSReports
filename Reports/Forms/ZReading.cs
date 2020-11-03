@@ -106,7 +106,6 @@ namespace Reports
             foreach (var item in items)
             {
                 dgReading[dtlDate.Index, row].Value = item.Date;
-                dgReading[dtlTime.Index, row].Value = item.Time;
                 dgReading[dtlNewORNo.Index, row].Value = item.NewORNo;
                 dgReading[dtlOldORNo.Index, row].Value = item.OldORNo;
                 dgReading[dtlNewFRNo.Index, row].Value = item.NewFRNo;
@@ -172,7 +171,7 @@ namespace Reports
 
             dt.TableName = "ZReading";
             var viewer = new Viewer();
-            viewer.DateCovered = dateFrom.ToString("MM/dd/yyyy") + "~" + dateTo.ToString("MM/dd/yyyy");
+            viewer.DateCovered = dateFrom.ToString("MM/dd/yyyy") + "-" + dateTo.ToString("MM/dd/yyyy");
             viewer.ReportType = ReportType.ZReading;
             viewer.Source = dt;
             viewer.ShowDialog();

@@ -37,7 +37,7 @@ namespace Reports.Services
                     var item = new PeakLoadModel
                     {
                         Row = int.Parse(dr["Row"].ToString()),
-                        Duration = dr["Duration"].ToString(),
+                        Time = dr["Time"].ToString(),
                         GrossIn = decimal.Parse(dr["GrossIn"].ToString()),
                         Cancel = decimal.Parse(dr["Cancel"].ToString()),
                         NetIn = decimal.Parse(dr["NetIn"].ToString()),

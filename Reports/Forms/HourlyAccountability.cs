@@ -22,6 +22,9 @@ namespace Reports
         {
             CheckForIllegalCrossThreadCalls = false;
             LoadAccess();
+            LoadGates();
+            timeFrom.Value = DateTime.Now.Minimun();
+            timeTo.Value = DateTime.Now.Maximum();
             base.OnLoad(e);
         }
         private void LoadAccess()
@@ -30,10 +33,19 @@ namespace Reports
             btnExcel.Visible = btnCsv.Visible = UserAccess.CanExport;
             btnRefresh.Enabled = btnGenerate.Enabled = UserAccess.CanAccess;
         }
+        private void LoadGates()
+        {
+            var items = services.Gates();
+            cbTerminal.DataSource = items;
+            cbTerminal.ValueMember = "Id";
+            cbTerminal.DisplayMember = "Name";
+        }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
-            var items = await services.HourlyAccountabilityReportAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var items = await services.HourlyAccountabilityReportAsync(from, to, cbTerminal.SelectedValue.ToString());
             Spinner.ShowSpinner(this, () =>
             {
                 PopulateHourlyAccountability(items);
@@ -53,9 +65,7 @@ namespace Reports
             {
                 dgHourlyAccountability[dtlTime.Index, row].Value = item.TimeString;
                 dgHourlyAccountability[dtlTotalCard.Index, row].Value = item.TotalCard;
-                dgHourlyAccountability[dtlCardCounter.Index, row].Value = item.CardCounter;
                 dgHourlyAccountability[dtlTotalAmount.Index, row].Value = item.TotalAmount;
-                dgHourlyAccountability[dtlAmountCounter.Index, row].Value = item.AmountCounter;
                 row++;
             }
             dgHourlyAccountability.AutoResizeColumns();
@@ -71,12 +81,13 @@ namespace Reports
         private async void btnCsv_Click(object sender, EventArgs e)
         {
             btnCsv.Enabled = false;
-            var dt = await services.HourlyAccountabilityReportDatatableAsync(dtDate.Value);
-
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.HourlyAccountabilityReportDatatableAsync(from, to, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Hourly Accountability Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Hourly Accountability Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -87,12 +98,14 @@ namespace Reports
         private  async void btnExcel_Click(object sender, EventArgs e)
         {
             btnExcel.Enabled = false;
-            var dt = await services.HourlyAccountabilityReportDatatableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.HourlyAccountabilityReportDatatableAsync(from, to, cbTerminal.SelectedValue.ToString());
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Hourly Accountability Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Hourly Accountability Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -103,11 +116,13 @@ namespace Reports
         private async void btnPrint_Click(object sender, EventArgs e)
         {
             btnPrint.Enabled = false;
-            var items = await services.HourlyAccountabilityReportDatatableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var items = await services.HourlyAccountabilityReportDatatableAsync(from, to, cbTerminal.SelectedValue.ToString());
             items.TableName = "HourlyAccountability";
             var viewer = new Viewer();
             viewer.ReportType = ReportType.HourlyAccountability;
-            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
+            viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.Source = items;
             viewer.ShowDialog();
             btnPrint.Enabled = true;

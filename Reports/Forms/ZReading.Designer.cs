@@ -50,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtlDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlNewORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlOldORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlNewFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,7 +142,6 @@
             this.dgReading.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgReading.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlDate,
-            this.dtlTime,
             this.dtlNewORNo,
             this.dtlOldORNo,
             this.dtlNewFRNo,
@@ -273,14 +271,6 @@
             this.dtlDate.ReadOnly = true;
             this.dtlDate.Width = 150;
             // 
-            // dtlTime
-            // 
-            this.dtlTime.HeaderText = "Time";
-            this.dtlTime.MinimumWidth = 6;
-            this.dtlTime.Name = "dtlTime";
-            this.dtlTime.ReadOnly = true;
-            this.dtlTime.Width = 150;
-            // 
             // dtlNewORNo
             // 
             this.dtlNewORNo.HeaderText = "New OR No";
@@ -389,7 +379,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlNewORNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlOldORNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlNewFRNo;

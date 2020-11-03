@@ -20,8 +20,18 @@ namespace Reports
         protected override void OnLoad(EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
+            LoadGates();
             LoadAccess();
+            timeFrom.Value = DateTime.Now.Minimun();
+            timeTo.Value = DateTime.Now.Maximum();
             base.OnLoad(e);
+        }
+        private void LoadGates()
+        {
+            var items = services.Gates();
+            cbTerminal.DataSource = items;
+            cbTerminal.ValueMember = "Id";
+            cbTerminal.DisplayMember = "Name";
         }
         private void LoadAccess()
         {
@@ -32,7 +42,9 @@ namespace Reports
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
-            var items = await services.OperationHourlyAccountabilityAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var items = await services.OperationHourlyAccountabilityAsync(from,to,cbTerminal.SelectedValue.ToString());
             Spinner.ShowSpinner(this, () =>
             {
                 LoadOperationHourlyAccountability(items);
@@ -67,12 +79,14 @@ namespace Reports
         private async void btnCsv_Click(object sender, EventArgs e)
         {
             btnCsv.Enabled = false;
-            var dt = await services.OperationHourlyAccountabilityDataTableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.OperationHourlyAccountabilityDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Operation Hourly Accountability Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Operation Hourly Accountability Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -83,11 +97,13 @@ namespace Reports
         private async void btnExcel_Click(object sender, EventArgs e)
         {
             btnExcel.Enabled = false;
-            var dt = await services.OperationHourlyAccountabilityDataTableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var dt = await services.OperationHourlyAccountabilityDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Operation Hourly Accountability Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Operation Hourly Accountability Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -98,10 +114,12 @@ namespace Reports
         private async void btnPrint_Click(object sender, EventArgs e)
         {
             btnPrint.Enabled = false;
-            var items = await services.OperationHourlyAccountabilityDataTableAsync(dtDate.Value);
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+            var items = await services.OperationHourlyAccountabilityDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
             items.TableName = "OperationHourlyAccountability";
             var viewer = new Viewer();
-            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
+            viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.OperationHourlyAccountability;
             viewer.Source = items;
             viewer.ShowDialog();

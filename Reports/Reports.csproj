@@ -94,6 +94,12 @@
     <Compile Include="cSpinner.Designer.cs">
       <DependentUpon>cSpinner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CardClearing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardClearing.Designer.cs">
+      <DependentUpon>CardClearing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAccessMatrix.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,7 +107,11 @@
       <DependentUpon>UserAccessMatrix.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\ExportToExcelFile.cs" />
-    <Compile Include="Spinner.cs" />
+    <Compile Include="Models\CardClearingModel.cs" />
+    <Compile Include="Models\CashlessSummaryModel.cs" />
+    <Compile Include="Services\CardClearingServices.cs" />
+    <Compile Include="Services\CashlessSummaryServices.cs" />
+    <Compile Include="Helper\Spinner.cs" />
     <Compile Include="Models\UserAccessMatrixItemModel.cs" />
     <Compile Include="Services\UserAccessMatrixServices.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -317,9 +327,13 @@
     <EmbeddedResource Include="cSpinner.resx">
       <DependentUpon>cSpinner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CardClearing.resx">
+      <DependentUpon>CardClearing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAccessMatrix.resx">
       <DependentUpon>UserAccessMatrix.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CardClearingReport.rdlc" />
     <EmbeddedResource Include="Reports\UserAccessMatrixReport.rdlc" />
     <EmbeddedResource Include="UtilitiesForms\EnterPlateNo.resx">
       <DependentUpon>EnterPlateNo.cs</DependentUpon>

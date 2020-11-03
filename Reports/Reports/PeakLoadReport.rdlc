@@ -21,8 +21,8 @@
           <DataField>Row</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Duration">
-          <DataField>Duration</DataField>
+        <Field Name="Time">
+          <DataField>Time</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="GrossIn">
@@ -56,7 +56,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Reports</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Arjay Mendoza\Desktop\Reports\Reports\Datasets\Reports.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Arjay Mendoza\Desktop\PMSReports\Reports\Datasets\Reports.xsd</rd:SchemaPath>
         <rd:TableName>PeakLoad</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -143,7 +143,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Duration</Value>
+                                  <Value>Time</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -421,21 +421,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Duration">
+                        <Textbox Name="Time">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Duration.Value</Value>
+                                  <Value>=Fields!Time.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Duration</rd:DefaultName>
+                          <rd:DefaultName>Time</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>

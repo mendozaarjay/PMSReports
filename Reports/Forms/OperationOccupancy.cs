@@ -56,7 +56,7 @@ namespace Reports
             var row = 0;
             foreach (var item in items)
             {
-                dgOperation[dtlDurationHours.Index, row].Value = item.DurationHours;
+                dgOperation[dtlDurationHours.Index, row].Value = item.Time;
                 dgOperation[dtlIn.Index, row].Value = item.In;
                 dgOperation[dtlOut.Index, row].Value = item.Out;
                 dgOperation[dtlRemaining.Index, row].Value = item.Remaining;

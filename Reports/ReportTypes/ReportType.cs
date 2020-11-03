@@ -19,5 +19,6 @@
         SummaryReportPerTerminal = 14,
         ZReading = 15,
         UserAccessMatrix = 16,
+        CardClearing = 17,
     };
 }

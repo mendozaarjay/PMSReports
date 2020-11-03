@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeakLoad));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.dtDate = new System.Windows.Forms.DateTimePicker();
@@ -234,7 +234,7 @@
             // 
             // dtlDuration
             // 
-            this.dtlDuration.HeaderText = "Duration";
+            this.dtlDuration.HeaderText = "Time";
             this.dtlDuration.MinimumWidth = 6;
             this.dtlDuration.Name = "dtlDuration";
             this.dtlDuration.ReadOnly = true;
@@ -242,9 +242,9 @@
             // 
             // dtlGrossIn
             // 
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle29.Format = "N2";
-            this.dtlGrossIn.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.dtlGrossIn.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtlGrossIn.HeaderText = "Gross In";
             this.dtlGrossIn.MinimumWidth = 6;
             this.dtlGrossIn.Name = "dtlGrossIn";
@@ -253,9 +253,9 @@
             // 
             // dtlCancel
             // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle30.Format = "N2";
-            this.dtlCancel.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.dtlCancel.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlCancel.HeaderText = "Cancelled";
             this.dtlCancel.MinimumWidth = 6;
             this.dtlCancel.Name = "dtlCancel";
@@ -264,9 +264,9 @@
             // 
             // dtlNetIn
             // 
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle31.Format = "N2";
-            this.dtlNetIn.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.dtlNetIn.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtlNetIn.HeaderText = "Net In";
             this.dtlNetIn.MinimumWidth = 6;
             this.dtlNetIn.Name = "dtlNetIn";
@@ -275,9 +275,9 @@
             // 
             // dtlInPercentage
             // 
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle32.Format = "N2";
-            this.dtlInPercentage.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.dtlInPercentage.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtlInPercentage.HeaderText = "In (%)";
             this.dtlInPercentage.MinimumWidth = 6;
             this.dtlInPercentage.Name = "dtlInPercentage";
@@ -286,9 +286,9 @@
             // 
             // dtlNetOut
             // 
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle33.Format = "N2";
-            this.dtlNetOut.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.dtlNetOut.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtlNetOut.HeaderText = "Net Out";
             this.dtlNetOut.MinimumWidth = 6;
             this.dtlNetOut.Name = "dtlNetOut";
@@ -297,9 +297,9 @@
             // 
             // dtlOutPercentage
             // 
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle34.Format = "N2";
-            this.dtlOutPercentage.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.dtlOutPercentage.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtlOutPercentage.HeaderText = "Out (%)";
             this.dtlOutPercentage.MinimumWidth = 6;
             this.dtlOutPercentage.Name = "dtlOutPercentage";
@@ -308,9 +308,9 @@
             // 
             // dtlAmount
             // 
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle35.Format = "N2";
-            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            this.dtlAmount.DefaultCellStyle = dataGridViewCellStyle7;
             this.dtlAmount.HeaderText = "Amount";
             this.dtlAmount.MinimumWidth = 6;
             this.dtlAmount.Name = "dtlAmount";
@@ -357,6 +357,7 @@
         private System.Windows.Forms.ToolStripButton btnPrint;
         private System.Windows.Forms.ToolStripButton btnFind;
         private System.Windows.Forms.DataGridView dgPeakLoad;
+        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDuration;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlGrossIn;
@@ -366,6 +367,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlNetOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlOutPercentage;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAmount;
-        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

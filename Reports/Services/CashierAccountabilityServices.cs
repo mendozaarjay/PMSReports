@@ -13,23 +13,25 @@ namespace Reports.Services
     {
         private const string StoredProcedure = "[dbo].[spCashierAccountabilityReport]";
         
-        public async Task<DataTable> CashierAccountabilityDataTableAsync(DateTime date,int terminal)
+        public async Task<DataTable> CashierAccountabilityDataTableAsync(DateTime from, DateTime to,int terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<IEnumerable<CashierAccountabilityModel>> CashierAccountabilityAsync(DateTime date, int terminal)
+        public async Task<IEnumerable<CashierAccountabilityModel>> CashierAccountabilityAsync(DateTime from,DateTime to, int terminal)
         {
             var items = new List<CashierAccountabilityModel>();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Date", date);
+            cmd.Parameters.AddWithValue("@DateFrom", from);
+            cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)

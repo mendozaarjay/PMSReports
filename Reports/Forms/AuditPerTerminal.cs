@@ -132,7 +132,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Audit Per Terminal Report " + from.ToString("MMddyyyy") + "-" + to.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Terminal Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -150,14 +150,14 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Audit Per Terminal Report " + from.ToString("MMddyyyy") + "-" + to.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Terminal Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }
-
+        CashlessSummaryServices summaryServices = new CashlessSummaryServices();
         private async void btnPrint_Click(object sender, EventArgs e)
         {
             btnPrint.Enabled = false;
@@ -178,9 +178,13 @@ namespace Reports
             _processedTickets.TableName = "AuditPerTerminalProcessedTickets";
             sources.Add(_processedTickets);
 
+            var cashlessSummary = await summaryServices.CashlessSummaryDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
+            cashlessSummary.TableName = "CashlessSummary";
+            sources.Add(cashlessSummary);
+
             var viewer = new Viewer();
             viewer.IsMultipleSource = true;
-            viewer.DateCovered = from.ToString("MMddyyyy") + "~" + to.ToString("MMddyyyy");
+            viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.AuditPerTerminal;
             viewer.ReportSources = sources;
             viewer.ShowDialog();

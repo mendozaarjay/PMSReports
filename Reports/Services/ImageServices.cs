@@ -21,5 +21,14 @@ namespace Reports.Services
             var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
+        public async Task<DataTable> GetTransactionImagesHighReso(int id)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "[dbo].[spLoadTransitImageHighReso]";
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@Id", id);
+            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            return result;
+        }
     }
 }

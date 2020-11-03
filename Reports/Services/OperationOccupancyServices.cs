@@ -36,7 +36,7 @@ namespace Reports.Services
                     var item = new OperationOccupancyModel
                     {
                         RowNum = int.Parse(dr["RowNum"].ToString()),
-                        DurationHours = dr["DurationHours"].ToString(),
+                        Time = dr["Time"].ToString(),
                         In = int.Parse(dr["In"].ToString()),
                         Out = int.Parse(dr["Out"].ToString()),
                         Remaining = int.Parse(dr["Remaining"].ToString()),

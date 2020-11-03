@@ -76,6 +76,7 @@
             this.cWeeklyOccupancy = new LiveCharts.WinForms.CartesianChart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.cWeeklySales = new LiveCharts.WinForms.CartesianChart();
+            this.cardClearingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -288,6 +289,7 @@
             // 
             this.transactionReportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cardEncodingToolStripMenuItem,
+            this.cardClearingToolStripMenuItem,
             this.historyToolStripMenuItem,
             this.shiftToolStripMenuItem,
             this.salesToolStripMenuItem,
@@ -533,6 +535,13 @@
             this.cWeeklySales.TabIndex = 0;
             this.cWeeklySales.Text = "cartesianChart1";
             // 
+            // cardClearingToolStripMenuItem
+            // 
+            this.cardClearingToolStripMenuItem.Name = "cardClearingToolStripMenuItem";
+            this.cardClearingToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.cardClearingToolStripMenuItem.Text = "Card Clearing";
+            this.cardClearingToolStripMenuItem.Click += new System.EventHandler(this.cardClearingToolStripMenuItem_Click);
+            // 
             // MainFormNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -613,5 +622,6 @@
         private System.Windows.Forms.ToolStripMenuItem zReadingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cardEncodingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userAccessMatrixToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cardClearingToolStripMenuItem;
     }
 }

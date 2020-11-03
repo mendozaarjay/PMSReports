@@ -181,7 +181,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Detailed Transaction Summary Report " + dtFrom.Value.ToString("MMddyyy") + "-" + dtTo.Value.ToString("MMddyyyy");
+            sd.FileName = "Detailed Transaction Summary Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -203,7 +203,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Detailed Transaction Summary Report " + dtFrom.Value.ToString("MMddyyy") + "-" + dtTo.Value.ToString("MMddyyyy");
+            sd.FileName = "Detailed Transaction Summary Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -224,7 +224,7 @@ namespace Reports
 
             dt.TableName = "DetailedTransactionSummary";
             var viewer = new Viewer();
-            viewer.DateCovered = from.ToString("MM/dd/yyyy hh:mm tt") + "~" + to.ToString("MM/dd/yyyy hh:mm tt");
+            viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.DetailedTransactionSummaryReport;
             viewer.Source = dt;
             viewer.ShowDialog();

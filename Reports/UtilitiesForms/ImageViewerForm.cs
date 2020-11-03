@@ -14,6 +14,7 @@ namespace Reports
     public partial class ImageViewerForm : Form
     {
         public int TransitId { get; set; }
+        public bool UseHighResolutionImages { get; set; } = false;
         private ImageServices services = new ImageServices();
         public ImageViewerForm()
         {
@@ -21,7 +22,15 @@ namespace Reports
         }
         protected override async void OnLoad(EventArgs e)
         {
-            var dt = await services.GetTransactionImages(this.TransitId);
+            DataTable dt = new DataTable();
+            if (this.UseHighResolutionImages)
+            {
+                dt = await services.GetTransactionImagesHighReso(this.TransitId);
+            }
+            else
+            {
+                dt = await services.GetTransactionImages(this.TransitId);
+            }
             if(dt.Rows.Count > 0)
             {
                 var entraneImage1 = dt.Rows[0]["EntranceImage1"];

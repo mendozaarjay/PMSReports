@@ -16,6 +16,7 @@ namespace Reports.Reports
         public DataTable Source { get; set; }
         public ReportType ReportType { get; set; }
         public string DateCovered { get; set; }
+        public string PrintDate { get; set; }
         public Viewer()
         {
             InitializeComponent();
@@ -108,6 +109,10 @@ namespace Reports.Reports
                     mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.UserAccessMatrixReport.rdlc";
                     this.Text = "User Access Matrix Report";
                     break;
+                case ReportType.CardClearing:
+                    mReportViewer.LocalReport.ReportEmbeddedResource = "Reports.Reports.CardClearingReport.rdlc";
+                    this.Text = "Card Clearing Report";
+                    break;
             }
             
 
@@ -115,6 +120,11 @@ namespace Reports.Reports
             parameters.Add(new ReportParameter("Company", settings.Company));
             parameters.Add(new ReportParameter("TIN", settings.TIN));
             parameters.Add(new ReportParameter("Address", settings.Address));
+
+            if(ReportType == ReportType.AuditPerCashier)
+            {
+                parameters.Add(new ReportParameter("PrintDate", this.PrintDate));
+            }
 
             parameters.Add(new ReportParameter("ProgramAndVersion", Properties.Settings.Default.ProgramVersion));
             parameters.Add(new ReportParameter("Serial", Properties.Settings.Default.SN));

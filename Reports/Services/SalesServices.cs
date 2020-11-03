@@ -46,7 +46,7 @@ namespace Reports.Services
                     {
                         TransitId = int.Parse(dr["TransitId"].ToString()),
                         ORNo = dr["ORNumber"].ToString(),
-                        Type = dr["Type"].ToString(),
+                        PaymentType = dr["PaymentType"].ToString(),
                         PlateNo = dr["PlateNo"].ToString(),
                         TicketNo = dr["TicketNumber"].ToString(),
                         TimeIn = dr["TimeIn"].ToString(),

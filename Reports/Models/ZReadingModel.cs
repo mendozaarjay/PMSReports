@@ -4,7 +4,6 @@
     {
         public string Id { get; set; }
         public string Date { get; set; }
-        public string Time { get; set; }
         public string NewORNo { get; set; }
         public string OldORNo { get; set; }
         public string NewFRNo { get; set; }

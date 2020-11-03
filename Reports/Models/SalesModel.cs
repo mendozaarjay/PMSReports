@@ -4,7 +4,7 @@
     {
         public int TransitId { get; set; }
         public string ORNo { get; set; }
-        public string Type { get; set; }
+        public string PaymentType { get; set; }
         public string PlateNo { get; set; }
         public string TicketNo { get; set; }
         public string TimeIn { get; set; }

@@ -506,5 +506,14 @@ namespace Reports
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
+
+        private void cardClearingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CardClearing frm = new CardClearing();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RCCR");
+            frm.UserAccess = item;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
+        }
     }
 }

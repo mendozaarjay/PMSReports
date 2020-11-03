@@ -27,6 +27,8 @@ namespace Reports
             CheckForIllegalCrossThreadCalls = false;
             LoadGates();
             LoadAccess();
+            timeFrom.Value = DateTime.Now.Minimun();
+            timeTo.Value = DateTime.Now.Maximum();
             base.OnLoad(e);
         }
         private void LoadAccess()
@@ -47,8 +49,11 @@ namespace Reports
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
-            var items =  await services.CashierAccountabilityAsync(dtDate.Value, terminal);
+            var items =  await services.CashierAccountabilityAsync(from,to, terminal);
             Spinner.ShowSpinner(this, () =>
             {
                 LoadCashierAccountability(items);
@@ -83,14 +88,17 @@ namespace Reports
         private  async void btnCsv_Click(object sender, EventArgs e)
         {
             btnCsv.Enabled = false;
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
-            var dt = await services.CashierAccountabilityDataTableAsync(dtDate.Value,terminal);
+            var dt = await services.CashierAccountabilityDataTableAsync(from,to,terminal);
             dt.Columns.Remove("Row");
             dt.AcceptChanges();
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Cashier Accountability Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Cashier Accountability Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -101,31 +109,44 @@ namespace Reports
         private async void btnExcel_Click(object sender, EventArgs e)
         {
             btnExcel.Enabled = false;
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
+
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
-            var dt = await services.CashierAccountabilityDataTableAsync(dtDate.Value, terminal);
+            var dt = await services.CashierAccountabilityDataTableAsync(from,to, terminal);
             dt.Columns.Remove("Row");
             dt.AcceptChanges();
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Cashier Accountability Report " + dtDate.Value.ToString("MMddyyyy");
+            sd.FileName = "Cashier Accountability Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
             }
             btnExcel.Enabled = true;
         }
-
+        CashlessSummaryServices summaryServices = new CashlessSummaryServices();
         private async void btnPrint_Click(object sender, EventArgs e)
         {
             btnPrint.Enabled = false;
+            var sources = new List<DataTable>();
+            var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
+            var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
             var terminal = int.Parse(cbTerminal.SelectedValue.ToString());
-            var items = await services.CashierAccountabilityDataTableAsync(dtDate.Value, terminal);
-            items.TableName = "CashierAccountability";
+            var items = await services.CashierAccountabilityDataTableAsync(from, to , terminal);
+            items.TableName = "dsSource";
+            sources.Add(items);
+
+            var cashlessSummary = await summaryServices.CashlessSummaryDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
+            cashlessSummary.TableName = "CashlessSummary";
+            sources.Add(cashlessSummary);
+
             var viewer = new Viewer();
-            viewer.DateCovered = dtDate.Value.ToString("MM/dd/yyyy");
+            viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.CashierAccountability;
-            viewer.Source = items;
+            viewer.ReportSources = sources;
+            viewer.IsMultipleSource = true;
             viewer.ShowDialog();
             btnPrint.Enabled = true;
         }

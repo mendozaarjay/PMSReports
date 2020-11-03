@@ -313,7 +313,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Shift Report " + dtFrom.Value.ToString("MMddyyy") + "-" + dtTo.Value.ToString("MMddyyyy");
+            sd.FileName = "Shift Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -331,7 +331,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Shift Report " + dtFrom.Value.ToString("MMddyyy") + "-" + dtTo.Value.ToString("MMddyyyy");
+            sd.FileName = "Shift Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 //FileExport.ExportToExcel(dt, "Shift Report", sd.FileName);
@@ -349,7 +349,7 @@ namespace Reports
 
             dt.TableName = "Shift";
             var viewer = new Viewer();
-            viewer.DateCovered = from.ToString() + "~" + to.ToString();
+            viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.Shift;
             viewer.Source = dt;
             viewer.ShowDialog();

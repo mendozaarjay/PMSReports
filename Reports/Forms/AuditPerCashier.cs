@@ -48,6 +48,9 @@ namespace Reports
         }
         private async void btnGenerate_Click(object sender, EventArgs e)
         {
+            if (cboCashier.SelectedIndex < 0)
+                return;
+
             this.Enabled = false;
             btnGenerate.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
@@ -130,7 +133,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Audit Per Cashier Report " + from.ToString("MMddyyyy") + '-' + to.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Cashier Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -147,7 +150,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Audit Per Cashier Report " + from.ToString("MMddyyyy") + '-' + to.ToString("MMddyyyy");
+            sd.FileName = "Audit Per Cashier Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -155,6 +158,7 @@ namespace Reports
             btnExcel.Enabled = true;
         }
 
+        CashlessSummaryServices summaryServices = new CashlessSummaryServices();
         private async void btnPrint_Click(object sender, EventArgs e)
         {
             btnPrint.Enabled = false;
@@ -175,8 +179,13 @@ namespace Reports
             ticketaccountability.TableName = "AuditPerCashierTicketAccountability";
             sources.Add(ticketaccountability);
 
+            var cashlessSummary = await summaryServices.CashlessSummaryDataTableAsync(from, to, cbTerminal.SelectedValue.ToString());
+            cashlessSummary.TableName = "CashlessSummary";
+            sources.Add(cashlessSummary);
+
             var viewer = new Viewer();
-            viewer.DateCovered = from.ToString() + '~' + to.ToString();
+            viewer.DateCovered = from.ToString() + '-' + to.ToString();
+            viewer.PrintDate = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
             viewer.IsMultipleSource = true;
             viewer.ReportType = ReportType.AuditPerCashier;
             viewer.ReportSources = sources;

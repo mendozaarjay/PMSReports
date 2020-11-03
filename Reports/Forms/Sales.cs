@@ -59,6 +59,7 @@ namespace Reports
             var discount = result.Where(a => a.Discount > 0 && !a.IsErased).ToList();
             var erased = result.Where(a => a.IsErased).ToList();
             var fee = result.Where(a => a.AmountDue > 0 && !a.IsErased).ToList();
+            var cashless = result.Where(a => a.PaymentType.ToLower() == "cashless" && !a.IsErased);
 
             Spinner.ShowSpinner(this, () =>
             {
@@ -69,6 +70,7 @@ namespace Reports
                 PopulateSalesDiscount(discount);
                 PopulateSalesErased(erased);
                 PopulateSalesFee(fee);
+                PopulateSalesCashless(cashless);
             });
 
             btnGenerate.Enabled = true;
@@ -85,7 +87,7 @@ namespace Reports
                 dgAllSales[dtlAllRow.Index, row].Value = row + 1;
                 dgAllSales[dtlAllTransitId.Index, row].Value = item.TransitId;
                 dgAllSales[dtlAllORNumber.Index, row].Value = item.ORNo;
-                dgAllSales[dtlAllType.Index, row].Value = item.Type;
+                dgAllSales[dtlAllType.Index, row].Value = item.PaymentType;
                 dgAllSales[dtlAllPlateNo.Index, row].Value = item.PlateNo;
                 dgAllSales[dtlAllTicketNo.Index, row].Value = item.TicketNo;
                 dgAllSales[dtlAllTimeIn.Index, row].Value = item.TimeIn;
@@ -123,7 +125,7 @@ namespace Reports
                 dgTransactions[dtlTransactionRow.Index, row].Value = row + 1;
                 dgTransactions[dtlTransactionTransitId.Index, row].Value = item.TransitId;
                 dgTransactions[dtlTransactionORNumber.Index, row].Value = item.ORNo;
-                dgTransactions[dtlTransactionType.Index, row].Value = item.Type;
+                dgTransactions[dtlTransactionType.Index, row].Value = item.PaymentType;
                 dgTransactions[dtlTransactionPlateNo.Index, row].Value = item.PlateNo;
                 dgTransactions[dtlTransactionTicketNo.Index, row].Value = item.TicketNo;
                 dgTransactions[dtlTransactionTimeIn.Index, row].Value = item.TimeIn;
@@ -162,7 +164,7 @@ namespace Reports
                 dgCollections[dtlCollectionRow.Index, row].Value = row + 1;
                 dgCollections[dtlCollectionTransitId.Index, row].Value = item.TransitId;
                 dgCollections[dtlCollectionORNumber.Index, row].Value = item.ORNo;
-                dgCollections[dtlCollectionType.Index, row].Value = item.Type;
+                dgCollections[dtlCollectionType.Index, row].Value = item.PaymentType;
                 dgCollections[dtlCollectionPlateNo.Index, row].Value = item.PlateNo;
                 dgCollections[dtlCollectionTicketNo.Index, row].Value = item.TicketNo;
                 dgCollections[dtlCollectionTimeIn.Index, row].Value = item.TimeIn;
@@ -200,7 +202,7 @@ namespace Reports
                 dgDiscounts[dtlDiscountRow.Index, row].Value = row + 1;
                 dgDiscounts[dtlDiscountTransitId.Index, row].Value = item.TransitId;
                 dgDiscounts[dtlDiscountORNumber.Index, row].Value = item.ORNo;
-                dgDiscounts[dtlDiscountType.Index, row].Value = item.Type;
+                dgDiscounts[dtlDiscountType.Index, row].Value = item.PaymentType;
                 dgDiscounts[dtlDiscountPlateNo.Index, row].Value = item.PlateNo;
                 dgDiscounts[dtlDiscountTicketNo.Index, row].Value = item.TicketNo;
                 dgDiscounts[dtlDiscountTimeIn.Index, row].Value = item.TimeIn;
@@ -238,7 +240,7 @@ namespace Reports
                 dgErased[dtlEraseRow.Index, row].Value = row + 1;
                 dgErased[dtlEraseTransitId.Index, row].Value = item.TransitId;
                 dgErased[dtlEraseORNumber.Index, row].Value = item.ORNo;
-                dgErased[dtlEraseType.Index, row].Value = item.Type;
+                dgErased[dtlEraseType.Index, row].Value = item.PaymentType;
                 dgErased[dtlErasePlateNo.Index, row].Value = item.PlateNo;
                 dgErased[dtlEraseTicketNo.Index, row].Value = item.TicketNo;
                 dgErased[dtlEraseTimeIn.Index, row].Value = item.TimeIn;
@@ -277,7 +279,7 @@ namespace Reports
                 dgFees[dtlFeeRow.Index, row].Value = row + 1;
                 dgFees[dtlFeeTransitId.Index, row].Value = item.TransitId;
                 dgFees[dtlFeeORNumber.Index, row].Value = item.ORNo;
-                dgFees[dtlFeeType.Index, row].Value = item.Type;
+                dgFees[dtlFeeType.Index, row].Value = item.PaymentType;
                 dgFees[dtlFeePlateNo.Index, row].Value = item.PlateNo;
                 dgFees[dtlFeeTicketNo.Index, row].Value = item.TicketNo;
                 dgFees[dtlFeeTimeIn.Index, row].Value = item.TimeIn;
@@ -299,6 +301,45 @@ namespace Reports
                 dgFees[dtlFeeUpdateUser.Index, row].Value = item.Username;
                 dgFees[dtlFeeEntrance.Index, row].Value = item.Entrance;
                 dgFees[dtlFeeExit.Index, row].Value = item.Exit;
+                row++;
+            }
+            dgFees.AutoResizeColumns();
+        }
+        private void PopulateSalesCashless(IEnumerable<SalesModel> items)
+        {
+            dgCashless.Rows.Clear();
+            if (items.Count() > 0)
+                dgFees.Rows.Add(items.Count());
+
+            var row = 0;
+
+            foreach (var item in items)
+            {
+                dgCashless[dtlCashlessRow.Index, row].Value = row + 1;
+                dgCashless[dtlCashlessTransitId.Index, row].Value = item.TransitId;
+                dgCashless[dtlCashlessORNumber.Index, row].Value = item.ORNo;
+                dgCashless[dtlCashlessType.Index, row].Value = item.PaymentType;
+                dgCashless[dtlCashlessPlateNo.Index, row].Value = item.PlateNo;
+                dgCashless[dtlCashlessTicketNo.Index, row].Value = item.TicketNo;
+                dgCashless[dtlCashlessTimeIn.Index, row].Value = item.TimeIn;
+                dgCashless[dtlCashlessTimeOut.Index, row].Value = item.TimeOut;
+                dgCashless[dtlCashlessDuration.Index, row].Value = item.Duration;
+                dgCashless[dtlCashlessRateName.Index, row].Value = item.RateName;
+                dgCashless[dtlCashlessCoupon.Index, row].Value = item.Coupon;
+                dgCashless[dtlCashlessGrossAmount.Index, row].Value = item.GrossAmount;
+                dgCashless[dtlCashlessDiscount.Index, row].Value = item.Discount;
+                dgCashless[dtlCashlessAmountDue.Index, row].Value = item.AmountDue;
+                dgCashless[dtlCashlessAmountTendered.Index, row].Value = item.AmountTendered;
+                dgCashless[dtlCashlessChange.Index, row].Value = item.Change;
+                dgCashless[dtlCashlessVatable.Index, row].Value = item.Vatable;
+                dgCashless[dtlCashlessVat.Index, row].Value = item.Vat;
+                dgCashless[dtlCashlessVatExempt.Index, row].Value = item.VatExempt;
+                dgCashless[dtlCashlessZeroRated.Index, row].Value = item.ZeroRated;
+                dgCashless[dtlCashlessReprint.Index, row].Value = item.Reprint;
+                dgCashless[dtlCashlessDescription.Index, row].Value = item.Description;
+                dgCashless[dtlCashlessUpdateUser.Index, row].Value = item.Username;
+                dgCashless[dtlCashlessEntrance.Index, row].Value = item.Entrance;
+                dgCashless[dtlCashlessExit.Index, row].Value = item.Exit;
                 row++;
             }
             dgFees.AutoResizeColumns();
@@ -326,7 +367,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "CSV Files(*.csv) | *.csv";
             sd.Title = "Save Csv File";
-            sd.FileName = "Sales Report " + dtFrom.Value.ToString("MMddyyy") + "-" + dtTo.Value.ToString("MMddyyyy");
+            sd.FileName = "Sales Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 FileExport.ExportToCsv(dt, sd.FileName);
@@ -348,7 +389,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "Sales Report " + dtFrom.Value.ToString("MMddyyy") + "-" + dtTo.Value.ToString("MMddyyyy");
+            sd.FileName = "Sales Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -369,7 +410,7 @@ namespace Reports
 
             dt.TableName = "Sales";
             var viewer = new Viewer();
-            viewer.DateCovered = from.ToString() + "~" + to.ToString();
+            viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.Sales;
             viewer.Source = dt;
             viewer.ShowDialog();

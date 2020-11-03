@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tabPage2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgTransactions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgTransactions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="dtlTransactionRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -133,15 +124,6 @@
     <value>True</value>
   </metadata>
   <metadata name="dtlTransactionExit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPage1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgAllSales.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgAllSales.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dtlAllRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -153,15 +135,6 @@
   <metadata name="dtlAllExit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="tabPage3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgCollections.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgCollections.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="dtlCollectionRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -169,21 +142,6 @@
     <value>True</value>
   </metadata>
   <metadata name="dtlCollectionExit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnGenerate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtSearch.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPage5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgErased.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgErased.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dtlEraseRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -195,24 +153,6 @@
   <metadata name="dtlEraseExit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="tabControl1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPage4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPage6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPage4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgDiscounts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgDiscounts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="dtlDiscountRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -220,15 +160,6 @@
     <value>True</value>
   </metadata>
   <metadata name="dtlDiscountExit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPage6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgFees.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dgFees.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dtlFeeRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -240,59 +171,26 @@
   <metadata name="dtlFeeExit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="groupBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cboTerminal.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="timeTo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="timeFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtTo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="splitContainer1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnFind.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANYSURBVDhPVVJdTJtVGB6bupnolTFREsAoEcONN95pwgVR
-        b3bDMnZruMELY9REk2FM6oUL2Ujd2MW2FtjXtHxbf2g3Rn9oQVr2AS0UuvLXFmjZvrZQYJS2ayllX895
-        PF9XZnySJ++5OM/zvs97zqkTAKgxOOaa1CanQ3vfkTEYrEStspV5fjQ5qLfe4DjjB+xSTfX6/8HEp/+2
-        PL6u048Qzagf/V4RN2ZS6BG20DsjQufbKE1NTxd0OsulquQ/yGLlA++AzmBHnzeB4UgWs1uHcG0WoF7M
-        4o/J57g8sYNuIY71TfEFz1vaq9JXuGpfbOX1VtzxxhFIFSERioMjgsXnEh7FjqGcP0TX4zR+n9yFwr5C
-        BSGQrcQ5Qf+IL6x1+WHfyKEoUZQpcFCiWMsAEwkKTUjC9SclXPHlcM23B1swtq/VmLoVCsXpigFvHif3
-        AluYSRxCzBHsFikSeWA1TeFOUhjWCbhVAtXyS9wOZDCwkIRGY450qlRvVpbKto3+J2k4YwUs7JKKcGWf
-        YnaHwilSmKMUxg2C++tl6MMFcMEUOI6TfuztPdtuNJ45ZTTZcNOfBr+cx6hI4EkSTLLOY3EK2zMK61PG
-        TcJYhi12BPPSDvr6zMVflIa3K1Pc4iy037+H3rkMtCyvaaMMS4zAxoQuNoEnQTC9XWaUMJ8qwRnaZhGG
-        IkpD1eCubX7TFojjmrCHW8ES7jITPRv3Ees6wcRyrHCaIJopQ8wew+5beMHrLD0KjjtXWWS3M9QmeINQ
-        +VJQ+g6gZssajEgYjkmYTEhY3SfYyhPs5fIILq+w/HppaMjaUMkvQ3a57Vo2hmJxaP0p3FnIQbd6hIfR
-        EoTkMWIZCeliGWvRKDyeGZiHrNBpTXj9jDJkN81ESOsPLtGpcAKuyD6EZ3ks7RQhpguYXwrTsfEpPHzg
-        wPbuNn79R0S7ehhV+SvIJryw8tW4f80/OrdYHLGPUbfbTcY8QtZicw8PmHv+vDdowUXdLDocSUTZX3lt
-        0tLS8kZzc/NbDQ0N59j5nYsdHe93/Kz4uLNL8dkPlxWffvf9Tx9929b24fmuzlZZJFM2OTGoaWxsPNvU
-        1PRubW3te3V1dbWMn9TX1zez+gWrX7L6NavnWYMLn3/TeuXEpO2v37r/Bfy3noQsezQdAAAAAElFTkSu
-        QmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANXSURBVDhPVVJdTJtVGB6bupnolTFREsAoEcONN95pwgVx
+        3uyGZXhruMELY9REk2FM6oUL2UjdMJmj/LVp+UZ/aDdYP0oL0rIPaKFQ2hVKgRb3tYUCo7RdSyl+Pefx
+        fF2Z8UmevOfiPM/7Pu85584AoMpgW2zoNdlt2mFb2mCwElUPX+K4icSQ3npHrTa+wy5VVa7/H0x8/nfL
+        49s6/SOimfCi3y3iznwSXcIOuudF6Dxbxdm5ubxOZ/myIvkPslj5wD2gM4yjzx3HaDiDhZ1jOLbz6A1k
+        8MvMM1yf3kOnEMPmtvic4yytFekL3BwPNHN6K3rcMfiSBUiE4uiEIPBMwlj0FMqlY3Q8TuHnmX0o+CAV
+        BF+mHOcM/Y8861qHF+NbWRQkihIFjooUG2lgOk6hCUm4vVLEDU8WtzwH4P3RQ63G1KlQKM6XDTjzFLnv
+        28F8/BhilmC/QBHPAWspCmeCwrBJoF4jUAX/wT1fGgPLCWg05nC7SvVqeals2+hfScEezWN5n5SFq4cU
+        C3sUdpHCHKEwbhEMb5agX89D7U9CrVZL33Z3X2w1Gi+cM5p4/OFNgQvmMCESuBIEM6zzZIyCf0ph/Ztx
+        mzCWwEdPYH6yh74+c+EHpeH18hR3B82033uA7sU0tCyvaasES5SAZ0IHm8AVJ5jbLTFKWEoWYQ/tsggj
+        YaWhYjDIL23zvhhuCQf401/EIDPRs3HHWNdpJpZjracIIukSxMwpxj3LzzmdpUuhVl8qL7LTHmoR3H6o
+        PEkoPUfoZcsaCksYjUqYiUtYOyTYyREcZHPwB1dZ/mFpZMRaV84vQ3a55wgaQ9EYtN4kepaz0K2d4GGk
+        CCFximhaQqpQwkYkApdrHuYRK3RaE14+owzZTTMd0i6uBOjsehyO8CGEpzk82StATOXhDYTo5NQsHj6w
+        YXd/Fz/+JaK1dxQV+QvIJpyw+tmUd8M7sRgojPEO6nQ6yaRLyFh45+iAuevX+0MWXNMtoM2WQIT9lZcm
+        TU1NrzQ2Nr5WV1d3iZ3fuNbW9nbb94r32zsUH31zXfHhV19/994XLS3vXulob5ZFMmWTM4Oq+vr6iw0N
+        DW9WV1e/VVNTU834QW1tbSOrn7D6Kaufs3qFNbj68eXmG2cmLb/91Pkv37mecwp8VaYAAAAASUVORK5C
+        YII=
 </value>
   </data>
   <data name="btnPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -379,9 +277,6 @@
   <metadata name="bindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="bindingNavigator1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="dtlAllRow.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -434,9 +329,6 @@
     <value>True</value>
   </metadata>
   <metadata name="dtlFeeExit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

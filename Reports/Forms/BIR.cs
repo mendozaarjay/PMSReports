@@ -176,7 +176,7 @@ namespace Reports
             SaveFileDialog sd = new SaveFileDialog();
             sd.Filter = "Excel File(.xlsx)|*.xlsx";
             sd.Title = "Save Excel File";
-            sd.FileName = "BIR Report " + dateFrom.ToString("MMddyyy") + "-" + dateTo.ToString("MMddyyyy");
+            sd.FileName = "BIR Report " + dateFrom.ToString("MMddyyyy") + "-" + dateTo.ToString("MMddyyyy");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
                 ExportToExcelFile.Export(dt, sd.FileName);
@@ -196,7 +196,7 @@ namespace Reports
 
             dt.TableName = "BIR";
             var viewer = new Viewer();
-            viewer.DateCovered = dateFrom.ToString("MM/dd/yyyy") + "~" + dateTo.ToString("MM/dd/yyyy");
+            viewer.DateCovered = dateFrom.ToString("MM/dd/yyyy") + "-" + dateTo.ToString("MM/dd/yyyy");
             viewer.ReportType = ReportType.BIR;
             viewer.Source = dt;
             viewer.ShowDialog();

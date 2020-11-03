@@ -4,6 +4,10 @@
 
     partial class Reports
     {
+        partial class OperationOccupancyDataTable
+        {
+        }
+
         partial class AuditPerCashierDataTable
         {
         }

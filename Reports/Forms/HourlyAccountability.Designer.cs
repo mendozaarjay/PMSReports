@@ -30,15 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HourlyAccountability));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgHourlyAccountability = new System.Windows.Forms.DataGridView();
             this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.btnExcel = new System.Windows.Forms.ToolStripButton();
@@ -46,11 +42,17 @@
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnFind = new System.Windows.Forms.ToolStripButton();
+            this.cbTerminal = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timeTo = new System.Windows.Forms.DateTimePicker();
+            this.timeFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dtlTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTotalCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlCardCounter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlAmountCounter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -77,7 +79,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgHourlyAccountability);
             this.splitContainer1.Size = new System.Drawing.Size(900, 620);
-            this.splitContainer1.SplitterDistance = 171;
+            this.splitContainer1.SplitterDistance = 220;
             this.splitContainer1.TabIndex = 9;
             // 
             // groupBox1
@@ -85,44 +87,31 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.dtDate);
+            this.groupBox1.Controls.Add(this.timeTo);
+            this.groupBox1.Controls.Add(this.timeFrom);
+            this.groupBox1.Controls.Add(this.dtTo);
+            this.groupBox1.Controls.Add(this.dtFrom);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbTerminal);
+            this.groupBox1.Controls.Add(this.btnGenerate);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(876, 155);
+            this.groupBox1.Size = new System.Drawing.Size(876, 204);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(135, 97);
+            this.btnGenerate.Location = new System.Drawing.Point(143, 147);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(306, 32);
             this.btnGenerate.TabIndex = 6;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // dtDate
-            // 
-            this.dtDate.CustomFormat = "MM/dd/yyyy";
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(135, 50);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(306, 30);
-            this.dtDate.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Date";
             // 
             // dgHourlyAccountability
             // 
@@ -133,16 +122,14 @@
             this.dgHourlyAccountability.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlTime,
             this.dtlTotalCard,
-            this.dtlCardCounter,
-            this.dtlTotalAmount,
-            this.dtlAmountCounter});
+            this.dtlTotalAmount});
             this.dgHourlyAccountability.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgHourlyAccountability.Location = new System.Drawing.Point(0, 0);
             this.dgHourlyAccountability.Name = "dgHourlyAccountability";
             this.dgHourlyAccountability.ReadOnly = true;
             this.dgHourlyAccountability.RowHeadersWidth = 51;
             this.dgHourlyAccountability.RowTemplate.Height = 24;
-            this.dgHourlyAccountability.Size = new System.Drawing.Size(900, 445);
+            this.dgHourlyAccountability.Size = new System.Drawing.Size(900, 396);
             this.dgHourlyAccountability.TabIndex = 0;
             // 
             // btnPrint
@@ -213,6 +200,83 @@
             this.btnFind.Text = "&Find";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
+            // cbTerminal
+            // 
+            this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTerminal.FormattingEnabled = true;
+            this.cbTerminal.Location = new System.Drawing.Point(143, 109);
+            this.cbTerminal.Name = "cbTerminal";
+            this.cbTerminal.Size = new System.Drawing.Size(306, 31);
+            this.cbTerminal.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Terminal";
+            // 
+            // timeTo
+            // 
+            this.timeTo.CustomFormat = "hh:mm:ss tt";
+            this.timeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeTo.Location = new System.Drawing.Point(322, 73);
+            this.timeTo.Name = "timeTo";
+            this.timeTo.ShowUpDown = true;
+            this.timeTo.Size = new System.Drawing.Size(127, 30);
+            this.timeTo.TabIndex = 18;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.CustomFormat = "hh:mm:ss tt";
+            this.timeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeFrom.Location = new System.Drawing.Point(322, 34);
+            this.timeFrom.Name = "timeFrom";
+            this.timeFrom.ShowUpDown = true;
+            this.timeFrom.Size = new System.Drawing.Size(127, 30);
+            this.timeFrom.TabIndex = 16;
+            // 
+            // dtTo
+            // 
+            this.dtTo.CustomFormat = "MM/dd/yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(143, 73);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(171, 30);
+            this.dtTo.TabIndex = 17;
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.CustomFormat = "MM/dd/yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(143, 34);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(171, 30);
+            this.dtFrom.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 23);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Date To";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Date From";
+            // 
             // dtlTime
             // 
             this.dtlTime.HeaderText = "Time";
@@ -223,45 +287,24 @@
             // 
             // dtlTotalCard
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dtlTotalCard.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dtlTotalCard.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtlTotalCard.HeaderText = "Total Card";
             this.dtlTotalCard.MinimumWidth = 6;
             this.dtlTotalCard.Name = "dtlTotalCard";
             this.dtlTotalCard.ReadOnly = true;
             this.dtlTotalCard.Width = 125;
             // 
-            // dtlCardCounter
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dtlCardCounter.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dtlCardCounter.HeaderText = "Card Counter";
-            this.dtlCardCounter.MinimumWidth = 6;
-            this.dtlCardCounter.Name = "dtlCardCounter";
-            this.dtlCardCounter.ReadOnly = true;
-            this.dtlCardCounter.Width = 150;
-            // 
             // dtlTotalAmount
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            this.dtlTotalAmount.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.dtlTotalAmount.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlTotalAmount.HeaderText = "Total Amount";
             this.dtlTotalAmount.MinimumWidth = 6;
             this.dtlTotalAmount.Name = "dtlTotalAmount";
             this.dtlTotalAmount.ReadOnly = true;
             this.dtlTotalAmount.Width = 150;
-            // 
-            // dtlAmountCounter
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            this.dtlAmountCounter.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dtlAmountCounter.HeaderText = "Amount Counter";
-            this.dtlAmountCounter.MinimumWidth = 6;
-            this.dtlAmountCounter.Name = "dtlAmountCounter";
-            this.dtlAmountCounter.ReadOnly = true;
-            this.dtlAmountCounter.Width = 170;
             // 
             // HourlyAccountability
             // 
@@ -295,8 +338,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.DateTimePicker dtDate;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgHourlyAccountability;
         private System.Windows.Forms.ToolStripButton btnPrint;
         private System.Windows.Forms.ToolStripButton btnExcel;
@@ -304,10 +345,16 @@
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton btnFind;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbTerminal;
+        private System.Windows.Forms.DateTimePicker timeTo;
+        private System.Windows.Forms.DateTimePicker timeFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.DateTimePicker dtFrom;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTotalCard;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCardCounter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlTotalAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAmountCounter;
     }
 }

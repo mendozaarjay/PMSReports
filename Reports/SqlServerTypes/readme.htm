@@ -38,7 +38,7 @@
         {
             if (!_isSqlTypesLoaded)
             {
-                SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("~"));
+                SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("-"));
                 _isSqlTypesLoaded = true;
             }
             
@@ -49,7 +49,7 @@
         <h2>ASP.NET Web Applications</h2>
         <p>
             For ASP.NET Web Applications, add the following line of code to the Application_Start method in Global.asax.cs:
-            <pre>    SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("~/bin"));</pre>
+            <pre>    SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("-/bin"));</pre>
         </p>
         <h2>Desktop Applications</h2>
         <p>

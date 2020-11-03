@@ -70,6 +70,10 @@ namespace Reports.Datasets {
         
         private UserAccessMatrixDataTable tableUserAccessMatrix;
         
+        private CashlessSummaryDataTable tableCashlessSummary;
+        
+        private CardClearingDataTable tableCardClearing;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -166,6 +170,12 @@ namespace Reports.Datasets {
                 }
                 if ((ds.Tables["UserAccessMatrix"] != null)) {
                     base.Tables.Add(new UserAccessMatrixDataTable(ds.Tables["UserAccessMatrix"]));
+                }
+                if ((ds.Tables["CashlessSummary"] != null)) {
+                    base.Tables.Add(new CashlessSummaryDataTable(ds.Tables["CashlessSummary"]));
+                }
+                if ((ds.Tables["CardClearing"] != null)) {
+                    base.Tables.Add(new CardClearingDataTable(ds.Tables["CardClearing"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -417,6 +427,26 @@ namespace Reports.Datasets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CashlessSummaryDataTable CashlessSummary {
+            get {
+                return this.tableCashlessSummary;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CardClearingDataTable CardClearing {
+            get {
+                return this.tableCardClearing;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -550,6 +580,12 @@ namespace Reports.Datasets {
                 }
                 if ((ds.Tables["UserAccessMatrix"] != null)) {
                     base.Tables.Add(new UserAccessMatrixDataTable(ds.Tables["UserAccessMatrix"]));
+                }
+                if ((ds.Tables["CashlessSummary"] != null)) {
+                    base.Tables.Add(new CashlessSummaryDataTable(ds.Tables["CashlessSummary"]));
+                }
+                if ((ds.Tables["CardClearing"] != null)) {
+                    base.Tables.Add(new CardClearingDataTable(ds.Tables["CardClearing"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -722,6 +758,18 @@ namespace Reports.Datasets {
                     this.tableUserAccessMatrix.InitVars();
                 }
             }
+            this.tableCashlessSummary = ((CashlessSummaryDataTable)(base.Tables["CashlessSummary"]));
+            if ((initTable == true)) {
+                if ((this.tableCashlessSummary != null)) {
+                    this.tableCashlessSummary.InitVars();
+                }
+            }
+            this.tableCardClearing = ((CardClearingDataTable)(base.Tables["CardClearing"]));
+            if ((initTable == true)) {
+                if ((this.tableCardClearing != null)) {
+                    this.tableCardClearing.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -778,6 +826,10 @@ namespace Reports.Datasets {
             base.Tables.Add(this.tableZReading);
             this.tableUserAccessMatrix = new UserAccessMatrixDataTable();
             base.Tables.Add(this.tableUserAccessMatrix);
+            this.tableCashlessSummary = new CashlessSummaryDataTable();
+            base.Tables.Add(this.tableCashlessSummary);
+            this.tableCardClearing = new CardClearingDataTable();
+            base.Tables.Add(this.tableCardClearing);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -920,6 +972,18 @@ namespace Reports.Datasets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCashlessSummary() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCardClearing() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1041,6 +1105,12 @@ namespace Reports.Datasets {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void UserAccessMatrixRowChangeEventHandler(object sender, UserAccessMatrixRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CashlessSummaryRowChangeEventHandler(object sender, CashlessSummaryRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CardClearingRowChangeEventHandler(object sender, CardClearingRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1569,7 +1639,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnORNumber;
             
-            private global::System.Data.DataColumn columnType;
+            private global::System.Data.DataColumn columnPaymentType;
             
             private global::System.Data.DataColumn columnPlateNo;
             
@@ -1668,9 +1738,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TypeColumn {
+            public global::System.Data.DataColumn PaymentTypeColumn {
                 get {
-                    return this.columnType;
+                    return this.columnPaymentType;
                 }
             }
             
@@ -1929,7 +1999,7 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SalesRow AddSalesRow(
                         string ORNumber, 
-                        string Type, 
+                        string PaymentType, 
                         string PlateNo, 
                         string TicketNumber, 
                         string TimeIn, 
@@ -1960,7 +2030,7 @@ namespace Reports.Datasets {
                 SalesRow rowSalesRow = ((SalesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ORNumber,
-                        Type,
+                        PaymentType,
                         PlateNo,
                         TicketNumber,
                         TimeIn,
@@ -2011,7 +2081,7 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnORNumber = base.Columns["ORNumber"];
-                this.columnType = base.Columns["Type"];
+                this.columnPaymentType = base.Columns["PaymentType"];
                 this.columnPlateNo = base.Columns["PlateNo"];
                 this.columnTicketNumber = base.Columns["TicketNumber"];
                 this.columnTimeIn = base.Columns["TimeIn"];
@@ -2046,8 +2116,8 @@ namespace Reports.Datasets {
             private void InitClass() {
                 this.columnORNumber = new global::System.Data.DataColumn("ORNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnORNumber);
-                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnType);
+                this.columnPaymentType = new global::System.Data.DataColumn("PaymentType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaymentType);
                 this.columnPlateNo = new global::System.Data.DataColumn("PlateNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPlateNo);
                 this.columnTicketNumber = new global::System.Data.DataColumn("TicketNumber", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3848,7 +3918,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnRow;
             
-            private global::System.Data.DataColumn columnDuration;
+            private global::System.Data.DataColumn columnTime;
             
             private global::System.Data.DataColumn columnGrossIn;
             
@@ -3907,9 +3977,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DurationColumn {
+            public global::System.Data.DataColumn TimeColumn {
                 get {
-                    return this.columnDuration;
+                    return this.columnTime;
                 }
             }
             
@@ -4006,11 +4076,11 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PeakLoadRow AddPeakLoadRow(int Row, string Duration, decimal GrossIn, decimal Cancel, decimal NetIn, decimal InPercentage, decimal NetOut, decimal OutPercentage, decimal Amount) {
+            public PeakLoadRow AddPeakLoadRow(int Row, string Time, decimal GrossIn, decimal Cancel, decimal NetIn, decimal InPercentage, decimal NetOut, decimal OutPercentage, decimal Amount) {
                 PeakLoadRow rowPeakLoadRow = ((PeakLoadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Row,
-                        Duration,
+                        Time,
                         GrossIn,
                         Cancel,
                         NetIn,
@@ -4041,7 +4111,7 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnRow = base.Columns["Row"];
-                this.columnDuration = base.Columns["Duration"];
+                this.columnTime = base.Columns["Time"];
                 this.columnGrossIn = base.Columns["GrossIn"];
                 this.columnCancel = base.Columns["Cancel"];
                 this.columnNetIn = base.Columns["NetIn"];
@@ -4056,8 +4126,8 @@ namespace Reports.Datasets {
             private void InitClass() {
                 this.columnRow = new global::System.Data.DataColumn("Row", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRow);
-                this.columnDuration = new global::System.Data.DataColumn("Duration", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDuration);
+                this.columnTime = new global::System.Data.DataColumn("Time", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTime);
                 this.columnGrossIn = new global::System.Data.DataColumn("GrossIn", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGrossIn);
                 this.columnCancel = new global::System.Data.DataColumn("Cancel", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -4209,11 +4279,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnTotalCard;
             
-            private global::System.Data.DataColumn columnCardCounter;
-            
             private global::System.Data.DataColumn columnTotalAmount;
-            
-            private global::System.Data.DataColumn columnAmountCounter;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -4266,25 +4332,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CardCounterColumn {
-                get {
-                    return this.columnCardCounter;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn TotalAmountColumn {
                 get {
                     return this.columnTotalAmount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AmountCounterColumn {
-                get {
-                    return this.columnAmountCounter;
                 }
             }
             
@@ -4325,14 +4375,12 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public HourlyAccountabilityRow AddHourlyAccountabilityRow(string TimeString, int TotalCard, int CardCounter, decimal TotalAmount, decimal AmountCounter) {
+            public HourlyAccountabilityRow AddHourlyAccountabilityRow(string TimeString, int TotalCard, decimal TotalAmount) {
                 HourlyAccountabilityRow rowHourlyAccountabilityRow = ((HourlyAccountabilityRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TimeString,
                         TotalCard,
-                        CardCounter,
-                        TotalAmount,
-                        AmountCounter};
+                        TotalAmount};
                 rowHourlyAccountabilityRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHourlyAccountabilityRow);
                 return rowHourlyAccountabilityRow;
@@ -4357,9 +4405,7 @@ namespace Reports.Datasets {
             internal void InitVars() {
                 this.columnTimeString = base.Columns["TimeString"];
                 this.columnTotalCard = base.Columns["TotalCard"];
-                this.columnCardCounter = base.Columns["CardCounter"];
                 this.columnTotalAmount = base.Columns["TotalAmount"];
-                this.columnAmountCounter = base.Columns["AmountCounter"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4369,12 +4415,8 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnTimeString);
                 this.columnTotalCard = new global::System.Data.DataColumn("TotalCard", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalCard);
-                this.columnCardCounter = new global::System.Data.DataColumn("CardCounter", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCardCounter);
                 this.columnTotalAmount = new global::System.Data.DataColumn("TotalAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalAmount);
-                this.columnAmountCounter = new global::System.Data.DataColumn("AmountCounter", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmountCounter);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4510,7 +4552,7 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnRowNum;
             
-            private global::System.Data.DataColumn columnDurationHours;
+            private global::System.Data.DataColumn columnTime;
             
             private global::System.Data.DataColumn columnIn;
             
@@ -4561,9 +4603,9 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DurationHoursColumn {
+            public global::System.Data.DataColumn TimeColumn {
                 get {
-                    return this.columnDurationHours;
+                    return this.columnTime;
                 }
             }
             
@@ -4628,11 +4670,11 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OperationOccupancyRow AddOperationOccupancyRow(int RowNum, string DurationHours, int In, int Out, int Remaining) {
+            public OperationOccupancyRow AddOperationOccupancyRow(int RowNum, string Time, int In, int Out, int Remaining) {
                 OperationOccupancyRow rowOperationOccupancyRow = ((OperationOccupancyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
-                        DurationHours,
+                        Time,
                         In,
                         Out,
                         Remaining};
@@ -4659,7 +4701,7 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
-                this.columnDurationHours = base.Columns["DurationHours"];
+                this.columnTime = base.Columns["Time"];
                 this.columnIn = base.Columns["In"];
                 this.columnOut = base.Columns["Out"];
                 this.columnRemaining = base.Columns["Remaining"];
@@ -4670,8 +4712,8 @@ namespace Reports.Datasets {
             private void InitClass() {
                 this.columnRowNum = new global::System.Data.DataColumn("RowNum", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRowNum);
-                this.columnDurationHours = new global::System.Data.DataColumn("DurationHours", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDurationHours);
+                this.columnTime = new global::System.Data.DataColumn("Time", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTime);
                 this.columnIn = new global::System.Data.DataColumn("In", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIn);
                 this.columnOut = new global::System.Data.DataColumn("Out", typeof(int), null, global::System.Data.MappingType.Element);
@@ -8651,8 +8693,6 @@ namespace Reports.Datasets {
             
             private global::System.Data.DataColumn columnDate;
             
-            private global::System.Data.DataColumn columnTime;
-            
             private global::System.Data.DataColumn columnNewORNo;
             
             private global::System.Data.DataColumn columnOldORNo;
@@ -8717,14 +8757,6 @@ namespace Reports.Datasets {
             public global::System.Data.DataColumn DateColumn {
                 get {
                     return this.columnDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TimeColumn {
-                get {
-                    return this.columnTime;
                 }
             }
             
@@ -8837,12 +8869,11 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ZReadingRow AddZReadingRow(string Id, string Date, string Time, string NewORNo, string OldORNo, string NewFRNo, string OldFRNo, decimal TodaySales, decimal NewSales, decimal OldSales, string Location, string Terminal) {
+            public ZReadingRow AddZReadingRow(string Id, string Date, string NewORNo, string OldORNo, string NewFRNo, string OldFRNo, decimal TodaySales, decimal NewSales, decimal OldSales, string Location, string Terminal) {
                 ZReadingRow rowZReadingRow = ((ZReadingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         Date,
-                        Time,
                         NewORNo,
                         OldORNo,
                         NewFRNo,
@@ -8876,7 +8907,6 @@ namespace Reports.Datasets {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnDate = base.Columns["Date"];
-                this.columnTime = base.Columns["Time"];
                 this.columnNewORNo = base.Columns["NewORNo"];
                 this.columnOldORNo = base.Columns["OldORNo"];
                 this.columnNewFRNo = base.Columns["NewFRNo"];
@@ -8895,8 +8925,6 @@ namespace Reports.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
-                this.columnTime = new global::System.Data.DataColumn("Time", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTime);
                 this.columnNewORNo = new global::System.Data.DataColumn("NewORNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNewORNo);
                 this.columnOldORNo = new global::System.Data.DataColumn("OldORNo", typeof(string), null, global::System.Data.MappingType.Element);
@@ -9590,6 +9618,626 @@ namespace Reports.Datasets {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CashlessSummaryDataTable : global::System.Data.TypedTableBase<CashlessSummaryRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnDescription;
+            
+            private global::System.Data.DataColumn columnValue;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CashlessSummaryDataTable() {
+                this.TableName = "CashlessSummary";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CashlessSummaryDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CashlessSummaryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DescriptionColumn {
+                get {
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ValueColumn {
+                get {
+                    return this.columnValue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CashlessSummaryRow this[int index] {
+                get {
+                    return ((CashlessSummaryRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CashlessSummaryRowChangeEventHandler CashlessSummaryRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CashlessSummaryRowChangeEventHandler CashlessSummaryRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CashlessSummaryRowChangeEventHandler CashlessSummaryRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CashlessSummaryRowChangeEventHandler CashlessSummaryRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCashlessSummaryRow(CashlessSummaryRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CashlessSummaryRow AddCashlessSummaryRow(string Id, string Description, string Value) {
+                CashlessSummaryRow rowCashlessSummaryRow = ((CashlessSummaryRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Id,
+                        Description,
+                        Value};
+                rowCashlessSummaryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCashlessSummaryRow);
+                return rowCashlessSummaryRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CashlessSummaryDataTable cln = ((CashlessSummaryDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CashlessSummaryDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnDescription = base.Columns["Description"];
+                this.columnValue = base.Columns["Value"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
+                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValue);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CashlessSummaryRow NewCashlessSummaryRow() {
+                return ((CashlessSummaryRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CashlessSummaryRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CashlessSummaryRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CashlessSummaryRowChanged != null)) {
+                    this.CashlessSummaryRowChanged(this, new CashlessSummaryRowChangeEvent(((CashlessSummaryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CashlessSummaryRowChanging != null)) {
+                    this.CashlessSummaryRowChanging(this, new CashlessSummaryRowChangeEvent(((CashlessSummaryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CashlessSummaryRowDeleted != null)) {
+                    this.CashlessSummaryRowDeleted(this, new CashlessSummaryRowChangeEvent(((CashlessSummaryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CashlessSummaryRowDeleting != null)) {
+                    this.CashlessSummaryRowDeleting(this, new CashlessSummaryRowChangeEvent(((CashlessSummaryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCashlessSummaryRow(CashlessSummaryRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Reports ds = new Reports();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CashlessSummaryDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CardClearingDataTable : global::System.Data.TypedTableBase<CardClearingRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnRow;
+            
+            private global::System.Data.DataColumn columnEntranceGate;
+            
+            private global::System.Data.DataColumn columnPlateNo;
+            
+            private global::System.Data.DataColumn columnTicketNo;
+            
+            private global::System.Data.DataColumn columnDateTimeIn;
+            
+            private global::System.Data.DataColumn columnComment;
+            
+            private global::System.Data.DataColumn columnClearedUser;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CardClearingDataTable() {
+                this.TableName = "CardClearing";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CardClearingDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CardClearingDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RowColumn {
+                get {
+                    return this.columnRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EntranceGateColumn {
+                get {
+                    return this.columnEntranceGate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PlateNoColumn {
+                get {
+                    return this.columnPlateNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TicketNoColumn {
+                get {
+                    return this.columnTicketNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateTimeInColumn {
+                get {
+                    return this.columnDateTimeIn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CommentColumn {
+                get {
+                    return this.columnComment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ClearedUserColumn {
+                get {
+                    return this.columnClearedUser;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CardClearingRow this[int index] {
+                get {
+                    return ((CardClearingRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CardClearingRowChangeEventHandler CardClearingRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CardClearingRowChangeEventHandler CardClearingRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CardClearingRowChangeEventHandler CardClearingRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CardClearingRowChangeEventHandler CardClearingRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCardClearingRow(CardClearingRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CardClearingRow AddCardClearingRow(string Id, string Row, string EntranceGate, string PlateNo, string TicketNo, string DateTimeIn, string Comment, string ClearedUser) {
+                CardClearingRow rowCardClearingRow = ((CardClearingRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Id,
+                        Row,
+                        EntranceGate,
+                        PlateNo,
+                        TicketNo,
+                        DateTimeIn,
+                        Comment,
+                        ClearedUser};
+                rowCardClearingRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCardClearingRow);
+                return rowCardClearingRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CardClearingDataTable cln = ((CardClearingDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CardClearingDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnRow = base.Columns["Row"];
+                this.columnEntranceGate = base.Columns["EntranceGate"];
+                this.columnPlateNo = base.Columns["PlateNo"];
+                this.columnTicketNo = base.Columns["TicketNo"];
+                this.columnDateTimeIn = base.Columns["DateTimeIn"];
+                this.columnComment = base.Columns["Comment"];
+                this.columnClearedUser = base.Columns["ClearedUser"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnRow = new global::System.Data.DataColumn("Row", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRow);
+                this.columnEntranceGate = new global::System.Data.DataColumn("EntranceGate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEntranceGate);
+                this.columnPlateNo = new global::System.Data.DataColumn("PlateNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlateNo);
+                this.columnTicketNo = new global::System.Data.DataColumn("TicketNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTicketNo);
+                this.columnDateTimeIn = new global::System.Data.DataColumn("DateTimeIn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateTimeIn);
+                this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComment);
+                this.columnClearedUser = new global::System.Data.DataColumn("ClearedUser", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClearedUser);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CardClearingRow NewCardClearingRow() {
+                return ((CardClearingRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CardClearingRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CardClearingRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CardClearingRowChanged != null)) {
+                    this.CardClearingRowChanged(this, new CardClearingRowChangeEvent(((CardClearingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CardClearingRowChanging != null)) {
+                    this.CardClearingRowChanging(this, new CardClearingRowChangeEvent(((CardClearingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CardClearingRowDeleted != null)) {
+                    this.CardClearingRowDeleted(this, new CardClearingRowChangeEvent(((CardClearingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CardClearingRowDeleting != null)) {
+                    this.CardClearingRowDeleting(this, new CardClearingRowChangeEvent(((CardClearingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCardClearingRow(CardClearingRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Reports ds = new Reports();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CardClearingDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class HistoryRow : global::System.Data.DataRow {
@@ -10168,17 +10816,17 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Type {
+            public string PaymentType {
                 get {
                     try {
-                        return ((string)(this[this.tableSales.TypeColumn]));
+                        return ((string)(this[this.tableSales.PaymentTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Type\' in table \'Sales\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PaymentType\' in table \'Sales\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSales.TypeColumn] = value;
+                    this[this.tableSales.PaymentTypeColumn] = value;
                 }
             }
             
@@ -10628,14 +11276,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTypeNull() {
-                return this.IsNull(this.tableSales.TypeColumn);
+            public bool IsPaymentTypeNull() {
+                return this.IsNull(this.tableSales.PaymentTypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTypeNull() {
-                this[this.tableSales.TypeColumn] = global::System.Convert.DBNull;
+            public void SetPaymentTypeNull() {
+                this[this.tableSales.PaymentTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12347,17 +12995,17 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Duration {
+            public string Time {
                 get {
                     try {
-                        return ((string)(this[this.tablePeakLoad.DurationColumn]));
+                        return ((string)(this[this.tablePeakLoad.TimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Duration\' in table \'PeakLoad\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Time\' in table \'PeakLoad\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePeakLoad.DurationColumn] = value;
+                    this[this.tablePeakLoad.TimeColumn] = value;
                 }
             }
             
@@ -12487,14 +13135,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDurationNull() {
-                return this.IsNull(this.tablePeakLoad.DurationColumn);
+            public bool IsTimeNull() {
+                return this.IsNull(this.tablePeakLoad.TimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDurationNull() {
-                this[this.tablePeakLoad.DurationColumn] = global::System.Convert.DBNull;
+            public void SetTimeNull() {
+                this[this.tablePeakLoad.TimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12630,22 +13278,6 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int CardCounter {
-                get {
-                    try {
-                        return ((int)(this[this.tableHourlyAccountability.CardCounterColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CardCounter\' in table \'HourlyAccountability\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHourlyAccountability.CardCounterColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal TotalAmount {
                 get {
                     try {
@@ -12657,22 +13289,6 @@ namespace Reports.Datasets {
                 }
                 set {
                     this[this.tableHourlyAccountability.TotalAmountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal AmountCounter {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableHourlyAccountability.AmountCounterColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AmountCounter\' in table \'HourlyAccountability\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHourlyAccountability.AmountCounterColumn] = value;
                 }
             }
             
@@ -12702,18 +13318,6 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCardCounterNull() {
-                return this.IsNull(this.tableHourlyAccountability.CardCounterColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCardCounterNull() {
-                this[this.tableHourlyAccountability.CardCounterColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalAmountNull() {
                 return this.IsNull(this.tableHourlyAccountability.TotalAmountColumn);
             }
@@ -12722,18 +13326,6 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalAmountNull() {
                 this[this.tableHourlyAccountability.TotalAmountColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsAmountCounterNull() {
-                return this.IsNull(this.tableHourlyAccountability.AmountCounterColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetAmountCounterNull() {
-                this[this.tableHourlyAccountability.AmountCounterColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -12769,17 +13361,17 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DurationHours {
+            public string Time {
                 get {
                     try {
-                        return ((string)(this[this.tableOperationOccupancy.DurationHoursColumn]));
+                        return ((string)(this[this.tableOperationOccupancy.TimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DurationHours\' in table \'OperationOccupancy\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Time\' in table \'OperationOccupancy\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableOperationOccupancy.DurationHoursColumn] = value;
+                    this[this.tableOperationOccupancy.TimeColumn] = value;
                 }
             }
             
@@ -12845,14 +13437,14 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDurationHoursNull() {
-                return this.IsNull(this.tableOperationOccupancy.DurationHoursColumn);
+            public bool IsTimeNull() {
+                return this.IsNull(this.tableOperationOccupancy.TimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDurationHoursNull() {
-                this[this.tableOperationOccupancy.DurationHoursColumn] = global::System.Convert.DBNull;
+            public void SetTimeNull() {
+                this[this.tableOperationOccupancy.TimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15185,22 +15777,6 @@ namespace Reports.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Time {
-                get {
-                    try {
-                        return ((string)(this[this.tableZReading.TimeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Time\' in table \'ZReading\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableZReading.TimeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string NewORNo {
                 get {
                     try {
@@ -15365,18 +15941,6 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateNull() {
                 this[this.tableZReading.DateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTimeNull() {
-                return this.IsNull(this.tableZReading.TimeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTimeNull() {
-                this[this.tableZReading.TimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16088,6 +16652,344 @@ namespace Reports.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetRowNull() {
                 this[this.tableUserAccessMatrix.RowColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CashlessSummaryRow : global::System.Data.DataRow {
+            
+            private CashlessSummaryDataTable tableCashlessSummary;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CashlessSummaryRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCashlessSummary = ((CashlessSummaryDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Id {
+                get {
+                    try {
+                        return ((string)(this[this.tableCashlessSummary.IdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id\' in table \'CashlessSummary\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCashlessSummary.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Description {
+                get {
+                    try {
+                        return ((string)(this[this.tableCashlessSummary.DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'CashlessSummary\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCashlessSummary.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Value {
+                get {
+                    try {
+                        return ((string)(this[this.tableCashlessSummary.ValueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'CashlessSummary\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCashlessSummary.ValueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIdNull() {
+                return this.IsNull(this.tableCashlessSummary.IdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIdNull() {
+                this[this.tableCashlessSummary.IdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDescriptionNull() {
+                return this.IsNull(this.tableCashlessSummary.DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDescriptionNull() {
+                this[this.tableCashlessSummary.DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsValueNull() {
+                return this.IsNull(this.tableCashlessSummary.ValueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetValueNull() {
+                this[this.tableCashlessSummary.ValueColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CardClearingRow : global::System.Data.DataRow {
+            
+            private CardClearingDataTable tableCardClearing;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CardClearingRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCardClearing = ((CardClearingDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Id {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.IdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Row {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.RowColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Row\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.RowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EntranceGate {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.EntranceGateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EntranceGate\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.EntranceGateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PlateNo {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.PlateNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PlateNo\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.PlateNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TicketNo {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.TicketNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TicketNo\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.TicketNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DateTimeIn {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.DateTimeInColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateTimeIn\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.DateTimeInColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Comment {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.CommentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Comment\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.CommentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ClearedUser {
+                get {
+                    try {
+                        return ((string)(this[this.tableCardClearing.ClearedUserColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClearedUser\' in table \'CardClearing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCardClearing.ClearedUserColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIdNull() {
+                return this.IsNull(this.tableCardClearing.IdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIdNull() {
+                this[this.tableCardClearing.IdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRowNull() {
+                return this.IsNull(this.tableCardClearing.RowColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRowNull() {
+                this[this.tableCardClearing.RowColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEntranceGateNull() {
+                return this.IsNull(this.tableCardClearing.EntranceGateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEntranceGateNull() {
+                this[this.tableCardClearing.EntranceGateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPlateNoNull() {
+                return this.IsNull(this.tableCardClearing.PlateNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPlateNoNull() {
+                this[this.tableCardClearing.PlateNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTicketNoNull() {
+                return this.IsNull(this.tableCardClearing.TicketNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTicketNoNull() {
+                this[this.tableCardClearing.TicketNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateTimeInNull() {
+                return this.IsNull(this.tableCardClearing.DateTimeInColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateTimeInNull() {
+                this[this.tableCardClearing.DateTimeInColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCommentNull() {
+                return this.IsNull(this.tableCardClearing.CommentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCommentNull() {
+                this[this.tableCardClearing.CommentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsClearedUserNull() {
+                return this.IsNull(this.tableCardClearing.ClearedUserColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetClearedUserNull() {
+                this[this.tableCardClearing.ClearedUserColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -16859,6 +17761,74 @@ namespace Reports.Datasets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UserAccessMatrixRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CashlessSummaryRowChangeEvent : global::System.EventArgs {
+            
+            private CashlessSummaryRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CashlessSummaryRowChangeEvent(CashlessSummaryRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CashlessSummaryRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CardClearingRowChangeEvent : global::System.EventArgs {
+            
+            private CardClearingRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CardClearingRowChangeEvent(CardClearingRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CardClearingRow Row {
                 get {
                     return this.eventRow;
                 }

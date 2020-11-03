@@ -39,7 +39,6 @@ namespace Reports.Services
                     {
                         Id = dr["Id"].ToString(),
                         Date = dr["Date"].ToString(),
-                        Time = dr["Time"].ToString(),
                         NewORNo = dr["NewORNo"].ToString(),
                         OldORNo = dr["OldORNo"].ToString(),
                         OldFRNo = dr["OldFRNo"].ToString(),
