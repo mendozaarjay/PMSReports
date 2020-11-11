@@ -18,7 +18,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<IEnumerable<OperationHourlyAccountabilityModel>> OperationHourlyAccountabilityAsync(DateTime from, DateTime to, string terminal)
@@ -30,7 +30,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)
@@ -49,7 +49,7 @@ namespace Reports.Services
         }
         public DataTable Gates()
         {
-            var gates = DatabaseHelper.LoadDataTable("SELECT * FROM  [dbo].[fnGetAllGates]() [fgag]", Properties.Settings.Default.UserConnectionString);
+            var gates = SCObjects.LoadDataTable("SELECT * FROM  [dbo].[fnGetAllGates]() [fgag]", Properties.Settings.Default.UserConnectionString);
             return gates;
         }
     }

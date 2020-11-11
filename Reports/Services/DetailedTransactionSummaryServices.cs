@@ -10,7 +10,7 @@ namespace Reports.Services
     public class DetailedTransactionSummaryServices
     {
         private const string StoredProcedure = "[dbo].[spDetailedTransactionSummaryReport]";
-        public async Task<DataTable> DetailedTransactionSummaryDatatableAsync(DateTime dateFrom, DateTime dateTo,string keyword)
+        public async Task<DataTable> DetailedTransactionSummaryDatatableAsync(DateTime dateFrom, DateTime dateTo,string keyword,string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
@@ -18,11 +18,12 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", dateFrom);
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
             cmd.Parameters.AddWithValue("@SearchKey", keyword);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
 
-        public async Task<IEnumerable<DetailedTransactionSummaryModel>> DetailedTransactionSummaryAsync(DateTime dateFrom, DateTime dateTo, string keyword)
+        public async Task<IEnumerable<DetailedTransactionSummaryModel>> DetailedTransactionSummaryAsync(DateTime dateFrom, DateTime dateTo, string keyword,string terminal)
         {
             List<DetailedTransactionSummaryModel> items = new List<DetailedTransactionSummaryModel>();
             SqlCommand cmd = new SqlCommand();
@@ -31,7 +32,8 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", dateFrom);
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
             cmd.Parameters.AddWithValue("@SearchKey", keyword);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            cmd.Parameters.AddWithValue("@Terminal", terminal);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
 
             if(result != null)
             {
@@ -56,13 +58,32 @@ namespace Reports.Services
                         TimeOut = dr["TimeOut"].ToString(),
                         TotalHours = dr["TotalHours"].ToString(),
                         Username = dr["Username"].ToString(),
+                        EntranceGate = dr["EntranceGate"].ToString(),
+                        Terminal = dr["Terminal"].ToString(),
                         EntranceImage = dr["EntranceImage"].ToString().Length > 0 ? (byte[])(dr["EntranceImage"]) : null,
                         ExitImage = dr["ExitImage"].ToString().Length > 0 ? (byte[])(dr["ExitImage"]) : null,
+                        SCPWDName = dr["SCPWDName"].ToString(),
+                        SCPWDAddress = dr["SCPWDAddress"].ToString(),
+                        SCPWDId = dr["SCPWDId"].ToString(),
+                        LostCardPenalty = decimal.Parse(dr["LostCardPenalty"].ToString()),
+                        LostCardName = dr["LostCardName"].ToString(),
+                        LostCardLicenseNo = dr["LostCardLicenseNo"].ToString(),
+                        LostCardORCR = dr["LostCardORCR"].ToString(),
+                        OvernightPenalty = decimal.Parse(dr["OvernightPenalty"].ToString()),
                     };
                     items.Add(item);
                 }
             }
             return items;
         }
+        public DataTable Terminals()
+        {
+            var sql = @"SELECT [fgag].[Id],
+                               [fgag].[Name]
+                        FROM [dbo].[fnGetAllGates]() [fgag]";
+            var items = SCObjects.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            return items;
+        }
     }
 }
+

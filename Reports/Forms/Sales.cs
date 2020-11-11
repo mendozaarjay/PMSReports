@@ -109,6 +109,18 @@ namespace Reports
                 dgAllSales[dtlAllUpdateUser.Index, row].Value = item.Username;
                 dgAllSales[dtlAllEntrance.Index, row].Value = item.Entrance;
                 dgAllSales[dtlAllExit.Index, row].Value = item.Exit;
+
+
+                dgAllSales[dtlAllSCPWDName.Index, row].Value = item.SCPWDName;
+                dgAllSales[dtlAllSDPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgAllSales[dtlAllSCPWDId.Index, row].Value = item.SCPWDId;
+                dgAllSales[dtlAllLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgAllSales[dtlAllLCName.Index, row].Value = item.LostCardName;
+                dgAllSales[dtlAllLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgAllSales[dtlAllLCORCR.Index, row].Value = item.LostCardORCR;
+                dgAllSales[dtlAllOvernight.Index, row].Value = item.OvernightPenalty;
+
+
                 row++;
             }
             dgAllSales.AutoResizeColumns();
@@ -147,6 +159,15 @@ namespace Reports
                 dgTransactions[dtlTransactionUpdateUser.Index, row].Value = item.Username;
                 dgTransactions[dtlTransactionEntrance.Index, row].Value = item.Entrance;
                 dgTransactions[dtlTransactionExit.Index, row].Value = item.Exit;
+
+                dgTransactions[dtlTransactionSCPWDName.Index, row].Value = item.SCPWDName;
+                dgTransactions[dtlTransactionSDPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgTransactions[dtlTransactionSCPWDId.Index, row].Value = item.SCPWDId;
+                dgTransactions[dtlTransactionLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgTransactions[dtlTransactionLCName.Index, row].Value = item.LostCardName;
+                dgTransactions[dtlTransactionLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgTransactions[dtlTransactionLCORCR.Index, row].Value = item.LostCardORCR;
+                dgTransactions[dtlTransactionOvernight.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             dgTransactions.AutoResizeColumns();
@@ -186,6 +207,15 @@ namespace Reports
                 dgCollections[dtlCollectionUpdateUser.Index, row].Value = item.Username;
                 dgCollections[dtlCollectionEntrance.Index, row].Value = item.Entrance;
                 dgCollections[dtlCollectionExit.Index, row].Value = item.Exit;
+
+                dgCollections[dtlCollectionSCPWDName.Index, row].Value = item.SCPWDName;
+                dgCollections[dtlCollectionSDPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgCollections[dtlCollectionSCPWDId.Index, row].Value = item.SCPWDId;
+                dgCollections[dtlCollectionLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgCollections[dtlCollectionLCName.Index, row].Value = item.LostCardName;
+                dgCollections[dtlCollectionLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgCollections[dtlCollectionLCORCR.Index, row].Value = item.LostCardORCR;
+                dgCollections[dtlCollectionOvernight.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             dgCollections.AutoResizeColumns();
@@ -224,6 +254,15 @@ namespace Reports
                 dgDiscounts[dtlDiscountUpdateUser.Index, row].Value = item.Username;
                 dgDiscounts[dtlDiscountEntrance.Index, row].Value = item.Entrance;
                 dgDiscounts[dtlDiscountExit.Index, row].Value = item.Exit;
+
+                dgDiscounts[dtlDiscountSCPWDName.Index, row].Value = item.SCPWDName;
+                dgDiscounts[dtlDiscountSDPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgDiscounts[dtlDiscountSCPWDId.Index, row].Value = item.SCPWDId;
+                dgDiscounts[dtlDiscountLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgDiscounts[dtlDiscountLCName.Index, row].Value = item.LostCardName;
+                dgDiscounts[dtlDiscountLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgDiscounts[dtlDiscountLCORCR.Index, row].Value = item.LostCardORCR;
+                dgDiscounts[dtlDiscountOvernight.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             dgDiscounts.AutoResizeColumns();
@@ -262,6 +301,16 @@ namespace Reports
                 dgErased[dtlEraseUpdateUser.Index, row].Value = item.Username;
                 dgErased[dtlEraseEntrance.Index, row].Value = item.Entrance;
                 dgErased[dtlEraseExit.Index, row].Value = item.Exit;
+
+
+                dgErased[dtlEraseSCPWDName.Index, row].Value = item.SCPWDName;
+                dgErased[dtlEraseSDPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgErased[dtlEraseSCPWDId.Index, row].Value = item.SCPWDId;
+                dgErased[dtlEraseLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgErased[dtlEraseLCName.Index, row].Value = item.LostCardName;
+                dgErased[dtlEraseLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgErased[dtlEraseLCORCR.Index, row].Value = item.LostCardORCR;
+                dgErased[dtlEraseOvernight.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             dgErased.AutoResizeColumns();
@@ -301,6 +350,15 @@ namespace Reports
                 dgFees[dtlFeeUpdateUser.Index, row].Value = item.Username;
                 dgFees[dtlFeeEntrance.Index, row].Value = item.Entrance;
                 dgFees[dtlFeeExit.Index, row].Value = item.Exit;
+
+                dgFees[dtlFeeSCPWDName.Index, row].Value = item.SCPWDName;
+                dgFees[dtlFeeSDPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgFees[dtlFeeSCPWDId.Index, row].Value = item.SCPWDId;
+                dgFees[dtlFeeLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgFees[dtlFeeLCName.Index, row].Value = item.LostCardName;
+                dgFees[dtlFeeLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgFees[dtlFeeLCORCR.Index, row].Value = item.LostCardORCR;
+                dgFees[dtlFeeOvernight.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             dgFees.AutoResizeColumns();
@@ -340,6 +398,15 @@ namespace Reports
                 dgCashless[dtlCashlessUpdateUser.Index, row].Value = item.Username;
                 dgCashless[dtlCashlessEntrance.Index, row].Value = item.Entrance;
                 dgCashless[dtlCashlessExit.Index, row].Value = item.Exit;
+
+                dgCashless[dtlCashlessSCPWDName.Index, row].Value = item.SCPWDName;
+                dgCashless[dtlCashlessSDPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgCashless[dtlCashlessSCPWDId.Index, row].Value = item.SCPWDId;
+                dgCashless[dtlCashlessLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgCashless[dtlCashlessLCName.Index, row].Value = item.LostCardName;
+                dgCashless[dtlCashlessLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgCashless[dtlCashlessLCORCR.Index, row].Value = item.LostCardORCR;
+                dgCashless[dtlCashlessOvernight.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             dgFees.AutoResizeColumns();
@@ -404,15 +471,13 @@ namespace Reports
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
             var dt = await services.SalesReportDataTableAsync(from, to, txtSearch.Text.Trim(), cboTerminal.SelectedValue.ToString());
-            dt.Columns.Remove("TransitId");
-            dt.Columns.Remove("IsErased");
-            dt.AcceptChanges();
 
-            dt.TableName = "Sales";
-            var viewer = new Viewer();
+
+            dt.TableName = "SalesReport";
+            var viewer = new CrystalViewer();
             viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.Sales;
-            viewer.Source = dt;
+            viewer.DataSource = dt;
             viewer.ShowDialog();
             btnPrint.Enabled = true;
         }

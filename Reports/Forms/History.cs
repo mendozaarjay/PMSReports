@@ -139,7 +139,14 @@ namespace Reports
                 dgHistoryAll[dtlAllCoupon.Index, row].Value = item.Coupon;
                 dgHistoryAll[dtlAllMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgHistoryAll[dtlAllMonthlyName.Index, row].Value = item.MonthlyName;
-                dgHistoryAll[dtlAllEntranceGate.Index, row].Value = item.EntranceGate;
+                dgHistoryAll[dtlAllSCPWDName.Index, row].Value = item.SCPWDName;
+                dgHistoryAll[dtlAllSCPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgHistoryAll[dtlAllSCPWDId.Index, row].Value = item.SCPWDId;
+                dgHistoryAll[dtlAllLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgHistoryAll[dtlAllLCName.Index, row].Value = item.LostCardName;
+                dgHistoryAll[dtlAllLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgHistoryAll[dtlAllLCOrCr.Index, row].Value = item.LostCardORCR;
+                dgHistoryAll[dtlAllOvernightPenalty.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -170,6 +177,14 @@ namespace Reports
                 dgParkerIn[dtlParkerInMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgParkerIn[dtlParkerInMonthlyName.Index, row].Value = item.MonthlyName;
                 dgParkerIn[dtlParkerInEntranceGate.Index, row].Value = item.EntranceGate;
+                dgParkerIn[dtlParkerInSCPWDName.Index, row].Value = item.SCPWDName;
+                dgParkerIn[dtlParkerInSCPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgParkerIn[dtlParkerInSCPWDId.Index, row].Value = item.SCPWDId;
+                dgParkerIn[dtlParkerInLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgParkerIn[dtlParkerInLCName.Index, row].Value = item.LostCardName;
+                dgParkerIn[dtlParkerInLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgParkerIn[dtlParkerInLCOrCr.Index, row].Value = item.LostCardORCR;
+                dgParkerIn[dtlParkerInOvernightPenalty.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -201,6 +216,14 @@ namespace Reports
                 dgParkerOut[dtlParkerOutMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgParkerOut[dtlParkerOutMonthlyName.Index, row].Value = item.MonthlyName;
                 dgParkerOut[dtlParkerOutEntranceGate.Index, row].Value = item.EntranceGate;
+                dgParkerOut[dtlParkerOutSCPWDName.Index, row].Value = item.SCPWDName;
+                dgParkerOut[dtlParkerOutSCPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgParkerOut[dtlParkerOutSCPWDId.Index, row].Value = item.SCPWDId;
+                dgParkerOut[dtlParkerOutLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgParkerOut[dtlParkerOutLCName.Index, row].Value = item.LostCardName;
+                dgParkerOut[dtlParkerOutLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgParkerOut[dtlParkerOutLCOrCr.Index, row].Value = item.LostCardORCR;
+                dgParkerOut[dtlParkerOutOvernightPenalty.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -232,6 +255,15 @@ namespace Reports
                 dgMonthlyIn[dtlMonthlyInMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgMonthlyIn[dtlMonthlyInMonthlyName.Index, row].Value = item.MonthlyName;
                 dgMonthlyIn[dtlMonthlyInEntranceGate.Index, row].Value = item.EntranceGate;
+
+                dgMonthlyIn[dtlMonthlyInSCPWDName.Index, row].Value = item.SCPWDName;
+                dgMonthlyIn[dtlMonthlyInSCPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgMonthlyIn[dtlMonthlyInSCPWDId.Index, row].Value = item.SCPWDId;
+                dgMonthlyIn[dtlMonthlyInLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgMonthlyIn[dtlMonthlyInLCName.Index, row].Value = item.LostCardName;
+                dgMonthlyIn[dtlMonthlyInLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgMonthlyIn[dtlMonthlyInLCOrCr.Index, row].Value = item.LostCardORCR;
+                dgMonthlyIn[dtlMonthlyInOvernightPenalty.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -262,6 +294,15 @@ namespace Reports
                 dgMonthlyOut[dtlMonthlyOutMonthlyRFID.Index, row].Value = item.MonthlyRFID;
                 dgMonthlyOut[dtlMonthlyOutMonthlyName.Index, row].Value = item.MonthlyName;
                 dgMonthlyOut[dtlMonthlyOutEntranceGate.Index, row].Value = item.EntranceGate;
+
+                dgMonthlyOut[dtlMonthlyOutSCPWDName.Index, row].Value = item.SCPWDName;
+                dgMonthlyOut[dtlMonthlyOutSCPWDAddress.Index, row].Value = item.SCPWDAddress;
+                dgMonthlyOut[dtlMonthlyOutSCPWDId.Index, row].Value = item.SCPWDId;
+                dgMonthlyOut[dtlMonthlyOutLCPenalty.Index, row].Value = item.LostCardPenalty;
+                dgMonthlyOut[dtlMonthlyOutLCName.Index, row].Value = item.LostCardName;
+                dgMonthlyOut[dtlMonthlyOutLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                dgMonthlyOut[dtlMonthlyOutLCOrCr.Index, row].Value = item.LostCardORCR;
+                dgMonthlyOut[dtlMonthlyOutOvernightPenalty.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
@@ -297,15 +338,17 @@ namespace Reports
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
             var items = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
-            items.Columns.Remove("TransitId");
-            items.AcceptChanges();
+            //items.Columns.Remove("TransitId");
+            //items.AcceptChanges();
 
-            items.TableName = "History";
-            var viewer = new Viewer();
+            items.TableName = "HistoryReport";
+            var viewer = new CrystalViewer();
             viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.History;
-            viewer.Source = items;
+            viewer.DataSource = items;
             viewer.ShowDialog();
+
+
             btnPrint.Enabled = true;
         }
 

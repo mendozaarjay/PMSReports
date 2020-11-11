@@ -26,8 +26,20 @@ namespace Reports
             timeFrom.Value = DateTime.Now.Minimun();
             timeTo.Value = DateTime.Now.Maximum();
             CheckForIllegalCrossThreadCalls = false;
+            LoadAllTerminal();
             LoadAccess();
             base.OnLoad(e);
+        }
+        private void LoadAllTerminal()
+        {
+            var items = services.Terminals();
+            if (items != null)
+            {
+                cboTerminal.DataSource = null;
+                cboTerminal.DataSource = items;
+                cboTerminal.DisplayMember = "Name";
+                cboTerminal.ValueMember = "Id";
+            }
         }
         private void LoadAccess()
         {
@@ -41,7 +53,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var result = await services.DetailedTransactionSummaryAsync(from,to, txtSearch.Text.Trim());
+            var result = await services.DetailedTransactionSummaryAsync(from,to, txtSearch.Text.Trim(),cboTerminal.SelectedValue.ToString());
             await Spinner.ShowSpinnerAsync(this, PopulateDetailedTransactionSummary(result));
             if(cbShowImages.Checked)
             {
@@ -154,6 +166,19 @@ namespace Reports
                     dgDetailedTransaction[dtlCardNumber.Index, row].Value = item.CardNumber;
                     dgDetailedTransaction[dtlCashier.Index, row].Value = item.Username;
 
+                    dgDetailedTransaction[dtlSCPWDName.Index, row].Value = item.SCPWDName;
+                    dgDetailedTransaction[dtlSCPWDAddress.Index, row].Value = item.SCPWDAddress;
+                    dgDetailedTransaction[dtlSCPWDId.Index, row].Value = item.SCPWDId;
+                    dgDetailedTransaction[dtlLCPenalty.Index, row].Value = item.LostCardPenalty;
+                    dgDetailedTransaction[dtlLCName.Index, row].Value = item.LostCardName;
+                    dgDetailedTransaction[dtlLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
+                    dgDetailedTransaction[dtlLCORCR.Index, row].Value = item.LostCardORCR;
+                    dgDetailedTransaction[dtlOvernight.Index, row].Value = item.OvernightPenalty;
+
+                    dgDetailedTransaction[dtlTerminal.Index, row].Value = item.Terminal;
+                    dgDetailedTransaction[dtlEntranceGate.Index, row].Value = item.EntranceGate;
+
+
                     row++;
                 }
             });
@@ -172,7 +197,7 @@ namespace Reports
             btnCsv.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to, txtSearch.Text.Trim());
+            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to, txtSearch.Text.Trim(), cboTerminal.SelectedValue.ToString());
             dt.Columns.Remove("TransitId");
             dt.Columns.Remove("EntranceImage");
             dt.Columns.Remove("ExitImage");
@@ -194,7 +219,7 @@ namespace Reports
             btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to,txtSearch.Text.Trim());
+            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to,txtSearch.Text.Trim(), cboTerminal.SelectedValue.ToString());
             dt.Columns.Remove("TransitId");
             dt.Columns.Remove("EntranceImage");
             dt.Columns.Remove("ExitImage");
@@ -216,17 +241,13 @@ namespace Reports
             btnPrint.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to,txtSearch.Text.Trim());
-            dt.Columns.Remove("TransitId");
-            dt.Columns.Remove("EntranceImage");
-            dt.Columns.Remove("ExitImage");
-            dt.AcceptChanges();
+            var dt = await services.DetailedTransactionSummaryDatatableAsync(from,to,txtSearch.Text.Trim(), cboTerminal.SelectedValue.ToString());
 
-            dt.TableName = "DetailedTransactionSummary";
-            var viewer = new Viewer();
+            dt.TableName = "DetailedReport";
+            var viewer = new CrystalViewer();
             viewer.DateCovered = from.ToString() + "-" + to.ToString();
             viewer.ReportType = ReportType.DetailedTransactionSummaryReport;
-            viewer.Source = dt;
+            viewer.DataSource = dt;
             viewer.ShowDialog();
             btnPrint.Enabled = true;
         }

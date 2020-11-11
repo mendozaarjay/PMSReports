@@ -28,5 +28,13 @@
         public bool IsErased { get; set; }
         public string Entrance { get; set; }
         public string Exit { get; set; }
+        public string SCPWDName { get; set; }
+        public string SCPWDAddress { get; set; }
+        public string SCPWDId { get; set; }
+        public decimal LostCardPenalty { get; set; }
+        public string LostCardName { get; set; }
+        public string LostCardLicenseNo { get; set; }
+        public string LostCardORCR { get; set; }
+        public decimal OvernightPenalty { get; set; }
     }
 }

@@ -35,7 +35,6 @@ namespace Reports
             var main = new MainFormNew(); //Change to main when deployment
             var form = new Sales(); //Testing of form
             form.UserAccess = access;
-
             Application.Run(main);
         }
     }

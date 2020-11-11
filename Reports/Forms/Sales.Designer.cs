@@ -30,77 +30,73 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle163 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle164 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle165 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle166 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle167 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle168 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle169 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle170 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle171 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle172 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle173 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle174 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle175 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle176 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle177 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle178 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle179 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle180 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle181 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle182 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle183 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle184 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle185 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle186 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle187 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle188 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle189 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle190 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle191 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle192 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle193 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle194 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle195 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle196 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle197 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle198 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle199 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle200 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgTransactions = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgAllSales = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgCollections = new System.Windows.Forms.DataGridView();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.dgErased = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dgDiscounts = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.dgFees = new System.Windows.Forms.DataGridView();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -140,13 +136,22 @@
             this.dtlAllVat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllVatExempt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllZeroRated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllSDPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCORCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllOvernight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllReprint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllImage = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dtlTransactionTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgTransactions = new System.Windows.Forms.DataGridView();
             this.dtlTransactionRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionEntrance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionExit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionORNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,13 +171,22 @@
             this.dtlTransactionVat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionVatExempt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionZeroRated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionSDPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionLCORCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTransactionOvernight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionReprint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlTransactionImage = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dtlCollectionTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCollections = new System.Windows.Forms.DataGridView();
             this.dtlCollectionRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionEntrance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionExit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionORNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -192,13 +206,22 @@
             this.dtlCollectionVat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionVatExempt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionZeroRated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionSDPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionLCORCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCollectionOvernight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionReprint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCollectionImage = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dtlDiscountTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDiscounts = new System.Windows.Forms.DataGridView();
             this.dtlDiscountRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountEntrance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountExit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountORNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -218,13 +241,22 @@
             this.dtlDiscountVat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountVatExempt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountZeroRated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountSDPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountLCORCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlDiscountOvernight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountReprint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlDiscountImage = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dtlEraseTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgErased = new System.Windows.Forms.DataGridView();
             this.dtlEraseRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseEntrance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseExit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseORNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -244,13 +276,22 @@
             this.dtlEraseVat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseVatExempt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseZeroRated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseSDPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseLCORCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlEraseOvernight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseReprint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlEraseImage = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dtlFeeTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgFees = new System.Windows.Forms.DataGridView();
             this.dtlFeeRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeEntrance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeExit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeORNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -270,15 +311,22 @@
             this.dtlFeeVat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeVatExempt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeZeroRated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeSDPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeLCORCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlFeeOvernight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeReprint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlFeeImage = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.dgCashless = new System.Windows.Forms.DataGridView();
-            this.dtlCashlessTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessEntrance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessExit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessORNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -298,23 +346,27 @@
             this.dtlCashlessVat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessVatExempt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessZeroRated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessSDPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessLCORCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlCashlessOvernight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessReprint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessUpdateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlCashlessImage = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgTransactions)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAllSales)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCollections)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgErased)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDiscounts)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgFees)).BeginInit();
+            this.tabPage7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -322,7 +374,11 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTransactions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCollections)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDiscounts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgErased)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCashless)).BeginInit();
             this.SuspendLayout();
             // 
@@ -336,49 +392,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Transaction";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dgTransactions
-            // 
-            this.dgTransactions.AllowUserToAddRows = false;
-            this.dgTransactions.AllowUserToDeleteRows = false;
-            this.dgTransactions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlTransactionTransitId,
-            this.dtlTransactionRow,
-            this.dtlTransactionType,
-            this.dtlTransactionEntrance,
-            this.dtlTransactionExit,
-            this.dtlTransactionORNumber,
-            this.dtlTransactionPlateNo,
-            this.dtlTransactionTicketNo,
-            this.dtlTransactionTimeIn,
-            this.dtlTransactionTimeOut,
-            this.dtlTransactionDuration,
-            this.dtlTransactionRateName,
-            this.dtlTransactionCoupon,
-            this.dtlTransactionGrossAmount,
-            this.dtlTransactionDiscount,
-            this.dtlTransactionAmountDue,
-            this.dtlTransactionAmountTendered,
-            this.dtlTransactionChange,
-            this.dtlTransactionVatable,
-            this.dtlTransactionVat,
-            this.dtlTransactionVatExempt,
-            this.dtlTransactionZeroRated,
-            this.dtlTransactionReprint,
-            this.dtlTransactionDescription,
-            this.dtlTransactionUpdateUser,
-            this.dtlTransactionImage});
-            this.dgTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgTransactions.Location = new System.Drawing.Point(3, 3);
-            this.dgTransactions.Name = "dgTransactions";
-            this.dgTransactions.ReadOnly = true;
-            this.dgTransactions.RowHeadersWidth = 51;
-            this.dgTransactions.RowTemplate.Height = 24;
-            this.dgTransactions.Size = new System.Drawing.Size(1198, 315);
-            this.dgTransactions.TabIndex = 1;
-            this.dgTransactions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTransactions_CellContentClick);
             // 
             // tabPage1
             // 
@@ -420,6 +433,14 @@
             this.dtlAllVat,
             this.dtlAllVatExempt,
             this.dtlAllZeroRated,
+            this.dtlAllSCPWDName,
+            this.dtlAllSDPWDAddress,
+            this.dtlAllSCPWDId,
+            this.dtlAllLCPenalty,
+            this.dtlAllLCName,
+            this.dtlAllLCLicenseNo,
+            this.dtlAllLCORCR,
+            this.dtlAllOvernight,
             this.dtlAllReprint,
             this.dtlAllDescription,
             this.dtlAllUpdateUser,
@@ -444,49 +465,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Collection";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dgCollections
-            // 
-            this.dgCollections.AllowUserToAddRows = false;
-            this.dgCollections.AllowUserToDeleteRows = false;
-            this.dgCollections.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgCollections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCollections.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlCollectionTransitId,
-            this.dtlCollectionRow,
-            this.dtlCollectionType,
-            this.dtlCollectionEntrance,
-            this.dtlCollectionExit,
-            this.dtlCollectionORNumber,
-            this.dtlCollectionPlateNo,
-            this.dtlCollectionTicketNo,
-            this.dtlCollectionTimeIn,
-            this.dtlCollectionTimeOut,
-            this.dtlCollectionDuration,
-            this.dtlCollectionRateName,
-            this.dtlCollectionCoupon,
-            this.dtlCollectionGrossAmount,
-            this.dtlCollectionDiscount,
-            this.dtlCollectionAmountDue,
-            this.dtlCollectionAmountTendered,
-            this.dtlCollectionChange,
-            this.dtlCollectionVatable,
-            this.dtlCollectionVat,
-            this.dtlCollectionVatExempt,
-            this.dtlCollectionZeroRated,
-            this.dtlCollectionReprint,
-            this.dtlCollectionDescription,
-            this.dtlCollectionUpdateUser,
-            this.dtlCollectionImage});
-            this.dgCollections.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgCollections.Location = new System.Drawing.Point(3, 3);
-            this.dgCollections.Name = "dgCollections";
-            this.dgCollections.ReadOnly = true;
-            this.dgCollections.RowHeadersWidth = 51;
-            this.dgCollections.RowTemplate.Height = 24;
-            this.dgCollections.Size = new System.Drawing.Size(1198, 315);
-            this.dgCollections.TabIndex = 1;
-            this.dgCollections.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCollections_CellContentClick);
             // 
             // btnGenerate
             // 
@@ -516,49 +494,6 @@
             this.tabPage5.Text = "Erase";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // dgErased
-            // 
-            this.dgErased.AllowUserToAddRows = false;
-            this.dgErased.AllowUserToDeleteRows = false;
-            this.dgErased.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgErased.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgErased.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlEraseTransitId,
-            this.dtlEraseRow,
-            this.dtlEraseType,
-            this.dtlEraseEntrance,
-            this.dtlEraseExit,
-            this.dtlEraseORNumber,
-            this.dtlErasePlateNo,
-            this.dtlEraseTicketNo,
-            this.dtlEraseTimeIn,
-            this.dtlEraseTimeOut,
-            this.dtlEraseDuration,
-            this.dtlEraseRateName,
-            this.dtlEraseCoupon,
-            this.dtlEraseGrossAmount,
-            this.dtlEraseDiscount,
-            this.dtlEraseAmountDue,
-            this.dtlEraseAmountTendered,
-            this.dtlEraseChange,
-            this.dtlEraseVatable,
-            this.dtlEraseVat,
-            this.dtlEraseVatExempt,
-            this.dtlEraseZeroRated,
-            this.dtlEraseReprint,
-            this.dtlEraseDescription,
-            this.dtlEraseUpdateUser,
-            this.dtlEraseImage});
-            this.dgErased.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgErased.Location = new System.Drawing.Point(3, 3);
-            this.dgErased.Name = "dgErased";
-            this.dgErased.ReadOnly = true;
-            this.dgErased.RowHeadersWidth = 51;
-            this.dgErased.RowTemplate.Height = 24;
-            this.dgErased.Size = new System.Drawing.Size(1198, 315);
-            this.dgErased.TabIndex = 1;
-            this.dgErased.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgErased_CellContentClick);
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -586,49 +521,6 @@
             this.tabPage4.Text = "Discount";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dgDiscounts
-            // 
-            this.dgDiscounts.AllowUserToAddRows = false;
-            this.dgDiscounts.AllowUserToDeleteRows = false;
-            this.dgDiscounts.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgDiscounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDiscounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlDiscountTransitId,
-            this.dtlDiscountRow,
-            this.dtlDiscountType,
-            this.dtlDiscountEntrance,
-            this.dtlDiscountExit,
-            this.dtlDiscountORNumber,
-            this.dtlDiscountPlateNo,
-            this.dtlDiscountTicketNo,
-            this.dtlDiscountTimeIn,
-            this.dtlDiscountTimeOut,
-            this.dtlDiscountDuration,
-            this.dtlDiscountRateName,
-            this.dtlDiscountCoupon,
-            this.dtlDiscountGrossAmount,
-            this.dtlDiscountDiscount,
-            this.dtlDiscountAmountDue,
-            this.dtlDiscountAmountTendered,
-            this.dtlDiscountChange,
-            this.dtlDiscountVatable,
-            this.dtlDiscountVat,
-            this.dtlDiscountVatExempt,
-            this.dtlDiscountZeroRated,
-            this.dtlDiscountReprint,
-            this.dtlDiscountDescription,
-            this.dtlDiscountUpdateUser,
-            this.dtlDiscountImage});
-            this.dgDiscounts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgDiscounts.Location = new System.Drawing.Point(3, 3);
-            this.dgDiscounts.Name = "dgDiscounts";
-            this.dgDiscounts.ReadOnly = true;
-            this.dgDiscounts.RowHeadersWidth = 51;
-            this.dgDiscounts.RowTemplate.Height = 24;
-            this.dgDiscounts.Size = new System.Drawing.Size(1198, 315);
-            this.dgDiscounts.TabIndex = 1;
-            this.dgDiscounts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDiscounts_CellContentClick);
-            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.dgFees);
@@ -640,48 +532,16 @@
             this.tabPage6.Text = "Fee";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // dgFees
+            // tabPage7
             // 
-            this.dgFees.AllowUserToAddRows = false;
-            this.dgFees.AllowUserToDeleteRows = false;
-            this.dgFees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgFees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlFeeTransitId,
-            this.dtlFeeRow,
-            this.dtlFeeType,
-            this.dtlFeeEntrance,
-            this.dtlFeeExit,
-            this.dtlFeeORNumber,
-            this.dtlFeePlateNo,
-            this.dtlFeeTicketNo,
-            this.dtlFeeTimeIn,
-            this.dtlFeeTimeOut,
-            this.dtlFeeDuration,
-            this.dtlFeeRateName,
-            this.dtlFeeCoupon,
-            this.dtlFeeGrossAmount,
-            this.dtlFeeDiscount,
-            this.dtlFeeAmountDue,
-            this.dtlFeeAmountTendered,
-            this.dtlFeeChange,
-            this.dtlFeeVatable,
-            this.dtlFeeVat,
-            this.dtlFeeVatExempt,
-            this.dtlFeeZeroRated,
-            this.dtlFeeReprint,
-            this.dtlFeeDescription,
-            this.dtlFeeUpdateUser,
-            this.dtlFeeImage});
-            this.dgFees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgFees.Location = new System.Drawing.Point(3, 3);
-            this.dgFees.Name = "dgFees";
-            this.dgFees.ReadOnly = true;
-            this.dgFees.RowHeadersWidth = 51;
-            this.dgFees.RowTemplate.Height = 24;
-            this.dgFees.Size = new System.Drawing.Size(1198, 315);
-            this.dgFees.TabIndex = 1;
-            this.dgFees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFees_CellContentClick);
+            this.tabPage7.Controls.Add(this.dgCashless);
+            this.tabPage7.Location = new System.Drawing.Point(4, 32);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1204, 321);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Cashless";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -995,9 +855,9 @@
             // 
             // dtlAllDiscount
             // 
-            dataGridViewCellStyle153.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle153.Format = "N2";
-            this.dtlAllDiscount.DefaultCellStyle = dataGridViewCellStyle153;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            this.dtlAllDiscount.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtlAllDiscount.HeaderText = "Discount";
             this.dtlAllDiscount.MinimumWidth = 6;
             this.dtlAllDiscount.Name = "dtlAllDiscount";
@@ -1006,9 +866,9 @@
             // 
             // dtlAllAmountDue
             // 
-            dataGridViewCellStyle154.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle154.Format = "n2";
-            this.dtlAllAmountDue.DefaultCellStyle = dataGridViewCellStyle154;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "n2";
+            this.dtlAllAmountDue.DefaultCellStyle = dataGridViewCellStyle10;
             this.dtlAllAmountDue.HeaderText = "Amount Due";
             this.dtlAllAmountDue.MinimumWidth = 6;
             this.dtlAllAmountDue.Name = "dtlAllAmountDue";
@@ -1017,9 +877,9 @@
             // 
             // dtlAllAmountTendered
             // 
-            dataGridViewCellStyle155.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle155.Format = "n2";
-            this.dtlAllAmountTendered.DefaultCellStyle = dataGridViewCellStyle155;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "n2";
+            this.dtlAllAmountTendered.DefaultCellStyle = dataGridViewCellStyle11;
             this.dtlAllAmountTendered.HeaderText = "Amount Tendered";
             this.dtlAllAmountTendered.MinimumWidth = 6;
             this.dtlAllAmountTendered.Name = "dtlAllAmountTendered";
@@ -1028,9 +888,9 @@
             // 
             // dtlAllChange
             // 
-            dataGridViewCellStyle156.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle156.Format = "N2";
-            this.dtlAllChange.DefaultCellStyle = dataGridViewCellStyle156;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "N2";
+            this.dtlAllChange.DefaultCellStyle = dataGridViewCellStyle12;
             this.dtlAllChange.HeaderText = "Amount Change";
             this.dtlAllChange.MinimumWidth = 6;
             this.dtlAllChange.Name = "dtlAllChange";
@@ -1039,9 +899,9 @@
             // 
             // dtlAllVatable
             // 
-            dataGridViewCellStyle157.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle157.Format = "N2";
-            this.dtlAllVatable.DefaultCellStyle = dataGridViewCellStyle157;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "N2";
+            this.dtlAllVatable.DefaultCellStyle = dataGridViewCellStyle13;
             this.dtlAllVatable.HeaderText = "Vatable";
             this.dtlAllVatable.MinimumWidth = 6;
             this.dtlAllVatable.Name = "dtlAllVatable";
@@ -1050,9 +910,9 @@
             // 
             // dtlAllVat
             // 
-            dataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle158.Format = "N2";
-            this.dtlAllVat.DefaultCellStyle = dataGridViewCellStyle158;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "N2";
+            this.dtlAllVat.DefaultCellStyle = dataGridViewCellStyle14;
             this.dtlAllVat.HeaderText = "Vat";
             this.dtlAllVat.MinimumWidth = 6;
             this.dtlAllVat.Name = "dtlAllVat";
@@ -1061,9 +921,9 @@
             // 
             // dtlAllVatExempt
             // 
-            dataGridViewCellStyle159.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle159.Format = "N2";
-            this.dtlAllVatExempt.DefaultCellStyle = dataGridViewCellStyle159;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.Format = "N2";
+            this.dtlAllVatExempt.DefaultCellStyle = dataGridViewCellStyle15;
             this.dtlAllVatExempt.HeaderText = "Vat Exempt";
             this.dtlAllVatExempt.MinimumWidth = 6;
             this.dtlAllVatExempt.Name = "dtlAllVatExempt";
@@ -1072,14 +932,78 @@
             // 
             // dtlAllZeroRated
             // 
-            dataGridViewCellStyle160.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle160.Format = "N2";
-            this.dtlAllZeroRated.DefaultCellStyle = dataGridViewCellStyle160;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Format = "N2";
+            this.dtlAllZeroRated.DefaultCellStyle = dataGridViewCellStyle16;
             this.dtlAllZeroRated.HeaderText = "Zero Rated";
             this.dtlAllZeroRated.MinimumWidth = 6;
             this.dtlAllZeroRated.Name = "dtlAllZeroRated";
             this.dtlAllZeroRated.ReadOnly = true;
             this.dtlAllZeroRated.Width = 200;
+            // 
+            // dtlAllSCPWDName
+            // 
+            this.dtlAllSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlAllSCPWDName.MinimumWidth = 6;
+            this.dtlAllSCPWDName.Name = "dtlAllSCPWDName";
+            this.dtlAllSCPWDName.ReadOnly = true;
+            this.dtlAllSCPWDName.Width = 125;
+            // 
+            // dtlAllSDPWDAddress
+            // 
+            this.dtlAllSDPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlAllSDPWDAddress.MinimumWidth = 6;
+            this.dtlAllSDPWDAddress.Name = "dtlAllSDPWDAddress";
+            this.dtlAllSDPWDAddress.ReadOnly = true;
+            this.dtlAllSDPWDAddress.Width = 125;
+            // 
+            // dtlAllSCPWDId
+            // 
+            this.dtlAllSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlAllSCPWDId.MinimumWidth = 6;
+            this.dtlAllSCPWDId.Name = "dtlAllSCPWDId";
+            this.dtlAllSCPWDId.ReadOnly = true;
+            this.dtlAllSCPWDId.Width = 125;
+            // 
+            // dtlAllLCPenalty
+            // 
+            this.dtlAllLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlAllLCPenalty.MinimumWidth = 6;
+            this.dtlAllLCPenalty.Name = "dtlAllLCPenalty";
+            this.dtlAllLCPenalty.ReadOnly = true;
+            this.dtlAllLCPenalty.Width = 125;
+            // 
+            // dtlAllLCName
+            // 
+            this.dtlAllLCName.HeaderText = "Lost Card Name";
+            this.dtlAllLCName.MinimumWidth = 6;
+            this.dtlAllLCName.Name = "dtlAllLCName";
+            this.dtlAllLCName.ReadOnly = true;
+            this.dtlAllLCName.Width = 125;
+            // 
+            // dtlAllLCLicenseNo
+            // 
+            this.dtlAllLCLicenseNo.HeaderText = "Lost Card Lisence No";
+            this.dtlAllLCLicenseNo.MinimumWidth = 6;
+            this.dtlAllLCLicenseNo.Name = "dtlAllLCLicenseNo";
+            this.dtlAllLCLicenseNo.ReadOnly = true;
+            this.dtlAllLCLicenseNo.Width = 125;
+            // 
+            // dtlAllLCORCR
+            // 
+            this.dtlAllLCORCR.HeaderText = "Lost Card OR//CR";
+            this.dtlAllLCORCR.MinimumWidth = 6;
+            this.dtlAllLCORCR.Name = "dtlAllLCORCR";
+            this.dtlAllLCORCR.ReadOnly = true;
+            this.dtlAllLCORCR.Width = 125;
+            // 
+            // dtlAllOvernight
+            // 
+            this.dtlAllOvernight.HeaderText = "Overnight Penalty";
+            this.dtlAllOvernight.MinimumWidth = 6;
+            this.dtlAllOvernight.Name = "dtlAllOvernight";
+            this.dtlAllOvernight.ReadOnly = true;
+            this.dtlAllOvernight.Width = 125;
             // 
             // dtlAllReprint
             // 
@@ -1113,14 +1037,55 @@
             this.dtlAllImage.ReadOnly = true;
             this.dtlAllImage.Width = 125;
             // 
-            // dtlTransactionTransitId
+            // dgTransactions
             // 
-            this.dtlTransactionTransitId.HeaderText = "Id";
-            this.dtlTransactionTransitId.MinimumWidth = 6;
-            this.dtlTransactionTransitId.Name = "dtlTransactionTransitId";
-            this.dtlTransactionTransitId.ReadOnly = true;
-            this.dtlTransactionTransitId.Visible = false;
-            this.dtlTransactionTransitId.Width = 200;
+            this.dgTransactions.AllowUserToAddRows = false;
+            this.dgTransactions.AllowUserToDeleteRows = false;
+            this.dgTransactions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlTransactionRow,
+            this.dtlTransactionType,
+            this.dtlTransactionTransitId,
+            this.dtlTransactionEntrance,
+            this.dtlTransactionExit,
+            this.dtlTransactionORNumber,
+            this.dtlTransactionPlateNo,
+            this.dtlTransactionTicketNo,
+            this.dtlTransactionTimeIn,
+            this.dtlTransactionTimeOut,
+            this.dtlTransactionDuration,
+            this.dtlTransactionRateName,
+            this.dtlTransactionCoupon,
+            this.dtlTransactionGrossAmount,
+            this.dtlTransactionDiscount,
+            this.dtlTransactionAmountDue,
+            this.dtlTransactionAmountTendered,
+            this.dtlTransactionChange,
+            this.dtlTransactionVatable,
+            this.dtlTransactionVat,
+            this.dtlTransactionVatExempt,
+            this.dtlTransactionZeroRated,
+            this.dtlTransactionSCPWDName,
+            this.dtlTransactionSDPWDAddress,
+            this.dtlTransactionSCPWDId,
+            this.dtlTransactionLCPenalty,
+            this.dtlTransactionLCName,
+            this.dtlTransactionLCLicenseNo,
+            this.dtlTransactionLCORCR,
+            this.dtlTransactionOvernight,
+            this.dtlTransactionReprint,
+            this.dtlTransactionDescription,
+            this.dtlTransactionUpdateUser,
+            this.dtlTransactionImage});
+            this.dgTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgTransactions.Location = new System.Drawing.Point(3, 3);
+            this.dgTransactions.Name = "dgTransactions";
+            this.dgTransactions.ReadOnly = true;
+            this.dgTransactions.RowHeadersWidth = 51;
+            this.dgTransactions.RowTemplate.Height = 24;
+            this.dgTransactions.Size = new System.Drawing.Size(1198, 315);
+            this.dgTransactions.TabIndex = 3;
             // 
             // dtlTransactionRow
             // 
@@ -1137,6 +1102,15 @@
             this.dtlTransactionType.Name = "dtlTransactionType";
             this.dtlTransactionType.ReadOnly = true;
             this.dtlTransactionType.Width = 200;
+            // 
+            // dtlTransactionTransitId
+            // 
+            this.dtlTransactionTransitId.HeaderText = "Id";
+            this.dtlTransactionTransitId.MinimumWidth = 6;
+            this.dtlTransactionTransitId.Name = "dtlTransactionTransitId";
+            this.dtlTransactionTransitId.ReadOnly = true;
+            this.dtlTransactionTransitId.Visible = false;
+            this.dtlTransactionTransitId.Width = 200;
             // 
             // dtlTransactionEntrance
             // 
@@ -1228,9 +1202,9 @@
             // 
             // dtlTransactionDiscount
             // 
-            dataGridViewCellStyle161.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle161.Format = "N2";
-            this.dtlTransactionDiscount.DefaultCellStyle = dataGridViewCellStyle161;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.dtlTransactionDiscount.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtlTransactionDiscount.HeaderText = "Discount";
             this.dtlTransactionDiscount.MinimumWidth = 6;
             this.dtlTransactionDiscount.Name = "dtlTransactionDiscount";
@@ -1239,9 +1213,9 @@
             // 
             // dtlTransactionAmountDue
             // 
-            dataGridViewCellStyle162.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle162.Format = "n2";
-            this.dtlTransactionAmountDue.DefaultCellStyle = dataGridViewCellStyle162;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "n2";
+            this.dtlTransactionAmountDue.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlTransactionAmountDue.HeaderText = "Amount Due";
             this.dtlTransactionAmountDue.MinimumWidth = 6;
             this.dtlTransactionAmountDue.Name = "dtlTransactionAmountDue";
@@ -1250,9 +1224,9 @@
             // 
             // dtlTransactionAmountTendered
             // 
-            dataGridViewCellStyle163.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle163.Format = "n2";
-            this.dtlTransactionAmountTendered.DefaultCellStyle = dataGridViewCellStyle163;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "n2";
+            this.dtlTransactionAmountTendered.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtlTransactionAmountTendered.HeaderText = "Amount Tendered";
             this.dtlTransactionAmountTendered.MinimumWidth = 6;
             this.dtlTransactionAmountTendered.Name = "dtlTransactionAmountTendered";
@@ -1261,9 +1235,9 @@
             // 
             // dtlTransactionChange
             // 
-            dataGridViewCellStyle164.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle164.Format = "N2";
-            this.dtlTransactionChange.DefaultCellStyle = dataGridViewCellStyle164;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.dtlTransactionChange.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtlTransactionChange.HeaderText = "Amount Change";
             this.dtlTransactionChange.MinimumWidth = 6;
             this.dtlTransactionChange.Name = "dtlTransactionChange";
@@ -1272,9 +1246,9 @@
             // 
             // dtlTransactionVatable
             // 
-            dataGridViewCellStyle165.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle165.Format = "N2";
-            this.dtlTransactionVatable.DefaultCellStyle = dataGridViewCellStyle165;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.dtlTransactionVatable.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtlTransactionVatable.HeaderText = "Vatable";
             this.dtlTransactionVatable.MinimumWidth = 6;
             this.dtlTransactionVatable.Name = "dtlTransactionVatable";
@@ -1283,9 +1257,9 @@
             // 
             // dtlTransactionVat
             // 
-            dataGridViewCellStyle166.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle166.Format = "N2";
-            this.dtlTransactionVat.DefaultCellStyle = dataGridViewCellStyle166;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.dtlTransactionVat.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtlTransactionVat.HeaderText = "Vat";
             this.dtlTransactionVat.MinimumWidth = 6;
             this.dtlTransactionVat.Name = "dtlTransactionVat";
@@ -1294,9 +1268,9 @@
             // 
             // dtlTransactionVatExempt
             // 
-            dataGridViewCellStyle167.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle167.Format = "N2";
-            this.dtlTransactionVatExempt.DefaultCellStyle = dataGridViewCellStyle167;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            this.dtlTransactionVatExempt.DefaultCellStyle = dataGridViewCellStyle7;
             this.dtlTransactionVatExempt.HeaderText = "Vat Exempt";
             this.dtlTransactionVatExempt.MinimumWidth = 6;
             this.dtlTransactionVatExempt.Name = "dtlTransactionVatExempt";
@@ -1305,14 +1279,78 @@
             // 
             // dtlTransactionZeroRated
             // 
-            dataGridViewCellStyle168.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle168.Format = "N2";
-            this.dtlTransactionZeroRated.DefaultCellStyle = dataGridViewCellStyle168;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            this.dtlTransactionZeroRated.DefaultCellStyle = dataGridViewCellStyle8;
             this.dtlTransactionZeroRated.HeaderText = "Zero Rated";
             this.dtlTransactionZeroRated.MinimumWidth = 6;
             this.dtlTransactionZeroRated.Name = "dtlTransactionZeroRated";
             this.dtlTransactionZeroRated.ReadOnly = true;
             this.dtlTransactionZeroRated.Width = 200;
+            // 
+            // dtlTransactionSCPWDName
+            // 
+            this.dtlTransactionSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlTransactionSCPWDName.MinimumWidth = 6;
+            this.dtlTransactionSCPWDName.Name = "dtlTransactionSCPWDName";
+            this.dtlTransactionSCPWDName.ReadOnly = true;
+            this.dtlTransactionSCPWDName.Width = 125;
+            // 
+            // dtlTransactionSDPWDAddress
+            // 
+            this.dtlTransactionSDPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlTransactionSDPWDAddress.MinimumWidth = 6;
+            this.dtlTransactionSDPWDAddress.Name = "dtlTransactionSDPWDAddress";
+            this.dtlTransactionSDPWDAddress.ReadOnly = true;
+            this.dtlTransactionSDPWDAddress.Width = 125;
+            // 
+            // dtlTransactionSCPWDId
+            // 
+            this.dtlTransactionSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlTransactionSCPWDId.MinimumWidth = 6;
+            this.dtlTransactionSCPWDId.Name = "dtlTransactionSCPWDId";
+            this.dtlTransactionSCPWDId.ReadOnly = true;
+            this.dtlTransactionSCPWDId.Width = 125;
+            // 
+            // dtlTransactionLCPenalty
+            // 
+            this.dtlTransactionLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlTransactionLCPenalty.MinimumWidth = 6;
+            this.dtlTransactionLCPenalty.Name = "dtlTransactionLCPenalty";
+            this.dtlTransactionLCPenalty.ReadOnly = true;
+            this.dtlTransactionLCPenalty.Width = 125;
+            // 
+            // dtlTransactionLCName
+            // 
+            this.dtlTransactionLCName.HeaderText = "Lost Card Name";
+            this.dtlTransactionLCName.MinimumWidth = 6;
+            this.dtlTransactionLCName.Name = "dtlTransactionLCName";
+            this.dtlTransactionLCName.ReadOnly = true;
+            this.dtlTransactionLCName.Width = 125;
+            // 
+            // dtlTransactionLCLicenseNo
+            // 
+            this.dtlTransactionLCLicenseNo.HeaderText = "Lost Card Lisence No";
+            this.dtlTransactionLCLicenseNo.MinimumWidth = 6;
+            this.dtlTransactionLCLicenseNo.Name = "dtlTransactionLCLicenseNo";
+            this.dtlTransactionLCLicenseNo.ReadOnly = true;
+            this.dtlTransactionLCLicenseNo.Width = 125;
+            // 
+            // dtlTransactionLCORCR
+            // 
+            this.dtlTransactionLCORCR.HeaderText = "Lost Card OR//CR";
+            this.dtlTransactionLCORCR.MinimumWidth = 6;
+            this.dtlTransactionLCORCR.Name = "dtlTransactionLCORCR";
+            this.dtlTransactionLCORCR.ReadOnly = true;
+            this.dtlTransactionLCORCR.Width = 125;
+            // 
+            // dtlTransactionOvernight
+            // 
+            this.dtlTransactionOvernight.HeaderText = "Overnight Penalty";
+            this.dtlTransactionOvernight.MinimumWidth = 6;
+            this.dtlTransactionOvernight.Name = "dtlTransactionOvernight";
+            this.dtlTransactionOvernight.ReadOnly = true;
+            this.dtlTransactionOvernight.Width = 125;
             // 
             // dtlTransactionReprint
             // 
@@ -1346,14 +1384,55 @@
             this.dtlTransactionImage.ReadOnly = true;
             this.dtlTransactionImage.Width = 125;
             // 
-            // dtlCollectionTransitId
+            // dgCollections
             // 
-            this.dtlCollectionTransitId.HeaderText = "Id";
-            this.dtlCollectionTransitId.MinimumWidth = 6;
-            this.dtlCollectionTransitId.Name = "dtlCollectionTransitId";
-            this.dtlCollectionTransitId.ReadOnly = true;
-            this.dtlCollectionTransitId.Visible = false;
-            this.dtlCollectionTransitId.Width = 200;
+            this.dgCollections.AllowUserToAddRows = false;
+            this.dgCollections.AllowUserToDeleteRows = false;
+            this.dgCollections.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgCollections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCollections.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlCollectionRow,
+            this.dtlCollectionType,
+            this.dtlCollectionTransitId,
+            this.dtlCollectionEntrance,
+            this.dtlCollectionExit,
+            this.dtlCollectionORNumber,
+            this.dtlCollectionPlateNo,
+            this.dtlCollectionTicketNo,
+            this.dtlCollectionTimeIn,
+            this.dtlCollectionTimeOut,
+            this.dtlCollectionDuration,
+            this.dtlCollectionRateName,
+            this.dtlCollectionCoupon,
+            this.dtlCollectionGrossAmount,
+            this.dtlCollectionDiscount,
+            this.dtlCollectionAmountDue,
+            this.dtlCollectionAmountTendered,
+            this.dtlCollectionChange,
+            this.dtlCollectionVatable,
+            this.dtlCollectionVat,
+            this.dtlCollectionVatExempt,
+            this.dtlCollectionZeroRated,
+            this.dtlCollectionSCPWDName,
+            this.dtlCollectionSDPWDAddress,
+            this.dtlCollectionSCPWDId,
+            this.dtlCollectionLCPenalty,
+            this.dtlCollectionLCName,
+            this.dtlCollectionLCLicenseNo,
+            this.dtlCollectionLCORCR,
+            this.dtlCollectionOvernight,
+            this.dtlCollectionReprint,
+            this.dtlCollectionDescription,
+            this.dtlCollectionUpdateUser,
+            this.dtlCollectionImage});
+            this.dgCollections.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgCollections.Location = new System.Drawing.Point(3, 3);
+            this.dgCollections.Name = "dgCollections";
+            this.dgCollections.ReadOnly = true;
+            this.dgCollections.RowHeadersWidth = 51;
+            this.dgCollections.RowTemplate.Height = 24;
+            this.dgCollections.Size = new System.Drawing.Size(1198, 315);
+            this.dgCollections.TabIndex = 3;
             // 
             // dtlCollectionRow
             // 
@@ -1370,6 +1449,15 @@
             this.dtlCollectionType.Name = "dtlCollectionType";
             this.dtlCollectionType.ReadOnly = true;
             this.dtlCollectionType.Width = 200;
+            // 
+            // dtlCollectionTransitId
+            // 
+            this.dtlCollectionTransitId.HeaderText = "Id";
+            this.dtlCollectionTransitId.MinimumWidth = 6;
+            this.dtlCollectionTransitId.Name = "dtlCollectionTransitId";
+            this.dtlCollectionTransitId.ReadOnly = true;
+            this.dtlCollectionTransitId.Visible = false;
+            this.dtlCollectionTransitId.Width = 200;
             // 
             // dtlCollectionEntrance
             // 
@@ -1461,9 +1549,9 @@
             // 
             // dtlCollectionDiscount
             // 
-            dataGridViewCellStyle169.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle169.Format = "N2";
-            this.dtlCollectionDiscount.DefaultCellStyle = dataGridViewCellStyle169;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle17.Format = "N2";
+            this.dtlCollectionDiscount.DefaultCellStyle = dataGridViewCellStyle17;
             this.dtlCollectionDiscount.HeaderText = "Discount";
             this.dtlCollectionDiscount.MinimumWidth = 6;
             this.dtlCollectionDiscount.Name = "dtlCollectionDiscount";
@@ -1472,9 +1560,9 @@
             // 
             // dtlCollectionAmountDue
             // 
-            dataGridViewCellStyle170.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle170.Format = "n2";
-            this.dtlCollectionAmountDue.DefaultCellStyle = dataGridViewCellStyle170;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle18.Format = "n2";
+            this.dtlCollectionAmountDue.DefaultCellStyle = dataGridViewCellStyle18;
             this.dtlCollectionAmountDue.HeaderText = "Amount Due";
             this.dtlCollectionAmountDue.MinimumWidth = 6;
             this.dtlCollectionAmountDue.Name = "dtlCollectionAmountDue";
@@ -1483,9 +1571,9 @@
             // 
             // dtlCollectionAmountTendered
             // 
-            dataGridViewCellStyle171.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle171.Format = "n2";
-            this.dtlCollectionAmountTendered.DefaultCellStyle = dataGridViewCellStyle171;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle19.Format = "n2";
+            this.dtlCollectionAmountTendered.DefaultCellStyle = dataGridViewCellStyle19;
             this.dtlCollectionAmountTendered.HeaderText = "Amount Tendered";
             this.dtlCollectionAmountTendered.MinimumWidth = 6;
             this.dtlCollectionAmountTendered.Name = "dtlCollectionAmountTendered";
@@ -1494,9 +1582,9 @@
             // 
             // dtlCollectionChange
             // 
-            dataGridViewCellStyle172.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle172.Format = "N2";
-            this.dtlCollectionChange.DefaultCellStyle = dataGridViewCellStyle172;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle20.Format = "N2";
+            this.dtlCollectionChange.DefaultCellStyle = dataGridViewCellStyle20;
             this.dtlCollectionChange.HeaderText = "Amount Change";
             this.dtlCollectionChange.MinimumWidth = 6;
             this.dtlCollectionChange.Name = "dtlCollectionChange";
@@ -1505,9 +1593,9 @@
             // 
             // dtlCollectionVatable
             // 
-            dataGridViewCellStyle173.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle173.Format = "N2";
-            this.dtlCollectionVatable.DefaultCellStyle = dataGridViewCellStyle173;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.Format = "N2";
+            this.dtlCollectionVatable.DefaultCellStyle = dataGridViewCellStyle21;
             this.dtlCollectionVatable.HeaderText = "Vatable";
             this.dtlCollectionVatable.MinimumWidth = 6;
             this.dtlCollectionVatable.Name = "dtlCollectionVatable";
@@ -1516,9 +1604,9 @@
             // 
             // dtlCollectionVat
             // 
-            dataGridViewCellStyle174.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle174.Format = "N2";
-            this.dtlCollectionVat.DefaultCellStyle = dataGridViewCellStyle174;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle22.Format = "N2";
+            this.dtlCollectionVat.DefaultCellStyle = dataGridViewCellStyle22;
             this.dtlCollectionVat.HeaderText = "Vat";
             this.dtlCollectionVat.MinimumWidth = 6;
             this.dtlCollectionVat.Name = "dtlCollectionVat";
@@ -1527,9 +1615,9 @@
             // 
             // dtlCollectionVatExempt
             // 
-            dataGridViewCellStyle175.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle175.Format = "N2";
-            this.dtlCollectionVatExempt.DefaultCellStyle = dataGridViewCellStyle175;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle23.Format = "N2";
+            this.dtlCollectionVatExempt.DefaultCellStyle = dataGridViewCellStyle23;
             this.dtlCollectionVatExempt.HeaderText = "Vat Exempt";
             this.dtlCollectionVatExempt.MinimumWidth = 6;
             this.dtlCollectionVatExempt.Name = "dtlCollectionVatExempt";
@@ -1538,14 +1626,78 @@
             // 
             // dtlCollectionZeroRated
             // 
-            dataGridViewCellStyle176.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle176.Format = "N2";
-            this.dtlCollectionZeroRated.DefaultCellStyle = dataGridViewCellStyle176;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle24.Format = "N2";
+            this.dtlCollectionZeroRated.DefaultCellStyle = dataGridViewCellStyle24;
             this.dtlCollectionZeroRated.HeaderText = "Zero Rated";
             this.dtlCollectionZeroRated.MinimumWidth = 6;
             this.dtlCollectionZeroRated.Name = "dtlCollectionZeroRated";
             this.dtlCollectionZeroRated.ReadOnly = true;
             this.dtlCollectionZeroRated.Width = 200;
+            // 
+            // dtlCollectionSCPWDName
+            // 
+            this.dtlCollectionSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlCollectionSCPWDName.MinimumWidth = 6;
+            this.dtlCollectionSCPWDName.Name = "dtlCollectionSCPWDName";
+            this.dtlCollectionSCPWDName.ReadOnly = true;
+            this.dtlCollectionSCPWDName.Width = 125;
+            // 
+            // dtlCollectionSDPWDAddress
+            // 
+            this.dtlCollectionSDPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlCollectionSDPWDAddress.MinimumWidth = 6;
+            this.dtlCollectionSDPWDAddress.Name = "dtlCollectionSDPWDAddress";
+            this.dtlCollectionSDPWDAddress.ReadOnly = true;
+            this.dtlCollectionSDPWDAddress.Width = 125;
+            // 
+            // dtlCollectionSCPWDId
+            // 
+            this.dtlCollectionSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlCollectionSCPWDId.MinimumWidth = 6;
+            this.dtlCollectionSCPWDId.Name = "dtlCollectionSCPWDId";
+            this.dtlCollectionSCPWDId.ReadOnly = true;
+            this.dtlCollectionSCPWDId.Width = 125;
+            // 
+            // dtlCollectionLCPenalty
+            // 
+            this.dtlCollectionLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlCollectionLCPenalty.MinimumWidth = 6;
+            this.dtlCollectionLCPenalty.Name = "dtlCollectionLCPenalty";
+            this.dtlCollectionLCPenalty.ReadOnly = true;
+            this.dtlCollectionLCPenalty.Width = 125;
+            // 
+            // dtlCollectionLCName
+            // 
+            this.dtlCollectionLCName.HeaderText = "Lost Card Name";
+            this.dtlCollectionLCName.MinimumWidth = 6;
+            this.dtlCollectionLCName.Name = "dtlCollectionLCName";
+            this.dtlCollectionLCName.ReadOnly = true;
+            this.dtlCollectionLCName.Width = 125;
+            // 
+            // dtlCollectionLCLicenseNo
+            // 
+            this.dtlCollectionLCLicenseNo.HeaderText = "Lost Card Lisence No";
+            this.dtlCollectionLCLicenseNo.MinimumWidth = 6;
+            this.dtlCollectionLCLicenseNo.Name = "dtlCollectionLCLicenseNo";
+            this.dtlCollectionLCLicenseNo.ReadOnly = true;
+            this.dtlCollectionLCLicenseNo.Width = 125;
+            // 
+            // dtlCollectionLCORCR
+            // 
+            this.dtlCollectionLCORCR.HeaderText = "Lost Card OR//CR";
+            this.dtlCollectionLCORCR.MinimumWidth = 6;
+            this.dtlCollectionLCORCR.Name = "dtlCollectionLCORCR";
+            this.dtlCollectionLCORCR.ReadOnly = true;
+            this.dtlCollectionLCORCR.Width = 125;
+            // 
+            // dtlCollectionOvernight
+            // 
+            this.dtlCollectionOvernight.HeaderText = "Overnight Penalty";
+            this.dtlCollectionOvernight.MinimumWidth = 6;
+            this.dtlCollectionOvernight.Name = "dtlCollectionOvernight";
+            this.dtlCollectionOvernight.ReadOnly = true;
+            this.dtlCollectionOvernight.Width = 125;
             // 
             // dtlCollectionReprint
             // 
@@ -1579,14 +1731,55 @@
             this.dtlCollectionImage.ReadOnly = true;
             this.dtlCollectionImage.Width = 125;
             // 
-            // dtlDiscountTransitId
+            // dgDiscounts
             // 
-            this.dtlDiscountTransitId.HeaderText = "Id";
-            this.dtlDiscountTransitId.MinimumWidth = 6;
-            this.dtlDiscountTransitId.Name = "dtlDiscountTransitId";
-            this.dtlDiscountTransitId.ReadOnly = true;
-            this.dtlDiscountTransitId.Visible = false;
-            this.dtlDiscountTransitId.Width = 200;
+            this.dgDiscounts.AllowUserToAddRows = false;
+            this.dgDiscounts.AllowUserToDeleteRows = false;
+            this.dgDiscounts.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgDiscounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDiscounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlDiscountRow,
+            this.dtlDiscountType,
+            this.dtlDiscountTransitId,
+            this.dtlDiscountEntrance,
+            this.dtlDiscountExit,
+            this.dtlDiscountORNumber,
+            this.dtlDiscountPlateNo,
+            this.dtlDiscountTicketNo,
+            this.dtlDiscountTimeIn,
+            this.dtlDiscountTimeOut,
+            this.dtlDiscountDuration,
+            this.dtlDiscountRateName,
+            this.dtlDiscountCoupon,
+            this.dtlDiscountGrossAmount,
+            this.dtlDiscountDiscount,
+            this.dtlDiscountAmountDue,
+            this.dtlDiscountAmountTendered,
+            this.dtlDiscountChange,
+            this.dtlDiscountVatable,
+            this.dtlDiscountVat,
+            this.dtlDiscountVatExempt,
+            this.dtlDiscountZeroRated,
+            this.dtlDiscountSCPWDName,
+            this.dtlDiscountSDPWDAddress,
+            this.dtlDiscountSCPWDId,
+            this.dtlDiscountLCPenalty,
+            this.dtlDiscountLCName,
+            this.dtlDiscountLCLicenseNo,
+            this.dtlDiscountLCORCR,
+            this.dtlDiscountOvernight,
+            this.dtlDiscountReprint,
+            this.dtlDiscountDescription,
+            this.dtlDiscountUpdateUser,
+            this.dtlDiscountImage});
+            this.dgDiscounts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgDiscounts.Location = new System.Drawing.Point(3, 3);
+            this.dgDiscounts.Name = "dgDiscounts";
+            this.dgDiscounts.ReadOnly = true;
+            this.dgDiscounts.RowHeadersWidth = 51;
+            this.dgDiscounts.RowTemplate.Height = 24;
+            this.dgDiscounts.Size = new System.Drawing.Size(1198, 315);
+            this.dgDiscounts.TabIndex = 3;
             // 
             // dtlDiscountRow
             // 
@@ -1603,6 +1796,15 @@
             this.dtlDiscountType.Name = "dtlDiscountType";
             this.dtlDiscountType.ReadOnly = true;
             this.dtlDiscountType.Width = 200;
+            // 
+            // dtlDiscountTransitId
+            // 
+            this.dtlDiscountTransitId.HeaderText = "Id";
+            this.dtlDiscountTransitId.MinimumWidth = 6;
+            this.dtlDiscountTransitId.Name = "dtlDiscountTransitId";
+            this.dtlDiscountTransitId.ReadOnly = true;
+            this.dtlDiscountTransitId.Visible = false;
+            this.dtlDiscountTransitId.Width = 200;
             // 
             // dtlDiscountEntrance
             // 
@@ -1694,9 +1896,9 @@
             // 
             // dtlDiscountDiscount
             // 
-            dataGridViewCellStyle177.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle177.Format = "N2";
-            this.dtlDiscountDiscount.DefaultCellStyle = dataGridViewCellStyle177;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle33.Format = "N2";
+            this.dtlDiscountDiscount.DefaultCellStyle = dataGridViewCellStyle33;
             this.dtlDiscountDiscount.HeaderText = "Discount";
             this.dtlDiscountDiscount.MinimumWidth = 6;
             this.dtlDiscountDiscount.Name = "dtlDiscountDiscount";
@@ -1705,9 +1907,9 @@
             // 
             // dtlDiscountAmountDue
             // 
-            dataGridViewCellStyle178.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle178.Format = "n2";
-            this.dtlDiscountAmountDue.DefaultCellStyle = dataGridViewCellStyle178;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle34.Format = "n2";
+            this.dtlDiscountAmountDue.DefaultCellStyle = dataGridViewCellStyle34;
             this.dtlDiscountAmountDue.HeaderText = "Amount Due";
             this.dtlDiscountAmountDue.MinimumWidth = 6;
             this.dtlDiscountAmountDue.Name = "dtlDiscountAmountDue";
@@ -1716,9 +1918,9 @@
             // 
             // dtlDiscountAmountTendered
             // 
-            dataGridViewCellStyle179.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle179.Format = "n2";
-            this.dtlDiscountAmountTendered.DefaultCellStyle = dataGridViewCellStyle179;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle35.Format = "n2";
+            this.dtlDiscountAmountTendered.DefaultCellStyle = dataGridViewCellStyle35;
             this.dtlDiscountAmountTendered.HeaderText = "Amount Tendered";
             this.dtlDiscountAmountTendered.MinimumWidth = 6;
             this.dtlDiscountAmountTendered.Name = "dtlDiscountAmountTendered";
@@ -1727,9 +1929,9 @@
             // 
             // dtlDiscountChange
             // 
-            dataGridViewCellStyle180.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle180.Format = "N2";
-            this.dtlDiscountChange.DefaultCellStyle = dataGridViewCellStyle180;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle36.Format = "N2";
+            this.dtlDiscountChange.DefaultCellStyle = dataGridViewCellStyle36;
             this.dtlDiscountChange.HeaderText = "Amount Change";
             this.dtlDiscountChange.MinimumWidth = 6;
             this.dtlDiscountChange.Name = "dtlDiscountChange";
@@ -1738,9 +1940,9 @@
             // 
             // dtlDiscountVatable
             // 
-            dataGridViewCellStyle181.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle181.Format = "N2";
-            this.dtlDiscountVatable.DefaultCellStyle = dataGridViewCellStyle181;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle37.Format = "N2";
+            this.dtlDiscountVatable.DefaultCellStyle = dataGridViewCellStyle37;
             this.dtlDiscountVatable.HeaderText = "Vatable";
             this.dtlDiscountVatable.MinimumWidth = 6;
             this.dtlDiscountVatable.Name = "dtlDiscountVatable";
@@ -1749,9 +1951,9 @@
             // 
             // dtlDiscountVat
             // 
-            dataGridViewCellStyle182.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle182.Format = "N2";
-            this.dtlDiscountVat.DefaultCellStyle = dataGridViewCellStyle182;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle38.Format = "N2";
+            this.dtlDiscountVat.DefaultCellStyle = dataGridViewCellStyle38;
             this.dtlDiscountVat.HeaderText = "Vat";
             this.dtlDiscountVat.MinimumWidth = 6;
             this.dtlDiscountVat.Name = "dtlDiscountVat";
@@ -1760,9 +1962,9 @@
             // 
             // dtlDiscountVatExempt
             // 
-            dataGridViewCellStyle183.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle183.Format = "N2";
-            this.dtlDiscountVatExempt.DefaultCellStyle = dataGridViewCellStyle183;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle39.Format = "N2";
+            this.dtlDiscountVatExempt.DefaultCellStyle = dataGridViewCellStyle39;
             this.dtlDiscountVatExempt.HeaderText = "Vat Exempt";
             this.dtlDiscountVatExempt.MinimumWidth = 6;
             this.dtlDiscountVatExempt.Name = "dtlDiscountVatExempt";
@@ -1771,14 +1973,78 @@
             // 
             // dtlDiscountZeroRated
             // 
-            dataGridViewCellStyle184.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle184.Format = "N2";
-            this.dtlDiscountZeroRated.DefaultCellStyle = dataGridViewCellStyle184;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle40.Format = "N2";
+            this.dtlDiscountZeroRated.DefaultCellStyle = dataGridViewCellStyle40;
             this.dtlDiscountZeroRated.HeaderText = "Zero Rated";
             this.dtlDiscountZeroRated.MinimumWidth = 6;
             this.dtlDiscountZeroRated.Name = "dtlDiscountZeroRated";
             this.dtlDiscountZeroRated.ReadOnly = true;
             this.dtlDiscountZeroRated.Width = 200;
+            // 
+            // dtlDiscountSCPWDName
+            // 
+            this.dtlDiscountSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlDiscountSCPWDName.MinimumWidth = 6;
+            this.dtlDiscountSCPWDName.Name = "dtlDiscountSCPWDName";
+            this.dtlDiscountSCPWDName.ReadOnly = true;
+            this.dtlDiscountSCPWDName.Width = 125;
+            // 
+            // dtlDiscountSDPWDAddress
+            // 
+            this.dtlDiscountSDPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlDiscountSDPWDAddress.MinimumWidth = 6;
+            this.dtlDiscountSDPWDAddress.Name = "dtlDiscountSDPWDAddress";
+            this.dtlDiscountSDPWDAddress.ReadOnly = true;
+            this.dtlDiscountSDPWDAddress.Width = 125;
+            // 
+            // dtlDiscountSCPWDId
+            // 
+            this.dtlDiscountSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlDiscountSCPWDId.MinimumWidth = 6;
+            this.dtlDiscountSCPWDId.Name = "dtlDiscountSCPWDId";
+            this.dtlDiscountSCPWDId.ReadOnly = true;
+            this.dtlDiscountSCPWDId.Width = 125;
+            // 
+            // dtlDiscountLCPenalty
+            // 
+            this.dtlDiscountLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlDiscountLCPenalty.MinimumWidth = 6;
+            this.dtlDiscountLCPenalty.Name = "dtlDiscountLCPenalty";
+            this.dtlDiscountLCPenalty.ReadOnly = true;
+            this.dtlDiscountLCPenalty.Width = 125;
+            // 
+            // dtlDiscountLCName
+            // 
+            this.dtlDiscountLCName.HeaderText = "Lost Card Name";
+            this.dtlDiscountLCName.MinimumWidth = 6;
+            this.dtlDiscountLCName.Name = "dtlDiscountLCName";
+            this.dtlDiscountLCName.ReadOnly = true;
+            this.dtlDiscountLCName.Width = 125;
+            // 
+            // dtlDiscountLCLicenseNo
+            // 
+            this.dtlDiscountLCLicenseNo.HeaderText = "Lost Card Lisence No";
+            this.dtlDiscountLCLicenseNo.MinimumWidth = 6;
+            this.dtlDiscountLCLicenseNo.Name = "dtlDiscountLCLicenseNo";
+            this.dtlDiscountLCLicenseNo.ReadOnly = true;
+            this.dtlDiscountLCLicenseNo.Width = 125;
+            // 
+            // dtlDiscountLCORCR
+            // 
+            this.dtlDiscountLCORCR.HeaderText = "Lost Card OR//CR";
+            this.dtlDiscountLCORCR.MinimumWidth = 6;
+            this.dtlDiscountLCORCR.Name = "dtlDiscountLCORCR";
+            this.dtlDiscountLCORCR.ReadOnly = true;
+            this.dtlDiscountLCORCR.Width = 125;
+            // 
+            // dtlDiscountOvernight
+            // 
+            this.dtlDiscountOvernight.HeaderText = "Overnight Penalty";
+            this.dtlDiscountOvernight.MinimumWidth = 6;
+            this.dtlDiscountOvernight.Name = "dtlDiscountOvernight";
+            this.dtlDiscountOvernight.ReadOnly = true;
+            this.dtlDiscountOvernight.Width = 125;
             // 
             // dtlDiscountReprint
             // 
@@ -1812,14 +2078,55 @@
             this.dtlDiscountImage.ReadOnly = true;
             this.dtlDiscountImage.Width = 125;
             // 
-            // dtlEraseTransitId
+            // dgErased
             // 
-            this.dtlEraseTransitId.HeaderText = "Id";
-            this.dtlEraseTransitId.MinimumWidth = 6;
-            this.dtlEraseTransitId.Name = "dtlEraseTransitId";
-            this.dtlEraseTransitId.ReadOnly = true;
-            this.dtlEraseTransitId.Visible = false;
-            this.dtlEraseTransitId.Width = 200;
+            this.dgErased.AllowUserToAddRows = false;
+            this.dgErased.AllowUserToDeleteRows = false;
+            this.dgErased.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgErased.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgErased.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlEraseRow,
+            this.dtlEraseType,
+            this.dtlEraseTransitId,
+            this.dtlEraseEntrance,
+            this.dtlEraseExit,
+            this.dtlEraseORNumber,
+            this.dtlErasePlateNo,
+            this.dtlEraseTicketNo,
+            this.dtlEraseTimeIn,
+            this.dtlEraseTimeOut,
+            this.dtlEraseDuration,
+            this.dtlEraseRateName,
+            this.dtlEraseCoupon,
+            this.dtlEraseGrossAmount,
+            this.dtlEraseDiscount,
+            this.dtlEraseAmountDue,
+            this.dtlEraseAmountTendered,
+            this.dtlEraseChange,
+            this.dtlEraseVatable,
+            this.dtlEraseVat,
+            this.dtlEraseVatExempt,
+            this.dtlEraseZeroRated,
+            this.dtlEraseSCPWDName,
+            this.dtlEraseSDPWDAddress,
+            this.dtlEraseSCPWDId,
+            this.dtlEraseLCPenalty,
+            this.dtlEraseLCName,
+            this.dtlEraseLCLicenseNo,
+            this.dtlEraseLCORCR,
+            this.dtlEraseOvernight,
+            this.dtlEraseReprint,
+            this.dtlEraseDescription,
+            this.dtlEraseUpdateUser,
+            this.dtlEraseImage});
+            this.dgErased.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgErased.Location = new System.Drawing.Point(3, 3);
+            this.dgErased.Name = "dgErased";
+            this.dgErased.ReadOnly = true;
+            this.dgErased.RowHeadersWidth = 51;
+            this.dgErased.RowTemplate.Height = 24;
+            this.dgErased.Size = new System.Drawing.Size(1198, 315);
+            this.dgErased.TabIndex = 3;
             // 
             // dtlEraseRow
             // 
@@ -1836,6 +2143,15 @@
             this.dtlEraseType.Name = "dtlEraseType";
             this.dtlEraseType.ReadOnly = true;
             this.dtlEraseType.Width = 200;
+            // 
+            // dtlEraseTransitId
+            // 
+            this.dtlEraseTransitId.HeaderText = "Id";
+            this.dtlEraseTransitId.MinimumWidth = 6;
+            this.dtlEraseTransitId.Name = "dtlEraseTransitId";
+            this.dtlEraseTransitId.ReadOnly = true;
+            this.dtlEraseTransitId.Visible = false;
+            this.dtlEraseTransitId.Width = 200;
             // 
             // dtlEraseEntrance
             // 
@@ -1927,9 +2243,9 @@
             // 
             // dtlEraseDiscount
             // 
-            dataGridViewCellStyle185.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle185.Format = "N2";
-            this.dtlEraseDiscount.DefaultCellStyle = dataGridViewCellStyle185;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle25.Format = "N2";
+            this.dtlEraseDiscount.DefaultCellStyle = dataGridViewCellStyle25;
             this.dtlEraseDiscount.HeaderText = "Discount";
             this.dtlEraseDiscount.MinimumWidth = 6;
             this.dtlEraseDiscount.Name = "dtlEraseDiscount";
@@ -1938,9 +2254,9 @@
             // 
             // dtlEraseAmountDue
             // 
-            dataGridViewCellStyle186.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle186.Format = "n2";
-            this.dtlEraseAmountDue.DefaultCellStyle = dataGridViewCellStyle186;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Format = "n2";
+            this.dtlEraseAmountDue.DefaultCellStyle = dataGridViewCellStyle26;
             this.dtlEraseAmountDue.HeaderText = "Amount Due";
             this.dtlEraseAmountDue.MinimumWidth = 6;
             this.dtlEraseAmountDue.Name = "dtlEraseAmountDue";
@@ -1949,9 +2265,9 @@
             // 
             // dtlEraseAmountTendered
             // 
-            dataGridViewCellStyle187.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle187.Format = "n2";
-            this.dtlEraseAmountTendered.DefaultCellStyle = dataGridViewCellStyle187;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle27.Format = "n2";
+            this.dtlEraseAmountTendered.DefaultCellStyle = dataGridViewCellStyle27;
             this.dtlEraseAmountTendered.HeaderText = "Amount Tendered";
             this.dtlEraseAmountTendered.MinimumWidth = 6;
             this.dtlEraseAmountTendered.Name = "dtlEraseAmountTendered";
@@ -1960,9 +2276,9 @@
             // 
             // dtlEraseChange
             // 
-            dataGridViewCellStyle188.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle188.Format = "N2";
-            this.dtlEraseChange.DefaultCellStyle = dataGridViewCellStyle188;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle28.Format = "N2";
+            this.dtlEraseChange.DefaultCellStyle = dataGridViewCellStyle28;
             this.dtlEraseChange.HeaderText = "Amount Change";
             this.dtlEraseChange.MinimumWidth = 6;
             this.dtlEraseChange.Name = "dtlEraseChange";
@@ -1971,9 +2287,9 @@
             // 
             // dtlEraseVatable
             // 
-            dataGridViewCellStyle189.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle189.Format = "N2";
-            this.dtlEraseVatable.DefaultCellStyle = dataGridViewCellStyle189;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle29.Format = "N2";
+            this.dtlEraseVatable.DefaultCellStyle = dataGridViewCellStyle29;
             this.dtlEraseVatable.HeaderText = "Vatable";
             this.dtlEraseVatable.MinimumWidth = 6;
             this.dtlEraseVatable.Name = "dtlEraseVatable";
@@ -1982,9 +2298,9 @@
             // 
             // dtlEraseVat
             // 
-            dataGridViewCellStyle190.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle190.Format = "N2";
-            this.dtlEraseVat.DefaultCellStyle = dataGridViewCellStyle190;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle30.Format = "N2";
+            this.dtlEraseVat.DefaultCellStyle = dataGridViewCellStyle30;
             this.dtlEraseVat.HeaderText = "Vat";
             this.dtlEraseVat.MinimumWidth = 6;
             this.dtlEraseVat.Name = "dtlEraseVat";
@@ -1993,9 +2309,9 @@
             // 
             // dtlEraseVatExempt
             // 
-            dataGridViewCellStyle191.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle191.Format = "N2";
-            this.dtlEraseVatExempt.DefaultCellStyle = dataGridViewCellStyle191;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle31.Format = "N2";
+            this.dtlEraseVatExempt.DefaultCellStyle = dataGridViewCellStyle31;
             this.dtlEraseVatExempt.HeaderText = "Vat Exempt";
             this.dtlEraseVatExempt.MinimumWidth = 6;
             this.dtlEraseVatExempt.Name = "dtlEraseVatExempt";
@@ -2004,14 +2320,78 @@
             // 
             // dtlEraseZeroRated
             // 
-            dataGridViewCellStyle192.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle192.Format = "N2";
-            this.dtlEraseZeroRated.DefaultCellStyle = dataGridViewCellStyle192;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle32.Format = "N2";
+            this.dtlEraseZeroRated.DefaultCellStyle = dataGridViewCellStyle32;
             this.dtlEraseZeroRated.HeaderText = "Zero Rated";
             this.dtlEraseZeroRated.MinimumWidth = 6;
             this.dtlEraseZeroRated.Name = "dtlEraseZeroRated";
             this.dtlEraseZeroRated.ReadOnly = true;
             this.dtlEraseZeroRated.Width = 200;
+            // 
+            // dtlEraseSCPWDName
+            // 
+            this.dtlEraseSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlEraseSCPWDName.MinimumWidth = 6;
+            this.dtlEraseSCPWDName.Name = "dtlEraseSCPWDName";
+            this.dtlEraseSCPWDName.ReadOnly = true;
+            this.dtlEraseSCPWDName.Width = 125;
+            // 
+            // dtlEraseSDPWDAddress
+            // 
+            this.dtlEraseSDPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlEraseSDPWDAddress.MinimumWidth = 6;
+            this.dtlEraseSDPWDAddress.Name = "dtlEraseSDPWDAddress";
+            this.dtlEraseSDPWDAddress.ReadOnly = true;
+            this.dtlEraseSDPWDAddress.Width = 125;
+            // 
+            // dtlEraseSCPWDId
+            // 
+            this.dtlEraseSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlEraseSCPWDId.MinimumWidth = 6;
+            this.dtlEraseSCPWDId.Name = "dtlEraseSCPWDId";
+            this.dtlEraseSCPWDId.ReadOnly = true;
+            this.dtlEraseSCPWDId.Width = 125;
+            // 
+            // dtlEraseLCPenalty
+            // 
+            this.dtlEraseLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlEraseLCPenalty.MinimumWidth = 6;
+            this.dtlEraseLCPenalty.Name = "dtlEraseLCPenalty";
+            this.dtlEraseLCPenalty.ReadOnly = true;
+            this.dtlEraseLCPenalty.Width = 125;
+            // 
+            // dtlEraseLCName
+            // 
+            this.dtlEraseLCName.HeaderText = "Lost Card Name";
+            this.dtlEraseLCName.MinimumWidth = 6;
+            this.dtlEraseLCName.Name = "dtlEraseLCName";
+            this.dtlEraseLCName.ReadOnly = true;
+            this.dtlEraseLCName.Width = 125;
+            // 
+            // dtlEraseLCLicenseNo
+            // 
+            this.dtlEraseLCLicenseNo.HeaderText = "Lost Card Lisence No";
+            this.dtlEraseLCLicenseNo.MinimumWidth = 6;
+            this.dtlEraseLCLicenseNo.Name = "dtlEraseLCLicenseNo";
+            this.dtlEraseLCLicenseNo.ReadOnly = true;
+            this.dtlEraseLCLicenseNo.Width = 125;
+            // 
+            // dtlEraseLCORCR
+            // 
+            this.dtlEraseLCORCR.HeaderText = "Lost Card OR//CR";
+            this.dtlEraseLCORCR.MinimumWidth = 6;
+            this.dtlEraseLCORCR.Name = "dtlEraseLCORCR";
+            this.dtlEraseLCORCR.ReadOnly = true;
+            this.dtlEraseLCORCR.Width = 125;
+            // 
+            // dtlEraseOvernight
+            // 
+            this.dtlEraseOvernight.HeaderText = "Overnight Penalty";
+            this.dtlEraseOvernight.MinimumWidth = 6;
+            this.dtlEraseOvernight.Name = "dtlEraseOvernight";
+            this.dtlEraseOvernight.ReadOnly = true;
+            this.dtlEraseOvernight.Width = 125;
             // 
             // dtlEraseReprint
             // 
@@ -2045,14 +2425,55 @@
             this.dtlEraseImage.ReadOnly = true;
             this.dtlEraseImage.Width = 125;
             // 
-            // dtlFeeTransitId
+            // dgFees
             // 
-            this.dtlFeeTransitId.HeaderText = "Id";
-            this.dtlFeeTransitId.MinimumWidth = 6;
-            this.dtlFeeTransitId.Name = "dtlFeeTransitId";
-            this.dtlFeeTransitId.ReadOnly = true;
-            this.dtlFeeTransitId.Visible = false;
-            this.dtlFeeTransitId.Width = 200;
+            this.dgFees.AllowUserToAddRows = false;
+            this.dgFees.AllowUserToDeleteRows = false;
+            this.dgFees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlFeeRow,
+            this.dtlFeeType,
+            this.dtlFeeTransitId,
+            this.dtlFeeEntrance,
+            this.dtlFeeExit,
+            this.dtlFeeORNumber,
+            this.dtlFeePlateNo,
+            this.dtlFeeTicketNo,
+            this.dtlFeeTimeIn,
+            this.dtlFeeTimeOut,
+            this.dtlFeeDuration,
+            this.dtlFeeRateName,
+            this.dtlFeeCoupon,
+            this.dtlFeeGrossAmount,
+            this.dtlFeeDiscount,
+            this.dtlFeeAmountDue,
+            this.dtlFeeAmountTendered,
+            this.dtlFeeChange,
+            this.dtlFeeVatable,
+            this.dtlFeeVat,
+            this.dtlFeeVatExempt,
+            this.dtlFeeZeroRated,
+            this.dtlFeeSCPWDName,
+            this.dtlFeeSDPWDAddress,
+            this.dtlFeeSCPWDId,
+            this.dtlFeeLCPenalty,
+            this.dtlFeeLCName,
+            this.dtlFeeLCLicenseNo,
+            this.dtlFeeLCORCR,
+            this.dtlFeeOvernight,
+            this.dtlFeeReprint,
+            this.dtlFeeDescription,
+            this.dtlFeeUpdateUser,
+            this.dtlFeeImage});
+            this.dgFees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgFees.Location = new System.Drawing.Point(3, 3);
+            this.dgFees.Name = "dgFees";
+            this.dgFees.ReadOnly = true;
+            this.dgFees.RowHeadersWidth = 51;
+            this.dgFees.RowTemplate.Height = 24;
+            this.dgFees.Size = new System.Drawing.Size(1198, 315);
+            this.dgFees.TabIndex = 3;
             // 
             // dtlFeeRow
             // 
@@ -2069,6 +2490,15 @@
             this.dtlFeeType.Name = "dtlFeeType";
             this.dtlFeeType.ReadOnly = true;
             this.dtlFeeType.Width = 200;
+            // 
+            // dtlFeeTransitId
+            // 
+            this.dtlFeeTransitId.HeaderText = "Id";
+            this.dtlFeeTransitId.MinimumWidth = 6;
+            this.dtlFeeTransitId.Name = "dtlFeeTransitId";
+            this.dtlFeeTransitId.ReadOnly = true;
+            this.dtlFeeTransitId.Visible = false;
+            this.dtlFeeTransitId.Width = 200;
             // 
             // dtlFeeEntrance
             // 
@@ -2160,9 +2590,9 @@
             // 
             // dtlFeeDiscount
             // 
-            dataGridViewCellStyle193.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle193.Format = "N2";
-            this.dtlFeeDiscount.DefaultCellStyle = dataGridViewCellStyle193;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle41.Format = "N2";
+            this.dtlFeeDiscount.DefaultCellStyle = dataGridViewCellStyle41;
             this.dtlFeeDiscount.HeaderText = "Discount";
             this.dtlFeeDiscount.MinimumWidth = 6;
             this.dtlFeeDiscount.Name = "dtlFeeDiscount";
@@ -2171,9 +2601,9 @@
             // 
             // dtlFeeAmountDue
             // 
-            dataGridViewCellStyle194.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle194.Format = "n2";
-            this.dtlFeeAmountDue.DefaultCellStyle = dataGridViewCellStyle194;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle42.Format = "n2";
+            this.dtlFeeAmountDue.DefaultCellStyle = dataGridViewCellStyle42;
             this.dtlFeeAmountDue.HeaderText = "Amount Due";
             this.dtlFeeAmountDue.MinimumWidth = 6;
             this.dtlFeeAmountDue.Name = "dtlFeeAmountDue";
@@ -2182,9 +2612,9 @@
             // 
             // dtlFeeAmountTendered
             // 
-            dataGridViewCellStyle195.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle195.Format = "n2";
-            this.dtlFeeAmountTendered.DefaultCellStyle = dataGridViewCellStyle195;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle43.Format = "n2";
+            this.dtlFeeAmountTendered.DefaultCellStyle = dataGridViewCellStyle43;
             this.dtlFeeAmountTendered.HeaderText = "Amount Tendered";
             this.dtlFeeAmountTendered.MinimumWidth = 6;
             this.dtlFeeAmountTendered.Name = "dtlFeeAmountTendered";
@@ -2193,9 +2623,9 @@
             // 
             // dtlFeeChange
             // 
-            dataGridViewCellStyle196.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle196.Format = "N2";
-            this.dtlFeeChange.DefaultCellStyle = dataGridViewCellStyle196;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle44.Format = "N2";
+            this.dtlFeeChange.DefaultCellStyle = dataGridViewCellStyle44;
             this.dtlFeeChange.HeaderText = "Amount Change";
             this.dtlFeeChange.MinimumWidth = 6;
             this.dtlFeeChange.Name = "dtlFeeChange";
@@ -2204,9 +2634,9 @@
             // 
             // dtlFeeVatable
             // 
-            dataGridViewCellStyle197.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle197.Format = "N2";
-            this.dtlFeeVatable.DefaultCellStyle = dataGridViewCellStyle197;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle45.Format = "N2";
+            this.dtlFeeVatable.DefaultCellStyle = dataGridViewCellStyle45;
             this.dtlFeeVatable.HeaderText = "Vatable";
             this.dtlFeeVatable.MinimumWidth = 6;
             this.dtlFeeVatable.Name = "dtlFeeVatable";
@@ -2215,9 +2645,9 @@
             // 
             // dtlFeeVat
             // 
-            dataGridViewCellStyle198.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle198.Format = "N2";
-            this.dtlFeeVat.DefaultCellStyle = dataGridViewCellStyle198;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle46.Format = "N2";
+            this.dtlFeeVat.DefaultCellStyle = dataGridViewCellStyle46;
             this.dtlFeeVat.HeaderText = "Vat";
             this.dtlFeeVat.MinimumWidth = 6;
             this.dtlFeeVat.Name = "dtlFeeVat";
@@ -2226,9 +2656,9 @@
             // 
             // dtlFeeVatExempt
             // 
-            dataGridViewCellStyle199.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle199.Format = "N2";
-            this.dtlFeeVatExempt.DefaultCellStyle = dataGridViewCellStyle199;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle47.Format = "N2";
+            this.dtlFeeVatExempt.DefaultCellStyle = dataGridViewCellStyle47;
             this.dtlFeeVatExempt.HeaderText = "Vat Exempt";
             this.dtlFeeVatExempt.MinimumWidth = 6;
             this.dtlFeeVatExempt.Name = "dtlFeeVatExempt";
@@ -2237,14 +2667,78 @@
             // 
             // dtlFeeZeroRated
             // 
-            dataGridViewCellStyle200.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle200.Format = "N2";
-            this.dtlFeeZeroRated.DefaultCellStyle = dataGridViewCellStyle200;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle48.Format = "N2";
+            this.dtlFeeZeroRated.DefaultCellStyle = dataGridViewCellStyle48;
             this.dtlFeeZeroRated.HeaderText = "Zero Rated";
             this.dtlFeeZeroRated.MinimumWidth = 6;
             this.dtlFeeZeroRated.Name = "dtlFeeZeroRated";
             this.dtlFeeZeroRated.ReadOnly = true;
             this.dtlFeeZeroRated.Width = 200;
+            // 
+            // dtlFeeSCPWDName
+            // 
+            this.dtlFeeSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlFeeSCPWDName.MinimumWidth = 6;
+            this.dtlFeeSCPWDName.Name = "dtlFeeSCPWDName";
+            this.dtlFeeSCPWDName.ReadOnly = true;
+            this.dtlFeeSCPWDName.Width = 125;
+            // 
+            // dtlFeeSDPWDAddress
+            // 
+            this.dtlFeeSDPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlFeeSDPWDAddress.MinimumWidth = 6;
+            this.dtlFeeSDPWDAddress.Name = "dtlFeeSDPWDAddress";
+            this.dtlFeeSDPWDAddress.ReadOnly = true;
+            this.dtlFeeSDPWDAddress.Width = 125;
+            // 
+            // dtlFeeSCPWDId
+            // 
+            this.dtlFeeSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlFeeSCPWDId.MinimumWidth = 6;
+            this.dtlFeeSCPWDId.Name = "dtlFeeSCPWDId";
+            this.dtlFeeSCPWDId.ReadOnly = true;
+            this.dtlFeeSCPWDId.Width = 125;
+            // 
+            // dtlFeeLCPenalty
+            // 
+            this.dtlFeeLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlFeeLCPenalty.MinimumWidth = 6;
+            this.dtlFeeLCPenalty.Name = "dtlFeeLCPenalty";
+            this.dtlFeeLCPenalty.ReadOnly = true;
+            this.dtlFeeLCPenalty.Width = 125;
+            // 
+            // dtlFeeLCName
+            // 
+            this.dtlFeeLCName.HeaderText = "Lost Card Name";
+            this.dtlFeeLCName.MinimumWidth = 6;
+            this.dtlFeeLCName.Name = "dtlFeeLCName";
+            this.dtlFeeLCName.ReadOnly = true;
+            this.dtlFeeLCName.Width = 125;
+            // 
+            // dtlFeeLCLicenseNo
+            // 
+            this.dtlFeeLCLicenseNo.HeaderText = "Lost Card Lisence No";
+            this.dtlFeeLCLicenseNo.MinimumWidth = 6;
+            this.dtlFeeLCLicenseNo.Name = "dtlFeeLCLicenseNo";
+            this.dtlFeeLCLicenseNo.ReadOnly = true;
+            this.dtlFeeLCLicenseNo.Width = 125;
+            // 
+            // dtlFeeLCORCR
+            // 
+            this.dtlFeeLCORCR.HeaderText = "Lost Card OR//CR";
+            this.dtlFeeLCORCR.MinimumWidth = 6;
+            this.dtlFeeLCORCR.Name = "dtlFeeLCORCR";
+            this.dtlFeeLCORCR.ReadOnly = true;
+            this.dtlFeeLCORCR.Width = 125;
+            // 
+            // dtlFeeOvernight
+            // 
+            this.dtlFeeOvernight.HeaderText = "Overnight Penalty";
+            this.dtlFeeOvernight.MinimumWidth = 6;
+            this.dtlFeeOvernight.Name = "dtlFeeOvernight";
+            this.dtlFeeOvernight.ReadOnly = true;
+            this.dtlFeeOvernight.Width = 125;
             // 
             // dtlFeeReprint
             // 
@@ -2278,17 +2772,6 @@
             this.dtlFeeImage.ReadOnly = true;
             this.dtlFeeImage.Width = 125;
             // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.dgCashless);
-            this.tabPage7.Location = new System.Drawing.Point(4, 32);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1204, 321);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Cashless";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
             // dgCashless
             // 
             this.dgCashless.AllowUserToAddRows = false;
@@ -2296,9 +2779,9 @@
             this.dgCashless.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgCashless.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCashless.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlCashlessTransitId,
             this.dtlCashlessRow,
             this.dtlCashlessType,
+            this.dtlCashlessTransitId,
             this.dtlCashlessEntrance,
             this.dtlCashlessExit,
             this.dtlCashlessORNumber,
@@ -2318,6 +2801,14 @@
             this.dtlCashlessVat,
             this.dtlCashlessVatExempt,
             this.dtlCashlessZeroRated,
+            this.dtlCashlessSCPWDName,
+            this.dtlCashlessSDPWDAddress,
+            this.dtlCashlessSCPWDId,
+            this.dtlCashlessLCPenalty,
+            this.dtlCashlessLCName,
+            this.dtlCashlessLCLicenseNo,
+            this.dtlCashlessLCORCR,
+            this.dtlCashlessOvernight,
             this.dtlCashlessReprint,
             this.dtlCashlessDescription,
             this.dtlCashlessUpdateUser,
@@ -2330,15 +2821,6 @@
             this.dgCashless.RowTemplate.Height = 24;
             this.dgCashless.Size = new System.Drawing.Size(1198, 315);
             this.dgCashless.TabIndex = 3;
-            // 
-            // dtlCashlessTransitId
-            // 
-            this.dtlCashlessTransitId.HeaderText = "Id";
-            this.dtlCashlessTransitId.MinimumWidth = 6;
-            this.dtlCashlessTransitId.Name = "dtlCashlessTransitId";
-            this.dtlCashlessTransitId.ReadOnly = true;
-            this.dtlCashlessTransitId.Visible = false;
-            this.dtlCashlessTransitId.Width = 200;
             // 
             // dtlCashlessRow
             // 
@@ -2355,6 +2837,15 @@
             this.dtlCashlessType.Name = "dtlCashlessType";
             this.dtlCashlessType.ReadOnly = true;
             this.dtlCashlessType.Width = 200;
+            // 
+            // dtlCashlessTransitId
+            // 
+            this.dtlCashlessTransitId.HeaderText = "Id";
+            this.dtlCashlessTransitId.MinimumWidth = 6;
+            this.dtlCashlessTransitId.Name = "dtlCashlessTransitId";
+            this.dtlCashlessTransitId.ReadOnly = true;
+            this.dtlCashlessTransitId.Visible = false;
+            this.dtlCashlessTransitId.Width = 200;
             // 
             // dtlCashlessEntrance
             // 
@@ -2446,9 +2937,9 @@
             // 
             // dtlCashlessDiscount
             // 
-            dataGridViewCellStyle145.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle145.Format = "N2";
-            this.dtlCashlessDiscount.DefaultCellStyle = dataGridViewCellStyle145;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle49.Format = "N2";
+            this.dtlCashlessDiscount.DefaultCellStyle = dataGridViewCellStyle49;
             this.dtlCashlessDiscount.HeaderText = "Discount";
             this.dtlCashlessDiscount.MinimumWidth = 6;
             this.dtlCashlessDiscount.Name = "dtlCashlessDiscount";
@@ -2457,9 +2948,9 @@
             // 
             // dtlCashlessAmountDue
             // 
-            dataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle146.Format = "n2";
-            this.dtlCashlessAmountDue.DefaultCellStyle = dataGridViewCellStyle146;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle50.Format = "n2";
+            this.dtlCashlessAmountDue.DefaultCellStyle = dataGridViewCellStyle50;
             this.dtlCashlessAmountDue.HeaderText = "Amount Due";
             this.dtlCashlessAmountDue.MinimumWidth = 6;
             this.dtlCashlessAmountDue.Name = "dtlCashlessAmountDue";
@@ -2468,9 +2959,9 @@
             // 
             // dtlCashlessAmountTendered
             // 
-            dataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle147.Format = "n2";
-            this.dtlCashlessAmountTendered.DefaultCellStyle = dataGridViewCellStyle147;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle51.Format = "n2";
+            this.dtlCashlessAmountTendered.DefaultCellStyle = dataGridViewCellStyle51;
             this.dtlCashlessAmountTendered.HeaderText = "Amount Tendered";
             this.dtlCashlessAmountTendered.MinimumWidth = 6;
             this.dtlCashlessAmountTendered.Name = "dtlCashlessAmountTendered";
@@ -2479,9 +2970,9 @@
             // 
             // dtlCashlessChange
             // 
-            dataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle148.Format = "N2";
-            this.dtlCashlessChange.DefaultCellStyle = dataGridViewCellStyle148;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle52.Format = "N2";
+            this.dtlCashlessChange.DefaultCellStyle = dataGridViewCellStyle52;
             this.dtlCashlessChange.HeaderText = "Amount Change";
             this.dtlCashlessChange.MinimumWidth = 6;
             this.dtlCashlessChange.Name = "dtlCashlessChange";
@@ -2490,9 +2981,9 @@
             // 
             // dtlCashlessVatable
             // 
-            dataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle149.Format = "N2";
-            this.dtlCashlessVatable.DefaultCellStyle = dataGridViewCellStyle149;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle53.Format = "N2";
+            this.dtlCashlessVatable.DefaultCellStyle = dataGridViewCellStyle53;
             this.dtlCashlessVatable.HeaderText = "Vatable";
             this.dtlCashlessVatable.MinimumWidth = 6;
             this.dtlCashlessVatable.Name = "dtlCashlessVatable";
@@ -2501,9 +2992,9 @@
             // 
             // dtlCashlessVat
             // 
-            dataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle150.Format = "N2";
-            this.dtlCashlessVat.DefaultCellStyle = dataGridViewCellStyle150;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle54.Format = "N2";
+            this.dtlCashlessVat.DefaultCellStyle = dataGridViewCellStyle54;
             this.dtlCashlessVat.HeaderText = "Vat";
             this.dtlCashlessVat.MinimumWidth = 6;
             this.dtlCashlessVat.Name = "dtlCashlessVat";
@@ -2512,9 +3003,9 @@
             // 
             // dtlCashlessVatExempt
             // 
-            dataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle151.Format = "N2";
-            this.dtlCashlessVatExempt.DefaultCellStyle = dataGridViewCellStyle151;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle55.Format = "N2";
+            this.dtlCashlessVatExempt.DefaultCellStyle = dataGridViewCellStyle55;
             this.dtlCashlessVatExempt.HeaderText = "Vat Exempt";
             this.dtlCashlessVatExempt.MinimumWidth = 6;
             this.dtlCashlessVatExempt.Name = "dtlCashlessVatExempt";
@@ -2523,14 +3014,78 @@
             // 
             // dtlCashlessZeroRated
             // 
-            dataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle152.Format = "N2";
-            this.dtlCashlessZeroRated.DefaultCellStyle = dataGridViewCellStyle152;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle56.Format = "N2";
+            this.dtlCashlessZeroRated.DefaultCellStyle = dataGridViewCellStyle56;
             this.dtlCashlessZeroRated.HeaderText = "Zero Rated";
             this.dtlCashlessZeroRated.MinimumWidth = 6;
             this.dtlCashlessZeroRated.Name = "dtlCashlessZeroRated";
             this.dtlCashlessZeroRated.ReadOnly = true;
             this.dtlCashlessZeroRated.Width = 200;
+            // 
+            // dtlCashlessSCPWDName
+            // 
+            this.dtlCashlessSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlCashlessSCPWDName.MinimumWidth = 6;
+            this.dtlCashlessSCPWDName.Name = "dtlCashlessSCPWDName";
+            this.dtlCashlessSCPWDName.ReadOnly = true;
+            this.dtlCashlessSCPWDName.Width = 125;
+            // 
+            // dtlCashlessSDPWDAddress
+            // 
+            this.dtlCashlessSDPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlCashlessSDPWDAddress.MinimumWidth = 6;
+            this.dtlCashlessSDPWDAddress.Name = "dtlCashlessSDPWDAddress";
+            this.dtlCashlessSDPWDAddress.ReadOnly = true;
+            this.dtlCashlessSDPWDAddress.Width = 125;
+            // 
+            // dtlCashlessSCPWDId
+            // 
+            this.dtlCashlessSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlCashlessSCPWDId.MinimumWidth = 6;
+            this.dtlCashlessSCPWDId.Name = "dtlCashlessSCPWDId";
+            this.dtlCashlessSCPWDId.ReadOnly = true;
+            this.dtlCashlessSCPWDId.Width = 125;
+            // 
+            // dtlCashlessLCPenalty
+            // 
+            this.dtlCashlessLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlCashlessLCPenalty.MinimumWidth = 6;
+            this.dtlCashlessLCPenalty.Name = "dtlCashlessLCPenalty";
+            this.dtlCashlessLCPenalty.ReadOnly = true;
+            this.dtlCashlessLCPenalty.Width = 125;
+            // 
+            // dtlCashlessLCName
+            // 
+            this.dtlCashlessLCName.HeaderText = "Lost Card Name";
+            this.dtlCashlessLCName.MinimumWidth = 6;
+            this.dtlCashlessLCName.Name = "dtlCashlessLCName";
+            this.dtlCashlessLCName.ReadOnly = true;
+            this.dtlCashlessLCName.Width = 125;
+            // 
+            // dtlCashlessLCLicenseNo
+            // 
+            this.dtlCashlessLCLicenseNo.HeaderText = "Lost Card Lisence No";
+            this.dtlCashlessLCLicenseNo.MinimumWidth = 6;
+            this.dtlCashlessLCLicenseNo.Name = "dtlCashlessLCLicenseNo";
+            this.dtlCashlessLCLicenseNo.ReadOnly = true;
+            this.dtlCashlessLCLicenseNo.Width = 125;
+            // 
+            // dtlCashlessLCORCR
+            // 
+            this.dtlCashlessLCORCR.HeaderText = "Lost Card OR//CR";
+            this.dtlCashlessLCORCR.MinimumWidth = 6;
+            this.dtlCashlessLCORCR.Name = "dtlCashlessLCORCR";
+            this.dtlCashlessLCORCR.ReadOnly = true;
+            this.dtlCashlessLCORCR.Width = 125;
+            // 
+            // dtlCashlessOvernight
+            // 
+            this.dtlCashlessOvernight.HeaderText = "Overnight Penalty";
+            this.dtlCashlessOvernight.MinimumWidth = 6;
+            this.dtlCashlessOvernight.Name = "dtlCashlessOvernight";
+            this.dtlCashlessOvernight.ReadOnly = true;
+            this.dtlCashlessOvernight.Width = 125;
             // 
             // dtlCashlessReprint
             // 
@@ -2577,18 +3132,14 @@
             this.Name = "Sales";
             this.Text = "Sales Report";
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgTransactions)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgAllSales)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgCollections)).EndInit();
             this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgErased)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgDiscounts)).EndInit();
             this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgFees)).EndInit();
+            this.tabPage7.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2598,7 +3149,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgTransactions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCollections)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDiscounts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgErased)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCashless)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2628,43 +3183,13 @@
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView dgAllSales;
-        private System.Windows.Forms.DataGridView dgTransactions;
-        private System.Windows.Forms.DataGridView dgCollections;
-        private System.Windows.Forms.DataGridView dgDiscounts;
-        private System.Windows.Forms.DataGridView dgErased;
-        private System.Windows.Forms.DataGridView dgFees;
         private System.Windows.Forms.DateTimePicker timeTo;
         private System.Windows.Forms.DateTimePicker timeFrom;
         private System.Windows.Forms.DateTimePicker dtTo;
         private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboTerminal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTransitId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionRow;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionEntrance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionExit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionORNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionPlateNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTicketNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTimeIn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTimeOut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionDuration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionRateName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionCoupon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionGrossAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionDiscount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionAmountDue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionAmountTendered;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionChange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionVatable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionVat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionVatExempt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionZeroRated;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionReprint;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionUpdateUser;
-        private System.Windows.Forms.DataGridViewButtonColumn dtlTransactionImage;
+        private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllType;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllTransitId;
@@ -2687,13 +3212,57 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllVat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllVatExempt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllZeroRated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllSDPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCORCR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllOvernight;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllReprint;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllUpdateUser;
         private System.Windows.Forms.DataGridViewButtonColumn dtlAllImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionTransitId;
+        private System.Windows.Forms.DataGridView dgTransactions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionRow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTransitId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionEntrance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionExit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionORNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionPlateNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTicketNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTimeIn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionTimeOut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionDuration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionRateName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionCoupon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionGrossAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionDiscount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionAmountDue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionAmountTendered;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionChange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionVatable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionVat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionVatExempt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionZeroRated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionSDPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionLCORCR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionOvernight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionReprint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlTransactionUpdateUser;
+        private System.Windows.Forms.DataGridViewButtonColumn dtlTransactionImage;
+        private System.Windows.Forms.DataGridView dgCollections;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionEntrance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionORNumber;
@@ -2713,13 +3282,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionVat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionVatExempt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionZeroRated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionSDPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionLCORCR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionOvernight;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionReprint;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCollectionUpdateUser;
         private System.Windows.Forms.DataGridViewButtonColumn dtlCollectionImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountTransitId;
+        private System.Windows.Forms.DataGridView dgDiscounts;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountEntrance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountORNumber;
@@ -2739,13 +3317,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountVat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountVatExempt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountZeroRated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountSDPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountLCORCR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountOvernight;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountReprint;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlDiscountUpdateUser;
         private System.Windows.Forms.DataGridViewButtonColumn dtlDiscountImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseTransitId;
+        private System.Windows.Forms.DataGridView dgErased;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseEntrance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseORNumber;
@@ -2765,13 +3352,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseVat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseVatExempt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseZeroRated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseSDPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseLCORCR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseOvernight;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseReprint;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlEraseUpdateUser;
         private System.Windows.Forms.DataGridViewButtonColumn dtlEraseImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeTransitId;
+        private System.Windows.Forms.DataGridView dgFees;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeEntrance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeORNumber;
@@ -2791,15 +3387,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeVat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeVatExempt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeZeroRated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeSDPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeLCORCR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeOvernight;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeReprint;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlFeeUpdateUser;
         private System.Windows.Forms.DataGridViewButtonColumn dtlFeeImage;
-        private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.DataGridView dgCashless;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessEntrance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessORNumber;
@@ -2819,6 +3422,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessVat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessVatExempt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessZeroRated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessSDPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessLCORCR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessOvernight;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessReprint;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlCashlessUpdateUser;

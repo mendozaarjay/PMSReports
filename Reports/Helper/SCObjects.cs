@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace Reports
 {
-    public static class DatabaseHelper
+    public static class SCObjects
+
     {
         public static string ExecNonQuery(SqlCommand cmd, string SqlConnectionString)
         {

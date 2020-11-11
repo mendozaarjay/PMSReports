@@ -18,7 +18,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@Date", date);
             cmd.Parameters.AddWithValue("@Keyword", keyword);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
 
             if(result != null)
             {
@@ -45,7 +45,7 @@ namespace Reports.Services
             cmd.CommandText = "[dbo].[spUpdatePlateNo]";
             cmd.Parameters.AddWithValue("@Id", id);
             cmd.Parameters.AddWithValue("@PlateNo", plateno);
-            var result = await DatabaseHelper.ExecNonQueryAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecNonQueryAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public DataTable Terminals()
@@ -53,7 +53,7 @@ namespace Reports.Services
             var sql = @"SELECT [fgag].[Id],
                                [fgag].[Name]
                         FROM [dbo].[fnGetAllGates]() [fgag]";
-            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            var items = SCObjects.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

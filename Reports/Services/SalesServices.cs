@@ -12,8 +12,8 @@ namespace Reports.Services
     public class SalesServices
     {
         private const string StoredProcedure = "[dbo].[spSalesReport]";
-        
-        public async Task<DataTable> SalesReportDataTableAsync(DateTime datefrom, DateTime dateto, string keyword,string terminal)
+
+        public async Task<DataTable> SalesReportDataTableAsync(DateTime datefrom, DateTime dateto, string keyword, string terminal)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
@@ -23,10 +23,10 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@SearchKey", keyword);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
             cmd.Parameters.AddWithValue("@IncludeAll", 0);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
-        public async Task<IEnumerable<SalesModel>> SalesReportAsync(DateTime datefrom, DateTime dateto, string keyword,string terminal)
+        public async Task<IEnumerable<SalesModel>> SalesReportAsync(DateTime datefrom, DateTime dateto, string keyword, string terminal)
         {
             List<SalesModel> items = new List<SalesModel>();
 
@@ -37,10 +37,10 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", dateto);
             cmd.Parameters.AddWithValue("@SearchKey", keyword);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
-            if(result != null)
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            if (result != null)
             {
-                foreach(DataRow dr in result.Rows)
+                foreach (DataRow dr in result.Rows)
                 {
                     var item = new SalesModel
                     {
@@ -70,6 +70,14 @@ namespace Reports.Services
                         Entrance = dr["Entrance"].ToString(),
                         Exit = dr["Exit"].ToString(),
                         IsErased = dr["IsErased"].ToString().Equals("1") ? true : false,
+                        SCPWDName = dr["SCPWDName"].ToString(),
+                        SCPWDAddress = dr["SCPWDAddress"].ToString(),
+                        SCPWDId = dr["SCPWDId"].ToString(),
+                        LostCardPenalty = decimal.Parse(dr["LostCardPenalty"].ToString()),
+                        LostCardName = dr["LostCardName"].ToString(),
+                        LostCardLicenseNo = dr["LostCardLicenseNo"].ToString(),
+                        LostCardORCR = dr["LostCardORCR"].ToString(),
+                        OvernightPenalty = decimal.Parse(dr["OvernightPenalty"].ToString()),
                     };
 
                     items.Add(item);
@@ -83,7 +91,7 @@ namespace Reports.Services
             var sql = @"SELECT [fgag].[Id],
                                [fgag].[Name]
                         FROM [dbo].[fnGetAllGates]() [fgag]";
-            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            var items = SCObjects.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

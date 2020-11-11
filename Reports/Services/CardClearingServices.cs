@@ -18,7 +18,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<IEnumerable<CardClearingModel>> CardClearingAsync(DateTime from, DateTime to, string terminal)
@@ -30,7 +30,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
 
             if(result != null)
             {
@@ -58,7 +58,7 @@ namespace Reports.Services
             var sql = @"SELECT [fgag].[Id],
                                [fgag].[Name]
                         FROM [dbo].[fnGetAllGates]() [fgag]";
-            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            var items = SCObjects.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

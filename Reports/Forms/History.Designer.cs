@@ -53,6 +53,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgHistoryAll = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dtlAllTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,10 +71,17 @@
             this.dtlAllCoupon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllMonthlyRFID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllSCPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllLCOrCr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlAllOvernightPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlAllEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlAllExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlAllView = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgParkerIn = new System.Windows.Forms.DataGridView();
             this.dtlParkerInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,10 +97,17 @@
             this.dtlParkerInCoupon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInMonthlyRFID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInSCPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCOrCr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInOvernightPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlParkerInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlParkerInView = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgParkerOut = new System.Windows.Forms.DataGridView();
             this.dtlParkerOutTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,10 +123,17 @@
             this.dtlParkerOutCoupon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutMonthlyRFID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutSCPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutLCOrCr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerOutOvernightPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlParkerOutEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlParkerOutExitImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dtlParkerOutView = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dtlParkerOutView = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgMonthlyIn = new System.Windows.Forms.DataGridView();
             this.dtlMonthlyInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -124,10 +149,17 @@
             this.dtlMonthlyInCoupon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInMonthlyRFID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInSCPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInLCOrCr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyInOvernightPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyInView = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dgMonthlyOut = new System.Windows.Forms.DataGridView();
             this.dtlMonthlyOutTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,9 +175,17 @@
             this.dtlMonthlyOutCoupon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutMonthlyRFID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutSCPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutLCOrCr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutOvernightPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlMonthlyOutEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyOutExitImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dtlMonthlyOutView = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlMonthlyOutView = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -157,12 +197,12 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgHistoryAll)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyOut)).BeginInit();
             this.SuspendLayout();
             // 
@@ -185,7 +225,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1011, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1195, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -249,7 +289,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1011, 559);
+            this.splitContainer1.Size = new System.Drawing.Size(1195, 617);
             this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -272,7 +312,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(987, 234);
+            this.groupBox1.Size = new System.Drawing.Size(1171, 234);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
@@ -403,7 +443,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1011, 305);
+            this.tabControl1.Size = new System.Drawing.Size(1195, 363);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -412,7 +452,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1003, 269);
+            this.tabPage1.Size = new System.Drawing.Size(1187, 327);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "All";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -438,6 +478,14 @@
             this.dtlAllCoupon,
             this.dtlAllMonthlyRFID,
             this.dtlAllMonthlyName,
+            this.dtlAllSCPWDName,
+            this.dtlAllSCPWDAddress,
+            this.dtlAllSCPWDId,
+            this.dtlAllLCPenalty,
+            this.dtlAllLCName,
+            this.dtlAllLCLicenseNo,
+            this.dtlAllLCOrCr,
+            this.dtlAllOvernightPenalty,
             this.dtlAllEntranceImage,
             this.dtlAllExitImage,
             this.dtlAllView});
@@ -447,9 +495,53 @@
             this.dgHistoryAll.ReadOnly = true;
             this.dgHistoryAll.RowHeadersWidth = 51;
             this.dgHistoryAll.RowTemplate.Height = 24;
-            this.dgHistoryAll.Size = new System.Drawing.Size(997, 263);
+            this.dgHistoryAll.Size = new System.Drawing.Size(1181, 321);
             this.dgHistoryAll.TabIndex = 1;
             this.dgHistoryAll.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgHistoryAll_CellContentClick);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgParkerIn);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Parker In";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgParkerOut);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Parker Out";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dgMonthlyIn);
+            this.tabPage4.Location = new System.Drawing.Point(4, 32);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Monthly In";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dgMonthlyOut);
+            this.tabPage5.Location = new System.Drawing.Point(4, 32);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Monthly Out";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // dtlAllTransitId
             // 
@@ -564,6 +656,70 @@
             this.dtlAllMonthlyName.ReadOnly = true;
             this.dtlAllMonthlyName.Width = 200;
             // 
+            // dtlAllSCPWDName
+            // 
+            this.dtlAllSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlAllSCPWDName.MinimumWidth = 6;
+            this.dtlAllSCPWDName.Name = "dtlAllSCPWDName";
+            this.dtlAllSCPWDName.ReadOnly = true;
+            this.dtlAllSCPWDName.Width = 125;
+            // 
+            // dtlAllSCPWDAddress
+            // 
+            this.dtlAllSCPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlAllSCPWDAddress.MinimumWidth = 6;
+            this.dtlAllSCPWDAddress.Name = "dtlAllSCPWDAddress";
+            this.dtlAllSCPWDAddress.ReadOnly = true;
+            this.dtlAllSCPWDAddress.Width = 125;
+            // 
+            // dtlAllSCPWDId
+            // 
+            this.dtlAllSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlAllSCPWDId.MinimumWidth = 6;
+            this.dtlAllSCPWDId.Name = "dtlAllSCPWDId";
+            this.dtlAllSCPWDId.ReadOnly = true;
+            this.dtlAllSCPWDId.Width = 125;
+            // 
+            // dtlAllLCPenalty
+            // 
+            this.dtlAllLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlAllLCPenalty.MinimumWidth = 6;
+            this.dtlAllLCPenalty.Name = "dtlAllLCPenalty";
+            this.dtlAllLCPenalty.ReadOnly = true;
+            this.dtlAllLCPenalty.Width = 125;
+            // 
+            // dtlAllLCName
+            // 
+            this.dtlAllLCName.HeaderText = "Lost Card Name";
+            this.dtlAllLCName.MinimumWidth = 6;
+            this.dtlAllLCName.Name = "dtlAllLCName";
+            this.dtlAllLCName.ReadOnly = true;
+            this.dtlAllLCName.Width = 125;
+            // 
+            // dtlAllLCLicenseNo
+            // 
+            this.dtlAllLCLicenseNo.HeaderText = "Lost Card License";
+            this.dtlAllLCLicenseNo.MinimumWidth = 6;
+            this.dtlAllLCLicenseNo.Name = "dtlAllLCLicenseNo";
+            this.dtlAllLCLicenseNo.ReadOnly = true;
+            this.dtlAllLCLicenseNo.Width = 125;
+            // 
+            // dtlAllLCOrCr
+            // 
+            this.dtlAllLCOrCr.HeaderText = "Lost Card OR/CR";
+            this.dtlAllLCOrCr.MinimumWidth = 6;
+            this.dtlAllLCOrCr.Name = "dtlAllLCOrCr";
+            this.dtlAllLCOrCr.ReadOnly = true;
+            this.dtlAllLCOrCr.Width = 125;
+            // 
+            // dtlAllOvernightPenalty
+            // 
+            this.dtlAllOvernightPenalty.HeaderText = "Overnight";
+            this.dtlAllOvernightPenalty.MinimumWidth = 6;
+            this.dtlAllOvernightPenalty.Name = "dtlAllOvernightPenalty";
+            this.dtlAllOvernightPenalty.ReadOnly = true;
+            this.dtlAllOvernightPenalty.Width = 125;
+            // 
             // dtlAllEntranceImage
             // 
             this.dtlAllEntranceImage.HeaderText = "Entrance";
@@ -590,23 +746,12 @@
             this.dtlAllView.ReadOnly = true;
             this.dtlAllView.Width = 125;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dgParkerIn);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1003, 276);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Parker In";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // dgParkerIn
             // 
             this.dgParkerIn.AllowUserToAddRows = false;
             this.dgParkerIn.AllowUserToDeleteRows = false;
             this.dgParkerIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgParkerIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgParkerIn.ColumnHeadersHeight = 29;
             this.dgParkerIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlParkerInTransitId,
             this.dtlParkerInRow,
@@ -622,6 +767,14 @@
             this.dtlParkerInCoupon,
             this.dtlParkerInMonthlyRFID,
             this.dtlParkerInMonthlyName,
+            this.dtlParkerInSCPWDName,
+            this.dtlParkerInSCPWDAddress,
+            this.dtlParkerInSCPWDId,
+            this.dtlParkerInLCPenalty,
+            this.dtlParkerInLCName,
+            this.dtlParkerInLCLicenseNo,
+            this.dtlParkerInLCOrCr,
+            this.dtlParkerInOvernightPenalty,
             this.dtlParkerInEntranceImage,
             this.dtlParkerInExitImage,
             this.dtlParkerInView});
@@ -631,9 +784,8 @@
             this.dgParkerIn.ReadOnly = true;
             this.dgParkerIn.RowHeadersWidth = 51;
             this.dgParkerIn.RowTemplate.Height = 24;
-            this.dgParkerIn.Size = new System.Drawing.Size(997, 270);
-            this.dgParkerIn.TabIndex = 0;
-            this.dgParkerIn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgParkerIn_CellContentClick);
+            this.dgParkerIn.Size = new System.Drawing.Size(1181, 321);
+            this.dgParkerIn.TabIndex = 3;
             // 
             // dtlParkerInTransitId
             // 
@@ -710,7 +862,7 @@
             // 
             // dtlParkerInDurationOfStay
             // 
-            this.dtlParkerInDurationOfStay.HeaderText = "Duration";
+            this.dtlParkerInDurationOfStay.HeaderText = "Duration of Stay";
             this.dtlParkerInDurationOfStay.MinimumWidth = 6;
             this.dtlParkerInDurationOfStay.Name = "dtlParkerInDurationOfStay";
             this.dtlParkerInDurationOfStay.ReadOnly = true;
@@ -748,9 +900,73 @@
             this.dtlParkerInMonthlyName.ReadOnly = true;
             this.dtlParkerInMonthlyName.Width = 200;
             // 
+            // dtlParkerInSCPWDName
+            // 
+            this.dtlParkerInSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlParkerInSCPWDName.MinimumWidth = 6;
+            this.dtlParkerInSCPWDName.Name = "dtlParkerInSCPWDName";
+            this.dtlParkerInSCPWDName.ReadOnly = true;
+            this.dtlParkerInSCPWDName.Width = 125;
+            // 
+            // dtlParkerInSCPWDAddress
+            // 
+            this.dtlParkerInSCPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlParkerInSCPWDAddress.MinimumWidth = 6;
+            this.dtlParkerInSCPWDAddress.Name = "dtlParkerInSCPWDAddress";
+            this.dtlParkerInSCPWDAddress.ReadOnly = true;
+            this.dtlParkerInSCPWDAddress.Width = 125;
+            // 
+            // dtlParkerInSCPWDId
+            // 
+            this.dtlParkerInSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlParkerInSCPWDId.MinimumWidth = 6;
+            this.dtlParkerInSCPWDId.Name = "dtlParkerInSCPWDId";
+            this.dtlParkerInSCPWDId.ReadOnly = true;
+            this.dtlParkerInSCPWDId.Width = 125;
+            // 
+            // dtlParkerInLCPenalty
+            // 
+            this.dtlParkerInLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlParkerInLCPenalty.MinimumWidth = 6;
+            this.dtlParkerInLCPenalty.Name = "dtlParkerInLCPenalty";
+            this.dtlParkerInLCPenalty.ReadOnly = true;
+            this.dtlParkerInLCPenalty.Width = 125;
+            // 
+            // dtlParkerInLCName
+            // 
+            this.dtlParkerInLCName.HeaderText = "Lost Card Name";
+            this.dtlParkerInLCName.MinimumWidth = 6;
+            this.dtlParkerInLCName.Name = "dtlParkerInLCName";
+            this.dtlParkerInLCName.ReadOnly = true;
+            this.dtlParkerInLCName.Width = 125;
+            // 
+            // dtlParkerInLCLicenseNo
+            // 
+            this.dtlParkerInLCLicenseNo.HeaderText = "Lost Card License";
+            this.dtlParkerInLCLicenseNo.MinimumWidth = 6;
+            this.dtlParkerInLCLicenseNo.Name = "dtlParkerInLCLicenseNo";
+            this.dtlParkerInLCLicenseNo.ReadOnly = true;
+            this.dtlParkerInLCLicenseNo.Width = 125;
+            // 
+            // dtlParkerInLCOrCr
+            // 
+            this.dtlParkerInLCOrCr.HeaderText = "Lost Card OR/CR";
+            this.dtlParkerInLCOrCr.MinimumWidth = 6;
+            this.dtlParkerInLCOrCr.Name = "dtlParkerInLCOrCr";
+            this.dtlParkerInLCOrCr.ReadOnly = true;
+            this.dtlParkerInLCOrCr.Width = 125;
+            // 
+            // dtlParkerInOvernightPenalty
+            // 
+            this.dtlParkerInOvernightPenalty.HeaderText = "Overnight";
+            this.dtlParkerInOvernightPenalty.MinimumWidth = 6;
+            this.dtlParkerInOvernightPenalty.Name = "dtlParkerInOvernightPenalty";
+            this.dtlParkerInOvernightPenalty.ReadOnly = true;
+            this.dtlParkerInOvernightPenalty.Width = 125;
+            // 
             // dtlParkerInEntranceImage
             // 
-            this.dtlParkerInEntranceImage.HeaderText = "Entrance Image";
+            this.dtlParkerInEntranceImage.HeaderText = "Entrance";
             this.dtlParkerInEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlParkerInEntranceImage.MinimumWidth = 6;
             this.dtlParkerInEntranceImage.Name = "dtlParkerInEntranceImage";
@@ -759,7 +975,7 @@
             // 
             // dtlParkerInExitImage
             // 
-            this.dtlParkerInExitImage.HeaderText = "Exit Image";
+            this.dtlParkerInExitImage.HeaderText = "Exit";
             this.dtlParkerInExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlParkerInExitImage.MinimumWidth = 6;
             this.dtlParkerInExitImage.Name = "dtlParkerInExitImage";
@@ -774,23 +990,12 @@
             this.dtlParkerInView.ReadOnly = true;
             this.dtlParkerInView.Width = 125;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.dgParkerOut);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1003, 276);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Parker Out";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // dgParkerOut
             // 
             this.dgParkerOut.AllowUserToAddRows = false;
             this.dgParkerOut.AllowUserToDeleteRows = false;
             this.dgParkerOut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgParkerOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgParkerOut.ColumnHeadersHeight = 29;
             this.dgParkerOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlParkerOutTransitId,
             this.dtlParkerOutRow,
@@ -806,6 +1011,14 @@
             this.dtlParkerOutCoupon,
             this.dtlParkerOutMonthlyRFID,
             this.dtlParkerOutMonthlyName,
+            this.dtlParkerOutSCPWDName,
+            this.dtlParkerOutSCPWDAddress,
+            this.dtlParkerOutSCPWDId,
+            this.dtlParkerOutLCPenalty,
+            this.dtlParkerOutLCName,
+            this.dtlParkerOutLCLicenseNo,
+            this.dtlParkerOutLCOrCr,
+            this.dtlParkerOutOvernightPenalty,
             this.dtlParkerOutEntranceImage,
             this.dtlParkerOutExitImage,
             this.dtlParkerOutView});
@@ -815,9 +1028,8 @@
             this.dgParkerOut.ReadOnly = true;
             this.dgParkerOut.RowHeadersWidth = 51;
             this.dgParkerOut.RowTemplate.Height = 24;
-            this.dgParkerOut.Size = new System.Drawing.Size(997, 270);
-            this.dgParkerOut.TabIndex = 2;
-            this.dgParkerOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgParkerOut_CellContentClick);
+            this.dgParkerOut.Size = new System.Drawing.Size(1181, 321);
+            this.dgParkerOut.TabIndex = 3;
             // 
             // dtlParkerOutTransitId
             // 
@@ -894,7 +1106,7 @@
             // 
             // dtlParkerOutDurationOfStay
             // 
-            this.dtlParkerOutDurationOfStay.HeaderText = "Duration";
+            this.dtlParkerOutDurationOfStay.HeaderText = "Duration of Stay";
             this.dtlParkerOutDurationOfStay.MinimumWidth = 6;
             this.dtlParkerOutDurationOfStay.Name = "dtlParkerOutDurationOfStay";
             this.dtlParkerOutDurationOfStay.ReadOnly = true;
@@ -932,9 +1144,73 @@
             this.dtlParkerOutMonthlyName.ReadOnly = true;
             this.dtlParkerOutMonthlyName.Width = 200;
             // 
+            // dtlParkerOutSCPWDName
+            // 
+            this.dtlParkerOutSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlParkerOutSCPWDName.MinimumWidth = 6;
+            this.dtlParkerOutSCPWDName.Name = "dtlParkerOutSCPWDName";
+            this.dtlParkerOutSCPWDName.ReadOnly = true;
+            this.dtlParkerOutSCPWDName.Width = 125;
+            // 
+            // dtlParkerOutSCPWDAddress
+            // 
+            this.dtlParkerOutSCPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlParkerOutSCPWDAddress.MinimumWidth = 6;
+            this.dtlParkerOutSCPWDAddress.Name = "dtlParkerOutSCPWDAddress";
+            this.dtlParkerOutSCPWDAddress.ReadOnly = true;
+            this.dtlParkerOutSCPWDAddress.Width = 125;
+            // 
+            // dtlParkerOutSCPWDId
+            // 
+            this.dtlParkerOutSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlParkerOutSCPWDId.MinimumWidth = 6;
+            this.dtlParkerOutSCPWDId.Name = "dtlParkerOutSCPWDId";
+            this.dtlParkerOutSCPWDId.ReadOnly = true;
+            this.dtlParkerOutSCPWDId.Width = 125;
+            // 
+            // dtlParkerOutLCPenalty
+            // 
+            this.dtlParkerOutLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlParkerOutLCPenalty.MinimumWidth = 6;
+            this.dtlParkerOutLCPenalty.Name = "dtlParkerOutLCPenalty";
+            this.dtlParkerOutLCPenalty.ReadOnly = true;
+            this.dtlParkerOutLCPenalty.Width = 125;
+            // 
+            // dtlParkerOutLCName
+            // 
+            this.dtlParkerOutLCName.HeaderText = "Lost Card Name";
+            this.dtlParkerOutLCName.MinimumWidth = 6;
+            this.dtlParkerOutLCName.Name = "dtlParkerOutLCName";
+            this.dtlParkerOutLCName.ReadOnly = true;
+            this.dtlParkerOutLCName.Width = 125;
+            // 
+            // dtlParkerOutLCLicenseNo
+            // 
+            this.dtlParkerOutLCLicenseNo.HeaderText = "Lost Card License";
+            this.dtlParkerOutLCLicenseNo.MinimumWidth = 6;
+            this.dtlParkerOutLCLicenseNo.Name = "dtlParkerOutLCLicenseNo";
+            this.dtlParkerOutLCLicenseNo.ReadOnly = true;
+            this.dtlParkerOutLCLicenseNo.Width = 125;
+            // 
+            // dtlParkerOutLCOrCr
+            // 
+            this.dtlParkerOutLCOrCr.HeaderText = "Lost Card OR/CR";
+            this.dtlParkerOutLCOrCr.MinimumWidth = 6;
+            this.dtlParkerOutLCOrCr.Name = "dtlParkerOutLCOrCr";
+            this.dtlParkerOutLCOrCr.ReadOnly = true;
+            this.dtlParkerOutLCOrCr.Width = 125;
+            // 
+            // dtlParkerOutOvernightPenalty
+            // 
+            this.dtlParkerOutOvernightPenalty.HeaderText = "Overnight";
+            this.dtlParkerOutOvernightPenalty.MinimumWidth = 6;
+            this.dtlParkerOutOvernightPenalty.Name = "dtlParkerOutOvernightPenalty";
+            this.dtlParkerOutOvernightPenalty.ReadOnly = true;
+            this.dtlParkerOutOvernightPenalty.Width = 125;
+            // 
             // dtlParkerOutEntranceImage
             // 
-            this.dtlParkerOutEntranceImage.HeaderText = "Entrance Image";
+            this.dtlParkerOutEntranceImage.HeaderText = "Entrance";
             this.dtlParkerOutEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlParkerOutEntranceImage.MinimumWidth = 6;
             this.dtlParkerOutEntranceImage.Name = "dtlParkerOutEntranceImage";
@@ -943,7 +1219,7 @@
             // 
             // dtlParkerOutExitImage
             // 
-            this.dtlParkerOutExitImage.HeaderText = "Exit Image";
+            this.dtlParkerOutExitImage.HeaderText = "Exit";
             this.dtlParkerOutExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlParkerOutExitImage.MinimumWidth = 6;
             this.dtlParkerOutExitImage.Name = "dtlParkerOutExitImage";
@@ -958,23 +1234,12 @@
             this.dtlParkerOutView.ReadOnly = true;
             this.dtlParkerOutView.Width = 125;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.dgMonthlyIn);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1003, 276);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Monthly In";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // dgMonthlyIn
             // 
             this.dgMonthlyIn.AllowUserToAddRows = false;
             this.dgMonthlyIn.AllowUserToDeleteRows = false;
             this.dgMonthlyIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgMonthlyIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMonthlyIn.ColumnHeadersHeight = 29;
             this.dgMonthlyIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlMonthlyInTransitId,
             this.dtlMonthlyInRow,
@@ -990,6 +1255,14 @@
             this.dtlMonthlyInCoupon,
             this.dtlMonthlyInMonthlyRFID,
             this.dtlMonthlyInMonthlyName,
+            this.dtlMonthlyInSCPWDName,
+            this.dtlMonthlyInSCPWDAddress,
+            this.dtlMonthlyInSCPWDId,
+            this.dtlMonthlyInLCPenalty,
+            this.dtlMonthlyInLCName,
+            this.dtlMonthlyInLCLicenseNo,
+            this.dtlMonthlyInLCOrCr,
+            this.dtlMonthlyInOvernightPenalty,
             this.dtlMonthlyInEntranceImage,
             this.dtlMonthlyInExitImage,
             this.dtlMonthlyInView});
@@ -999,9 +1272,8 @@
             this.dgMonthlyIn.ReadOnly = true;
             this.dgMonthlyIn.RowHeadersWidth = 51;
             this.dgMonthlyIn.RowTemplate.Height = 24;
-            this.dgMonthlyIn.Size = new System.Drawing.Size(997, 270);
-            this.dgMonthlyIn.TabIndex = 2;
-            this.dgMonthlyIn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMonthlyIn_CellContentClick);
+            this.dgMonthlyIn.Size = new System.Drawing.Size(1181, 321);
+            this.dgMonthlyIn.TabIndex = 3;
             // 
             // dtlMonthlyInTransitId
             // 
@@ -1078,7 +1350,7 @@
             // 
             // dtlMonthlyInDurationOfStay
             // 
-            this.dtlMonthlyInDurationOfStay.HeaderText = "Duration";
+            this.dtlMonthlyInDurationOfStay.HeaderText = "Duration of Stay";
             this.dtlMonthlyInDurationOfStay.MinimumWidth = 6;
             this.dtlMonthlyInDurationOfStay.Name = "dtlMonthlyInDurationOfStay";
             this.dtlMonthlyInDurationOfStay.ReadOnly = true;
@@ -1116,9 +1388,73 @@
             this.dtlMonthlyInMonthlyName.ReadOnly = true;
             this.dtlMonthlyInMonthlyName.Width = 200;
             // 
+            // dtlMonthlyInSCPWDName
+            // 
+            this.dtlMonthlyInSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlMonthlyInSCPWDName.MinimumWidth = 6;
+            this.dtlMonthlyInSCPWDName.Name = "dtlMonthlyInSCPWDName";
+            this.dtlMonthlyInSCPWDName.ReadOnly = true;
+            this.dtlMonthlyInSCPWDName.Width = 125;
+            // 
+            // dtlMonthlyInSCPWDAddress
+            // 
+            this.dtlMonthlyInSCPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlMonthlyInSCPWDAddress.MinimumWidth = 6;
+            this.dtlMonthlyInSCPWDAddress.Name = "dtlMonthlyInSCPWDAddress";
+            this.dtlMonthlyInSCPWDAddress.ReadOnly = true;
+            this.dtlMonthlyInSCPWDAddress.Width = 125;
+            // 
+            // dtlMonthlyInSCPWDId
+            // 
+            this.dtlMonthlyInSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlMonthlyInSCPWDId.MinimumWidth = 6;
+            this.dtlMonthlyInSCPWDId.Name = "dtlMonthlyInSCPWDId";
+            this.dtlMonthlyInSCPWDId.ReadOnly = true;
+            this.dtlMonthlyInSCPWDId.Width = 125;
+            // 
+            // dtlMonthlyInLCPenalty
+            // 
+            this.dtlMonthlyInLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlMonthlyInLCPenalty.MinimumWidth = 6;
+            this.dtlMonthlyInLCPenalty.Name = "dtlMonthlyInLCPenalty";
+            this.dtlMonthlyInLCPenalty.ReadOnly = true;
+            this.dtlMonthlyInLCPenalty.Width = 125;
+            // 
+            // dtlMonthlyInLCName
+            // 
+            this.dtlMonthlyInLCName.HeaderText = "Lost Card Name";
+            this.dtlMonthlyInLCName.MinimumWidth = 6;
+            this.dtlMonthlyInLCName.Name = "dtlMonthlyInLCName";
+            this.dtlMonthlyInLCName.ReadOnly = true;
+            this.dtlMonthlyInLCName.Width = 125;
+            // 
+            // dtlMonthlyInLCLicenseNo
+            // 
+            this.dtlMonthlyInLCLicenseNo.HeaderText = "Lost Card License";
+            this.dtlMonthlyInLCLicenseNo.MinimumWidth = 6;
+            this.dtlMonthlyInLCLicenseNo.Name = "dtlMonthlyInLCLicenseNo";
+            this.dtlMonthlyInLCLicenseNo.ReadOnly = true;
+            this.dtlMonthlyInLCLicenseNo.Width = 125;
+            // 
+            // dtlMonthlyInLCOrCr
+            // 
+            this.dtlMonthlyInLCOrCr.HeaderText = "Lost Card OR/CR";
+            this.dtlMonthlyInLCOrCr.MinimumWidth = 6;
+            this.dtlMonthlyInLCOrCr.Name = "dtlMonthlyInLCOrCr";
+            this.dtlMonthlyInLCOrCr.ReadOnly = true;
+            this.dtlMonthlyInLCOrCr.Width = 125;
+            // 
+            // dtlMonthlyInOvernightPenalty
+            // 
+            this.dtlMonthlyInOvernightPenalty.HeaderText = "Overnight";
+            this.dtlMonthlyInOvernightPenalty.MinimumWidth = 6;
+            this.dtlMonthlyInOvernightPenalty.Name = "dtlMonthlyInOvernightPenalty";
+            this.dtlMonthlyInOvernightPenalty.ReadOnly = true;
+            this.dtlMonthlyInOvernightPenalty.Width = 125;
+            // 
             // dtlMonthlyInEntranceImage
             // 
-            this.dtlMonthlyInEntranceImage.HeaderText = "Entrance Image";
+            this.dtlMonthlyInEntranceImage.HeaderText = "Entrance";
             this.dtlMonthlyInEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlMonthlyInEntranceImage.MinimumWidth = 6;
             this.dtlMonthlyInEntranceImage.Name = "dtlMonthlyInEntranceImage";
@@ -1127,7 +1463,7 @@
             // 
             // dtlMonthlyInExitImage
             // 
-            this.dtlMonthlyInExitImage.HeaderText = "Exit Image";
+            this.dtlMonthlyInExitImage.HeaderText = "Exit";
             this.dtlMonthlyInExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlMonthlyInExitImage.MinimumWidth = 6;
             this.dtlMonthlyInExitImage.Name = "dtlMonthlyInExitImage";
@@ -1142,23 +1478,12 @@
             this.dtlMonthlyInView.ReadOnly = true;
             this.dtlMonthlyInView.Width = 125;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.dgMonthlyOut);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1003, 276);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Monthly Out";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
             // dgMonthlyOut
             // 
             this.dgMonthlyOut.AllowUserToAddRows = false;
             this.dgMonthlyOut.AllowUserToDeleteRows = false;
             this.dgMonthlyOut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgMonthlyOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMonthlyOut.ColumnHeadersHeight = 29;
             this.dgMonthlyOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dtlMonthlyOutTransitId,
             this.dtlMonthlyOutRow,
@@ -1174,6 +1499,14 @@
             this.dtlMonthlyOutCoupon,
             this.dtlMonthlyOutMonthlyRFID,
             this.dtlMonthlyOutMonthlyName,
+            this.dtlMonthlyOutSCPWDName,
+            this.dtlMonthlyOutSCPWDAddress,
+            this.dtlMonthlyOutSCPWDId,
+            this.dtlMonthlyOutLCPenalty,
+            this.dtlMonthlyOutLCName,
+            this.dtlMonthlyOutLCLicenseNo,
+            this.dtlMonthlyOutLCOrCr,
+            this.dtlMonthlyOutOvernightPenalty,
             this.dtlMonthlyOutEntranceImage,
             this.dtlMonthlyOutExitImage,
             this.dtlMonthlyOutView});
@@ -1183,9 +1516,8 @@
             this.dgMonthlyOut.ReadOnly = true;
             this.dgMonthlyOut.RowHeadersWidth = 51;
             this.dgMonthlyOut.RowTemplate.Height = 24;
-            this.dgMonthlyOut.Size = new System.Drawing.Size(997, 270);
-            this.dgMonthlyOut.TabIndex = 2;
-            this.dgMonthlyOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMonthlyOut_CellContentClick);
+            this.dgMonthlyOut.Size = new System.Drawing.Size(1181, 321);
+            this.dgMonthlyOut.TabIndex = 3;
             // 
             // dtlMonthlyOutTransitId
             // 
@@ -1262,7 +1594,7 @@
             // 
             // dtlMonthlyOutDurationOfStay
             // 
-            this.dtlMonthlyOutDurationOfStay.HeaderText = "Duration";
+            this.dtlMonthlyOutDurationOfStay.HeaderText = "Duration of Stay";
             this.dtlMonthlyOutDurationOfStay.MinimumWidth = 6;
             this.dtlMonthlyOutDurationOfStay.Name = "dtlMonthlyOutDurationOfStay";
             this.dtlMonthlyOutDurationOfStay.ReadOnly = true;
@@ -1300,9 +1632,73 @@
             this.dtlMonthlyOutMonthlyName.ReadOnly = true;
             this.dtlMonthlyOutMonthlyName.Width = 200;
             // 
+            // dtlMonthlyOutSCPWDName
+            // 
+            this.dtlMonthlyOutSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlMonthlyOutSCPWDName.MinimumWidth = 6;
+            this.dtlMonthlyOutSCPWDName.Name = "dtlMonthlyOutSCPWDName";
+            this.dtlMonthlyOutSCPWDName.ReadOnly = true;
+            this.dtlMonthlyOutSCPWDName.Width = 125;
+            // 
+            // dtlMonthlyOutSCPWDAddress
+            // 
+            this.dtlMonthlyOutSCPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlMonthlyOutSCPWDAddress.MinimumWidth = 6;
+            this.dtlMonthlyOutSCPWDAddress.Name = "dtlMonthlyOutSCPWDAddress";
+            this.dtlMonthlyOutSCPWDAddress.ReadOnly = true;
+            this.dtlMonthlyOutSCPWDAddress.Width = 125;
+            // 
+            // dtlMonthlyOutSCPWDId
+            // 
+            this.dtlMonthlyOutSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlMonthlyOutSCPWDId.MinimumWidth = 6;
+            this.dtlMonthlyOutSCPWDId.Name = "dtlMonthlyOutSCPWDId";
+            this.dtlMonthlyOutSCPWDId.ReadOnly = true;
+            this.dtlMonthlyOutSCPWDId.Width = 125;
+            // 
+            // dtlMonthlyOutLCPenalty
+            // 
+            this.dtlMonthlyOutLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlMonthlyOutLCPenalty.MinimumWidth = 6;
+            this.dtlMonthlyOutLCPenalty.Name = "dtlMonthlyOutLCPenalty";
+            this.dtlMonthlyOutLCPenalty.ReadOnly = true;
+            this.dtlMonthlyOutLCPenalty.Width = 125;
+            // 
+            // dtlMonthlyOutLCName
+            // 
+            this.dtlMonthlyOutLCName.HeaderText = "Lost Card Name";
+            this.dtlMonthlyOutLCName.MinimumWidth = 6;
+            this.dtlMonthlyOutLCName.Name = "dtlMonthlyOutLCName";
+            this.dtlMonthlyOutLCName.ReadOnly = true;
+            this.dtlMonthlyOutLCName.Width = 125;
+            // 
+            // dtlMonthlyOutLCLicenseNo
+            // 
+            this.dtlMonthlyOutLCLicenseNo.HeaderText = "Lost Card License";
+            this.dtlMonthlyOutLCLicenseNo.MinimumWidth = 6;
+            this.dtlMonthlyOutLCLicenseNo.Name = "dtlMonthlyOutLCLicenseNo";
+            this.dtlMonthlyOutLCLicenseNo.ReadOnly = true;
+            this.dtlMonthlyOutLCLicenseNo.Width = 125;
+            // 
+            // dtlMonthlyOutLCOrCr
+            // 
+            this.dtlMonthlyOutLCOrCr.HeaderText = "Lost Card OR/CR";
+            this.dtlMonthlyOutLCOrCr.MinimumWidth = 6;
+            this.dtlMonthlyOutLCOrCr.Name = "dtlMonthlyOutLCOrCr";
+            this.dtlMonthlyOutLCOrCr.ReadOnly = true;
+            this.dtlMonthlyOutLCOrCr.Width = 125;
+            // 
+            // dtlMonthlyOutOvernightPenalty
+            // 
+            this.dtlMonthlyOutOvernightPenalty.HeaderText = "Overnight";
+            this.dtlMonthlyOutOvernightPenalty.MinimumWidth = 6;
+            this.dtlMonthlyOutOvernightPenalty.Name = "dtlMonthlyOutOvernightPenalty";
+            this.dtlMonthlyOutOvernightPenalty.ReadOnly = true;
+            this.dtlMonthlyOutOvernightPenalty.Width = 125;
+            // 
             // dtlMonthlyOutEntranceImage
             // 
-            this.dtlMonthlyOutEntranceImage.HeaderText = "Entrance Image";
+            this.dtlMonthlyOutEntranceImage.HeaderText = "Entrance";
             this.dtlMonthlyOutEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlMonthlyOutEntranceImage.MinimumWidth = 6;
             this.dtlMonthlyOutEntranceImage.Name = "dtlMonthlyOutEntranceImage";
@@ -1311,7 +1707,7 @@
             // 
             // dtlMonthlyOutExitImage
             // 
-            this.dtlMonthlyOutExitImage.HeaderText = "Exit Image";
+            this.dtlMonthlyOutExitImage.HeaderText = "Exit";
             this.dtlMonthlyOutExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dtlMonthlyOutExitImage.MinimumWidth = 6;
             this.dtlMonthlyOutExitImage.Name = "dtlMonthlyOutExitImage";
@@ -1330,7 +1726,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 586);
+            this.ClientSize = new System.Drawing.Size(1195, 644);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.bindingNavigator1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1351,12 +1747,12 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgHistoryAll)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).EndInit();
             this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyOut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1390,10 +1786,6 @@
         private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.CheckBox cbShowImages;
         private System.Windows.Forms.DataGridView dgHistoryAll;
-        private System.Windows.Forms.DataGridView dgParkerIn;
-        private System.Windows.Forms.DataGridView dgParkerOut;
-        private System.Windows.Forms.DataGridView dgMonthlyIn;
-        private System.Windows.Forms.DataGridView dgMonthlyOut;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboTerminal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllTransitId;
@@ -1410,9 +1802,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllCoupon;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllMonthlyRFID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllMonthlyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllSCPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllLCOrCr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlAllOvernightPenalty;
         private System.Windows.Forms.DataGridViewImageColumn dtlAllEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlAllExitImage;
         private System.Windows.Forms.DataGridViewButtonColumn dtlAllView;
+        private System.Windows.Forms.DataGridView dgParkerIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInEntranceGate;
@@ -1427,9 +1828,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInCoupon;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInMonthlyRFID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInMonthlyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInSCPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInLCOrCr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerInOvernightPenalty;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerInEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerInExitImage;
         private System.Windows.Forms.DataGridViewButtonColumn dtlParkerInView;
+        private System.Windows.Forms.DataGridView dgParkerOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutEntranceGate;
@@ -1444,9 +1854,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutCoupon;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutMonthlyRFID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutMonthlyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutSCPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutLCOrCr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutOvernightPenalty;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerOutEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerOutExitImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlParkerOutView;
+        private System.Windows.Forms.DataGridViewButtonColumn dtlParkerOutView;
+        private System.Windows.Forms.DataGridView dgMonthlyIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInEntranceGate;
@@ -1461,9 +1880,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInCoupon;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInMonthlyRFID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInMonthlyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInSCPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInLCOrCr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyInOvernightPenalty;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyInEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyInExitImage;
         private System.Windows.Forms.DataGridViewButtonColumn dtlMonthlyInView;
+        private System.Windows.Forms.DataGridView dgMonthlyOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutTransitId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutEntranceGate;
@@ -1478,9 +1906,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutCoupon;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutMonthlyRFID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutMonthlyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutSCPWDName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutSCPWDAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutSCPWDId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutLCPenalty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutLCName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutLCLicenseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutLCOrCr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutOvernightPenalty;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyOutEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlMonthlyOutExitImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtlMonthlyOutView;
+        private System.Windows.Forms.DataGridViewButtonColumn dtlMonthlyOutView;
     }
 }
 

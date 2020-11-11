@@ -18,7 +18,7 @@ namespace Reports.Services
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@Date", date);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<IEnumerable<PeakLoadModel>> PeakLoadReportAsync(DateTime date)
@@ -29,7 +29,7 @@ namespace Reports.Services
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@Date", date);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)

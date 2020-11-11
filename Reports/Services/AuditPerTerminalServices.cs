@@ -23,7 +23,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<DataTable> AuditPerTerminalTicketAccountabilityDataTableAsync(DateTime from, DateTime to, string terminal)
@@ -34,7 +34,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<DataTable> AuditPerTerminalProcessedTicketsDataTableAsync(DateTime from, DateTime to, string terminal)
@@ -45,7 +45,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
 
@@ -58,7 +58,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)
@@ -87,7 +87,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)
@@ -112,7 +112,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)
@@ -131,7 +131,7 @@ namespace Reports.Services
 
         public DataTable Gates()
         {
-            var gates = DatabaseHelper.LoadDataTable("SELECT [g].[GateID] AS [Id],[g].[GateName] AS [Name] FROM  [dbo].[Gates] [g] WHERE ISNULL([g].[IsDeleted],0) = 0 ", Properties.Settings.Default.UserConnectionString);
+            var gates = SCObjects.LoadDataTable("SELECT [g].[GateID] AS [Id],[g].[GateName] AS [Name] FROM  [dbo].[Gates] [g] WHERE ISNULL([g].[IsDeleted],0) = 0 ", Properties.Settings.Default.UserConnectionString);
             return gates;
         }
 

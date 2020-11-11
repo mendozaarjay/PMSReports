@@ -18,7 +18,7 @@ namespace Reports.Services
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@Id", id);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<DataTable> GetTransactionImagesHighReso(int id)
@@ -27,7 +27,7 @@ namespace Reports.Services
             cmd.CommandText = "[dbo].[spLoadTransitImageHighReso]";
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@Id", id);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
     }

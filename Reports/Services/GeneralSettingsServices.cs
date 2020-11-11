@@ -15,7 +15,7 @@ namespace Reports.Services
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
-            var result = DatabaseHelper.ExecGetData(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = SCObjects.ExecGetData(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 var item = new GeneralSettingModel

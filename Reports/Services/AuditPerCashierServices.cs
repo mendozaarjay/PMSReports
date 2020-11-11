@@ -21,7 +21,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Cashier", cashier);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<DataTable> ProcessedTicketsDataTableAsync(DateTime from, DateTime to, string cashier,string terminal)
@@ -33,7 +33,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Cashier", cashier);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<DataTable> TicketAccountabilityDataTableAsync(DateTime from, DateTime to, string cashier, string terminal)
@@ -45,12 +45,12 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Cashier", cashier);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public DataTable Gates()
         {
-            var gates = DatabaseHelper.LoadDataTable("SELECT [g].[GateID] AS [Id],[g].[GateName] AS [Name] FROM  [dbo].[Gates] [g] WHERE ISNULL([g].[IsDeleted],0) = 0 ", Properties.Settings.Default.UserConnectionString);
+            var gates = SCObjects.LoadDataTable("SELECT [g].[GateID] AS [Id],[g].[GateName] AS [Name] FROM  [dbo].[Gates] [g] WHERE ISNULL([g].[IsDeleted],0) = 0 ", Properties.Settings.Default.UserConnectionString);
             return gates;
         }
 
@@ -64,7 +64,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Cashier", cashier);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)
@@ -90,7 +90,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Cashier", cashier);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow  dr in result.Rows)
@@ -116,7 +116,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Cashier", cashier);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)
@@ -137,7 +137,7 @@ namespace Reports.Services
             var sql = string.Format(@"EXEC [dbo].[spGetCashierPerTerminal] @DateFrom = '{0}', 
                                      @DateTo = '{1}',   
                                      @Terminal ={2}", from, to, terminal);
-            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            var items = SCObjects.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

@@ -20,7 +20,7 @@ namespace Reports.Services
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@UserId", userid);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<IEnumerable<UserAccessMatrixItemModel>> GetUserAccessMatrixAsync(string userid)
@@ -31,7 +31,7 @@ namespace Reports.Services
             cmd.CommandText = StoredProcedure;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@UserId", userid);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if(result != null)
             {
                 foreach(DataRow dr in result.Rows)
@@ -70,7 +70,7 @@ namespace Reports.Services
             var sql = @"SELECT [UserID],
                                [Username]
                         FROM [dbo].[fnGetAllUsers]()";
-            var result = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            var result = SCObjects.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return result;
         }
     }

@@ -13,7 +13,7 @@ namespace Reports.Services
     {
         private const string StoredProcedure = "[dbo].[spHistoryReport]";
 
-        public async Task<IEnumerable<HistoryModel>> GetHistoryReportAsync(DateTime dateFrom, DateTime dateTo,string terminal, string Keyword)
+        public async Task<IEnumerable<HistoryModel>> GetHistoryReportAsync(DateTime dateFrom, DateTime dateTo, string terminal, string Keyword)
         {
             var items = new List<HistoryModel>();
             SqlCommand cmd = new SqlCommand();
@@ -23,9 +23,9 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
             cmd.Parameters.AddWithValue("@SearchKey", Keyword);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
 
-            foreach(DataRow dr in result.Rows)
+            foreach (DataRow dr in result.Rows)
             {
                 var item = new HistoryModel();
                 item.Id = int.Parse(dr["TransitId"].ToString());
@@ -39,9 +39,15 @@ namespace Reports.Services
                 item.Duration = dr["Duration"].ToString();
                 item.RateName = dr["RateName"].ToString();
                 item.Coupon = dr["Coupon"].ToString();
-                item.MonthlyRFID = dr["MonthlyRFID"].ToString();
-                item.MonthlyName = dr["MonthlyName"].ToString();
-            
+                item.SCPWDName = dr["SCPWDName"].ToString();
+                item.SCPWDAddress = dr["SCPWDAddress"].ToString();
+                item.SCPWDId = dr["SCPWDId"].ToString();
+                item.LostCardPenalty = decimal.Parse(dr["LostCardPenalty"].ToString());
+                item.LostCardName = dr["LostCardName"].ToString();
+                item.LostCardLicenseNo = dr["LostCardLicenseNo"].ToString();
+                item.LostCardORCR = dr["LostCardORCR"].ToString();
+                item.OvernightPenalty = decimal.Parse(dr["OvernightPenalty"].ToString());
+
                 item.EntranceImage = dr["EntranceImage"].ToString().Length > 0 ? (byte[])(dr["EntranceImage"]) : null;
                 item.ExitImage = dr["ExitImage"].ToString().Length > 0 ? (byte[])(dr["ExitImage"]) : null;
                 item.EntranceGate = dr["EntranceGate"].ToString();
@@ -49,7 +55,7 @@ namespace Reports.Services
             }
             return items;
         }
-        public async Task<DataTable> GetHistoryDataTableAsync(DateTime dateFrom, DateTime dateTo,string terminal, string Keyword)
+        public async Task<DataTable> GetHistoryDataTableAsync(DateTime dateFrom, DateTime dateTo, string terminal, string Keyword)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
@@ -58,7 +64,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
             cmd.Parameters.AddWithValue("@SearchKey", Keyword);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public DataTable Terminals()
@@ -66,7 +72,7 @@ namespace Reports.Services
             var sql = @"SELECT [fgag].[Id],
                                [fgag].[Name]
                         FROM [dbo].[fnGetAllGates]() [fgag]";
-            var items = DatabaseHelper.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
+            var items = SCObjects.LoadDataTable(sql, Properties.Settings.Default.UserConnectionString);
             return items;
         }
     }

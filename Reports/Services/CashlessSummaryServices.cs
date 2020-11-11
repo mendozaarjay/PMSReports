@@ -20,7 +20,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }
         public async Task<IEnumerable<CashlessSummaryModel>> CashlessSummaryAsync(DateTime from, DateTime to, string terminal)
@@ -32,7 +32,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateFrom", from);
             cmd.Parameters.AddWithValue("@DateTo", to);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
-            var result = await DatabaseHelper.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
+            var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             if (result == null)
                 return null;
 
