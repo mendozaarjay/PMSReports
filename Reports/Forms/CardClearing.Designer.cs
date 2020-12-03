@@ -103,7 +103,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1035, 196);
+            this.groupBox1.Size = new System.Drawing.Size(1317, 196);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parameters";
@@ -190,7 +190,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgCardClearing);
-            this.splitContainer1.Size = new System.Drawing.Size(1059, 621);
+            this.splitContainer1.Size = new System.Drawing.Size(1341, 621);
             this.splitContainer1.SplitterDistance = 212;
             this.splitContainer1.TabIndex = 3;
             // 
@@ -216,7 +216,7 @@
             this.dgCardClearing.ReadOnly = true;
             this.dgCardClearing.RowHeadersWidth = 51;
             this.dgCardClearing.RowTemplate.Height = 24;
-            this.dgCardClearing.Size = new System.Drawing.Size(1059, 405);
+            this.dgCardClearing.Size = new System.Drawing.Size(1341, 405);
             this.dgCardClearing.TabIndex = 0;
             this.dgCardClearing.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCardClearing_CellContentClick);
             // 
@@ -357,7 +357,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1059, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1341, 27);
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -365,7 +365,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 648);
+            this.ClientSize = new System.Drawing.Size(1341, 648);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.bindingNavigator1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

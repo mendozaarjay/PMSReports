@@ -55,7 +55,7 @@ namespace Reports
             var result = await services.SalesReportAsync(from, to, txtSearch.Text.Trim(),cboTerminal.SelectedValue.ToString());
             var all = result;
             var transaction = result.Where(a => a.AmountDue > 0 && !a.IsErased).ToList();
-            var collection = result.Where(a => a.TimeOut.Length > 0 && !a.IsErased).ToList();
+            var collection = result.Where(a => a.TimeOut.Length > 0 && !a.IsErased && a.Exit.ToLower().Contains("valid")).ToList();
             var discount = result.Where(a => a.Discount > 0 && !a.IsErased).ToList();
             var erased = result.Where(a => a.IsErased).ToList();
             var fee = result.Where(a => a.AmountDue > 0 && !a.IsErased).ToList();
