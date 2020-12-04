@@ -39,6 +39,8 @@ namespace Reports.Services
                 item.Duration = dr["Duration"].ToString();
                 item.RateName = dr["RateName"].ToString();
                 item.Coupon = dr["Coupon"].ToString();
+                item.MonthlyName = dr["MonthlyName"].ToString();
+                item.MonthlyRFID = dr["MonthlyRFID"].ToString();
                 item.SCPWDName = dr["SCPWDName"].ToString();
                 item.SCPWDAddress = dr["SCPWDAddress"].ToString();
                 item.SCPWDId = dr["SCPWDId"].ToString();

@@ -71,11 +71,11 @@ namespace Reports
 
             var items = await services.GetHistoryReportAsync(from, to,cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
 
-            var parkerIn = items.Where(a => a.MonthlyName == "" && a.TimeOut == "");
-            var parkerOut = items.Where(a => a.MonthlyName == "" && a.TimeOut.Length > 0);
+            var parkerIn = items.Where(a => a.MonthlyName.Replace(" ","").Length == 0 && a.TimeOut == "");
+            var parkerOut = items.Where(a => a.MonthlyName.Replace(" ", "").Length == 0 && a.TimeOut.Length > 0);
 
-            var monthlyIn = items.Where(a => a.MonthlyName != "" && a.TimeOut == "");
-            var monthlyOut = items.Where(a => a.MonthlyName != "" && a.TimeOut.Length > 0);
+            var monthlyIn = items.Where(a => a.MonthlyName.Replace(" ", "").Length > 0 && a.TimeOut == "");
+            var monthlyOut = items.Where(a => a.MonthlyName.Replace(" ", "").Length > 0 && a.TimeOut.Length > 0);
 
             HistoryItems = null;
             HistoryItems = items.ToList();
@@ -147,6 +147,7 @@ namespace Reports
                 dgHistoryAll[dtlAllLCLicenseNo.Index, row].Value = item.LostCardLicenseNo;
                 dgHistoryAll[dtlAllLCOrCr.Index, row].Value = item.LostCardORCR;
                 dgHistoryAll[dtlAllOvernightPenalty.Index, row].Value = item.OvernightPenalty;
+                dgHistoryAll[dtlAllEntranceGate.Index, row].Value = item.EntranceGate;
                 row++;
             }
             this.Invoke((MethodInvoker)delegate
