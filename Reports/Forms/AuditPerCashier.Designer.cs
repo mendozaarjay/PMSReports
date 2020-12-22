@@ -359,10 +359,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgTicketAccountability);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1005, 341);
+            this.tabPage2.Size = new System.Drawing.Size(1005, 334);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ticket Accountability";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -382,7 +382,7 @@
             this.dgTicketAccountability.ReadOnly = true;
             this.dgTicketAccountability.RowHeadersWidth = 51;
             this.dgTicketAccountability.RowTemplate.Height = 24;
-            this.dgTicketAccountability.Size = new System.Drawing.Size(999, 335);
+            this.dgTicketAccountability.Size = new System.Drawing.Size(999, 328);
             this.dgTicketAccountability.TabIndex = 1;
             // 
             // dtltaDescription
@@ -404,10 +404,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgProcessedTickets);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1005, 341);
+            this.tabPage3.Size = new System.Drawing.Size(1005, 334);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Processed Tickets";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -427,7 +427,7 @@
             this.dgProcessedTickets.ReadOnly = true;
             this.dgProcessedTickets.RowHeadersWidth = 51;
             this.dgProcessedTickets.RowTemplate.Height = 24;
-            this.dgProcessedTickets.Size = new System.Drawing.Size(999, 335);
+            this.dgProcessedTickets.Size = new System.Drawing.Size(999, 328);
             this.dgProcessedTickets.TabIndex = 2;
             // 
             // dtlptDescription
