@@ -51,11 +51,11 @@
             this.dtlComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlClearedUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtlView = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnFind = new System.Windows.Forms.ToolStripButton();
-            this.btnPrint = new System.Windows.Forms.ToolStripButton();
-            this.btnExcel = new System.Windows.Forms.ToolStripButton();
-            this.btnCsv = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.btnCsv = new System.Windows.Forms.ToolStripButton();
+            this.btnExcel = new System.Windows.Forms.ToolStripButton();
+            this.btnPrint = new System.Windows.Forms.ToolStripButton();
+            this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -293,32 +293,14 @@
             this.dtlView.ReadOnly = true;
             this.dtlView.Width = 125;
             // 
-            // btnFind
+            // btnRefresh
             // 
-            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
-            this.btnFind.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(61, 24);
-            this.btnFind.Text = "&Find";
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(63, 24);
-            this.btnPrint.Text = "&Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
-            this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(67, 24);
-            this.btnExcel.Text = "&Excel";
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(82, 24);
+            this.btnRefresh.Text = "&Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnCsv
             // 
@@ -329,14 +311,32 @@
             this.btnCsv.Text = "&CSV";
             this.btnCsv.Click += new System.EventHandler(this.btnCsv_Click);
             // 
-            // btnRefresh
+            // btnExcel
             // 
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(82, 24);
-            this.btnRefresh.Text = "&Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
+            this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(67, 24);
+            this.btnExcel.Text = "&Excel";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(63, 24);
+            this.btnPrint.Text = "&Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnFind
+            // 
+            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
+            this.btnFind.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(61, 24);
+            this.btnFind.Text = "&Find";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // bindingNavigator1
             // 
@@ -394,12 +394,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ToolStripButton btnFind;
-        private System.Windows.Forms.ToolStripButton btnPrint;
-        private System.Windows.Forms.ToolStripButton btnExcel;
-        private System.Windows.Forms.ToolStripButton btnCsv;
-        private System.Windows.Forms.ToolStripButton btnRefresh;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.DateTimePicker timeTo;
         private System.Windows.Forms.DateTimePicker timeFrom;
         private System.Windows.Forms.DateTimePicker dtTo;
@@ -416,5 +410,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlComment;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtlClearedUser;
         private System.Windows.Forms.DataGridViewButtonColumn dtlView;
+        private System.Windows.Forms.ToolStripButton btnRefresh;
+        private System.Windows.Forms.ToolStripButton btnCsv;
+        private System.Windows.Forms.ToolStripButton btnExcel;
+        private System.Windows.Forms.ToolStripButton btnPrint;
+        private System.Windows.Forms.ToolStripButton btnFind;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
     }
 }

@@ -49,10 +49,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.transactionReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cardEncodingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cardClearingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shiftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailedTransactionSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cashlessTransactionReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accoutabilityReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditPerCashierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditPerTerminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +68,7 @@
             this.operationOccupancyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peakLoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remainingCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regularParkersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.periodicReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zReadingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +79,7 @@
             this.cWeeklyOccupancy = new LiveCharts.WinForms.CartesianChart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.cWeeklySales = new LiveCharts.WinForms.CartesianChart();
-            this.cardClearingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditTrailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -293,7 +296,8 @@
             this.historyToolStripMenuItem,
             this.shiftToolStripMenuItem,
             this.salesToolStripMenuItem,
-            this.detailedTransactionSummaryToolStripMenuItem});
+            this.detailedTransactionSummaryToolStripMenuItem,
+            this.cashlessTransactionReportsToolStripMenuItem});
             this.transactionReportsToolStripMenuItem.Name = "transactionReportsToolStripMenuItem";
             this.transactionReportsToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.transactionReportsToolStripMenuItem.Text = "Transaction Reports";
@@ -304,6 +308,13 @@
             this.cardEncodingToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
             this.cardEncodingToolStripMenuItem.Text = "Card Encoding";
             this.cardEncodingToolStripMenuItem.Click += new System.EventHandler(this.cardEncodingToolStripMenuItem_Click);
+            // 
+            // cardClearingToolStripMenuItem
+            // 
+            this.cardClearingToolStripMenuItem.Name = "cardClearingToolStripMenuItem";
+            this.cardClearingToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.cardClearingToolStripMenuItem.Text = "Card Clearing";
+            this.cardClearingToolStripMenuItem.Click += new System.EventHandler(this.cardClearingToolStripMenuItem_Click);
             // 
             // historyToolStripMenuItem
             // 
@@ -338,6 +349,13 @@
             this.detailedTransactionSummaryToolStripMenuItem.Text = "Detailed Transaction Summary";
             this.detailedTransactionSummaryToolStripMenuItem.Click += new System.EventHandler(this.detailedTransactionSummaryToolStripMenuItem_Click);
             // 
+            // cashlessTransactionReportsToolStripMenuItem
+            // 
+            this.cashlessTransactionReportsToolStripMenuItem.Name = "cashlessTransactionReportsToolStripMenuItem";
+            this.cashlessTransactionReportsToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.cashlessTransactionReportsToolStripMenuItem.Text = "Cashless Transaction Report";
+            this.cashlessTransactionReportsToolStripMenuItem.Click += new System.EventHandler(this.cashlessTransactionReportsToolStripMenuItem_Click);
+            // 
             // accoutabilityReportsToolStripMenuItem
             // 
             this.accoutabilityReportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -347,7 +365,8 @@
             this.hourlyAccountabilityToolStripMenuItem,
             this.operationHourlyAccoutabilityToolStripMenuItem,
             this.summaryReportPerTerminalToolStripMenuItem,
-            this.userAccessMatrixToolStripMenuItem});
+            this.userAccessMatrixToolStripMenuItem,
+            this.auditTrailToolStripMenuItem});
             this.accoutabilityReportsToolStripMenuItem.Name = "accoutabilityReportsToolStripMenuItem";
             this.accoutabilityReportsToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
             this.accoutabilityReportsToolStripMenuItem.Text = "Accountability Reports";
@@ -407,7 +426,8 @@
             this.lenghtOfStayToolStripMenuItem,
             this.operationOccupancyToolStripMenuItem,
             this.peakLoadToolStripMenuItem,
-            this.remainingCarsToolStripMenuItem});
+            this.remainingCarsToolStripMenuItem,
+            this.regularParkersToolStripMenuItem1});
             this.statisticsReportToolStripMenuItem.Name = "statisticsReportToolStripMenuItem";
             this.statisticsReportToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.statisticsReportToolStripMenuItem.Text = "Statistics Report";
@@ -439,6 +459,13 @@
             this.remainingCarsToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.remainingCarsToolStripMenuItem.Text = "Remaining Cars";
             this.remainingCarsToolStripMenuItem.Click += new System.EventHandler(this.remainingCarsToolStripMenuItem_Click);
+            // 
+            // regularParkersToolStripMenuItem1
+            // 
+            this.regularParkersToolStripMenuItem1.Name = "regularParkersToolStripMenuItem1";
+            this.regularParkersToolStripMenuItem1.Size = new System.Drawing.Size(235, 26);
+            this.regularParkersToolStripMenuItem1.Text = "Regular Parkers";
+            this.regularParkersToolStripMenuItem1.Click += new System.EventHandler(this.regularParkersToolStripMenuItem1_Click);
             // 
             // periodicReportsToolStripMenuItem
             // 
@@ -535,12 +562,12 @@
             this.cWeeklySales.TabIndex = 0;
             this.cWeeklySales.Text = "cartesianChart1";
             // 
-            // cardClearingToolStripMenuItem
+            // auditTrailToolStripMenuItem
             // 
-            this.cardClearingToolStripMenuItem.Name = "cardClearingToolStripMenuItem";
-            this.cardClearingToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.cardClearingToolStripMenuItem.Text = "Card Clearing";
-            this.cardClearingToolStripMenuItem.Click += new System.EventHandler(this.cardClearingToolStripMenuItem_Click);
+            this.auditTrailToolStripMenuItem.Name = "auditTrailToolStripMenuItem";
+            this.auditTrailToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.auditTrailToolStripMenuItem.Text = "Audit Trail";
+            this.auditTrailToolStripMenuItem.Click += new System.EventHandler(this.auditTrailToolStripMenuItem_Click);
             // 
             // MainFormNew
             // 
@@ -623,5 +650,8 @@
         private System.Windows.Forms.ToolStripMenuItem cardEncodingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userAccessMatrixToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cardClearingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cashlessTransactionReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem regularParkersToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem auditTrailToolStripMenuItem;
     }
 }

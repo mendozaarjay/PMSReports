@@ -20,5 +20,8 @@
         ZReading = 15,
         UserAccessMatrix = 16,
         CardClearing = 17,
+        CashlessReport = 18,
+        AuditTrail = 19,
+        RegularParker = 20
     };
 }

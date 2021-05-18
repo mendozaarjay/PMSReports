@@ -69,7 +69,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var items = await services.GetHistoryReportAsync(from, to,cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
+            var items = await services.GetHistoryReportAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim(), rbExit.Checked);
 
             var parkerIn = items.Where(a => a.MonthlyName.Replace(" ","").Length == 0 && a.TimeOut == "");
             var parkerOut = items.Where(a => a.MonthlyName.Replace(" ", "").Length == 0 && a.TimeOut.Length > 0);
@@ -317,7 +317,7 @@ namespace Reports
             btnExcel.Enabled = false;
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
-            var dt = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
+            var dt = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim(), rbExit.Checked);
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 
@@ -338,7 +338,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var items = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
+            var items = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim(), rbExit.Checked);
             //items.Columns.Remove("TransitId");
             //items.AcceptChanges();
 
@@ -359,7 +359,7 @@ namespace Reports
             var from = DateTimeConverter.GetDateTime(dtFrom, timeFrom);
             var to = DateTimeConverter.GetDateTime(dtTo, timeTo);
 
-            var dt = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim());
+            var dt = await services.GetHistoryDataTableAsync(from, to, cboTerminal.SelectedValue.ToString(), txtSearch.Text.Trim(), rbExit.Checked);
             dt.Columns.Remove("TransitId");
             dt.AcceptChanges();
 

@@ -91,6 +91,8 @@ namespace Reports
             var oo = UserAccessItems.Any(a => a.ModuleCode == "ROO" && a.CanAccess);
             var pl = UserAccessItems.Any(a => a.ModuleCode == "RPL" && a.CanAccess);
             var rc = UserAccessItems.Any(a => a.ModuleCode == "RRC" && a.CanAccess);
+            var rpr = UserAccessItems.Any(a => a.ModuleCode == "RRPR" && a.CanAccess);
+
             if (los || oo || pl || rc)
                 statisticsReportToolStripMenuItem.Visible = true;
             else
@@ -100,6 +102,7 @@ namespace Reports
             operationOccupancyToolStripMenuItem.Visible = oo;
             peakLoadToolStripMenuItem.Visible = pl;
             remainingCarsToolStripMenuItem.Visible = rc;
+            regularParkersToolStripMenuItem1.Visible = rpr;
         }
         private void LoadPeriodicAccess()
         {
@@ -511,6 +514,33 @@ namespace Reports
         {
             CardClearing frm = new CardClearing();
             var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RCCR");
+            frm.UserAccess = item;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
+        }
+
+        private void cashlessTransactionReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cashless frm = new Cashless();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "CTRR");
+            frm.UserAccess = item;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
+        }
+
+        private void regularParkersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RegularParkers frm = new RegularParkers();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RRPR");
+            frm.UserAccess = item;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
+        }
+
+        private void auditTrailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuditTrail frm = new AuditTrail();
+            var item = UserAccessItems.FirstOrDefault(a => a.ModuleCode == "RATR");
             frm.UserAccess = item;
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();

@@ -13,7 +13,7 @@ namespace Reports.Services
     {
         private const string StoredProcedure = "[dbo].[spHistoryReport]";
 
-        public async Task<IEnumerable<HistoryModel>> GetHistoryReportAsync(DateTime dateFrom, DateTime dateTo, string terminal, string Keyword)
+        public async Task<IEnumerable<HistoryModel>> GetHistoryReportAsync(DateTime dateFrom, DateTime dateTo, string terminal, string Keyword, bool basedOnExit)
         {
             var items = new List<HistoryModel>();
             SqlCommand cmd = new SqlCommand();
@@ -23,6 +23,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
             cmd.Parameters.AddWithValue("@SearchKey", Keyword);
+            cmd.Parameters.AddWithValue("@QueryType", basedOnExit ? 2 : 1);
             var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
 
             foreach (DataRow dr in result.Rows)
@@ -57,7 +58,7 @@ namespace Reports.Services
             }
             return items;
         }
-        public async Task<DataTable> GetHistoryDataTableAsync(DateTime dateFrom, DateTime dateTo, string terminal, string Keyword)
+        public async Task<DataTable> GetHistoryDataTableAsync(DateTime dateFrom, DateTime dateTo, string terminal, string Keyword,bool basedOnExit)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = StoredProcedure;
@@ -66,6 +67,7 @@ namespace Reports.Services
             cmd.Parameters.AddWithValue("@DateTo", dateTo);
             cmd.Parameters.AddWithValue("@Terminal", terminal);
             cmd.Parameters.AddWithValue("@SearchKey", Keyword);
+            cmd.Parameters.AddWithValue("@QueryType", basedOnExit ? 2 : 1);
             var result = await SCObjects.ExecGetDataAsync(cmd, Properties.Settings.Default.UserConnectionString);
             return result;
         }

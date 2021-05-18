@@ -79,6 +79,32 @@
             this.dtlAllExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlAllView = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgParkerIn = new System.Windows.Forms.DataGridView();
+            this.dtlParkerInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInTicketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInDateTimeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInDateTimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInDurationOfStay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInRatesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInCoupon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInMonthlyRFID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInSCPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInLCOrCr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInOvernightPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlParkerInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtlParkerInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtlParkerInView = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgParkerOut = new System.Windows.Forms.DataGridView();
             this.dtlParkerOutTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -160,32 +186,10 @@
             this.dtlMonthlyOutEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyOutExitImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtlMonthlyOutView = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgParkerIn = new System.Windows.Forms.DataGridView();
-            this.dtlParkerInTransitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInEntranceGate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInTicketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInDateTimeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInDateTimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInDurationOfStay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInRatesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInCoupon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInMonthlyRFID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInMonthlyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInSCPWDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInSCPWDAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInSCPWDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInLCPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInLCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInLCLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInLCOrCr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInOvernightPenalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlParkerInEntranceImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dtlParkerInExitImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dtlParkerInView = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbEntrance = new System.Windows.Forms.RadioButton();
+            this.rbExit = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -197,13 +201,14 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgHistoryAll)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyOut)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -298,6 +303,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cboTerminal);
             this.groupBox1.Controls.Add(this.cbShowImages);
@@ -705,21 +711,265 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgParkerIn);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage2.Size = new System.Drawing.Size(1187, 334);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Parker In";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dgParkerIn
+            // 
+            this.dgParkerIn.AllowUserToAddRows = false;
+            this.dgParkerIn.AllowUserToDeleteRows = false;
+            this.dgParkerIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgParkerIn.ColumnHeadersHeight = 29;
+            this.dgParkerIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtlParkerInTransitId,
+            this.dtlParkerInRow,
+            this.dtlParkerInEntranceGate,
+            this.dtlParkerInTerminal,
+            this.dtlParkerInORNo,
+            this.dtlParkerInPlateNo,
+            this.dtlParkerInTicketNo,
+            this.dtlParkerInDateTimeIn,
+            this.dtlParkerInDateTimeOut,
+            this.dtlParkerInDurationOfStay,
+            this.dtlParkerInRatesName,
+            this.dtlParkerInCoupon,
+            this.dtlParkerInMonthlyRFID,
+            this.dtlParkerInMonthlyName,
+            this.dtlParkerInSCPWDName,
+            this.dtlParkerInSCPWDAddress,
+            this.dtlParkerInSCPWDId,
+            this.dtlParkerInLCPenalty,
+            this.dtlParkerInLCName,
+            this.dtlParkerInLCLicenseNo,
+            this.dtlParkerInLCOrCr,
+            this.dtlParkerInOvernightPenalty,
+            this.dtlParkerInEntranceImage,
+            this.dtlParkerInExitImage,
+            this.dtlParkerInView});
+            this.dgParkerIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgParkerIn.Location = new System.Drawing.Point(3, 3);
+            this.dgParkerIn.Name = "dgParkerIn";
+            this.dgParkerIn.ReadOnly = true;
+            this.dgParkerIn.RowHeadersWidth = 51;
+            this.dgParkerIn.RowTemplate.Height = 24;
+            this.dgParkerIn.Size = new System.Drawing.Size(1181, 328);
+            this.dgParkerIn.TabIndex = 5;
+            // 
+            // dtlParkerInTransitId
+            // 
+            this.dtlParkerInTransitId.HeaderText = "Id";
+            this.dtlParkerInTransitId.MinimumWidth = 6;
+            this.dtlParkerInTransitId.Name = "dtlParkerInTransitId";
+            this.dtlParkerInTransitId.ReadOnly = true;
+            this.dtlParkerInTransitId.Visible = false;
+            this.dtlParkerInTransitId.Width = 125;
+            // 
+            // dtlParkerInRow
+            // 
+            this.dtlParkerInRow.HeaderText = "Row";
+            this.dtlParkerInRow.MinimumWidth = 6;
+            this.dtlParkerInRow.Name = "dtlParkerInRow";
+            this.dtlParkerInRow.ReadOnly = true;
+            this.dtlParkerInRow.Width = 125;
+            // 
+            // dtlParkerInEntranceGate
+            // 
+            this.dtlParkerInEntranceGate.HeaderText = "Entrance Gate";
+            this.dtlParkerInEntranceGate.MinimumWidth = 6;
+            this.dtlParkerInEntranceGate.Name = "dtlParkerInEntranceGate";
+            this.dtlParkerInEntranceGate.ReadOnly = true;
+            this.dtlParkerInEntranceGate.Width = 200;
+            // 
+            // dtlParkerInTerminal
+            // 
+            this.dtlParkerInTerminal.HeaderText = "Terminal";
+            this.dtlParkerInTerminal.MinimumWidth = 6;
+            this.dtlParkerInTerminal.Name = "dtlParkerInTerminal";
+            this.dtlParkerInTerminal.ReadOnly = true;
+            this.dtlParkerInTerminal.Width = 200;
+            // 
+            // dtlParkerInORNo
+            // 
+            this.dtlParkerInORNo.HeaderText = "OR Number";
+            this.dtlParkerInORNo.MinimumWidth = 6;
+            this.dtlParkerInORNo.Name = "dtlParkerInORNo";
+            this.dtlParkerInORNo.ReadOnly = true;
+            this.dtlParkerInORNo.Width = 200;
+            // 
+            // dtlParkerInPlateNo
+            // 
+            this.dtlParkerInPlateNo.HeaderText = "Plate No";
+            this.dtlParkerInPlateNo.MinimumWidth = 6;
+            this.dtlParkerInPlateNo.Name = "dtlParkerInPlateNo";
+            this.dtlParkerInPlateNo.ReadOnly = true;
+            this.dtlParkerInPlateNo.Width = 200;
+            // 
+            // dtlParkerInTicketNo
+            // 
+            this.dtlParkerInTicketNo.HeaderText = "Ticket No";
+            this.dtlParkerInTicketNo.MinimumWidth = 6;
+            this.dtlParkerInTicketNo.Name = "dtlParkerInTicketNo";
+            this.dtlParkerInTicketNo.ReadOnly = true;
+            this.dtlParkerInTicketNo.Width = 200;
+            // 
+            // dtlParkerInDateTimeIn
+            // 
+            this.dtlParkerInDateTimeIn.HeaderText = "Date/Time In";
+            this.dtlParkerInDateTimeIn.MinimumWidth = 6;
+            this.dtlParkerInDateTimeIn.Name = "dtlParkerInDateTimeIn";
+            this.dtlParkerInDateTimeIn.ReadOnly = true;
+            this.dtlParkerInDateTimeIn.Width = 200;
+            // 
+            // dtlParkerInDateTimeOut
+            // 
+            this.dtlParkerInDateTimeOut.HeaderText = "Date/Time Out";
+            this.dtlParkerInDateTimeOut.MinimumWidth = 6;
+            this.dtlParkerInDateTimeOut.Name = "dtlParkerInDateTimeOut";
+            this.dtlParkerInDateTimeOut.ReadOnly = true;
+            this.dtlParkerInDateTimeOut.Width = 200;
+            // 
+            // dtlParkerInDurationOfStay
+            // 
+            this.dtlParkerInDurationOfStay.HeaderText = "Duration of Stay";
+            this.dtlParkerInDurationOfStay.MinimumWidth = 6;
+            this.dtlParkerInDurationOfStay.Name = "dtlParkerInDurationOfStay";
+            this.dtlParkerInDurationOfStay.ReadOnly = true;
+            this.dtlParkerInDurationOfStay.Width = 200;
+            // 
+            // dtlParkerInRatesName
+            // 
+            this.dtlParkerInRatesName.HeaderText = "Rate";
+            this.dtlParkerInRatesName.MinimumWidth = 6;
+            this.dtlParkerInRatesName.Name = "dtlParkerInRatesName";
+            this.dtlParkerInRatesName.ReadOnly = true;
+            this.dtlParkerInRatesName.Width = 200;
+            // 
+            // dtlParkerInCoupon
+            // 
+            this.dtlParkerInCoupon.HeaderText = "Coupon";
+            this.dtlParkerInCoupon.MinimumWidth = 6;
+            this.dtlParkerInCoupon.Name = "dtlParkerInCoupon";
+            this.dtlParkerInCoupon.ReadOnly = true;
+            this.dtlParkerInCoupon.Width = 200;
+            // 
+            // dtlParkerInMonthlyRFID
+            // 
+            this.dtlParkerInMonthlyRFID.HeaderText = "Monthly RFID";
+            this.dtlParkerInMonthlyRFID.MinimumWidth = 6;
+            this.dtlParkerInMonthlyRFID.Name = "dtlParkerInMonthlyRFID";
+            this.dtlParkerInMonthlyRFID.ReadOnly = true;
+            this.dtlParkerInMonthlyRFID.Width = 200;
+            // 
+            // dtlParkerInMonthlyName
+            // 
+            this.dtlParkerInMonthlyName.HeaderText = "Monthly Name";
+            this.dtlParkerInMonthlyName.MinimumWidth = 6;
+            this.dtlParkerInMonthlyName.Name = "dtlParkerInMonthlyName";
+            this.dtlParkerInMonthlyName.ReadOnly = true;
+            this.dtlParkerInMonthlyName.Width = 200;
+            // 
+            // dtlParkerInSCPWDName
+            // 
+            this.dtlParkerInSCPWDName.HeaderText = "SC/PWD Name";
+            this.dtlParkerInSCPWDName.MinimumWidth = 6;
+            this.dtlParkerInSCPWDName.Name = "dtlParkerInSCPWDName";
+            this.dtlParkerInSCPWDName.ReadOnly = true;
+            this.dtlParkerInSCPWDName.Width = 125;
+            // 
+            // dtlParkerInSCPWDAddress
+            // 
+            this.dtlParkerInSCPWDAddress.HeaderText = "SC/PWD Address";
+            this.dtlParkerInSCPWDAddress.MinimumWidth = 6;
+            this.dtlParkerInSCPWDAddress.Name = "dtlParkerInSCPWDAddress";
+            this.dtlParkerInSCPWDAddress.ReadOnly = true;
+            this.dtlParkerInSCPWDAddress.Width = 125;
+            // 
+            // dtlParkerInSCPWDId
+            // 
+            this.dtlParkerInSCPWDId.HeaderText = "SC/PWD I.D";
+            this.dtlParkerInSCPWDId.MinimumWidth = 6;
+            this.dtlParkerInSCPWDId.Name = "dtlParkerInSCPWDId";
+            this.dtlParkerInSCPWDId.ReadOnly = true;
+            this.dtlParkerInSCPWDId.Width = 125;
+            // 
+            // dtlParkerInLCPenalty
+            // 
+            this.dtlParkerInLCPenalty.HeaderText = "Lost Card Penalty";
+            this.dtlParkerInLCPenalty.MinimumWidth = 6;
+            this.dtlParkerInLCPenalty.Name = "dtlParkerInLCPenalty";
+            this.dtlParkerInLCPenalty.ReadOnly = true;
+            this.dtlParkerInLCPenalty.Width = 125;
+            // 
+            // dtlParkerInLCName
+            // 
+            this.dtlParkerInLCName.HeaderText = "Lost Card Name";
+            this.dtlParkerInLCName.MinimumWidth = 6;
+            this.dtlParkerInLCName.Name = "dtlParkerInLCName";
+            this.dtlParkerInLCName.ReadOnly = true;
+            this.dtlParkerInLCName.Width = 125;
+            // 
+            // dtlParkerInLCLicenseNo
+            // 
+            this.dtlParkerInLCLicenseNo.HeaderText = "Lost Card License";
+            this.dtlParkerInLCLicenseNo.MinimumWidth = 6;
+            this.dtlParkerInLCLicenseNo.Name = "dtlParkerInLCLicenseNo";
+            this.dtlParkerInLCLicenseNo.ReadOnly = true;
+            this.dtlParkerInLCLicenseNo.Width = 125;
+            // 
+            // dtlParkerInLCOrCr
+            // 
+            this.dtlParkerInLCOrCr.HeaderText = "Lost Card OR/CR";
+            this.dtlParkerInLCOrCr.MinimumWidth = 6;
+            this.dtlParkerInLCOrCr.Name = "dtlParkerInLCOrCr";
+            this.dtlParkerInLCOrCr.ReadOnly = true;
+            this.dtlParkerInLCOrCr.Width = 125;
+            // 
+            // dtlParkerInOvernightPenalty
+            // 
+            this.dtlParkerInOvernightPenalty.HeaderText = "Overnight";
+            this.dtlParkerInOvernightPenalty.MinimumWidth = 6;
+            this.dtlParkerInOvernightPenalty.Name = "dtlParkerInOvernightPenalty";
+            this.dtlParkerInOvernightPenalty.ReadOnly = true;
+            this.dtlParkerInOvernightPenalty.Width = 125;
+            // 
+            // dtlParkerInEntranceImage
+            // 
+            this.dtlParkerInEntranceImage.HeaderText = "Entrance";
+            this.dtlParkerInEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dtlParkerInEntranceImage.MinimumWidth = 6;
+            this.dtlParkerInEntranceImage.Name = "dtlParkerInEntranceImage";
+            this.dtlParkerInEntranceImage.ReadOnly = true;
+            this.dtlParkerInEntranceImage.Width = 250;
+            // 
+            // dtlParkerInExitImage
+            // 
+            this.dtlParkerInExitImage.HeaderText = "Exit";
+            this.dtlParkerInExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dtlParkerInExitImage.MinimumWidth = 6;
+            this.dtlParkerInExitImage.Name = "dtlParkerInExitImage";
+            this.dtlParkerInExitImage.ReadOnly = true;
+            this.dtlParkerInExitImage.Width = 250;
+            // 
+            // dtlParkerInView
+            // 
+            this.dtlParkerInView.HeaderText = "View";
+            this.dtlParkerInView.MinimumWidth = 6;
+            this.dtlParkerInView.Name = "dtlParkerInView";
+            this.dtlParkerInView.ReadOnly = true;
+            this.dtlParkerInView.Width = 125;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgParkerOut);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage3.Size = new System.Drawing.Size(1187, 334);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Parker Out";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -762,7 +1012,7 @@
             this.dgParkerOut.ReadOnly = true;
             this.dgParkerOut.RowHeadersWidth = 51;
             this.dgParkerOut.RowTemplate.Height = 24;
-            this.dgParkerOut.Size = new System.Drawing.Size(1181, 321);
+            this.dgParkerOut.Size = new System.Drawing.Size(1181, 328);
             this.dgParkerOut.TabIndex = 3;
             // 
             // dtlParkerOutTransitId
@@ -971,10 +1221,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.dgMonthlyIn);
-            this.tabPage4.Location = new System.Drawing.Point(4, 32);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage4.Size = new System.Drawing.Size(1187, 334);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Monthly In";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1017,7 +1267,7 @@
             this.dgMonthlyIn.ReadOnly = true;
             this.dgMonthlyIn.RowHeadersWidth = 51;
             this.dgMonthlyIn.RowTemplate.Height = 24;
-            this.dgMonthlyIn.Size = new System.Drawing.Size(1181, 321);
+            this.dgMonthlyIn.Size = new System.Drawing.Size(1181, 328);
             this.dgMonthlyIn.TabIndex = 3;
             // 
             // dtlMonthlyInTransitId
@@ -1226,10 +1476,10 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.dgMonthlyOut);
-            this.tabPage5.Location = new System.Drawing.Point(4, 32);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1187, 327);
+            this.tabPage5.Size = new System.Drawing.Size(1187, 334);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Monthly Out";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1272,7 +1522,7 @@
             this.dgMonthlyOut.ReadOnly = true;
             this.dgMonthlyOut.RowHeadersWidth = 51;
             this.dgMonthlyOut.RowTemplate.Height = 24;
-            this.dgMonthlyOut.Size = new System.Drawing.Size(1181, 321);
+            this.dgMonthlyOut.Size = new System.Drawing.Size(1181, 328);
             this.dgMonthlyOut.TabIndex = 3;
             // 
             // dtlMonthlyOutTransitId
@@ -1478,249 +1728,51 @@
             this.dtlMonthlyOutView.ReadOnly = true;
             this.dtlMonthlyOutView.Width = 125;
             // 
-            // dgParkerIn
+            // groupBox2
             // 
-            this.dgParkerIn.AllowUserToAddRows = false;
-            this.dgParkerIn.AllowUserToDeleteRows = false;
-            this.dgParkerIn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgParkerIn.ColumnHeadersHeight = 29;
-            this.dgParkerIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtlParkerInTransitId,
-            this.dtlParkerInRow,
-            this.dtlParkerInEntranceGate,
-            this.dtlParkerInTerminal,
-            this.dtlParkerInORNo,
-            this.dtlParkerInPlateNo,
-            this.dtlParkerInTicketNo,
-            this.dtlParkerInDateTimeIn,
-            this.dtlParkerInDateTimeOut,
-            this.dtlParkerInDurationOfStay,
-            this.dtlParkerInRatesName,
-            this.dtlParkerInCoupon,
-            this.dtlParkerInMonthlyRFID,
-            this.dtlParkerInMonthlyName,
-            this.dtlParkerInSCPWDName,
-            this.dtlParkerInSCPWDAddress,
-            this.dtlParkerInSCPWDId,
-            this.dtlParkerInLCPenalty,
-            this.dtlParkerInLCName,
-            this.dtlParkerInLCLicenseNo,
-            this.dtlParkerInLCOrCr,
-            this.dtlParkerInOvernightPenalty,
-            this.dtlParkerInEntranceImage,
-            this.dtlParkerInExitImage,
-            this.dtlParkerInView});
-            this.dgParkerIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgParkerIn.Location = new System.Drawing.Point(3, 3);
-            this.dgParkerIn.Name = "dgParkerIn";
-            this.dgParkerIn.ReadOnly = true;
-            this.dgParkerIn.RowHeadersWidth = 51;
-            this.dgParkerIn.RowTemplate.Height = 24;
-            this.dgParkerIn.Size = new System.Drawing.Size(1181, 321);
-            this.dgParkerIn.TabIndex = 5;
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.rbExit);
+            this.groupBox2.Controls.Add(this.rbEntrance);
+            this.groupBox2.Location = new System.Drawing.Point(468, 23);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(597, 155);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Search Type";
             // 
-            // dtlParkerInTransitId
+            // rbEntrance
             // 
-            this.dtlParkerInTransitId.HeaderText = "Id";
-            this.dtlParkerInTransitId.MinimumWidth = 6;
-            this.dtlParkerInTransitId.Name = "dtlParkerInTransitId";
-            this.dtlParkerInTransitId.ReadOnly = true;
-            this.dtlParkerInTransitId.Visible = false;
-            this.dtlParkerInTransitId.Width = 125;
+            this.rbEntrance.AutoSize = true;
+            this.rbEntrance.Checked = true;
+            this.rbEntrance.Location = new System.Drawing.Point(27, 29);
+            this.rbEntrance.Name = "rbEntrance";
+            this.rbEntrance.Size = new System.Drawing.Size(173, 27);
+            this.rbEntrance.TabIndex = 0;
+            this.rbEntrance.TabStop = true;
+            this.rbEntrance.Text = "Based on Entrance";
+            this.rbEntrance.UseVisualStyleBackColor = true;
             // 
-            // dtlParkerInRow
+            // rbExit
             // 
-            this.dtlParkerInRow.HeaderText = "Row";
-            this.dtlParkerInRow.MinimumWidth = 6;
-            this.dtlParkerInRow.Name = "dtlParkerInRow";
-            this.dtlParkerInRow.ReadOnly = true;
-            this.dtlParkerInRow.Width = 125;
+            this.rbExit.AutoSize = true;
+            this.rbExit.Location = new System.Drawing.Point(27, 60);
+            this.rbExit.Name = "rbExit";
+            this.rbExit.Size = new System.Drawing.Size(133, 27);
+            this.rbExit.TabIndex = 1;
+            this.rbExit.Text = "Based on Exit";
+            this.rbExit.UseVisualStyleBackColor = true;
             // 
-            // dtlParkerInEntranceGate
+            // label5
             // 
-            this.dtlParkerInEntranceGate.HeaderText = "Entrance Gate";
-            this.dtlParkerInEntranceGate.MinimumWidth = 6;
-            this.dtlParkerInEntranceGate.Name = "dtlParkerInEntranceGate";
-            this.dtlParkerInEntranceGate.ReadOnly = true;
-            this.dtlParkerInEntranceGate.Width = 200;
-            // 
-            // dtlParkerInTerminal
-            // 
-            this.dtlParkerInTerminal.HeaderText = "Terminal";
-            this.dtlParkerInTerminal.MinimumWidth = 6;
-            this.dtlParkerInTerminal.Name = "dtlParkerInTerminal";
-            this.dtlParkerInTerminal.ReadOnly = true;
-            this.dtlParkerInTerminal.Width = 200;
-            // 
-            // dtlParkerInORNo
-            // 
-            this.dtlParkerInORNo.HeaderText = "OR Number";
-            this.dtlParkerInORNo.MinimumWidth = 6;
-            this.dtlParkerInORNo.Name = "dtlParkerInORNo";
-            this.dtlParkerInORNo.ReadOnly = true;
-            this.dtlParkerInORNo.Width = 200;
-            // 
-            // dtlParkerInPlateNo
-            // 
-            this.dtlParkerInPlateNo.HeaderText = "Plate No";
-            this.dtlParkerInPlateNo.MinimumWidth = 6;
-            this.dtlParkerInPlateNo.Name = "dtlParkerInPlateNo";
-            this.dtlParkerInPlateNo.ReadOnly = true;
-            this.dtlParkerInPlateNo.Width = 200;
-            // 
-            // dtlParkerInTicketNo
-            // 
-            this.dtlParkerInTicketNo.HeaderText = "Ticket No";
-            this.dtlParkerInTicketNo.MinimumWidth = 6;
-            this.dtlParkerInTicketNo.Name = "dtlParkerInTicketNo";
-            this.dtlParkerInTicketNo.ReadOnly = true;
-            this.dtlParkerInTicketNo.Width = 200;
-            // 
-            // dtlParkerInDateTimeIn
-            // 
-            this.dtlParkerInDateTimeIn.HeaderText = "Date/Time In";
-            this.dtlParkerInDateTimeIn.MinimumWidth = 6;
-            this.dtlParkerInDateTimeIn.Name = "dtlParkerInDateTimeIn";
-            this.dtlParkerInDateTimeIn.ReadOnly = true;
-            this.dtlParkerInDateTimeIn.Width = 200;
-            // 
-            // dtlParkerInDateTimeOut
-            // 
-            this.dtlParkerInDateTimeOut.HeaderText = "Date/Time Out";
-            this.dtlParkerInDateTimeOut.MinimumWidth = 6;
-            this.dtlParkerInDateTimeOut.Name = "dtlParkerInDateTimeOut";
-            this.dtlParkerInDateTimeOut.ReadOnly = true;
-            this.dtlParkerInDateTimeOut.Width = 200;
-            // 
-            // dtlParkerInDurationOfStay
-            // 
-            this.dtlParkerInDurationOfStay.HeaderText = "Duration of Stay";
-            this.dtlParkerInDurationOfStay.MinimumWidth = 6;
-            this.dtlParkerInDurationOfStay.Name = "dtlParkerInDurationOfStay";
-            this.dtlParkerInDurationOfStay.ReadOnly = true;
-            this.dtlParkerInDurationOfStay.Width = 200;
-            // 
-            // dtlParkerInRatesName
-            // 
-            this.dtlParkerInRatesName.HeaderText = "Rate";
-            this.dtlParkerInRatesName.MinimumWidth = 6;
-            this.dtlParkerInRatesName.Name = "dtlParkerInRatesName";
-            this.dtlParkerInRatesName.ReadOnly = true;
-            this.dtlParkerInRatesName.Width = 200;
-            // 
-            // dtlParkerInCoupon
-            // 
-            this.dtlParkerInCoupon.HeaderText = "Coupon";
-            this.dtlParkerInCoupon.MinimumWidth = 6;
-            this.dtlParkerInCoupon.Name = "dtlParkerInCoupon";
-            this.dtlParkerInCoupon.ReadOnly = true;
-            this.dtlParkerInCoupon.Width = 200;
-            // 
-            // dtlParkerInMonthlyRFID
-            // 
-            this.dtlParkerInMonthlyRFID.HeaderText = "Monthly RFID";
-            this.dtlParkerInMonthlyRFID.MinimumWidth = 6;
-            this.dtlParkerInMonthlyRFID.Name = "dtlParkerInMonthlyRFID";
-            this.dtlParkerInMonthlyRFID.ReadOnly = true;
-            this.dtlParkerInMonthlyRFID.Width = 200;
-            // 
-            // dtlParkerInMonthlyName
-            // 
-            this.dtlParkerInMonthlyName.HeaderText = "Monthly Name";
-            this.dtlParkerInMonthlyName.MinimumWidth = 6;
-            this.dtlParkerInMonthlyName.Name = "dtlParkerInMonthlyName";
-            this.dtlParkerInMonthlyName.ReadOnly = true;
-            this.dtlParkerInMonthlyName.Width = 200;
-            // 
-            // dtlParkerInSCPWDName
-            // 
-            this.dtlParkerInSCPWDName.HeaderText = "SC/PWD Name";
-            this.dtlParkerInSCPWDName.MinimumWidth = 6;
-            this.dtlParkerInSCPWDName.Name = "dtlParkerInSCPWDName";
-            this.dtlParkerInSCPWDName.ReadOnly = true;
-            this.dtlParkerInSCPWDName.Width = 125;
-            // 
-            // dtlParkerInSCPWDAddress
-            // 
-            this.dtlParkerInSCPWDAddress.HeaderText = "SC/PWD Address";
-            this.dtlParkerInSCPWDAddress.MinimumWidth = 6;
-            this.dtlParkerInSCPWDAddress.Name = "dtlParkerInSCPWDAddress";
-            this.dtlParkerInSCPWDAddress.ReadOnly = true;
-            this.dtlParkerInSCPWDAddress.Width = 125;
-            // 
-            // dtlParkerInSCPWDId
-            // 
-            this.dtlParkerInSCPWDId.HeaderText = "SC/PWD I.D";
-            this.dtlParkerInSCPWDId.MinimumWidth = 6;
-            this.dtlParkerInSCPWDId.Name = "dtlParkerInSCPWDId";
-            this.dtlParkerInSCPWDId.ReadOnly = true;
-            this.dtlParkerInSCPWDId.Width = 125;
-            // 
-            // dtlParkerInLCPenalty
-            // 
-            this.dtlParkerInLCPenalty.HeaderText = "Lost Card Penalty";
-            this.dtlParkerInLCPenalty.MinimumWidth = 6;
-            this.dtlParkerInLCPenalty.Name = "dtlParkerInLCPenalty";
-            this.dtlParkerInLCPenalty.ReadOnly = true;
-            this.dtlParkerInLCPenalty.Width = 125;
-            // 
-            // dtlParkerInLCName
-            // 
-            this.dtlParkerInLCName.HeaderText = "Lost Card Name";
-            this.dtlParkerInLCName.MinimumWidth = 6;
-            this.dtlParkerInLCName.Name = "dtlParkerInLCName";
-            this.dtlParkerInLCName.ReadOnly = true;
-            this.dtlParkerInLCName.Width = 125;
-            // 
-            // dtlParkerInLCLicenseNo
-            // 
-            this.dtlParkerInLCLicenseNo.HeaderText = "Lost Card License";
-            this.dtlParkerInLCLicenseNo.MinimumWidth = 6;
-            this.dtlParkerInLCLicenseNo.Name = "dtlParkerInLCLicenseNo";
-            this.dtlParkerInLCLicenseNo.ReadOnly = true;
-            this.dtlParkerInLCLicenseNo.Width = 125;
-            // 
-            // dtlParkerInLCOrCr
-            // 
-            this.dtlParkerInLCOrCr.HeaderText = "Lost Card OR/CR";
-            this.dtlParkerInLCOrCr.MinimumWidth = 6;
-            this.dtlParkerInLCOrCr.Name = "dtlParkerInLCOrCr";
-            this.dtlParkerInLCOrCr.ReadOnly = true;
-            this.dtlParkerInLCOrCr.Width = 125;
-            // 
-            // dtlParkerInOvernightPenalty
-            // 
-            this.dtlParkerInOvernightPenalty.HeaderText = "Overnight";
-            this.dtlParkerInOvernightPenalty.MinimumWidth = 6;
-            this.dtlParkerInOvernightPenalty.Name = "dtlParkerInOvernightPenalty";
-            this.dtlParkerInOvernightPenalty.ReadOnly = true;
-            this.dtlParkerInOvernightPenalty.Width = 125;
-            // 
-            // dtlParkerInEntranceImage
-            // 
-            this.dtlParkerInEntranceImage.HeaderText = "Entrance";
-            this.dtlParkerInEntranceImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dtlParkerInEntranceImage.MinimumWidth = 6;
-            this.dtlParkerInEntranceImage.Name = "dtlParkerInEntranceImage";
-            this.dtlParkerInEntranceImage.ReadOnly = true;
-            this.dtlParkerInEntranceImage.Width = 250;
-            // 
-            // dtlParkerInExitImage
-            // 
-            this.dtlParkerInExitImage.HeaderText = "Exit";
-            this.dtlParkerInExitImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dtlParkerInExitImage.MinimumWidth = 6;
-            this.dtlParkerInExitImage.Name = "dtlParkerInExitImage";
-            this.dtlParkerInExitImage.ReadOnly = true;
-            this.dtlParkerInExitImage.Width = 250;
-            // 
-            // dtlParkerInView
-            // 
-            this.dtlParkerInView.HeaderText = "View";
-            this.dtlParkerInView.MinimumWidth = 6;
-            this.dtlParkerInView.Name = "dtlParkerInView";
-            this.dtlParkerInView.ReadOnly = true;
-            this.dtlParkerInView.Width = 125;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(27, 88);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(564, 67);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Note : Based on entrance means, the report will generate based on the entrance da" +
+    "te and terminal. Based on exit means, the report will generate based on exit dat" +
+    "e and terminal.";
             // 
             // History
             // 
@@ -1747,13 +1799,15 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgHistoryAll)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgParkerOut)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyIn)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgMonthlyOut)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgParkerIn)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1917,6 +1971,10 @@
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerInEntranceImage;
         private System.Windows.Forms.DataGridViewImageColumn dtlParkerInExitImage;
         private System.Windows.Forms.DataGridViewButtonColumn dtlParkerInView;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbExit;
+        private System.Windows.Forms.RadioButton rbEntrance;
+        private System.Windows.Forms.Label label5;
     }
 }
 

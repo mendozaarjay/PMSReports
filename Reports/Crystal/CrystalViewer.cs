@@ -80,6 +80,48 @@ namespace Reports
                     salesreport.DataDefinition.FormulaFields["Username"].Text = FormulaFieldBuilder(Properties.Settings.Default.Username);
                     ReportDocument = salesreport;
                     break;
+                case ReportType.CashlessReport:
+                    CashlessCrystalReport cashless = new CashlessCrystalReport();
+                    cashless.SetDataSource(DataSource);
+                    viewer.ReportSource = cashless;
+                    cashless.DataDefinition.FormulaFields["Company"].Text = FormulaFieldBuilder(settings.Company);
+                    cashless.DataDefinition.FormulaFields["Address"].Text = FormulaFieldBuilder(settings.Address);
+                    cashless.DataDefinition.FormulaFields["TIN"].Text = FormulaFieldBuilder(settings.TIN);
+                    cashless.DataDefinition.FormulaFields["ProgramAndVersion"].Text = FormulaFieldBuilder(Properties.Settings.Default.ProgramVersion);
+                    cashless.DataDefinition.FormulaFields["Serial"].Text = FormulaFieldBuilder(Properties.Settings.Default.SN);
+                    cashless.DataDefinition.FormulaFields["Min"].Text = FormulaFieldBuilder(Properties.Settings.Default.MIN);
+                    cashless.DataDefinition.FormulaFields["DateCovered"].Text = FormulaFieldBuilder(this.DateCovered);
+                    cashless.DataDefinition.FormulaFields["Username"].Text = FormulaFieldBuilder(Properties.Settings.Default.Username);
+                    ReportDocument = cashless;
+                    break;
+                case ReportType.RegularParker:
+                    RegularParkerReport regular = new RegularParkerReport();
+                    regular.SetDataSource(DataSource);
+                    viewer.ReportSource = regular;
+                    regular.DataDefinition.FormulaFields["Company"].Text = FormulaFieldBuilder(settings.Company);
+                    regular.DataDefinition.FormulaFields["Address"].Text = FormulaFieldBuilder(settings.Address);
+                    regular.DataDefinition.FormulaFields["TIN"].Text = FormulaFieldBuilder(settings.TIN);
+                    regular.DataDefinition.FormulaFields["ProgramAndVersion"].Text = FormulaFieldBuilder(Properties.Settings.Default.ProgramVersion);
+                    regular.DataDefinition.FormulaFields["Serial"].Text = FormulaFieldBuilder(Properties.Settings.Default.SN);
+                    regular.DataDefinition.FormulaFields["Min"].Text = FormulaFieldBuilder(Properties.Settings.Default.MIN);
+                    regular.DataDefinition.FormulaFields["DateCovered"].Text = FormulaFieldBuilder(this.DateCovered);
+                    regular.DataDefinition.FormulaFields["Username"].Text = FormulaFieldBuilder(Properties.Settings.Default.Username);
+                    ReportDocument = regular;
+                    break;
+                case ReportType.AuditTrail:
+                    AuditTrailReport audit = new AuditTrailReport();
+                    audit.SetDataSource(DataSource);
+                    viewer.ReportSource = audit;
+                    audit.DataDefinition.FormulaFields["Company"].Text = FormulaFieldBuilder(settings.Company);
+                    audit.DataDefinition.FormulaFields["Address"].Text = FormulaFieldBuilder(settings.Address);
+                    audit.DataDefinition.FormulaFields["TIN"].Text = FormulaFieldBuilder(settings.TIN);
+                    audit.DataDefinition.FormulaFields["ProgramAndVersion"].Text = FormulaFieldBuilder(Properties.Settings.Default.ProgramVersion);
+                    audit.DataDefinition.FormulaFields["Serial"].Text = FormulaFieldBuilder(Properties.Settings.Default.SN);
+                    audit.DataDefinition.FormulaFields["Min"].Text = FormulaFieldBuilder(Properties.Settings.Default.MIN);
+                    audit.DataDefinition.FormulaFields["DateCovered"].Text = FormulaFieldBuilder(this.DateCovered);
+                    audit.DataDefinition.FormulaFields["Username"].Text = FormulaFieldBuilder(Properties.Settings.Default.Username);
+                    ReportDocument = audit;
+                    break;
             }
             viewer.Show();
             viewer.RefreshReport();
@@ -115,6 +157,24 @@ namespace Reports
                         break;
                     case ReportType.DetailedTransactionSummaryReport:
                         reportName = "Detailed Transaction Summary Report.pdf";
+                        fd.FileName = reportName;
+                        fd.ShowDialog();
+                        ReportDocument.ExportToDisk(ExportFormatType.PortableDocFormat, fd.FileName);
+                        break;
+                    case ReportType.CashlessReport:
+                        reportName = "Cashless Report.pdf";
+                        fd.FileName = reportName;
+                        fd.ShowDialog();
+                        ReportDocument.ExportToDisk(ExportFormatType.PortableDocFormat, fd.FileName);
+                        break;
+                    case ReportType.RegularParker:
+                        reportName = "Regular Parker Report.pdf";
+                        fd.FileName = reportName;
+                        fd.ShowDialog();
+                        ReportDocument.ExportToDisk(ExportFormatType.PortableDocFormat, fd.FileName);
+                        break;
+                    case ReportType.AuditTrail:
+                        reportName = "Audit Trail Report.pdf";
                         fd.FileName = reportName;
                         fd.ShowDialog();
                         ReportDocument.ExportToDisk(ExportFormatType.PortableDocFormat, fd.FileName);

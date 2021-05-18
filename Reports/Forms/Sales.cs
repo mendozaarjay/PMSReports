@@ -367,7 +367,7 @@ namespace Reports
         {
             dgCashless.Rows.Clear();
             if (items.Count() > 0)
-                dgFees.Rows.Add(items.Count());
+                dgCashless.Rows.Add(items.Count());
 
             var row = 0;
 

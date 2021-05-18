@@ -180,7 +180,7 @@ namespace Reports
             if (e.ColumnIndex == dtlView.Index)
             {
                 var id = dgEncoding[dtlId.Index, e.RowIndex].Value.ToString();
-                ImageViewer.ShowImage(int.Parse(id),true);
+                ImageViewer.ShowImage(int.Parse(id));
             }
         }
 

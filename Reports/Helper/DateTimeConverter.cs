@@ -18,4 +18,5 @@ namespace Reports
             return formattedDate;
         }
     }
+
 }

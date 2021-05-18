@@ -40,6 +40,14 @@
             this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.btnFind = new System.Windows.Forms.ToolStripButton();
             this.dgReading = new System.Windows.Forms.DataGridView();
+            this.dtlDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlNewORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlOldORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlNewFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlOldFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlTodaySales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlNewSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtlOldSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,14 +57,6 @@
             this.btnGenerate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtlDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlNewORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlOldORNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlNewFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlOldFRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlTodaySales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlNewSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtlOldSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgReading)).BeginInit();
@@ -86,7 +86,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(900, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1440, 27);
             this.bindingNavigator1.TabIndex = 6;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -155,113 +155,8 @@
             this.dgReading.ReadOnly = true;
             this.dgReading.RowHeadersWidth = 51;
             this.dgReading.RowTemplate.Height = 24;
-            this.dgReading.Size = new System.Drawing.Size(900, 438);
+            this.dgReading.Size = new System.Drawing.Size(1440, 438);
             this.dgReading.TabIndex = 0;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgReading);
-            this.splitContainer1.Size = new System.Drawing.Size(900, 647);
-            this.splitContainer1.SplitterDistance = 205;
-            this.splitContainer1.TabIndex = 7;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cbTerminal);
-            this.groupBox1.Controls.Add(this.cboYear);
-            this.groupBox1.Controls.Add(this.cboMonth);
-            this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(876, 189);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Parameters";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 23);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Terminal";
-            // 
-            // cbTerminal
-            // 
-            this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTerminal.FormattingEnabled = true;
-            this.cbTerminal.Location = new System.Drawing.Point(154, 115);
-            this.cbTerminal.Name = "cbTerminal";
-            this.cbTerminal.Size = new System.Drawing.Size(306, 31);
-            this.cbTerminal.TabIndex = 2;
-            // 
-            // cboYear
-            // 
-            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboYear.FormattingEnabled = true;
-            this.cboYear.Location = new System.Drawing.Point(154, 74);
-            this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(306, 31);
-            this.cboYear.TabIndex = 1;
-            // 
-            // cboMonth
-            // 
-            this.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMonth.FormattingEnabled = true;
-            this.cboMonth.Location = new System.Drawing.Point(154, 32);
-            this.cboMonth.Name = "cboMonth";
-            this.cboMonth.Size = new System.Drawing.Size(306, 31);
-            this.cboMonth.TabIndex = 0;
-            // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Location = new System.Drawing.Point(154, 154);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(306, 32);
-            this.btnGenerate.TabIndex = 3;
-            this.btnGenerate.Text = "Generate";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Year";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Month";
             // 
             // dtlDate
             // 
@@ -333,11 +228,116 @@
             this.dtlOldSales.ReadOnly = true;
             this.dtlOldSales.Width = 150;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dgReading);
+            this.splitContainer1.Size = new System.Drawing.Size(1440, 647);
+            this.splitContainer1.SplitterDistance = 205;
+            this.splitContainer1.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cbTerminal);
+            this.groupBox1.Controls.Add(this.cboYear);
+            this.groupBox1.Controls.Add(this.cboMonth);
+            this.groupBox1.Controls.Add(this.btnGenerate);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1416, 189);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Parameters";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 23);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Terminal";
+            // 
+            // cbTerminal
+            // 
+            this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTerminal.FormattingEnabled = true;
+            this.cbTerminal.Location = new System.Drawing.Point(154, 115);
+            this.cbTerminal.Name = "cbTerminal";
+            this.cbTerminal.Size = new System.Drawing.Size(306, 31);
+            this.cbTerminal.TabIndex = 2;
+            // 
+            // cboYear
+            // 
+            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboYear.FormattingEnabled = true;
+            this.cboYear.Location = new System.Drawing.Point(154, 74);
+            this.cboYear.Name = "cboYear";
+            this.cboYear.Size = new System.Drawing.Size(306, 31);
+            this.cboYear.TabIndex = 1;
+            // 
+            // cboMonth
+            // 
+            this.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMonth.FormattingEnabled = true;
+            this.cboMonth.Location = new System.Drawing.Point(154, 32);
+            this.cboMonth.Name = "cboMonth";
+            this.cboMonth.Size = new System.Drawing.Size(306, 31);
+            this.cboMonth.TabIndex = 0;
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Location = new System.Drawing.Point(154, 154);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(306, 32);
+            this.btnGenerate.TabIndex = 3;
+            this.btnGenerate.Text = "Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Year";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Month";
+            // 
             // ZReading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 647);
+            this.ClientSize = new System.Drawing.Size(1440, 647);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

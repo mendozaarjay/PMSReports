@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7F64A3D5-8DE8-4554-AD4F-47055C885C34}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Reports</RootNamespace>
     <AssemblyName>Reports</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -96,6 +96,30 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crystal\CashlessCrystalReport.cs">
+      <DependentUpon>CashlessCrystalReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Crystal\RegularParkerReport.cs">
+      <DependentUpon>RegularParkerReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Crystal\AuditTrailReport.cs">
+      <DependentUpon>AuditTrailReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Crystal\Template.cs">
+      <DependentUpon>Template.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Crystal\SalesCrystalReport.cs">
       <DependentUpon>SalesCrystalReport.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -131,6 +155,18 @@
     <Compile Include="Forms\CardClearing.Designer.cs">
       <DependentUpon>CardClearing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Cashless.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cashless.Designer.cs">
+      <DependentUpon>Cashless.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuditTrail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuditTrail.Designer.cs">
+      <DependentUpon>AuditTrail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAccessMatrix.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +175,7 @@
     </Compile>
     <Compile Include="Helper\ExportToExcelFile.cs" />
     <Compile Include="InitializeReports.cs" />
+    <Compile Include="Models\AuditTrailModel.cs" />
     <Compile Include="Models\CardClearingModel.cs" />
     <Compile Include="Models\CashlessSummaryModel.cs" />
     <Compile Include="Crystal\CrystalViewer.cs">
@@ -147,10 +184,21 @@
     <Compile Include="Crystal\CrystalViewer.Designer.cs">
       <DependentUpon>CrystalViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CashlessModel.cs" />
+    <Compile Include="Models\RegularParkerModel.cs" />
+    <Compile Include="Services\AuditTrailServices.cs" />
+    <Compile Include="Services\RegularParkerServices.cs" />
+    <Compile Include="Forms\RegularParkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegularParkers.Designer.cs">
+      <DependentUpon>RegularParkers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\CardClearingServices.cs" />
     <Compile Include="Services\CashlessSummaryServices.cs" />
     <Compile Include="Helper\Spinner.cs" />
     <Compile Include="Models\UserAccessMatrixItemModel.cs" />
+    <Compile Include="Services\CashlessServices.cs" />
     <Compile Include="Services\UserAccessMatrixServices.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TestForm.cs">
@@ -368,6 +416,22 @@
     <Compile Include="Forms\ZReading.Designer.cs">
       <DependentUpon>ZReading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Crystal\CashlessCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CashlessCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal\RegularParkerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RegularParkerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal\AuditTrailReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AuditTrailReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal\Template.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Template.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crystal\SalesCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SalesCrystalReport.cs</LastGenOutput>
@@ -386,8 +450,17 @@
     <EmbeddedResource Include="Forms\CardClearing.resx">
       <DependentUpon>CardClearing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cashless.resx">
+      <DependentUpon>Cashless.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuditTrail.resx">
+      <DependentUpon>AuditTrail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAccessMatrix.resx">
       <DependentUpon>UserAccessMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegularParkers.resx">
+      <DependentUpon>RegularParkers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CardClearingReport.rdlc" />
     <EmbeddedResource Include="Reports\UserAccessMatrixReport.rdlc" />
