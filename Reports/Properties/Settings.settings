@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="UserConnectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=.\SqlExpress;Initial Catalog=TEKTITE_SERVER;Persist Security Info=True;User ID=sa;Password=zealadmin01</Value>
+      <Value Profile="(Default)">Data Source=.\SqlExpress;Initial Catalog=OTISNOPIC;Persist Security Info=True;User ID=sa;Password=zealadmin01</Value>
     </Setting>
     <Setting Name="ProgramVersion" Type="System.String" Scope="User">
       <Value Profile="(Default)">TESTPROGRAMANDVERSION</Value>

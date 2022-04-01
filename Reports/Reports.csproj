@@ -186,6 +186,7 @@
     </Compile>
     <Compile Include="Models\CashlessModel.cs" />
     <Compile Include="Models\RegularParkerModel.cs" />
+    <Compile Include="Models\SalesGrid.cs" />
     <Compile Include="Services\AuditTrailServices.cs" />
     <Compile Include="Services\RegularParkerServices.cs" />
     <Compile Include="Forms\RegularParkers.cs">

@@ -112,6 +112,44 @@ namespace Reports
 
                 row++;
             }
+            dgDetails.Rows.Add(1);
+            var grossAmount = items.Sum(a => a.GrossAmount).ToString("N2");
+            var discount = items.Sum(a => a.Discount).ToString("N2");
+            var amountDue = items.Sum(a => a.AmountDue).ToString("N2");
+            var amountTendered = items.Sum(a => a.AmountTendered).ToString("N2");
+            var change = items.Sum(a => a.Change).ToString("N2");
+            var vatable = items.Sum(a => a.Vatable).ToString("N2");
+            var vat = items.Sum(a => a.Vat).ToString("N2");
+            var vatExempt = items.Sum(a => a.VatExempt).ToString("N2");
+            var zeroRated = items.Sum(a => a.ZeroRated).ToString("N2");
+            var lcPenalty = items.Sum(a => a.LostCardPenalty).ToString("N2");
+            var overnight = items.Sum(a => a.OvernightPenalty).ToString("N2");
+
+            dgDetails[dtlRow.Index, row].Value = "TOTAL";
+            dgDetails[dtlTransitId.Index, row].Value = "0";
+            dgDetails[dtlGrossAmount.Index, row].Value = grossAmount;
+            dgDetails[dtlDiscount.Index, row].Value = discount;
+            dgDetails[dtlAmountDue.Index, row].Value = amountDue;
+            dgDetails[dtlAmountTendered.Index, row].Value = amountTendered;
+            dgDetails[dtlChange.Index, row].Value = change;
+            dgDetails[dtlVatable.Index, row].Value = vatable;
+            dgDetails[dtlVat.Index, row].Value = vat;
+            dgDetails[dtlVatExempt.Index, row].Value = vatExempt;
+            dgDetails[dtlZeroRated.Index, row].Value = zeroRated;
+            dgDetails[dtlLCPenalty.Index, row].Value = lcPenalty;
+            dgDetails[dtlOvernight.Index, row].Value = overnight;
+
+            for (int i = 0; i < dgDetails.Columns.Count - 1; i++)
+            {
+                var style = new DataGridViewCellStyle();
+                style.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+                dgDetails[i, row].Style = style;
+            }
+            foreach (DataGridViewColumn dc in dgDetails.Columns)
+            {
+                dc.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
             dgDetails.AutoResizeColumns();
         }
 
@@ -162,7 +200,7 @@ namespace Reports
             sd.FileName = "Cashless Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                ExportToExcelFile.Export(dt, sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName,ReportType.CashlessReport);
             }
             btnExcel.Enabled = true;
         }

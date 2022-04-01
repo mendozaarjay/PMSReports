@@ -123,6 +123,7 @@ namespace Reports
 
                 row++;
             }
+            AddTotal(ref dgAllSales, items);
             dgAllSales.AutoResizeColumns();
         }
         private void PopulateSalesTransactions(IEnumerable<SalesModel> items)
@@ -171,6 +172,7 @@ namespace Reports
                 row++;
             }
             dgTransactions.AutoResizeColumns();
+            AddTotal(ref dgTransactions, items);
         }
         private void PopulateSalesCollection(IEnumerable<SalesModel> items)
         {
@@ -219,6 +221,7 @@ namespace Reports
                 row++;
             }
             dgCollections.AutoResizeColumns();
+            AddTotal(ref dgCollections, items);
         }
         private void PopulateSalesDiscount(IEnumerable<SalesModel> items)
         {
@@ -266,6 +269,7 @@ namespace Reports
                 row++;
             }
             dgDiscounts.AutoResizeColumns();
+            AddTotal(ref dgDiscounts, items);
         }
         private void PopulateSalesErased(IEnumerable<SalesModel> items)
         {
@@ -314,6 +318,7 @@ namespace Reports
                 row++;
             }
             dgErased.AutoResizeColumns();
+            AddTotal(ref dgErased, items);
         }
         private void PopulateSalesFee(IEnumerable<SalesModel> items)
         {
@@ -362,6 +367,7 @@ namespace Reports
                 row++;
             }
             dgFees.AutoResizeColumns();
+            AddTotal(ref dgFees, items);
         }
         private void PopulateSalesCashless(IEnumerable<SalesModel> items)
         {
@@ -409,9 +415,56 @@ namespace Reports
                 dgCashless[dtlCashlessOvernight.Index, row].Value = item.OvernightPenalty;
                 row++;
             }
-            dgFees.AutoResizeColumns();
+            dgCashless.AutoResizeColumns();
+            AddTotal(ref dgCashless, items);
         }
 
+        private void AddTotal(ref DataGridView dg, IEnumerable<SalesModel> items)
+        {
+            var rows = dg.Rows.Count;
+            if (rows <= 0)
+                return;
+            dg.Rows.Add(1);
+            var lastrow = rows;
+
+            var grossAmount = items.Sum(a => a.GrossAmount).ToString("N2");
+            var discount = items.Sum(a => a.Discount).ToString("N2");
+            var amountDue = items.Sum(a => a.AmountDue).ToString("N2");
+            var amountTendered = items.Sum(a => a.AmountTendered).ToString("N2");
+            var change = items.Sum(a => a.Change).ToString("N2");
+            var vatable = items.Sum(a => a.Vatable).ToString("N2");
+            var vat = items.Sum(a => a.Vat).ToString("N2");
+            var vatExempt = items.Sum(a => a.VatExempt).ToString("N2");
+            var zeroRated = items.Sum(a => a.ZeroRated).ToString("N2");
+            var lcPenalty = items.Sum(a => a.LostCardPenalty).ToString("N2");
+            var overnight = items.Sum(a => a.OvernightPenalty).ToString("N2");
+            
+            dg[SalesGrid.Row, lastrow].Value = "TOTAL";
+            dg[SalesGrid.TransitId, lastrow].Value = "0";
+            dg[SalesGrid.GrossAmount, lastrow].Value = grossAmount;
+            dg[SalesGrid.Discount, lastrow].Value = discount;
+            dg[SalesGrid.AmountDue, lastrow].Value = amountDue;
+            dg[SalesGrid.AmountTendered, lastrow].Value = amountTendered;
+            dg[SalesGrid.Change, lastrow].Value = change;
+            dg[SalesGrid.Vatable, lastrow].Value = vatable;
+            dg[SalesGrid.Vat, lastrow].Value = vat;
+            dg[SalesGrid.VatExempt, lastrow].Value = vatExempt;
+            dg[SalesGrid.ZeroRated, lastrow].Value = zeroRated;
+            dg[SalesGrid.LCPenalty, lastrow].Value = lcPenalty;
+            dg[SalesGrid.Overnight, lastrow].Value = overnight;
+
+            for (int i = 0; i < dg.Columns.Count - 1;i++)
+            {
+                var style = new DataGridViewCellStyle();
+                style.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+                dg[i, lastrow].Style = style;
+            }
+            foreach(DataGridViewColumn dc in dg.Columns)
+            {
+                dc.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+        }
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             btnRefresh.Enabled = false;
@@ -459,7 +512,7 @@ namespace Reports
             sd.FileName = "Sales Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                ExportToExcelFile.Export(dt, sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName,ReportType.Sales);
             }
             btnExcel.Enabled = true;
         }
@@ -556,5 +609,6 @@ namespace Reports
                 ImageViewer.ShowImage(int.Parse(id));
             }
         }
+
     }
 }

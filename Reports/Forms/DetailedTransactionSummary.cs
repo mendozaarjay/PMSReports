@@ -181,6 +181,29 @@ namespace Reports
 
                     row++;
                 }
+
+                dgDetailedTransaction.Rows.Add(1);
+
+                var amount = items.Sum(a => a.Amount).ToString("N2");
+                var lc = items.Sum(a => a.LostCardPenalty).ToString("N2");
+                var overnight = items.Sum(a => a.OvernightPenalty).ToString("N2");
+
+                dgDetailedTransaction[dtlRow.Index, row].Value = "TOTAL";
+                dgDetailedTransaction[dtlAmount.Index, row].Value = amount;
+                dgDetailedTransaction[dtlLCPenalty.Index, row].Value = lc;
+                dgDetailedTransaction[dtlOvernight.Index, row].Value = overnight;
+
+                for (int i = 0; i < dgDetailedTransaction.Columns.Count - 1; i++)
+                {
+                    var style = new DataGridViewCellStyle();
+                    style.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+                    dgDetailedTransaction[i, row].Style = style;
+                }
+                foreach (DataGridViewColumn dc in dgDetailedTransaction.Columns)
+                {
+                    dc.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
             });
         }
 
@@ -231,7 +254,7 @@ namespace Reports
             sd.FileName = "Detailed Transaction Summary Report " + from.ToString("MMddyyyy hhmmsstt") + "-" + to.ToString("MMddyyyy hhmmsstt");
             if (sd.ShowDialog() != DialogResult.Cancel)
             {
-                ExportToExcelFile.Export(dt, sd.FileName);
+                ExportToExcelFile.Export(dt, sd.FileName,ReportType.DetailedTransactionSummaryReport);
             }
             btnExcel.Enabled = true;
         }
